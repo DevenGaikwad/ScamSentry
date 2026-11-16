@@ -1,0 +1,70 @@
+[
+  {
+    "source_id": "mendeley_smishing_v1",
+    "title": "SMS PHISHING DATASET FOR MACHINE LEARNING AND PATTERN RECOGNITION",
+    "publisher": "Mendeley Data",
+    "authors": [
+      "Sandhya Mishra",
+      "Devpriya Soni"
+    ],
+    "version": "1",
+    "doi": "10.17632/f45bkkt8pr.1",
+    "landing_page": "https://data.mendeley.com/datasets/f45bkkt8pr/1",
+    "download_url": "https://data.mendeley.com/public-files/datasets/f45bkkt8pr/files/edb361de-918d-469f-9106-e84823830665/file_downloaded",
+    "published_license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "checked_at": "2026-11-16",
+    "eligibility_status": "eligible",
+    "file_review": "ZIP contains only Dataset_5971.csv; no conflicting bundled notice. Publisher cautions that third-party rights may require separate review. Training minimizes identifiers; no raw records redistributed.",
+    "download_sha256": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e",
+    "archive_sha256": "9bbf3188fdad81495d8e82825648b9b63b53fc86841a3d26c02629990b233cc3",
+    "actual_rows": 5971,
+    "actual_columns": [
+      "LABEL",
+      "TEXT",
+      "URL",
+      "EMAIL",
+      "PHONE"
+    ],
+    "actual_labels": {
+      "ham": 4844,
+      "Smishing": 616,
+      "spam": 466,
+      "Spam": 23,
+      "smishing": 22
+    },
+    "label_mapping": {
+      "ham": "ordinary",
+      "spam": "promotional-or-spam",
+      "Spam": "promotional-or-spam",
+      "Smishing": "smishing-like",
+      "smishing": "smishing-like"
+    },
+    "attribution": "Mishra, Sandhya; Soni, Devpriya (2022), SMS PHISHING DATASET FOR MACHINE LEARNING AND PATTERN RECOGNITION, Mendeley Data, V1, doi:10.17632/f45bkkt8pr.1, CC BY 4.0. Changes: identifier minimization, normalization, deduplication, template grouping and quarantine.",
+    "privacy_review": "Automated minimization; names and third-party text may remain; do not redistribute raw data."
+  },
+  {
+    "source_id": "uci_sms_spam",
+    "landing_page": "https://archive.ics.uci.edu/dataset/228/sms+spam+collection",
+    "published_license": "CC-BY-4.0",
+    "eligibility_status": "conditional",
+    "attribution": "Almeida, T.; Hidalgo, J. (2011), SMS Spam Collection, UCI, doi:10.24432/C5CC84.",
+    "notes": "Auxiliary only; ham/spam cannot become smishing labels. Bundled readme terms and cross-source overlap require separate audit. Excluded from all training runs."
+  },
+  {
+    "source_id": "phiusiil",
+    "landing_page": "https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset",
+    "published_license": "not_rechecked",
+    "eligibility_status": "excluded",
+    "attribution": "UCI PhiUSIIL research candidate; not used.",
+    "notes": "Learned URL model outside current release; no website-dependent feature substitution."
+  },
+  {
+    "source_id": "super_sms",
+    "landing_page": "https://github.com/smspamresearch/spstudy",
+    "published_license": "not_rechecked",
+    "eligibility_status": "excluded",
+    "attribution": "Research expansion candidate; not used.",
+    "notes": "Not needed for baseline; eligibility not established."
+  }
+]

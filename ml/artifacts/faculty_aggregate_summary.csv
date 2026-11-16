@@ -1,0 +1,5 @@
+partition,records,designated_groups,ordinary,promotion_or_spam,smishing_like
+development,861,813,725,61,75
+train,3444,3244,2901,244,299
+calibration,574,541,484,40,50
+test,861,813,724,62,75

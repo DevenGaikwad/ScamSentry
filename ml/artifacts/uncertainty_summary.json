@@ -1,0 +1,27 @@
+{
+  "ordinary_model_smishing_fpr": {
+    "count": 1,
+    "denominator": 724,
+    "wilson_95": [
+      0.00024386006904766758,
+      0.007781869641594148
+    ]
+  },
+  "smishing_recall": {
+    "count": 65,
+    "denominator": 75,
+    "wilson_95": [
+      0.7716683625530486,
+      0.9259341529595605
+    ]
+  },
+  "smishing_precision": {
+    "count": 65,
+    "denominator": 69,
+    "wilson_95": [
+      0.8602075664233835,
+      0.9772276111196287
+    ]
+  },
+  "warning": "Record-binomial supplements; designated group-bootstrap macro-F1 remains the grouped summary."
+}

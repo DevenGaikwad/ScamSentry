@@ -1,0 +1,6 @@
+source_id: mendeley_smishing_v1
+input: data/raw/Dataset_5971.csv
+encoding: utf-8-sig
+text_column: TEXT
+label_column: LABEL
+output: data/processed/messages.json

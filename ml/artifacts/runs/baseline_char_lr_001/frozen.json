@@ -1,0 +1,11 @@
+{
+  "protocol_id": "ss-group-v1",
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "split_sha256": "34781f082c5b76e75b8ada075a7dec1385e90f58d104444a4810e1491ead6cf9",
+  "policy": {
+    "version": "ordinal_v1",
+    "confidence": 0.62,
+    "margin": 0.18
+  },
+  "scope": "Research preview; no broad protection claim"
+}

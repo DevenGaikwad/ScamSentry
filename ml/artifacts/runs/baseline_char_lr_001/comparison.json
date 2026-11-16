@@ -1,0 +1,55 @@
+[
+  {
+    "candidate": "majority",
+    "feature": "char",
+    "development_macro_f1": 0.30474989491382937,
+    "fit_seconds": 0.005506497999704152,
+    "development_support": 861,
+    "final_test_accessed": false
+  },
+  {
+    "candidate": "word_lr",
+    "feature": "word",
+    "development_macro_f1": 0.921387696523157,
+    "fit_seconds": 0.16971915099975377,
+    "development_support": 861,
+    "final_test_accessed": false
+  },
+  {
+    "candidate": "char_nb",
+    "feature": "char",
+    "development_macro_f1": 0.870649340537892,
+    "fit_seconds": 0.008753466000143817,
+    "development_support": 861,
+    "final_test_accessed": false
+  },
+  {
+    "candidate": "char_svc",
+    "feature": "char",
+    "development_macro_f1": 0.8898212023636617,
+    "fit_seconds": 0.19821268199984843,
+    "development_support": 861,
+    "final_test_accessed": false
+  },
+  {
+    "candidate": "char_lr_C2",
+    "feature": "char",
+    "development_macro_f1": 0.900010567109748,
+    "fit_seconds": 0.4412522849997913,
+    "development_support": 861,
+    "final_test_accessed": false
+  },
+  {
+    "candidate": "char_lr_C4",
+    "feature": "char",
+    "development_macro_f1": 0.8989428582602929,
+    "fit_seconds": 0.39272603400013395,
+    "development_support": 861,
+    "final_test_accessed": false
+  },
+  {
+    "candidate": "transparent_rules",
+    "development_macro_f1": 0.3300806451612903,
+    "final_test_accessed": false
+  }
+]

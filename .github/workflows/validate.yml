@@ -1,0 +1,37 @@
+name: Validate local app and model contracts
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@v5.6.0
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r ml/requirements-lock.txt
+      - run: python -m pip install --no-deps -e ml
+      - run: python -m compileall -q ml/src scripts
+      - run: python -m pytest ml/tests -q
+      - run: python scripts/validate_project.py
+      - run: python scripts/check_contrast.py
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-java@v4.7.1
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+      - run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"'
+      - run: ./gradlew --no-daemon :core-analysis:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleRelease
+        working-directory: android
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: debug-apk-and-checks
+          path: |
+            android/app/build/outputs/apk/debug/*.apk
+            android/app/build/reports/lint-results-debug.html
+            android/core-analysis/build/reports/parity.json

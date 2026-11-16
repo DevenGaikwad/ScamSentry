@@ -1,0 +1,134 @@
+[
+  {
+    "foreground": "text",
+    "background": "#080C14",
+    "contrast": 17.909199220050127,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "supporting",
+    "background": "#080C14",
+    "contrast": 10.853866965818957,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "blue",
+    "background": "#080C14",
+    "contrast": 8.071123215572834,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "red",
+    "background": "#080C14",
+    "contrast": 7.130573551029322,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "amber",
+    "background": "#080C14",
+    "contrast": 13.573015106925752,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "green",
+    "background": "#080C14",
+    "contrast": 10.895651139948964,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "purple",
+    "background": "#080C14",
+    "contrast": 8.546579617655912,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "text",
+    "background": "#101722",
+    "contrast": 16.457155082374484,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "supporting",
+    "background": "#101722",
+    "contrast": 9.973855877373172,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "blue",
+    "background": "#101722",
+    "contrast": 7.4167317486160265,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "red",
+    "background": "#101722",
+    "contrast": 6.552440079185116,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "amber",
+    "background": "#101722",
+    "contrast": 12.472540609186632,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "green",
+    "background": "#101722",
+    "contrast": 10.012252269372462,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "purple",
+    "background": "#101722",
+    "contrast": 7.853639041222888,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "text",
+    "background": "#172131",
+    "contrast": 14.801259724739424,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "supporting",
+    "background": "#172131",
+    "contrast": 8.970300793739574,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "blue",
+    "background": "#172131",
+    "contrast": 6.670470829891922,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "red",
+    "background": "#172131",
+    "contrast": 5.893142949517486,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "amber",
+    "background": "#172131",
+    "contrast": 11.217571449007398,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "green",
+    "background": "#172131",
+    "contrast": 9.004833795806443,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "purple",
+    "background": "#172131",
+    "contrast": 7.063417136901738,
+    "normal_text_pass": true
+  },
+  {
+    "foreground": "dark button text",
+    "background": "#70A7FF",
+    "contrast": 8.071123215572834,
+    "normal_text_pass": true
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "input_rows": 5971,
+  "parsed_rows": 5971,
+  "quarantined_records": 130,
+  "conflicting_groups": 51,
+  "deduplicated_rows": 101,
+  "usable_rows": 5740,
+  "classes": {
+    "ham": 4834,
+    "smishing": 499,
+    "spam": 407
+  },
+  "groups": 5411,
+  "largest_group": 14,
+  "near_duplicate_edges": 662,
+  "processed_sha256": "9c48acf3d1237e44b403b9cc675c758b4e834ba89b795856dcf1bf327c078e13",
+  "max_length": 910,
+  "source_sha256": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e"
+}

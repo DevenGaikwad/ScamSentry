@@ -1,0 +1,145 @@
+{
+  "records": 861,
+  "accuracy": 0.9698025551684089,
+  "macro_f1": 0.9037592383028068,
+  "class_report": {
+    "0": {
+      "precision": 0.9916897506925207,
+      "recall": 0.988950276243094,
+      "f1-score": 0.9903181189488244,
+      "support": 724.0
+    },
+    "1": {
+      "precision": 0.7714285714285715,
+      "recall": 0.8709677419354839,
+      "f1-score": 0.8181818181818182,
+      "support": 62.0
+    },
+    "2": {
+      "precision": 0.9420289855072463,
+      "recall": 0.8666666666666667,
+      "f1-score": 0.9027777777777778,
+      "support": 75.0
+    },
+    "accuracy": 0.9698025551684089,
+    "macro avg": {
+      "precision": 0.9017157692094462,
+      "recall": 0.9088615616150815,
+      "f1-score": 0.9037592383028068,
+      "support": 861.0
+    },
+    "weighted avg": {
+      "precision": 0.9715030485981416,
+      "recall": 0.9698025551684089,
+      "f1-score": 0.9702972406266608,
+      "support": 861.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      716,
+      7,
+      1
+    ],
+    [
+      5,
+      54,
+      3
+    ],
+    [
+      1,
+      9,
+      65
+    ]
+  ],
+  "ordinary_fpr_smishing": 0.0013812154696132596,
+  "ordinary_fpr_any_nonordinary": 0.011049723756906077,
+  "log_loss": 0.1012229740739107,
+  "brier_multiclass_sum": 0.04747917150889187,
+  "ece_10_equal_width": 0.00763671888350194,
+  "reliability": [
+    {
+      "lower": 0.30000000000000004,
+      "n": 1,
+      "accuracy": 0.0,
+      "confidence": 0.3663110961271894
+    },
+    {
+      "lower": 0.4,
+      "n": 4,
+      "accuracy": 0.25,
+      "confidence": 0.4433789415169883
+    },
+    {
+      "lower": 0.5,
+      "n": 9,
+      "accuracy": 0.4444444444444444,
+      "confidence": 0.5561306492275226
+    },
+    {
+      "lower": 0.6000000000000001,
+      "n": 11,
+      "accuracy": 0.7272727272727273,
+      "confidence": 0.6506357718430724
+    },
+    {
+      "lower": 0.7000000000000001,
+      "n": 17,
+      "accuracy": 0.9411764705882353,
+      "confidence": 0.7534796446067802
+    },
+    {
+      "lower": 0.8,
+      "n": 36,
+      "accuracy": 0.8611111111111112,
+      "confidence": 0.8563917634312397
+    },
+    {
+      "lower": 0.9,
+      "n": 783,
+      "accuracy": 0.9897828863346104,
+      "confidence": 0.9900721113481047
+    }
+  ],
+  "smishing_average_precision": 0.9540241286477414,
+  "smishing_roc_auc": 0.9942493638676846,
+  "group_bootstrap_macro_f1_95ci": [
+    0.861006588073394,
+    0.9445590344171969
+  ],
+  "bootstrap": {
+    "unit": "designated template connected component",
+    "repetitions": 300,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "protocol_id": "ss-group-v1",
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "split_sha256": "34781f082c5b76e75b8ada075a7dec1385e90f58d104444a4810e1491ead6cf9",
+  "class_order": [
+    "ordinary",
+    "promotional-or-spam",
+    "smishing-like"
+  ],
+  "policy_categories": {
+    "higher": 68,
+    "lower": 699,
+    "unable": 19,
+    "checking": 75
+  },
+  "selective_coverage": 0.8908246225319396,
+  "accepted_error": 0.010430247718383311,
+  "abstained_error": 0.19148936170212766,
+  "policy_ordinary_higher_risk_rate": 0.0,
+  "runtime": {
+    "environment": "Linux Python CPU reference, not phone",
+    "warm_p50_ms": 0.3822690000561124,
+    "warm_p95_ms": 1.3245009999991453
+  },
+  "limitations": [
+    "Historical single-source benchmark",
+    "Grouping is heuristic; latent campaigns may still overlap",
+    "No real-device performance evidence",
+    "Calibration is specific to benchmark distribution"
+  ]
+}

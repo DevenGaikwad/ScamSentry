@@ -1,0 +1,10 @@
+{
+  "uci_parsed_rows": 5574,
+  "uci_labels": {
+    "ham": 4827,
+    "spam": 747
+  },
+  "uci_exact_normalized_overlap_with_mendeley": 5200,
+  "used_for_training": false,
+  "review": "Publisher lists CC BY 4.0; archive readme includes older terms plus an appreciated notification request. Source retained as conditional. No email sent; no extra data used."
+}

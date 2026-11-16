@@ -1,0 +1,87 @@
+{
+  "final_test_accessed": false,
+  "group_cv": [
+    {
+      "macro_f1": 0.9019429118599244,
+      "fit_records": 2295,
+      "validation_records": 1149,
+      "groups_isolated": true
+    },
+    {
+      "macro_f1": 0.8376196071742789,
+      "fit_records": 2296,
+      "validation_records": 1148,
+      "groups_isolated": true
+    },
+    {
+      "macro_f1": 0.8604024893180245,
+      "fit_records": 2297,
+      "validation_records": 1147,
+      "groups_isolated": true
+    }
+  ],
+  "learning_curve": [
+    {
+      "training_fraction": 0.3,
+      "training_groups": 973,
+      "development_macro_f1": 0.8292390861120195
+    },
+    {
+      "training_fraction": 0.6,
+      "training_groups": 1946,
+      "development_macro_f1": 0.8657469119380821
+    },
+    {
+      "training_fraction": 1.0,
+      "training_groups": 3244,
+      "development_macro_f1": 0.900010567109748
+    }
+  ],
+  "neural": {
+    "family": "character TF-IDF MLP",
+    "architecture": "4000 sparse character features → 32 ReLU → 3 softmax",
+    "parameters": 128131,
+    "epochs": [
+      {
+        "epoch": 1,
+        "development_macro_f1": 0.8231149191373316
+      },
+      {
+        "epoch": 2,
+        "development_macro_f1": 0.8455885175309635
+      },
+      {
+        "epoch": 3,
+        "development_macro_f1": 0.8507871745074341
+      },
+      {
+        "epoch": 4,
+        "development_macro_f1": 0.8623671306808833
+      },
+      {
+        "epoch": 5,
+        "development_macro_f1": 0.8623671306808833
+      },
+      {
+        "epoch": 6,
+        "development_macro_f1": 0.8587423567128001
+      },
+      {
+        "epoch": 7,
+        "development_macro_f1": 0.8624539345524002
+      },
+      {
+        "epoch": 8,
+        "development_macro_f1": 0.857110549338885
+      }
+    ],
+    "best_development_macro_f1": 0.8623671306808833,
+    "export_status": "Research only; no mobile runtime or parity. Linear bundle retained for measured development quality and simpler audited deployment."
+  },
+  "seconds": 15.922116793999976,
+  "limitations": [
+    "One seed for learning curve; not a variability estimate",
+    "No pretrained encoder downloaded",
+    "Neural development stopping is disclosed and uses no test labels"
+  ]
+}

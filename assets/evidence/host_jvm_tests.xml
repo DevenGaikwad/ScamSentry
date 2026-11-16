@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="in.deven.scamsentry.core.ParityTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-16T06:01:40.812Z" hostname="87faa8da7bca" time="2.514">
+  <properties/>
+  <testcase name="policyDoesNotTreatUrgencyAsProof" classname="in.deven.scamsentry.core.ParityTest" time="0.324"/>
+  <testcase name="linksStayOfflineAndExposeActualHost" classname="in.deven.scamsentry.core.ParityTest" time="0.167"/>
+  <testcase name="pythonKotlinGoldenParity" classname="in.deven.scamsentry.core.ParityTest" time="1.819"/>
+  <testcase name="integrityFailuresAreControlled" classname="in.deven.scamsentry.core.ParityTest" time="0.171"/>
+  <testcase name="unicodeAndSurrogateBoundaries" classname="in.deven.scamsentry.core.ParityTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

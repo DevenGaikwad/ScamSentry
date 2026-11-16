@@ -1,0 +1,31 @@
+{
+  "generation": "Original deterministic fictional text rendered with Pillow; no private records",
+  "credential_screenshot": {
+    "dimensions": [
+      760,
+      980
+    ],
+    "font": "DejaVu Sans",
+    "body_px": 24,
+    "header_px": 30,
+    "blur": 0,
+    "compression": "PNG lossless",
+    "expected_keywords": [
+      "OTP",
+      "Fictional",
+      "review.test"
+    ],
+    "parent": "original_credential_demo_001"
+  },
+  "unreadable": {
+    "dimensions": [
+      600,
+      800
+    ],
+    "expected_text": ""
+  },
+  "malformed": {
+    "bytes": "PNG signature followed by invalid fictional bytes",
+    "expected": "controlled decode failure"
+  }
+}

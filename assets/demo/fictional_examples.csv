@@ -1,0 +1,9 @@
+scenario_id,fictional_text,observed_policy_fixture,annotation_status
+golden_00,Let's meet in the library after class.,lower,Original single-author demonstration; not independent validation
+golden_01,Please bring your lab notebook before 9 tomorrow.,lower,Original single-author demonstration; not independent validation
+golden_02,Send your OTP immediately to keep the account active.,higher,Original single-author demonstration; not independent validation
+golden_03,Fictional shop: 20 percent discount this weekend. Reply STOP to unsubscribe.,checking,Original single-author demonstration; not independent validation
+golden_04,"Educational example: never share your OTP. A scam may say ""send your password"".",lower,Original single-author demonstration; not independent validation
+golden_05,https://example.org/notes,checking,Original single-author demonstration; not independent validation
+golden_06,https://bank.example@review.test/login,checking,Original single-author demonstration; not independent validation
+golden_07,https://xn--bcher-kva.example,checking,Original single-author demonstration; not independent validation

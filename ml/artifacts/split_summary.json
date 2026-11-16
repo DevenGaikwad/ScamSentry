@@ -1,0 +1,38 @@
+{
+  "development": {
+    "records": 861,
+    "groups": 813,
+    "classes": {
+      "0": 725,
+      "1": 61,
+      "2": 75
+    }
+  },
+  "train": {
+    "records": 3444,
+    "groups": 3244,
+    "classes": {
+      "0": 2901,
+      "2": 299,
+      "1": 244
+    }
+  },
+  "calibration": {
+    "records": 574,
+    "groups": 541,
+    "classes": {
+      "0": 484,
+      "1": 40,
+      "2": 50
+    }
+  },
+  "test": {
+    "records": 861,
+    "groups": 813,
+    "classes": {
+      "2": 75,
+      "0": 724,
+      "1": 62
+    }
+  }
+}

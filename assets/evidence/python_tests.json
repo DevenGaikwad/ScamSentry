@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-16",
+  "command": "python -m pytest ml/tests -q",
+  "pytest": "9.0.3",
+  "passed": 13,
+  "failed": 0,
+  "observation": "13 tests passed with pytest9.0.3 after the complete-host boundary regression; trusted local sklearn-reference artifact present. Release CI can skip that one private-reference test."
+}

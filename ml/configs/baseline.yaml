@@ -1,0 +1,10 @@
+run_id: baseline_char_lr_001
+protocol_id: ss-group-v1
+seed: 42
+min_df: 2
+max_features: 20000
+ngram_low: 3
+ngram_high: 5
+candidate_C: [2.0, 4.0]
+policy_confidence: 0.62
+policy_margin: 0.18

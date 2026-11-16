@@ -1,0 +1,17 @@
+**/__pycache__/
+**/.pytest_cache/
+**/*.egg-info/
+**/.venv/
+**/.gradle/
+**/build/
+**/local.properties
+**/.idea/
+**/*.jks
+**/*.keystore
+**/signing.properties
+ml/data/raw/
+ml/data/processed/
+ml/artifacts/private/
+ml/artifacts/runs/*/*.joblib
+release/*
+!release/README.md

@@ -1,0 +1,75 @@
+{
+  "scope": "Post-hoc aggregate metadata audit only; no test predictions, labels or thresholds used for new tuning",
+  "raw_records": 5971,
+  "processed_records": 5740,
+  "raw_class_case_normalized": {
+    "ham": 4844,
+    "smishing": 638,
+    "spam": 489
+  },
+  "raw_URL_presence_by_source_label": {
+    "ham": {
+      "records": 4844,
+      "with_http_or_www": 2
+    },
+    "spam": {
+      "records": 489,
+      "with_http_or_www": 85
+    },
+    "smishing": {
+      "records": 638,
+      "with_http_or_www": 98
+    }
+  },
+  "processed_by_label": {
+    "0": {
+      "records": 4834,
+      "groups": 4771,
+      "length_min_p50_p95_max": [
+        2.0,
+        54.0,
+        168.0,
+        910.0
+      ],
+      "script_and_length_heuristic_supported": 4662
+    },
+    "1": {
+      "records": 407,
+      "groups": 364,
+      "length_min_p50_p95_max": [
+        26.0,
+        170.0,
+        239.7,
+        372.0
+      ],
+      "script_and_length_heuristic_supported": 406
+    },
+    "2": {
+      "records": 499,
+      "groups": 276,
+      "length_min_p50_p95_max": [
+        54.0,
+        177.0,
+        258.19999999999993,
+        403.0
+      ],
+      "script_and_length_heuristic_supported": 499
+    }
+  },
+  "group_size_distribution": {
+    "2": 100,
+    "1": 5249,
+    "3": 28,
+    "12": 2,
+    "5": 8,
+    "4": 12,
+    "9": 1,
+    "14": 1,
+    "7": 4,
+    "10": 1,
+    "8": 2,
+    "6": 3
+  },
+  "record_collection_dates": "unknown; no temporal claim",
+  "privacy_limit": "No names or record examples published; regex minimization cannot guarantee removal of all identifiers."
+}

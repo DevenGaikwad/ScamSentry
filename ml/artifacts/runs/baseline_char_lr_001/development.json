@@ -1,0 +1,116 @@
+{
+  "records": 861,
+  "accuracy": 0.9709639953542393,
+  "macro_f1": 0.900010567109748,
+  "class_report": {
+    "0": {
+      "precision": 0.9903713892709766,
+      "recall": 0.993103448275862,
+      "f1-score": 0.9917355371900827,
+      "support": 725.0
+    },
+    "1": {
+      "precision": 0.8421052631578947,
+      "recall": 0.7868852459016393,
+      "f1-score": 0.8135593220338984,
+      "support": 61.0
+    },
+    "2": {
+      "precision": 0.8831168831168831,
+      "recall": 0.9066666666666666,
+      "f1-score": 0.8947368421052632,
+      "support": 75.0
+    },
+    "accuracy": 0.9709639953542393,
+    "macro avg": {
+      "precision": 0.905197845181918,
+      "recall": 0.8955517869480559,
+      "f1-score": 0.900010567109748,
+      "support": 861.0
+    },
+    "weighted avg": {
+      "precision": 0.9705243257930962,
+      "recall": 0.9709639953542393,
+      "f1-score": 0.9706627715038009,
+      "support": 861.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      720,
+      3,
+      2
+    ],
+    [
+      6,
+      48,
+      7
+    ],
+    [
+      1,
+      6,
+      68
+    ]
+  ],
+  "ordinary_fpr_smishing": 0.002758620689655172,
+  "ordinary_fpr_any_nonordinary": 0.006896551724137931,
+  "log_loss": 0.09247890978842069,
+  "brier_multiclass_sum": 0.04696293381523242,
+  "ece_10_equal_width": 0.013157797690327199,
+  "reliability": [
+    {
+      "lower": 0.30000000000000004,
+      "n": 1,
+      "accuracy": 1.0,
+      "confidence": 0.3951779902356019
+    },
+    {
+      "lower": 0.4,
+      "n": 5,
+      "accuracy": 0.8,
+      "confidence": 0.4651453574206014
+    },
+    {
+      "lower": 0.5,
+      "n": 9,
+      "accuracy": 0.2222222222222222,
+      "confidence": 0.5437804417377018
+    },
+    {
+      "lower": 0.6000000000000001,
+      "n": 19,
+      "accuracy": 0.6842105263157895,
+      "confidence": 0.6485649619881577
+    },
+    {
+      "lower": 0.7000000000000001,
+      "n": 18,
+      "accuracy": 0.9444444444444444,
+      "confidence": 0.7638227903166653
+    },
+    {
+      "lower": 0.8,
+      "n": 31,
+      "accuracy": 0.9032258064516129,
+      "confidence": 0.8669677496451473
+    },
+    {
+      "lower": 0.9,
+      "n": 778,
+      "accuracy": 0.9910025706940874,
+      "confidence": 0.9924206804055855
+    }
+  ],
+  "smishing_average_precision": 0.9605036283861252,
+  "smishing_roc_auc": 0.9952502120441051,
+  "group_bootstrap_macro_f1_95ci": [
+    0.8567087213115463,
+    0.9418653733551166
+  ],
+  "bootstrap": {
+    "unit": "designated template connected component",
+    "repetitions": 300,
+    "seed": 42,
+    "method": "percentile"
+  }
+}

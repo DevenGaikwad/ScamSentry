@@ -1,0 +1,21 @@
+{
+  "accessed_at": "2026-11-16",
+  "url": "https://data.mendeley.com/datasets/f45bkkt8pr/1",
+  "license": {
+    "id": "01d9c749-3c4d-4431-9df3-620b2dcfe144",
+    "short_name": "CC BY 4.0",
+    "full_name": "Creative Commons Attribution 4.0 International",
+    "description": "You can share, copy and modify this dataset so long as you give appropriate credit, provide a link to the CC BY license, and indicate if changes were made, but you may not do so in a way that suggests the rights holder has endorsed you or your use of the dataset. Note that further permission may be required for any content within the dataset that is identified as belonging to a third party.",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "category": "Creative",
+    "customer_id": null
+  },
+  "archive_contents": [
+    "Dataset_5971.csv"
+  ],
+  "publisher_counts": {
+    "ham": 4844,
+    "spam": 489,
+    "smishing": 638
+  }
+}

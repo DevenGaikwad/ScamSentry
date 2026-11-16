@@ -1,0 +1,20 @@
+[
+  {
+    "variant": "debug",
+    "bytes": 58813148,
+    "sha256": "95c638f8d645d3c8f347f9833796cb681ee7743c6cda54ab9c3d6e6271b993aa",
+    "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+    "model_matches": true,
+    "bundled_latin_OCR": true,
+    "apache_license_present": true
+  },
+  {
+    "variant": "release",
+    "bytes": 45741083,
+    "sha256": "19317ea86ac6e3f49a90418bd43acdfc78755532757f583648be24108df2ec50",
+    "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+    "model_matches": true,
+    "bundled_latin_OCR": true,
+    "apache_license_present": true
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "records": 5740,
+  "residual_email_patterns": 0,
+  "residual_digits": 0,
+  "notes": [
+    "Names and addresses cannot be reliably removed by regex; no raw records redistributed.",
+    "Privacy transforms are also applied on phone before model features; rules inspect original input."
+  ]
+}

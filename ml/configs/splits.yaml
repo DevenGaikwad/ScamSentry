@@ -1,0 +1,4 @@
+input: data/processed/messages.json
+output: artifacts/splits.json
+seed: 42
+protocol_id: ss-group-v1

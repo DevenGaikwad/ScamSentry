@@ -1,0 +1,38 @@
+{
+  "run_id": "baseline_char_lr_001",
+  "winner": "char_lr_C2",
+  "deployment_choice": "Best development char LR among bounded C candidates; word/SVC comparisons not automatically deployable",
+  "temperature": 0.5583310287780305,
+  "fit_partition": "train",
+  "calibration_partition": "calibration",
+  "selection_partition": "development",
+  "environment": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "dataset_digest": "9c48acf3d1237e44b403b9cc675c758b4e834ba89b795856dcf1bf327c078e13",
+  "split_digest": "34781f082c5b76e75b8ada075a7dec1385e90f58d104444a4810e1491ead6cf9",
+  "config": {
+    "run_id": "baseline_char_lr_001",
+    "protocol_id": "ss-group-v1",
+    "seed": 42,
+    "min_df": 2,
+    "max_features": 20000,
+    "ngram_low": 3,
+    "ngram_high": 5,
+    "candidate_C": [
+      2.0,
+      4.0
+    ],
+    "policy_confidence": 0.62,
+    "policy_margin": 0.18
+  },
+  "final_test_accessed": false,
+  "wall_seconds": 4.805970448000153,
+  "training_code_commit": null,
+  "training_code_state": "Uncommitted initial workspace at training time; final source snapshot linked in artifact inventory",
+  "source_manifest_digest": "082f9ba2755b0539c47d45e61f77e6692a8061546df5d1d3f947c5af58abd8f3",
+  "environment_report": "../../environment.json",
+  "environment_snapshot_sha256": "d42e980ad14311af5d039607238e04c48dc666bc9ea1e1d38b0f4ac3028c578e"
+}

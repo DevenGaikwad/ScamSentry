@@ -1,0 +1,88 @@
+{
+  "variant": "debug merged manifest",
+  "permissions": [
+    "in.deven.scamsentry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "components": [
+    {
+      "type": "activity",
+      "name": "in.deven.scamsentry.MainActivity",
+      "exported": "true",
+      "permission": null
+    },
+    {
+      "type": "provider",
+      "name": "androidx.core.content.FileProvider",
+      "exported": "false",
+      "permission": null
+    },
+    {
+      "type": "activity",
+      "name": "androidx.compose.ui.tooling.PreviewActivity",
+      "exported": "true",
+      "permission": null
+    },
+    {
+      "type": "service",
+      "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+      "exported": "false",
+      "permission": null
+    },
+    {
+      "type": "provider",
+      "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+      "exported": "false",
+      "permission": null
+    },
+    {
+      "type": "activity",
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": "false",
+      "permission": null
+    },
+    {
+      "type": "service",
+      "name": "androidx.room.MultiInstanceInvalidationService",
+      "exported": "false",
+      "permission": null
+    },
+    {
+      "type": "provider",
+      "name": "androidx.startup.InitializationProvider",
+      "exported": "false",
+      "permission": null
+    },
+    {
+      "type": "activity",
+      "name": "androidx.activity.ComponentActivity",
+      "exported": "true",
+      "permission": null
+    },
+    {
+      "type": "receiver",
+      "name": "androidx.profileinstaller.ProfileInstallReceiver",
+      "exported": "true",
+      "permission": "android.permission.DUMP"
+    },
+    {
+      "type": "service",
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": "false",
+      "permission": null
+    },
+    {
+      "type": "service",
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "exported": "false",
+      "permission": "android.permission.BIND_JOB_SERVICE"
+    },
+    {
+      "type": "receiver",
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": "false",
+      "permission": null
+    }
+  ],
+  "network_permission_absent": true,
+  "restricted_inbox_gallery_permissions_absent": true
+}

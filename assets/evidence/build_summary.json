@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-16",
+  "command": "Gradle9.3.1 :core-analysis:test :app:assembleDebug :app:assembleDebugAndroidTest :app:lintDebug :app:assembleRelease",
+  "status": "pass",
+  "host_jvm_tests": 5,
+  "golden_fixtures": 24,
+  "lint_errors": 0,
+  "lint_warnings": 11,
+  "lint_warning_types": [
+    "GradleDependency",
+    "ModifierParameter",
+    "NewerVersionAvailable",
+    "OldTargetApi"
+  ],
+  "debug_apk": "assembled; v2 development signature verified",
+  "instrumentation_test_apk": "assembled, 6 tests compiled; device execution blocked",
+  "release_apk": "R8 minified, resources shrunk, unsigned APK assembled",
+  "APK_native_zip_alignment": "16 KB alignment check passed for both variants; ELF/device compatibility remains a separate check",
+  "not_claimed": [
+    "physical-device execution",
+    "on-device parity",
+    "fresh offline OCR",
+    "runtime screenshots",
+    "phone latency",
+    "public signing",
+    "remote CI execution",
+    "GitHub publication"
+  ]
+}

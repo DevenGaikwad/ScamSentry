@@ -1,0 +1,83 @@
+android/app/build.gradle.kts:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 36
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdk specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdk is
+   less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdk to the highest available value. Then
+   test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+android/gradle/libs.versions.toml:9: Warning: A newer version of androidx.navigation:navigation-compose than 2.9.5 is available: 2.10.2 [GradleDependency]
+navigation = "2.9.5"
+             ~~~~~~~
+android/gradle/libs.versions.toml:10: Warning: A newer version of androidx.room:room-compiler than 2.8.3 is available: 2.8.5 [GradleDependency]
+room = "2.8.3"
+       ~~~~~~~
+android/gradle/libs.versions.toml:10: Warning: A newer version of androidx.room:room-ktx than 2.8.3 is available: 2.8.5 [GradleDependency]
+room = "2.8.3"
+       ~~~~~~~
+android/gradle/libs.versions.toml:10: Warning: A newer version of androidx.room:room-runtime than 2.8.3 is available: 2.8.5 [GradleDependency]
+room = "2.8.3"
+       ~~~~~~~
+android/gradle/libs.versions.toml:10: Warning: A newer version of androidx.room:room-testing than 2.8.3 is available: 2.8.5 [GradleDependency]
+room = "2.8.3"
+       ~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+android/gradle/libs.versions.toml:3: Warning: A newer version of org.jetbrains.kotlin.plugin.compose than 2.4.10 is available: 2.4.21 [NewerVersionAvailable]
+kotlin = "2.4.10"
+         ~~~~~~~~
+android/gradle/libs.versions.toml:12: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-play-services than 1.10.2 is available: 1.11.0 [NewerVersionAvailable]
+coroutines = "1.10.2"
+             ~~~~~~~~
+android/gradle/libs.versions.toml:15: Warning: A newer version of org.json:json than 20250517 is available: 20260814 [NewerVersionAvailable]
+json = "20250517"
+       ~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+android/app/src/main/java/in/deven/scamsentry/ui/App.kt:50: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+@Composable fun Mark(kind: String="shield", color: Color=Studio.Blue, modifier: Modifier=Modifier.size(24.dp)) {
+                                                                      ~~~~~~~~
+android/app/src/main/java/in/deven/scamsentry/ui/App.kt:50: Warning: Optional Modifier parameter should have a default value of Modifier [ModifierParameter from androidx.compose.ui]
+@Composable fun Mark(kind: String="shield", color: Color=Studio.Blue, modifier: Modifier=Modifier.size(24.dp)) {
+                                                                      ~~~~~~~~
+
+   Explanation for issues of type "ModifierParameter":
+   The first (or only) Modifier parameter in a Composable function should
+   follow the following rules:
+   - Be named modifier
+   - Have a type of Modifier
+   - Either have no default value, or have a default value of Modifier
+   - If optional, be the first optional parameter in the parameter list
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.ui
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+0 errors, 11 warnings

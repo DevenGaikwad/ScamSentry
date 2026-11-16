@@ -1,0 +1,26 @@
+[
+  {
+    "path": "android/app/src/main/res/font/inter.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/inter",
+    "license": "SIL-OFL-1.1",
+    "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+    "bytes": 876576,
+    "checked_at": "2026-11-16"
+  },
+  {
+    "path": "android/app/src/main/res/font/space_grotesk.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/spacegrotesk",
+    "license": "SIL-OFL-1.1",
+    "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "bytes": 136676,
+    "checked_at": "2026-11-16"
+  },
+  {
+    "path": "android/gradle/wrapper/gradle-wrapper.jar",
+    "source": "https://github.com/gradle/gradle/tree/v9.3.1",
+    "license": "Apache-2.0",
+    "sha256": "b3a875ddc1f044746e1b1a55f645584505f4a10438c1afea9f15e92a7c42ec13",
+    "bytes": 46175,
+    "checked_at": "2026-11-16"
+  }
+]
