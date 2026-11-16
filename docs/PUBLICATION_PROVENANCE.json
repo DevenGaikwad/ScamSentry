@@ -1,0 +1,12 @@
+{
+  "original_local_baseline_commit": "499fa7879d499a715306424d0e95da2b2c554158",
+  "original_archive_sha256": "fbfc705ce7959c5ae48c96942475c45f3d39416189150e2123888f52f6766dca",
+  "initial_remote_readme_commit": "f35b4836f5b7fad6c0a8d5a1b1b61806a63ca375",
+  "repository": "DevenGaikwad/ScamSentry",
+  "import_note": "The connector imports reviewed Git trees onto the existing public repository. Local original history is retained. Imported commit identities are distinct and are not presented as the original root commit.",
+  "raw_data_published": false,
+  "production_keys_published": false,
+  "remote_baseline_import_commit": "111450b974c8a0ffd153af5e908a89c29f60769c",
+  "remote_baseline_tree": "f6b1f1a7ff8b70f2bb93299143d78789f6a93e0c",
+  "baseline_tree_identical_to_original": true
+}

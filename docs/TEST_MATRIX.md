@@ -1,35 +1,25 @@
-# Acceptance evidence, 16 November 2026
+# V2 verification matrix
 
-Five host JVM tests include 24 cross-language fixtures; the Python suite has 13 passing tests. Android instrumentation tests compile. Their device execution has not been observed. Two headless software-emulator startup attempts did not produce a usable installed application; no physical phone or hardware acceleration is available. Do not equate compiled tests with passed workflows.
+Status is evidence-specific. Host checks do not imply device checks. Historical v1 evidence is preserved under `docs/history/0.1.0` and existing baseline evidence files; new results use `assets/evidence/v2`.
 
-| Acceptance case | Observed evidence | Remaining verification |
+| Area | Executed / prepared checks | Evidence or status |
 |---|---|---|
-| E01 ordinary message | Frozen fictional fixture and Python/JVM policy parity | Native workflow |
-| E02 legitimate urgency | Rule/policy negative-control test; fixture remains lower observed | Native comprehension |
-| E03 secret request | Rule recognizes request; golden policy higher even when model misses it | Actual result UI |
-| E04 promotion | Separate promotional class; fixture checking state | Actual result UI |
-| E05 quoted discussion | Secret rule avoids configured educational context; fixture lower observed | Real-user comprehension and broader quoted cases |
-| E06 standalone address | Offline parsing/unit fixtures; app withholds message probability for standalone URLs | Android orchestration runtime |
-| E07 user-info deception | Actual host and user-info observation checked in both languages | Native display/accessibility |
-| E08 IDN | Unicode/encoded host fixtures and normalization checks | Native copy/assistive reading |
-| E09 multiple addresses | Independent extraction and trailing punctuation unit tests | Native long/multiple-link layout |
-| E10 unsupported scheme | intent-like address rejected by parser, no external launch path | Device intent behavior |
-| E11 clean screenshot | Original PNG and bundled OCR assets; OCR instrumentation compiles | Fresh installed OCR and picker workflow |
-| E12 OCR-altered link | Editable review, versioned input, quality warning implemented | Actual correction workflow |
-| E13 unreadable screenshot | Original blank fixture, empty extraction recovery implemented | Device extraction/cancellation |
-| E14 malformed/oversized image | Byte/dimension/MIME bounds and typed errors; malformed test compiles | Content-provider/decoder stress on phone |
-| E15 unsupported language | Script/length limits and unable-state unit test | Native rendering/comprehension |
-| E16 obfuscation | Frozen held-out perturbations measured | Severe character substitutions fail; new independent improvement protocol needed |
-| E17 cold/warm sharing | Defensive text/plain handler and review path implemented | Device sharing and process restart |
-| E18 new input race | Version check, cancellation, serialized OCR task lifetime implemented | Deliberate lifecycle/race instrumentation |
-| E19 history off | Entity schema has no raw text/image/host; off default/manual save | Device storage inspection |
-| E20 save/delete/migrate | v1/v2 schemas, migration and manual-history workflow tests compile | Runtime migration/settings/race/deletion checks |
-| E21 corrupt model | Digest/schema guard and corruption regression pass on host | Android unavailable-result UI |
-| E22 fresh offline launch | Classifier/OCR/font resources bundled; no Internet permission | Fresh physical install with connectivity disabled |
-| E23 redacted export | Fixed metadata-only preview; fixture test compiles; narrow provider | Device preview/share URI/cleanup |
-| E24 large fonts/TalkBack | 22 text contrast pairings pass; semantics in source | Actual font-scale and assistive review |
-| E25 release consistency | R8 assembly, model-byte comparison, manifest inspection | Installed minified build and deliberate owner signing |
+| Context rules | Unrelated example labels, local negation, attached quotes, warning then new request, exception clauses | Python regressions and Kotlin ContextRulesV2Test pass |
+| Numeric baseline | 24 archived normalized/features/norm/logits/calibrated estimates and v1 categories | Host ParityTest pass; original bundle unchanged |
+| Complete domain contract | 53 fictional cases, including URL-only, unsupported text, absent model, short OCR, weak/repetitive input, exactly 40 and >40 links, malformed numeric/IDN/IPv6 hosts | Python-generated pack; Kotlin FullContractTest pass; browser parity pass |
+| Word/hybrid export | Actual tiny fictional scikit-learn fit and export; both blocks, norms, logits, estimates | Python, Kotlin and TypeScript synthetic-reference tests pass |
+| Public fit/export | Tiny real LR fit; staged metadata; malformed class/shape/threshold/numeric contracts | Public Python tests; no private joblib skip |
+| Metrics | Known matrix, absent classes, no predicted positives, imbalance, deferral denominators | metrics_v2 tests pass |
+| Distribution validation | Non-Git archive walk, repository Git failure, raw data, synthetic token/private-key markers, keystore-like path, symlink escape | Explicit stage output and isolated Python regressions |
+| Android build | Core + app unit tests, lint, debug/test/release APKs and benchmark assembly | In progress; actual reports determine acceptance |
+| History | Transactional insert/prune; schema 2→3 prunes legacy rows; v1 summaries preserved | Native instrumentation prepared; requires device execution |
+| OCR | Original fictional image, malformed bytes, all 8 EXIF pixel layouts, reviewed text | Native instrumentation prepared; no physical-device claim |
+| Lifecycle / concurrency | Rotation keeps draft, new share replaces pending input, cancellation/version guards | Native instrumentation prepared; browser stale-result workflow prepared |
+| Export | Redaction, current version metadata, independent files and expired-file pruning | Host app unit tests and native tests prepared; sharing errors visible |
+| Browser workflow | Real worker, desktop/mobile layout, corrupt model, local-input request checks, redacted report, navigation | Production Playwright suite; local IPC blocked; CI required |
+| Browser OCR | No compatible fully reviewed/validated browser asset chain established | Deferred; explicit UI limitation |
+| Physical performance | Cold/warm startup, inference, OCR, scrolling, heap, 16 KB runtime, fresh offline operation | Blocked: no physical phone / local KVM |
+| Windows invocation | Regenerated official wrapper; SDK/Windows instructions retained | Batch execution not run on this Linux host |
+| Remote CI / release | Independent Python/archive, Android, browser, KVM emulator and explicit preview publication jobs | Awaiting public source push and observed run |
 
-Additional parser regression: a bare address with an unfamiliar final TLD must display the complete host rather than truncate at an earlier familiar suffix. This defensive fix changes neither model parameters nor the frozen benchmark's fitted preprocessing. No final-test retuning was performed.
-
-Device matrix: Linux host/JVM verified as recorded; headless API30 x86_64 TCG bootstrap blocked; physical Android device unavailable. No universal Android compatibility, OCR confidence, battery percentage, production signing, remote CI success or usability-study result is claimed.
+Browser test canaries and screenshots are fictional. No private input is included in log artifacts. A CI emulator is functional evidence, not a phone performance benchmark. APK signature/ZIP/ELF checks and runtime page-size behavior have independent outcomes.

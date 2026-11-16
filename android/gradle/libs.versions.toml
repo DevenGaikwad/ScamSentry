@@ -1,14 +1,14 @@
 [versions]
-agp = "9.1.1"
-kotlin = "2.4.10"
+agp = "9.5.1"
+kotlin = "2.4.21"
 ksp = "2.3.10"
 compose-bom = "2026.09.00"
 core = "1.17.0"
-activity = "1.11.0"
-lifecycle = "2.9.4"
+activity = "1.13.0"
+lifecycle = "2.11.0"
 navigation = "2.9.5"
-room = "2.8.3"
-datastore = "1.1.7"
+room = "2.8.5"
+datastore = "1.3.0"
 coroutines = "1.10.2"
 mlkit = "16.0.1"
 junit = "4.13.2"
@@ -18,6 +18,10 @@ test-ext = "1.3.0"
 test-runner = "1.7.0"
 
 [libraries]
+compose-window = { module = "androidx.compose.material3:material3-window-size-class", version = "1.4.0" }
+profileinstaller = { module = "androidx.profileinstaller:profileinstaller", version = "1.4.1" }
+macrobenchmark = { module = "androidx.benchmark:benchmark-macro-junit4", version = "1.5.0" }
+uiautomator = { module = "androidx.test.uiautomator:uiautomator", version = "2.3.0" }
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "core" }
 androidx-activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 androidx-lifecycle = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
@@ -31,7 +35,7 @@ compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-
 compose-ui = { module = "androidx.compose.ui:ui" }
 compose-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
-compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-material3 = { module = "androidx.compose.material3:material3", version = "1.4.0" }
 compose-ui-test = { module = "androidx.compose.ui:ui-test-junit4" }
 compose-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
@@ -45,6 +49,7 @@ androidx-test-runner = { module = "androidx.test:runner", version.ref = "test-ru
 androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 
 [plugins]
+android-test = { id = "com.android.test", version.ref = "agp" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

@@ -1,0 +1,117 @@
+{
+  "config": {
+    "protocol_id": "ss-exploratory-v2",
+    "run_id": "exploratory_20261116_01",
+    "seed": 42,
+    "folds": 3,
+    "bootstrap": 300,
+    "candidates": [
+      {
+        "name": "word_c1",
+        "family": "word",
+        "C": 1,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "budget": 15000,
+        "word_range": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "word_c4",
+        "family": "word",
+        "C": 4,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "budget": 20000,
+        "word_range": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "word_unweighted",
+        "family": "word",
+        "C": 4,
+        "class_weight": null,
+        "min_df": 1,
+        "budget": 20000,
+        "word_range": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "char_robust_c2",
+        "family": "char",
+        "C": 2,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "budget": 20000,
+        "noise": 0.15
+      },
+      {
+        "name": "char_robust_c4",
+        "family": "char",
+        "C": 4,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "budget": 20000,
+        "noise": 0.3
+      },
+      {
+        "name": "hybrid_c1",
+        "family": "hybrid",
+        "C": 1,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "budget": 20000,
+        "weights": [
+          0.65,
+          0.35
+        ],
+        "word_range": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "hybrid_c4",
+        "family": "hybrid",
+        "C": 4,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "budget": 20000,
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "word_range": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "hybrid_word_heavy",
+        "family": "hybrid",
+        "C": 4,
+        "class_weight": null,
+        "min_df": 2,
+        "budget": 20000,
+        "weights": [
+          0.35,
+          0.65
+        ],
+        "word_range": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  "plan_sha256": "42bb6a2c5975f678da7769ea61d966fdacbb3ed2085b5e3157afc7445cde5367",
+  "config_sha256": "90d726fa842634e05c7299c9698f050b659793012caf1755af3d9e914b99c40f",
+  "status": "frozen before fits",
+  "created_at": "2026-11-16"
+}

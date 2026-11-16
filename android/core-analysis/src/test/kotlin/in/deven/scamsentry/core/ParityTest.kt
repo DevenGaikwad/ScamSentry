@@ -27,7 +27,7 @@ class ParityTest {
                 assertEquals(f.getJSONArray("logits").getDouble(k), got.logits[k], 1e-6)
                 assertTrue("probability parity $i/$k: $diff", diff < 1e-6)
             }
-            val category = Policy.decide(text, got.probabilities, Rules.inspect(text), UrlInspector.inspect(text), model.confidence, model.margin)
+            val category = Policy.decide(text, got.probabilities, LegacyRulesV1.inspect(text), UrlInspector.inspect(text), model.confidence, model.margin)
             assertEquals(f.getString("category"), category.wire)
         }
         val report = JSONObject().put("fixtures",fixtures.length()).put("max_probability_difference",maxDifference).put("tolerance",1e-6).put("status","pass").put("environment","Host JVM; Android device execution pending")

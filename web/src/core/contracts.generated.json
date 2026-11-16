@@ -1,0 +1,45 @@
+{
+  "limitations": {
+    "model_unavailable": "The validated message model is unavailable. Only local observations are available.",
+    "unsupported_scope": "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+    "short_ocr": "Very little OCR text was available. Replace the image or enter a complete message.",
+    "ocr_review": "OCR characters can be mistaken. Review the extracted text before relying on observations.",
+    "weak_features": "Too few usable model features were found for reliable statistical interpretation.",
+    "repetitive_input": "Highly repetitive text is outside the evaluated message scope.",
+    "standalone_url": "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+    "link_limit": "Only the first 40 addresses were inspected. Shorten the input to inspect every destination.",
+    "research_scope": "This historical research model cannot verify the sender or guarantee legitimacy.",
+    "lexical_only": "Links were inspected as text. No destination or reputation service was contacted.",
+    "invalid_input": "Enter a valid nonempty excerpt of at most 4,000 Unicode code points."
+  },
+  "rules": [
+    {
+      "code": "secret_request",
+      "severity": "high",
+      "title": "Request for a secret",
+      "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel.",
+      "pattern": "\\b(?:share|send|tell|reveal|reply\\s+with|provide|give)\\b.{0,55}\\b(?:otp|one[ -]time (?:code|password)|pin|password|verification code)\\b"
+    },
+    {
+      "code": "payment_request",
+      "severity": "caution",
+      "title": "Payment request",
+      "detail": "Check the recipient and reason independently before sending money.",
+      "pattern": "\\b(?:pay|transfer|deposit|send money|payment required|processing fee)\\b"
+    },
+    {
+      "code": "urgency",
+      "severity": "info",
+      "title": "Time pressure",
+      "detail": "A deadline alone does not establish fraud. Take time to verify unexpected requests.",
+      "pattern": "\\b(?:urgent|immediately|within \\d+ (?:hour|minute)|suspend|blocked|last chance)\\b"
+    },
+    {
+      "code": "reward",
+      "severity": "info",
+      "title": "Reward or offer",
+      "detail": "Offers can be legitimate advertising. An unexpected prize still deserves independent checking.",
+      "pattern": "\\b(?:won|winner|prize|reward|congratulations|offer|discount)\\b"
+    }
+  ]
+}

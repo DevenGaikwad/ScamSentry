@@ -1,0 +1,376 @@
+[
+  {
+    "config": {
+      "name": "word_c1",
+      "family": "word",
+      "C": 1,
+      "class_weight": "balanced",
+      "min_df": 2,
+      "budget": 15000,
+      "word_range": [
+        1,
+        2
+      ]
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.8621790534991111,
+        "smishing_recall": 0.8181818181818182,
+        "ordinary_to_smishing": 0.007238883143743537,
+        "fit_seconds": 0.5079019840013643,
+        "warnings": [],
+        "features": 6254
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.899818537323969,
+        "smishing_recall": 0.91,
+        "ordinary_to_smishing": 0.005170630816959669,
+        "fit_seconds": 0.6143376009968051,
+        "warnings": [],
+        "features": 6131
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.8665725940095083,
+        "smishing_recall": 0.74,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 0.6124067790005938,
+        "warnings": [],
+        "features": 6081
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.8761900616108628,
+    "eligible": true
+  },
+  {
+    "config": {
+      "name": "word_c4",
+      "family": "word",
+      "C": 4,
+      "class_weight": "balanced",
+      "min_df": 2,
+      "budget": 20000,
+      "word_range": [
+        1,
+        2
+      ]
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.8758428854254497,
+        "smishing_recall": 0.8383838383838383,
+        "ordinary_to_smishing": 0.005170630816959669,
+        "fit_seconds": 0.539795551001589,
+        "warnings": [],
+        "features": 6254
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.9037989369121141,
+        "smishing_recall": 0.91,
+        "ordinary_to_smishing": 0.004136504653567736,
+        "fit_seconds": 0.3982673619975685,
+        "warnings": [],
+        "features": 6131
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.8720327604883864,
+        "smishing_recall": 0.76,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 0.9391392709985666,
+        "warnings": [],
+        "features": 6081
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.88389152760865,
+    "eligible": true
+  },
+  {
+    "config": {
+      "name": "word_unweighted",
+      "family": "word",
+      "C": 4,
+      "class_weight": null,
+      "min_df": 1,
+      "budget": 20000,
+      "word_range": [
+        1,
+        2
+      ]
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.8608417718094481,
+        "smishing_recall": 0.7676767676767676,
+        "ordinary_to_smishing": 0.002068252326783868,
+        "fit_seconds": 0.6360415630006173,
+        "warnings": [],
+        "features": 20000
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.8687516582339169,
+        "smishing_recall": 0.84,
+        "ordinary_to_smishing": 0.004136504653567736,
+        "fit_seconds": 1.0800198920005641,
+        "warnings": [],
+        "features": 20000
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.8579465774653768,
+        "smishing_recall": 0.67,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 0.6573227129993029,
+        "warnings": [],
+        "features": 20000
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.8625133358362472,
+    "eligible": false
+  },
+  {
+    "config": {
+      "name": "char_robust_c2",
+      "family": "char",
+      "C": 2,
+      "class_weight": "balanced",
+      "min_df": 2,
+      "budget": 20000,
+      "noise": 0.15
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.8785135197664432,
+        "smishing_recall": 0.8484848484848485,
+        "ordinary_to_smishing": 0.0031023784901758012,
+        "fit_seconds": 3.4734201749997737,
+        "warnings": [],
+        "features": 20000
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.8809119273473393,
+        "smishing_recall": 0.82,
+        "ordinary_to_smishing": 0.001034126163391934,
+        "fit_seconds": 3.6894975930008513,
+        "warnings": [],
+        "features": 20000
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.8622543105665731,
+        "smishing_recall": 0.68,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 3.3392786930016882,
+        "warnings": [],
+        "features": 20000
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.8738932525601185,
+    "eligible": false
+  },
+  {
+    "config": {
+      "name": "char_robust_c4",
+      "family": "char",
+      "C": 4,
+      "class_weight": "balanced",
+      "min_df": 2,
+      "budget": 20000,
+      "noise": 0.3
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.8785658909147748,
+        "smishing_recall": 0.8484848484848485,
+        "ordinary_to_smishing": 0.0031023784901758012,
+        "fit_seconds": 2.3815017790002457,
+        "warnings": [],
+        "features": 20000
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.8919460744975948,
+        "smishing_recall": 0.82,
+        "ordinary_to_smishing": 0.001034126163391934,
+        "fit_seconds": 2.581180556000618,
+        "warnings": [],
+        "features": 20000
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.8864455586509924,
+        "smishing_recall": 0.74,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 3.04072980699857,
+        "warnings": [],
+        "features": 20000
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.8856525080211206,
+    "eligible": true
+  },
+  {
+    "config": {
+      "name": "hybrid_c1",
+      "family": "hybrid",
+      "C": 1,
+      "class_weight": "balanced",
+      "min_df": 2,
+      "budget": 20000,
+      "weights": [
+        0.65,
+        0.35
+      ],
+      "word_range": [
+        1,
+        2
+      ]
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.8471395171305285,
+        "smishing_recall": 0.8383838383838383,
+        "ordinary_to_smishing": 0.0062047569803516025,
+        "fit_seconds": 1.8534384469967335,
+        "warnings": [],
+        "features": 26254
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.8549331453598069,
+        "smishing_recall": 0.8,
+        "ordinary_to_smishing": 0.004136504653567736,
+        "fit_seconds": 2.0062977399975352,
+        "warnings": [],
+        "features": 26131
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.840044388387196,
+        "smishing_recall": 0.74,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 1.5609979830005614,
+        "warnings": [],
+        "features": 26081
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.8473723502925105,
+    "eligible": false
+  },
+  {
+    "config": {
+      "name": "hybrid_c4",
+      "family": "hybrid",
+      "C": 4,
+      "class_weight": "balanced",
+      "min_df": 2,
+      "budget": 20000,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "word_range": [
+        1,
+        2
+      ]
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.873852877031044,
+        "smishing_recall": 0.8484848484848485,
+        "ordinary_to_smishing": 0.007238883143743537,
+        "fit_seconds": 1.9163468500009913,
+        "warnings": [],
+        "features": 26254
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.8948420273022606,
+        "smishing_recall": 0.89,
+        "ordinary_to_smishing": 0.004136504653567736,
+        "fit_seconds": 2.111597447998065,
+        "warnings": [],
+        "features": 26131
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.8630294930729367,
+        "smishing_recall": 0.75,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 2.570062943999801,
+        "warnings": [],
+        "features": 26081
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.8772414658020805,
+    "eligible": true
+  },
+  {
+    "config": {
+      "name": "hybrid_word_heavy",
+      "family": "hybrid",
+      "C": 4,
+      "class_weight": null,
+      "min_df": 2,
+      "budget": 20000,
+      "weights": [
+        0.35,
+        0.65
+      ],
+      "word_range": [
+        1,
+        2
+      ]
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "macro_f1": 0.8444003955032592,
+        "smishing_recall": 0.7474747474747475,
+        "ordinary_to_smishing": 0.001034126163391934,
+        "fit_seconds": 3.7595017359999474,
+        "warnings": [],
+        "features": 26254
+      },
+      {
+        "fold": 1,
+        "macro_f1": 0.8758050607107211,
+        "smishing_recall": 0.85,
+        "ordinary_to_smishing": 0.002068252326783868,
+        "fit_seconds": 3.894573958001274,
+        "warnings": [],
+        "features": 26131
+      },
+      {
+        "fold": 2,
+        "macro_f1": 0.8582920514545492,
+        "smishing_recall": 0.66,
+        "ordinary_to_smishing": 0.0,
+        "fit_seconds": 3.461467608998646,
+        "warnings": [],
+        "features": 26081
+      }
+    ],
+    "status": "PASS",
+    "mean_macro_f1": 0.8594991692228432,
+    "eligible": false
+  }
+]

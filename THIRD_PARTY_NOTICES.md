@@ -22,3 +22,11 @@ The original icon, drawing-code symbols, interface, fictional demo scenarios, pi
 Before any public release, inspect final merged dependencies and their notices, perform the recorded rights/privacy review, and manage a deliberate signing identity. This preview is not a claim of a completed legal audit of every underlying public message.
 
 The full Apache 2.0 licence is provided in `assets/licenses/Apache-2.0.txt` and bundled in the APK under `assets/licenses/`. Font licence texts are also bundled.
+
+## Browser companion added in 0.2.0
+
+React and React DOM 19.3.1 are MIT licensed; the React notice is included in `assets/licenses/React-MIT.txt`. TypeScript 6.0.3, Vite 8.3.8 and their pinned build/test dependencies retain their upstream licences in the npm packages and lockfile. Inter and Space Grotesk are self-hosted using the same included SIL OFL notices. No copied bank interface or unlicensed stock illustration is used. The geometric shield is original project SVG/CSS.
+
+The public browser model is byte-identical to the attributed baseline model-derived asset. Mendeley source attribution and CC BY 4.0 conditions remain applicable independently of the project's MIT code licence. No raw training messages, private checkpoints, user messages or screenshots are hosted. Research-only toy fixtures are explicitly fictional fit/export tests and are never production fallback assets.
+
+Browser OCR assets are not distributed in this release. Tesseract worker/WASM/language assets were not silently downloaded as part of a user analysis. Android ML Kit terms and bundled-model notices continue to apply to the native screenshot workflow.

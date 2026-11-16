@@ -1,37 +1,175 @@
-name: Validate local app and model contracts
-on: [push, pull_request, workflow_dispatch]
+name: Verify ScamSentry preview
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   python:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - uses: actions/setup-python@v5.6.0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.12'
+          cache: pip
+          cache-dependency-path: ml/requirements-lock.txt
       - run: python -m pip install -r ml/requirements-lock.txt
       - run: python -m pip install --no-deps -e ml
       - run: python -m compileall -q ml/src scripts
       - run: python -m pytest ml/tests -q
-      - run: python scripts/validate_project.py
+      - run: mkdir -p release
+      - run: python scripts/validate_project.py --mode repository --format json --report release/repository_validation.json
       - run: python scripts/check_contrast.py
+      - run: python scripts/package_release.py --source-only
+      - name: Test the actual non-Git source extraction
+        run: |
+          python -m zipfile -e release/ScamSentry_0.2.0-preview_Source.zip /tmp/scamsentry-source
+          chmod +x /tmp/scamsentry-source/ScamSentry/android/gradlew
+          python /tmp/scamsentry-source/ScamSentry/scripts/validate_project.py --mode archive --format json
+          cd /tmp/scamsentry-source/ScamSentry
+          python -m pytest ml/tests -q
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: python-and-archive
+          path: release/
   android:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - uses: actions/setup-java@v4.7.1
+      - uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
         with:
           distribution: temurin
           java-version: '21'
-      - run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
-      - run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"'
-      - run: ./gradlew --no-daemon :core-analysis:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleRelease
-        working-directory: android
-      - uses: actions/upload-artifact@v4.6.2
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
-          name: debug-apk-and-checks
+          python-version: '3.12'
+      - run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"'
+      - run: ./gradlew --no-daemon :core-analysis:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleDebugAndroidTest
+        working-directory: android
+      - run: ./gradlew --no-daemon :app:assembleRelease
+        working-directory: android
+      - run: ./gradlew --no-daemon :benchmark:assembleBenchmark
+        working-directory: android
+      - run: python scripts/sign_research_apks.py
+      - run: python scripts/inspect_v2_apks.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: android-preview
           path: |
-            android/app/build/outputs/apk/debug/*.apk
-            android/app/build/reports/lint-results-debug.html
-            android/core-analysis/build/reports/parity.json
+            release/install/*.apk
+            release/signing_report.json
+            release/apk_inspection.json
+            android/app/build/outputs/apk/debug/*x86_64*.apk
+            android/app/build/outputs/apk/androidTest/debug/*.apk
+            android/app/build/reports/lint-results-debug.*
+            android/core-analysis/build/reports/*.json
+            android/core-analysis/build/test-results/test/*.xml
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.1'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test -- --reporter=json --outputFile=test-results/unit.json
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: browser-evidence
+          path: |
+            web/dist/
+            web/test-results/
+            web/playwright-report/
+            assets/evidence/v2/web_*.png
+            assets/evidence/v2/web_*.json
+  emulator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: android
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Enable KVM on the hosted Linux runner
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"'
+      - uses: ReactiveCircus/android-emulator-runner@1dcd0090116d15e7c562f8db72807de5e036a4ed
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_2
+          disable-animations: true
+          emulator-boot-timeout: 600
+          emulator-options: -no-snapshot -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -memory 2048 -cores 2
+          working-directory: android
+          script: ./gradlew --no-daemon :app:connectedDebugAndroidTest
+      - name: Collect actual instrumentation output
+        if: always()
+        run: |
+          mkdir -p release/device
+          adb pull /sdcard/Android/data/in.deven.scamsentry/files/screenshots release/device/ || true
+          adb logcat -d -t 1500 > release/device/logcat.txt || true
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: emulator-evidence
+          path: |
+            android/app/build/reports/androidTests/
+            android/app/build/outputs/androidTest-results/
+            android/app/build/outputs/connected_android_test_additional_output/
+            release/device/
+  publish-preview:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.repository == 'DevenGaikwad/ScamSentry'
+    needs: [python, android, browser, emulator]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r ml/requirements-lock.txt
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: android-preview
+          path: release/android-artifact
+      - name: Prepare immutable release assets
+        run: |
+          mkdir -p release/install
+          cp release/android-artifact/release/install/*.apk release/install/
+          cp release/android-artifact/release/signing_report.json release/signing_report.json
+          cp release/android-artifact/release/apk_inspection.json release/apk_inspection.json
+          python scripts/package_release.py
+      - name: Publish the authorized research preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: DevenGaikwad/ScamSentry
+        run: |
+          gh release create v0.2.0-preview --target "$GITHUB_SHA" --prerelease --title "ScamSentry 0.2.0 — Research Preview" --notes-file RELEASE_NOTES.md release/install/*.apk release/ScamSentry_0.2.0-preview_Source.zip release/ScamSentry_0.2.0_Research_Preview.zip release/ARTIFACT_INVENTORY.json release/SHA256SUMS.txt release/apk_inspection.json release/archive_validation.json

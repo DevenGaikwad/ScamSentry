@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ScamSentry</string>
+    <string name="nav_analyze">Analyze</string>
+    <string name="nav_history">History</string>
+    <string name="nav_learn">Learn</string>
+    <string name="analyze_message">Analyze message</string>
+    <string name="paste">Paste</string>
+    <string name="clear">Clear</string>
+    <string name="choose_screenshot">Choose a screenshot</string>
+    <string name="replace_screenshot">Replace screenshot</string>
+    <string name="message_description">Message to analyze</string>
+    <string name="settings_description">Settings and model information</string>
+    <string name="cancel">Cancel</string>
+</resources>

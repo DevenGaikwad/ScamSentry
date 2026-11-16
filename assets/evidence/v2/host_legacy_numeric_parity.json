@@ -1,0 +1,7 @@
+{
+  "max_probability_difference": 7.771561172376096E-16,
+  "environment": "Host JVM; Android device execution pending",
+  "tolerance": 1.0E-6,
+  "fixtures": 24,
+  "status": "pass"
+}

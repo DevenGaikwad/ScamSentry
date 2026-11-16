@@ -25,6 +25,9 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
     val onboardingDone = app.settings.onboardingDone.stateIn(viewModelScope,SharingStarted.WhileSubscribed(5000),false)
     val history = app.history.observe().catch { _state.update { s -> s.copy(error="Saved summaries are unavailable. Message analysis still works.") }; emit(emptyList()) }.stateIn(viewModelScope,SharingStarted.WhileSubscribed(5000),emptyList())
     private var work: Job? = null
+    private var previewOwner: OcrDraft? = null
+    private fun releasePreview() { previewOwner?.close(); previewOwner = null }
+    fun exportFailure() { _state.update { it.copy(error="The summary could not be shared. Your analysis is still available; try another destination app.") } }
     private var model: LinearModel? = null
     private var modelTried = false
     private val modelMutex = Mutex()
@@ -63,7 +66,7 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
     }
     fun clear() {
         work?.cancel()
-        _state.value.preview?.recycle()
+        releasePreview()
         _state.value = EditorState(version=_state.value.version+1)
     }
     fun cancel() {
@@ -73,15 +76,21 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
     fun review() { _state.update { it.copy(stage=if(it.preview!=null) Stage.REVIEWING else Stage.EDITING) } }
     fun selectImage(uri: Uri) {
         work?.cancel()
-        _state.value.preview?.recycle()
+        releasePreview()
         val version = _state.value.version+1
         _state.value = EditorState(source="Screenshot",version=version,stage=Stage.EXTRACTING)
         work = viewModelScope.launch {
             try {
                 val draft = ocrMutex.withLock { OcrReader(app).read(uri) }
-                ensureActive()
-                if (_state.value.version==version) _state.update { it.copy(text=draft.text,stage=Stage.REVIEWING,preview=draft.preview,ocrWarning=draft.warning) }
-                else draft.preview.recycle()
+                var transferred = false
+                try {
+                    ensureActive()
+                    if (_state.value.version==version) {
+                        previewOwner = draft
+                        _state.update { it.copy(text=draft.text,stage=Stage.REVIEWING,preview=draft.preview,ocrWarning=draft.warning) }
+                        transferred = true
+                    }
+                } finally { if (!transferred) draft.close() }
             } catch (e: CancellationException) { throw e }
             catch (e: Exception) { if (_state.value.version==version) _state.update { it.copy(stage=Stage.EDITING,error=(e as? InputFailure)?.publicMessage?:"Image text could not be read. Replace it or type the message.") } }
         }
@@ -97,27 +106,13 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
             try {
                 val engine = engine()
                 val result = withContext(Dispatchers.Default) {
-                    val obs = Rules.inspect(snapshot.text)
-                    val addresses = UrlInspector.inspect(snapshot.text)
-                    val standaloneUrl = addresses.size==1 && snapshot.text.trim()==addresses.first().original
-                    val estimate = if(!standaloneUrl && TextContract.scriptSupported(snapshot.text)) engine?.predict(snapshot.text) else null
-                    val poorOcr = snapshot.source=="Screenshot" && snapshot.text.trim().length<20
-                    val noFeatures = estimate!=null && estimate.activeCount==0
-                    val risk = if(standaloneUrl) { if(addresses.first().valid) Risk.CHECKING else Risk.UNABLE } else Policy.decide(snapshot.text,estimate?.probabilities,obs,addresses,engine?.confidence?:.62,engine?.margin?:.18,poorOcr || noFeatures || addresses.size>=40)
-                    AnalysisResult(UUID.randomUUID().toString(),snapshot.version,snapshot.text,snapshot.source,risk,estimate,obs,addresses,buildList {
-                        if(engine==null) add("The bundled message model is unavailable. Only the listed local observations are available. Reinstall the verified APK or edit the input.")
-                        if(!TextContract.scriptSupported(snapshot.text)) add("English messages are the supported research scope. This text is too short or uses a different script; Romanized language detection is also limited.")
-                        if(snapshot.source=="Screenshot") add(if(poorOcr) "Very little OCR text was available; interpretation is limited. Replace the image or enter a complete message." else "Text was extracted from a screenshot and reviewed. A mistaken character can still affect this result.")
-                        if(noFeatures) add("No usable model features were found. A result cannot be inferred reliably from this input.")
-                        if(standaloneUrl) add("Standalone address: lexical observations only. A message-classifier estimate is not a website-risk probability and is not used here.")
-                        if(addresses.size>=40) add("Link analysis is limited to the first 40 addresses. Shorten this input to inspect all destinations.")
-                        add("This historical research model cannot verify the sender or guarantee legitimacy.")
-                        if(addresses.isNotEmpty()) add("Links were inspected as text only. No site was visited or checked against live reputation services.")
-                    },engine?.id?:"unavailable",if(estimate!=null) engine?.contributions(snapshot.text,estimate)?:emptyList() else emptyList())
+                    val domain = AnalysisEngine.analyze(snapshot.text,engine,if (snapshot.source=="Screenshot") "ocr" else "text")
+                    AnalysisResult(UUID.randomUUID().toString(),snapshot.version,snapshot.text,snapshot.source,domain.risk,domain.estimate,domain.observations,domain.urls,domain.limitations,domain.modelId,domain.contributions)
+
                 }
                 ensureActive()
                 if(_state.value.version==snapshot.version) {
-                    _state.value.preview?.recycle()
+                    releasePreview()
                     _state.update { it.copy(result=result,stage=Stage.RESULT,preview=null) }
                 }
             } catch (e: CancellationException) { throw e }
@@ -138,7 +133,7 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
         viewModelScope.launch {
             runCatching { historyMutex.withLock {
                 if(!app.settings.historyEnabled.first()) false else {
-                    app.history.insert(HistoryEntry(result.id,result.completedAt,result.risk.wire,"${result.risk.title}; ${result.observations.size} observed patterns; ${result.urls.size} links. Original content not saved.",result.modelId,inputSource=result.source))
+                    app.history.insert(HistoryEntry(result.id,result.completedAt,result.risk.wire,"${result.risk.title}; ${result.observations.size} observed patterns; ${result.urls.size} links. Original content not saved.",result.modelId,policyVersion=result.policyVersion,inputSource=result.source))
                     true
                 }
             } }.onSuccess { saved -> if(saved && _state.value.result?.id==result.id) _state.update { it.copy(saved=true) } }.onFailure { _state.update { it.copy(error="Summary could not be saved. Your analysis is still available.") } }
@@ -146,5 +141,5 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
     }
     fun delete(id: String) { viewModelScope.launch { runCatching { historyMutex.withLock { app.history.delete(id) } }.onSuccess { if(_state.value.result?.id==id) _state.update { it.copy(saved=false) } }.onFailure { _state.update { it.copy(error="Summary could not be deleted. Try again.") } } } }
     fun clearHistory() { viewModelScope.launch { runCatching { historyMutex.withLock { app.history.clear(); _state.update { it.copy(saved=false) } } }.onFailure { _state.update { it.copy(error="Summaries could not be cleared. Try again.") } } } }
-    override fun onCleared() { _state.value.preview?.recycle(); super.onCleared() }
+    override fun onCleared() { releasePreview() }
 }

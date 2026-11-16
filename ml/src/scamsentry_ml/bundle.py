@@ -19,10 +19,17 @@ def validate(bundle):
     if len(model["idf"]) != n or len(model["coefficients"]) != 3 or any(len(row) != n for row in model["coefficients"]) or len(model["intercept"]) != 3:
         raise ValueError("Invalid parameter shape")
     values = model["idf"] + model["intercept"] + sum(model["coefficients"], []) + [model["temperature"]]
-    if not all(math.isfinite(v) for v in values) or model["temperature"] <= 0 or any(v <= 0 for v in model["idf"]):
+    if not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in values) or model["temperature"] <= 0 or any(v <= 0 for v in model["idf"]):
         raise ValueError("Invalid numeric parameters")
-    if model["ngram_range"] != [3, 5] or not model["sublinear_tf"] or not model["l2_normalize"]:
+    if model["ngram_range"] != [3, 5] or model["sublinear_tf"] is not True or model["l2_normalize"] is not True:
         raise ValueError("Feature contract mismatch")
+    policy=model["policy"]
+    if policy.get("version")!="ordinal_v1": raise ValueError("Unsupported policy version")
+    for key in ("confidence","margin"):
+        value=policy.get(key)
+        if isinstance(value,bool) or not isinstance(value,(int,float)) or not math.isfinite(value) or not 0<=value<=1: raise ValueError(f"Invalid policy {key}")
+    if not isinstance(model['model_id'],str) or not model['model_id'] or model['model_id']!=manifest['model_id']: raise ValueError('Model identity mismatch')
+    if manifest['schema_version']!=1 or manifest['format']!='utf8-json-float64' or manifest['byte_size']!=(Path(bundle)/'model.json').stat().st_size: raise ValueError('Manifest contract mismatch')
     return model
 
 

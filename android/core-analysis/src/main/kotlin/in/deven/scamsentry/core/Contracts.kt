@@ -14,7 +14,7 @@ enum class Risk(val wire: String, val title: String, val description: String) {
     LOWER("lower", "Lower observed risk", "Fewer indicators were found in the supported analysis. This does not verify the sender."),
     UNABLE("unable", "Unable to assess reliably", "The available analysis is limited. Review the input and verify independently.")
 }
-data class AnalysisResult(val id: String, val inputVersion: Long, val text: String, val source: String, val risk: Risk, val estimate: Estimate?, val observations: List<Observation>, val urls: List<UrlObservation>, val limitations: List<String>, val modelId: String, val contributions: List<Contribution>, val completedAt: Long = System.currentTimeMillis())
+data class AnalysisResult(val id: String, val inputVersion: Long, val text: String, val source: String, val risk: Risk, val estimate: Estimate?, val observations: List<Observation>, val urls: List<UrlObservation>, val limitations: List<String>, val modelId: String, val contributions: List<Contribution>, val completedAt: Long = System.currentTimeMillis(), val policyVersion: String = AnalysisEngine.POLICY, val schemaVersion: Int = 2, val normalizerVersion: String = TextContract.VERSION, val observationVersion: String = "local_context_v2")
 
 object TextContract {
     const val MAX_CODEPOINTS = 4000
@@ -64,8 +64,7 @@ object Rules {
     )
     fun inspect(text: String): List<Observation> {
         val normalized = TextContract.normalize(text)
-        val quoted = Regex("\\b(?:example|educational|scam awareness|quoted|warning about|do not share|never share|don't share)\\b").containsMatchIn(normalized)
-        val out = rules.filter { Regex(it.pattern, RegexOption.DOT_MATCHES_ALL).containsMatchIn(normalized) && !(quoted && it.code == "secret_request") }
+        val out = rules.filter { if(it.code=="secret_request") ContextRulesV2.hasActiveRequest(normalized) else Regex(it.pattern, RegexOption.DOT_MATCHES_ALL).containsMatchIn(normalized) }
             .map { Observation(it.code,"rule",it.severity,it.title,it.detail) }.toMutableList()
         if (text.any { it in "\u200b\u200c\u200d\ufeff" }) out.add(Observation("invisible_char", "rule", "caution", "Invisible characters", "Hidden formatting can change text and links. Review the original carefully."))
         return out
@@ -73,35 +72,7 @@ object Rules {
 }
 
 object UrlInspector {
-    private val pattern = Regex("(?iU)\\b(?:https?://|[a-z][a-z0-9+.-]*://|www\\.)[^\\s<>\"\\u200b]+|(?<![@\\w])(?:[a-z0-9-]+\\.)+(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\\.?(?![\\w.-])(?:[/?:#][^\\s<>\"]*)?")
-    fun inspect(text: String): List<UrlObservation> = pattern.findAll(text).take(40).map { m ->
-        val original = m.value.trimEnd('.', ',', ';', '!', ')', ']', '}')
-        try {
-            val candidate = if (original.contains("://")) original else "https://$original"
-            require(!candidate.contains('\\'))
-            val uri = URI(candidate)
-            require(uri.scheme.lowercase() in listOf("http", "https"))
-            val authority = requireNotNull(uri.rawAuthority)
-            val hostPort = authority.substringAfterLast('@')
-            val hostUnicode = if (hostPort.startsWith("[")) hostPort.substringBefore(']').substring(1) else hostPort.substringBefore(':')
-            require(hostUnicode.isNotBlank() && hostUnicode.none { it in "%\\\u200b\u200c\u200d" })
-            val host = if (hostUnicode.contains(':')) hostUnicode.lowercase() else IDN.toASCII(hostUnicode).lowercase()
-            require(host.length <= 253 && host.trimEnd('.').split('.').all { it.isNotEmpty() && it.length <= 63 })
-            require(Regex("[a-z0-9.:-]+").matches(host))
-            val portText = if (hostPort.startsWith("[")) hostPort.substringAfter(']', "").removePrefix(":") else hostPort.substringAfter(':', "")
-            if (portText.isNotEmpty()) require(portText.toInt() in 1..65535)
-            val codes = buildList {
-                if ('@' in authority) add("userinfo")
-                if ("xn--" in host) add("idn")
-                if (uri.scheme == "http") add("unencrypted_scheme")
-                if (host in listOf("bit.ly", "tinyurl.com", "t.co")) add("shortener")
-                if (original.length > 180) add("long_address")
-            }
-            UrlObservation(original, host, codes, true)
-        } catch (_: Exception) {
-            UrlObservation(original, null, listOf("unsupported_or_malformed"), false)
-        }
-    }.toList()
+    fun inspect(text: String): List<UrlObservation> = UrlLexicalV2.extract(text).addresses
 }
 
 object Policy {

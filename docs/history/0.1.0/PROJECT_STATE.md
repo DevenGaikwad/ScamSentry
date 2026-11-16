@@ -1,0 +1,19 @@
+# ScamSentry project state
+
+Owner: Deven Sachin Gaikwad. Started 16 November 2026. Local implementation is authorized; external publication and a permanent signing identity are not yet established. The complete requirements are preserved in IMPLEMENTATION_SPEC.md.
+
+Completed: primary publisher/licence and CSV archive review; verified 5,971 records; 130 records quarantined for conflicting template-group labels and 101 duplicate records reduced; 5,740 usable records; frozen designated-group split 3,444/861/574/861; baseline/MLP comparisons; train-only group CV; temperature calibration; frozen final evaluation; perturbation audit; JSON bundle; native Compose editor/results/history/Learn/settings/about; defensive sharing, bounded bundled OCR, redacted FileProvider export; privacy/threat/design/Windows/faculty/report documentation.
+
+Model: ss-char-lr-0.1.0, C2 char TF-IDF LR, temperature .55833103. Final test macro-F1 .903759, smishing 65/75 recall and 65/69 precision. Severe character substitution is a known failure; no retuning against final test. Test was accessed exactly once; use saved reports. New experiments must not overwrite the frozen run.
+
+Host Kotlin/JVM: 24 Python/Kotlin golden fixtures pass, maximum probability difference 7.77e-16. Python suite initially 13 pass. Test-only pytest updated from 8.4.2 to 9.0.3 after vulnerability audit; follow-up pinned Python audit has no known findings. Primary text contrast pairings: 22 pass 4.5:1.
+
+Resolved build toolchain: AGP 9.1.1, Gradle 9.3.1, Kotlin/Compose compiler 2.4.10, KSP 2.3.10, Compose BOM 2026.09.00, compile SDK 37.0, target 36, min 26, JDK 21. Initial 8.13/BOM combination failed compatibility and was replaced. Tools are temporary outside the project and not distributed. The app model is bundled; source reconstruction does not require training.
+
+Verification: debug APK, Android instrumentation-test APK, R8-minified unsigned release APK and lint completed successfully; lint locale defect fixed. Final verification passed after serialized OCR native-task lifetimes, serialized history/privacy changes, and complete bare-domain parsing were included. All five host tests pass; six Android instrumentation cases compile. Lint has zero errors, with non-fatal warnings in the evidence report. Five host JVM tests and 24 golden fixtures pass. Release manifest contains no Internet/inbox/contact/camera/broad gallery permission. Source and APK model digests match. History schema v2 and v1→v2 migration fixture compile.
+
+Runtime blocker: two attempts to boot a headless API30 x86_64 emulator under software TCG never produced a usable installed app; first startup lost the emulator process, and retry also remained incomplete after extended waiting. No physical phone or hardware acceleration exists. Instrumentation tests are compiled, not claimed executed. Actual screenshots, photo-picker/OCR/lifecycle/TalkBack/backup behavior and phone timings remain blocked. Use the documented checklist on the owner's Windows/Android device.
+
+Delivery artifact: the reviewed archive contains source, available APKs, checksums and evidence. See ARTIFACT_INVENTORY.json at the package root for the exact source commit and hashes. Public GitHub creation/push/release and a permanent signing identity remain outside established local authorization. No emails, private-message collection, purchases, remote inference or public pushes occurred. No model retraining or test retuning is needed for the completed preview.
+
+Useful commands from `ml`: `PYTHONPATH=src python -m pytest`; bundle validate; split verify. Full Android checks from `android`: wrapper `:core-analysis:test :app:assembleDebug :app:assembleDebugAndroidTest :app:testDebugUnitTest :app:lintDebug :app:assembleRelease`. Local network proxy settings are environment-specific and must not enter source. Use docs/SETUP_WINDOWS.md on the owner's laptop.

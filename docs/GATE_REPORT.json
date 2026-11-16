@@ -1,144 +1,140 @@
 {
+  "schema_version": 2,
   "date": "2026-11-16",
-  "release_status": "research_preview_not_final_release",
+  "release_status": "v2_verification_in_progress",
+  "all_gates_passed": false,
   "gates": [
     {
+      "id": "historical_preservation",
+      "status": "PASS",
+      "evidence": "docs/history/0.1.0",
+      "detail": "Original model, test reports, baseline Git tag and archive digest preserved"
+    },
+    {
       "id": "source_eligibility",
-      "status": "pass",
+      "status": "PASS",
       "evidence": "ml/manifests/sources.json",
-      "detail": "Primary archive/CSV and published licence checked; other candidates excluded or conditional."
+      "detail": "Reviewed primary source only; raw data excluded; no permission-email source added"
     },
     {
-      "id": "partition_isolation",
-      "status": "pass",
-      "evidence": "ml/artifacts/splits.json",
-      "detail": "Designated groups and normalized digests isolated; latent campaign independence not proved."
+      "id": "context_regressions",
+      "status": "PASS",
+      "evidence": "ml/tests/test_v2_context.py",
+      "detail": "Local negation and attached educational quotes; unrelated labels cannot globally suppress active requests"
     },
     {
-      "id": "trained_model_evaluation",
-      "status": "pass",
-      "evidence": "ml/artifacts/runs/baseline_char_lr_001/final_test.json",
-      "detail": "Frozen historical benchmark, denominators and uncertainty recorded."
+      "id": "metric_correctness",
+      "status": "PASS",
+      "evidence": "ml/tests/test_v2_metrics.py",
+      "detail": "Fixed-label confusion counts, averages and undefined-denominator handling tested"
     },
     {
-      "id": "robustness_goal",
-      "status": "fail",
+      "id": "ml_optimization",
+      "status": "PASS",
+      "evidence": "ml/artifacts/v2/exploratory_20261116_02/summary.json",
+      "detail": "Eight configurations, grouped folds, calibration, noise slices, threshold tables, paired CIs and resource record completed"
+    },
+    {
+      "id": "model_promotion",
+      "status": "PASS",
+      "evidence": "docs/MODEL_COMPARISON.md",
+      "detail": "Baseline retained; clean/noise trade-offs and missing prospective/device evidence do not justify promotion"
+    },
+    {
+      "id": "baseline_robustness_goal",
+      "status": "FAIL",
       "evidence": "ml/artifacts/robustness.json",
-      "detail": "Severe character substitution drops macro-F1 to .397; no broad robustness claim."
+      "detail": "Known severe substitution failure remains; experimental improvements do not validate broad protection"
     },
     {
-      "id": "export_integrity",
-      "status": "pass",
-      "evidence": "ml/artifacts/bundle/manifest.json",
-      "detail": "Reference and packaged Android model bytes match."
+      "id": "complete_host_kotlin_parity",
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/host_full_contract_parity.json",
+      "detail": "53 complete domain cases; historical 24 numeric fixtures remain separate"
     },
     {
-      "id": "host_kotlin_parity",
-      "status": "pass",
-      "evidence": "assets/evidence/host_jvm_parity.json",
-      "detail": "24 golden fixtures plus complete-host parser boundary regressions pass in the five-test host suite. On-device execution remains separate."
+      "id": "browser_unit_parity",
+      "status": "PASS",
+      "evidence": "web/tests/parity.test.ts",
+      "detail": "57 unit/parity tests executed, including synthetic word/hybrid math"
     },
     {
-      "id": "python_tests",
-      "status": "pass",
-      "evidence": "assets/evidence/python_tests.json",
-      "detail": "13 passed with pytest 9.0.3."
+      "id": "python_public_checks",
+      "status": "PASS",
+      "evidence": "ml/tests",
+      "detail": "68 executed Python tests; private sklearn checkpoint no longer needed"
     },
     {
-      "id": "python_dependency_audit",
-      "status": "pass",
-      "evidence": "assets/evidence/python_dependency_audit.json",
-      "detail": "No known findings in pinned Python requirements after test-tool fix; point-in-time only."
+      "id": "repository_validator",
+      "status": "PASS",
+      "evidence": "ml/src/scamsentry_ml/release_validation.py",
+      "detail": "Actual candidate scan with explicit stages; archive mode has separate tests"
     },
     {
-      "id": "debug_and_test_apk_build",
-      "status": "pass",
-      "evidence": "assets/evidence/build_summary.json",
-      "detail": "Final debug and six-case Android instrumentation APK assembly passed; device tests remain unexecuted."
+      "id": "android_build_group",
+      "status": "BLOCKED",
+      "evidence": "docs/DEPENDENCIES.md",
+      "detail": "Full upgraded Android build checks still running; core tests passed separately"
     },
     {
-      "id": "merged_permissions",
-      "status": "pass",
-      "evidence": "assets/evidence/merged_manifest_release.json",
-      "detail": "No Internet, inbox, camera, contact or broad gallery permission. Protected profile receiver documented."
+      "id": "native_instrumentation",
+      "status": "BLOCKED",
+      "evidence": "android/app/src/androidTest",
+      "detail": "Tests prepared; no local KVM or phone; CI emulator execution pending"
     },
     {
-      "id": "contrast",
-      "status": "pass",
-      "evidence": "assets/evidence/contrast.json",
-      "detail": "22 primary text pairings >=4.5:1; not a full accessibility audit."
+      "id": "browser_workflow_privacy",
+      "status": "BLOCKED",
+      "evidence": "web/tests/e2e/workflow.spec.ts",
+      "detail": "Production tests prepared; local Chromium IPC socket creation denied; CI execution pending"
     },
     {
-      "id": "lint",
-      "status": "pass",
-      "evidence": "assets/evidence/lint-results-debug.txt",
-      "detail": "Final lint: zero errors, 11 non-fatal update/style/target warnings retained."
+      "id": "browser_ocr",
+      "status": "NOT_APPLICABLE",
+      "evidence": "docs/WEB_ARCHITECTURE.md",
+      "detail": "Deferred with explicit UI limitation; no fabricated extraction"
     },
     {
-      "id": "minified_release_build",
-      "status": "pass",
-      "evidence": "assets/evidence/build_summary.json",
-      "detail": "Final R8/minified/resource-shrunk unsigned release assembly passed; model bytes and native ZIP alignment checked. Installed release/device verification and owner signing remain blocked."
+      "id": "physical_phone_benchmark",
+      "status": "BLOCKED",
+      "evidence": "docs/PERFORMANCE.md",
+      "detail": "Benchmark module prepared; no device measurements or generated Baseline Profile claimed"
     },
     {
-      "id": "android_instrumentation",
-      "status": "blocked",
-      "evidence": "docs/DEVICE_CHECKLIST.md",
-      "detail": "Six instrumentation tests compile. Two software-only API30 emulator startup attempts did not yield a usable installed app; physical device unavailable."
+      "id": "windows_wrapper_execution",
+      "status": "BLOCKED",
+      "evidence": "android/gradlew.bat",
+      "detail": "Official wrapper regenerated; Windows execution unavailable on Linux"
     },
     {
-      "id": "fresh_offline_ocr",
-      "status": "blocked",
-      "evidence": "docs/DEVICE_CHECKLIST.md",
-      "detail": "Bundled assets inspected; fresh-device execution not yet observed."
+      "id": "free_hosting_eligibility",
+      "status": "BLOCKED",
+      "evidence": "docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md",
+      "detail": "User account Hobby observed; target team access/entitlement not yet verified"
     },
     {
-      "id": "runtime_screenshots",
-      "status": "blocked",
-      "evidence": "docs/DEVICE_CHECKLIST.md",
-      "detail": "Blocked by unusable emulator boot and absent physical phone. No mock screen is substituted for actual app evidence."
+      "id": "no_cost",
+      "status": "PASS",
+      "evidence": "docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md",
+      "detail": "No paid plan, trial, purchase, domain, credits, database or add-on activated"
     },
     {
-      "id": "physical_device_performance",
-      "status": "blocked",
-      "evidence": "docs/DEVICE_CHECKLIST.md",
-      "detail": "No owned physical phone connected; Python/TCG times are not phone evidence."
+      "id": "github_source_publication",
+      "status": "BLOCKED",
+      "evidence": "docs/PROJECT_STATE.md",
+      "detail": "Correct public repository created; full source push and CI pending"
     },
     {
-      "id": "talkback_large_fonts_lifecycle",
-      "status": "blocked",
-      "evidence": "docs/DEVICE_CHECKLIST.md",
-      "detail": "Semantics and procedures prepared; actual device observation pending."
+      "id": "installable_preview_release",
+      "status": "BLOCKED",
+      "evidence": "scripts/sign_research_apks.py",
+      "detail": "ABI test-signing and verified packaging prepared; actual build/release pending"
     },
     {
-      "id": "history_migration_runtime",
-      "status": "blocked",
-      "evidence": "android/app/src/androidTest/java/in/deven/scamsentry/HistoryMigrationTest.kt",
-      "detail": "v1 and v2 schemas and executable migration fixture prepared; runtime pending."
-    },
-    {
-      "id": "public_signing_publication",
-      "status": "blocked",
-      "evidence": "docs/ROADMAP.md",
-      "detail": "Owner signing identity and publication destination authorization not provided."
-    },
-    {
-      "id": "learned_url_model",
-      "status": "not_applicable",
-      "evidence": "docs/ROADMAP.md",
-      "detail": "Optional research deferred; only lexical observations shipped."
-    },
-    {
-      "id": "multilingual_claim",
-      "status": "not_applicable",
-      "evidence": "docs/MODEL_CARD.md",
-      "detail": "No validated multilingual claim."
-    },
-    {
-      "id": "usability_study",
-      "status": "not_applicable",
-      "evidence": "docs/PILOT_PROTOCOL.md",
-      "detail": "Optional; protocol prepared but no participants or results invented."
+      "id": "full_spec_preserved",
+      "status": "PASS",
+      "evidence": "docs/UPGRADE_SPEC_V2_1.md",
+      "detail": "Original v2 text and additive v2.1 extension retained"
     }
   ]
 }

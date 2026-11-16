@@ -1,0 +1,532 @@
+{
+  "tolerance": 1e-06,
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "fixtures": [
+    {
+      "id": "golden_00",
+      "text": "Let's meet in the library after class.",
+      "normalized": "let's meet in the library after class.",
+      "logits": [
+        2.87219510189302,
+        -0.8491712817027259,
+        -2.0230238201902413
+      ],
+      "probabilities": [
+        0.9985717937292917,
+        0.0012727306617569092,
+        0.0001554756089513155
+      ],
+      "active_count": 80,
+      "norm": 43.71658775650211,
+      "category": "lower",
+      "urls": []
+    },
+    {
+      "id": "golden_01",
+      "text": "Please bring your lab notebook before 9 tomorrow.",
+      "normalized": "please bring your lab notebook before numbertoken tomorrow.",
+      "logits": [
+        0.9462930912096079,
+        -0.8714014299445921,
+        -0.07489166126496216
+      ],
+      "probabilities": [
+        0.833935804843269,
+        0.032155088518794124,
+        0.13390910663793693
+      ],
+      "active_count": 141,
+      "norm": 52.09356276887526,
+      "category": "lower",
+      "urls": []
+    },
+    {
+      "id": "golden_02",
+      "text": "Send your OTP immediately to keep the account active.",
+      "normalized": "send your otp immediately to keep the account active.",
+      "logits": [
+        1.7906398501434684,
+        -1.5655467126864189,
+        -0.2250931374569971
+      ],
+      "probabilities": [
+        0.9713494918183911,
+        0.0023811441585873307,
+        0.0262693640230215
+      ],
+      "active_count": 117,
+      "norm": 55.81573290685272,
+      "category": "higher",
+      "urls": []
+    },
+    {
+      "id": "golden_03",
+      "text": "Fictional shop: 20 percent discount this weekend. Reply STOP to unsubscribe.",
+      "normalized": "fictional shop: numbertoken percent discount this weekend. reply stop to unsubscribe.",
+      "logits": [
+        -0.9231197348132749,
+        1.9559040690484168,
+        -1.0327843342350882
+      ],
+      "probabilities": [
+        0.0057020844644353474,
+        0.9896126772073947,
+        0.004685238328170046
+      ],
+      "active_count": 212,
+      "norm": 73.35867248416818,
+      "category": "checking",
+      "urls": []
+    },
+    {
+      "id": "golden_04",
+      "text": "Educational example: never share your OTP. A scam may say \"send your password\".",
+      "normalized": "educational example: never share your otp. a scam may say \"send your password\".",
+      "logits": [
+        1.3768675307817848,
+        -0.6580154526882875,
+        -0.7188520780934451
+      ],
+      "probabilities": [
+        0.9527739414831454,
+        0.02489821433547309,
+        0.022327844181381503
+      ],
+      "active_count": 142,
+      "norm": 63.845343816879385,
+      "category": "lower",
+      "urls": []
+    },
+    {
+      "id": "golden_05",
+      "text": "https://example.org/notes",
+      "normalized": "urltoken",
+      "logits": [
+        -1.7645823138527916,
+        1.0584319780619251,
+        0.7061503357909247
+      ],
+      "probabilities": [
+        0.004140480082197932,
+        0.6500034126318647,
+        0.34585610728593746
+      ],
+      "active_count": 15,
+      "norm": 15.255394529701125,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "https://example.org/notes",
+          "host": "example.org",
+          "codes": [],
+          "valid": true
+        }
+      ]
+    },
+    {
+      "id": "golden_06",
+      "text": "https://bank.example@review.test/login",
+      "normalized": "https:// emailtoken /login",
+      "logits": [
+        -0.08834990121089703,
+        0.03431424616659218,
+        0.0540356550443597
+      ],
+      "probabilities": [
+        0.2827904178519096,
+        0.3522721173226368,
+        0.36493746482545353
+      ],
+      "active_count": 37,
+      "norm": 32.4190220397774,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "https://bank.example@review.test/login",
+          "host": "review.test",
+          "codes": [
+            "userinfo"
+          ],
+          "valid": true
+        }
+      ]
+    },
+    {
+      "id": "golden_07",
+      "text": "https://xn--bcher-kva.example",
+      "normalized": "urltoken",
+      "logits": [
+        -1.7645823138527916,
+        1.0584319780619251,
+        0.7061503357909247
+      ],
+      "probabilities": [
+        0.004140480082197932,
+        0.6500034126318647,
+        0.34585610728593746
+      ],
+      "active_count": 15,
+      "norm": 15.255394529701125,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "https://xn--bcher-kva.example",
+          "host": "xn--bcher-kva.example",
+          "codes": [
+            "idn"
+          ],
+          "valid": true
+        }
+      ]
+    },
+    {
+      "id": "golden_08",
+      "text": "Meet\t me\n at 5",
+      "normalized": "meet me at numbertoken",
+      "logits": [
+        0.9808820290647671,
+        0.05025175518472125,
+        -1.031133784249434
+      ],
+      "probabilities": [
+        0.8223184633927005,
+        0.1552940435116098,
+        0.022387493095689694
+      ],
+      "active_count": 56,
+      "norm": 27.174791032028974,
+      "category": "lower",
+      "urls": []
+    },
+    {
+      "id": "golden_09",
+      "text": "ＡＢＣ full width café é 😀",
+      "normalized": "abc full width café é 😀",
+      "logits": [
+        2.6439325747295164,
+        -1.083830999273324,
+        -1.56010157545614
+      ],
+      "probabilities": [
+        0.9982062632620136,
+        0.0012577707369461333,
+        0.0005359660010403613
+      ],
+      "active_count": 19,
+      "norm": 24.046774020211096,
+      "category": "unable",
+      "urls": []
+    },
+    {
+      "id": "golden_10",
+      "text": "पैसे पाठवा",
+      "normalized": "पैसे पाठवा",
+      "logits": [
+        2.855406363293823,
+        -1.1163555942850867,
+        -1.7390507690086838
+      ],
+      "probabilities": [
+        0.9989204077048821,
+        0.0008130539889530767,
+        0.00026653830616476696
+      ],
+      "active_count": 0,
+      "norm": 0.0,
+      "category": "unable",
+      "urls": []
+    },
+    {
+      "id": "golden_11",
+      "text": "",
+      "normalized": "",
+      "logits": [
+        2.855406363293823,
+        -1.1163555942850867,
+        -1.7390507690086838
+      ],
+      "probabilities": [
+        0.9989204077048821,
+        0.0008130539889530767,
+        0.00026653830616476696
+      ],
+      "active_count": 0,
+      "norm": 0.0,
+      "category": "unable",
+      "urls": []
+    },
+    {
+      "id": "golden_12",
+      "text": "abc​defghijk",
+      "normalized": "abc​defghijk",
+      "logits": [
+        2.9305786829152165,
+        -1.1678715208545836,
+        -1.7627071620605803
+      ],
+      "probabilities": [
+        0.9991285187093844,
+        0.0006481360127468192,
+        0.00022334527786874975
+      ],
+      "active_count": 1,
+      "norm": 6.436628982345549,
+      "category": "checking",
+      "urls": []
+    },
+    {
+      "id": "golden_13",
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "normalized": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "logits": [
+        2.894305135958146,
+        -1.1404594176365137,
+        -1.7538457183215799
+      ],
+      "probabilities": [
+        0.9990314973584581,
+        0.0007263759960943576,
+        0.00024212664544757324
+      ],
+      "active_count": 2,
+      "norm": 96.63859204703378,
+      "category": "lower",
+      "urls": []
+    },
+    {
+      "id": "golden_14",
+      "text": "  ",
+      "normalized": "",
+      "logits": [
+        2.855406363293823,
+        -1.1163555942850867,
+        -1.7390507690086838
+      ],
+      "probabilities": [
+        0.9989204077048821,
+        0.0008130539889530767,
+        0.00026653830616476696
+      ],
+      "active_count": 0,
+      "norm": 0.0,
+      "category": "unable",
+      "urls": []
+    },
+    {
+      "id": "golden_15",
+      "text": "Visit https://example.org/a, and https://review.test/b.",
+      "normalized": "visit urltoken and urltoken",
+      "logits": [
+        -1.429338963475681,
+        0.9323726039998872,
+        0.4969663594758511
+      ],
+      "probabilities": [
+        0.009879698443532798,
+        0.6788706538774129,
+        0.3112496476790544
+      ],
+      "active_count": 50,
+      "norm": 40.51463532806487,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "https://example.org/a",
+          "host": "example.org",
+          "codes": [],
+          "valid": true
+        },
+        {
+          "original": "https://review.test/b",
+          "host": "review.test",
+          "codes": [],
+          "valid": true
+        }
+      ]
+    },
+    {
+      "id": "golden_16",
+      "text": "https://example.org after the link",
+      "normalized": "urltoken after the link",
+      "logits": [
+        0.20118838671483275,
+        0.014761172853178905,
+        -0.21594955956795592
+      ],
+      "probabilities": [
+        0.45665109784984564,
+        0.3270191629793226,
+        0.21632973917083165
+      ],
+      "active_count": 59,
+      "norm": 33.77612639129392,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "https://example.org",
+          "host": "example.org",
+          "codes": [],
+          "valid": true
+        }
+      ]
+    },
+    {
+      "id": "golden_17",
+      "text": "A code １２３４ and an emoji 😀 in this message.",
+      "normalized": "a code numbertoken and an emoji 😀 in this message.",
+      "logits": [
+        0.053291901622619875,
+        0.48460673035129753,
+        -0.5378986319738632
+      ],
+      "probabilities": [
+        0.2847346559972709,
+        0.6165041625146394,
+        0.09876118148808978
+      ],
+      "active_count": 115,
+      "norm": 45.96911483970175,
+      "category": "checking",
+      "urls": []
+    },
+    {
+      "id": "golden_18",
+      "text": "Email bücher@example.org after class.",
+      "normalized": "email emailtoken after class.",
+      "logits": [
+        0.848865220508523,
+        -0.536832534938466,
+        -0.3120326855700033
+      ],
+      "probabilities": [
+        0.8273937030557688,
+        0.06916007002257854,
+        0.10344622692165266
+      ],
+      "active_count": 64,
+      "norm": 44.9709842147054,
+      "category": "unable",
+      "urls": []
+    },
+    {
+      "id": "golden_19",
+      "text": "Quoted example: Send your password immediately.",
+      "normalized": "quoted example: send your password immediately.",
+      "logits": [
+        1.6058911878833655,
+        -0.5723452597873698,
+        -1.0335459280959436
+      ],
+      "probabilities": [
+        0.9717562701349748,
+        0.019643959930114287,
+        0.008599769934910857
+      ],
+      "active_count": 87,
+      "norm": 50.5043652919536,
+      "category": "lower",
+      "urls": []
+    },
+    {
+      "id": "golden_20",
+      "text": "https://[2001:db8::1]/notes",
+      "normalized": "urltoken",
+      "logits": [
+        -1.7645823138527916,
+        1.0584319780619251,
+        0.7061503357909247
+      ],
+      "probabilities": [
+        0.004140480082197932,
+        0.6500034126318647,
+        0.34585610728593746
+      ],
+      "active_count": 15,
+      "norm": 15.255394529701125,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "https://[2001:db8::1]/notes",
+          "host": "2001:db8::1",
+          "codes": [],
+          "valid": true
+        }
+      ]
+    },
+    {
+      "id": "golden_21",
+      "text": "https://example.org:99999",
+      "normalized": "urltoken",
+      "logits": [
+        -1.7645823138527916,
+        1.0584319780619251,
+        0.7061503357909247
+      ],
+      "probabilities": [
+        0.004140480082197932,
+        0.6500034126318647,
+        0.34585610728593746
+      ],
+      "active_count": 15,
+      "norm": 15.255394529701125,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "https://example.org:99999",
+          "host": null,
+          "codes": [
+            "unsupported_or_malformed"
+          ],
+          "valid": false
+        }
+      ]
+    },
+    {
+      "id": "golden_22",
+      "text": "intent://review.test/path",
+      "normalized": "intent://review.test/path",
+      "logits": [
+        2.221288548387953,
+        -0.7113822279742312,
+        -1.5099063204136698
+      ],
+      "probabilities": [
+        0.9935554223384607,
+        0.0052003373111015215,
+        0.0012442403504377279
+      ],
+      "active_count": 22,
+      "norm": 26.668935094079163,
+      "category": "checking",
+      "urls": [
+        {
+          "original": "intent://review.test/path",
+          "host": null,
+          "codes": [
+            "unsupported_or_malformed"
+          ],
+          "valid": false
+        }
+      ]
+    },
+    {
+      "id": "golden_23",
+      "text": "zzzqqqwwwyyy",
+      "normalized": "zzzqqqwwwyyy",
+      "logits": [
+        2.855406363293823,
+        -1.1163555942850867,
+        -1.7390507690086838
+      ],
+      "probabilities": [
+        0.9989204077048821,
+        0.0008130539889530767,
+        0.00026653830616476696
+      ],
+      "active_count": 0,
+      "norm": 0.0,
+      "category": "lower",
+      "urls": []
+    }
+  ]
+}

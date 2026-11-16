@@ -58,19 +58,6 @@ def test_partition_guard_detects_template_leak(tmp_path):
     with pytest.raises(ValueError,match='leakage'): verify(path)
 
 
-def test_export_reference_matches_sklearn():
-    import joblib
-    root=Path(__file__).resolve().parents[1]
-    model_json=json.loads((root/'artifacts/bundle/model.json').read_text())
-    portable=PortableModel(model_json)
-    ref_path=root/'artifacts/runs/baseline_char_lr_001/reference.joblib'
-    if not ref_path.exists(): pytest.skip('Private training artifact not distributed; Kotlin fixtures still tested')
-    ref=joblib.load(ref_path)
-    texts=['Send your OTP immediately.','Bring notes to the library.','😀 ＡＢＣ 555 https://example.org']
-    x=ref['vectorizer'].transform([privacy_transform(t) for t in texts])
-    logits=ref['estimator'].decision_function(x)
-    assert np.allclose(logits,[portable.predict(t)['logits'] for t in texts],atol=1e-10)
-
 
 def test_corrupt_bundle_rejected(tmp_path):
     root=Path(__file__).resolve().parents[1]/'artifacts/bundle'

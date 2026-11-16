@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "model_id": "ss-char-lr-0.1.0",
+  "protocol_id": "ss-group-v1",
+  "evaluation_report": "../runs/baseline_char_lr_001/final_test.json",
+  "format": "utf8-json-float64",
+  "byte_size": 2369544,
+  "asset_path": "/model/model-14927b442dc9f33a.json"
+}

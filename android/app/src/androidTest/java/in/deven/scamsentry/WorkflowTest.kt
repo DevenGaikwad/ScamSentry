@@ -6,6 +6,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import `in`.deven.scamsentry.core.LinearModel
 import `in`.deven.scamsentry.core.Policy
 import `in`.deven.scamsentry.core.Rules
+import `in`.deven.scamsentry.core.LegacyRulesV1
 import `in`.deven.scamsentry.core.UrlInspector
 import org.json.JSONObject
 import org.junit.Assert.assertEquals
@@ -18,6 +19,7 @@ import `in`.deven.scamsentry.core.Risk
 import androidx.compose.ui.graphics.asAndroidBitmap
 import java.io.File
 import android.graphics.Bitmap
+import android.content.Intent
 
 @RunWith(AndroidJUnit4::class)
 class WorkflowTest {
@@ -37,6 +39,25 @@ class WorkflowTest {
         compose.onNodeWithText("Edit and analyze again").performScrollTo().performClick()
         compose.onNodeWithContentDescription("Message to analyze").assertExists()
     }
+    @Test fun rotationKeepsDraftAndSharedInputReplacesPendingAnalysis() {
+        onboard()
+        val original="Fictional class reminder: bring the project notes."
+        compose.onNodeWithContentDescription("Message to analyze").performTextInput(original)
+        compose.activityRule.scenario.recreate()
+        compose.onNodeWithContentDescription("Message to analyze").assertTextContains(original)
+        compose.onNodeWithText("Analyze message").performScrollTo().performClick()
+        compose.activityRule.scenario.onActivity { activity ->
+            activity.startActivity(Intent(activity,MainActivity::class.java).apply {
+                action=Intent.ACTION_SEND; type="text/plain"
+                putExtra(Intent.EXTRA_TEXT,"Fictional team: send your OTP immediately.")
+                addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            })
+        }
+        compose.waitUntil(10000) { compose.onAllNodesWithContentDescription("Message to analyze").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithContentDescription("Message to analyze").assertTextContains("send your OTP")
+        compose.onNodeWithText("Analyze message").performScrollTo().performClick()
+        compose.waitUntil(20000) { compose.onAllNodesWithText("Request for a secret").fetchSemanticsNodes().isNotEmpty() }
+    }
     private fun screenshot(name: String) {
         val bitmap=compose.onRoot().captureToImage().asAndroidBitmap()
         val path=File(compose.activity.getExternalFilesDir(null),"screenshots/$name").apply { parentFile?.mkdirs() }
@@ -51,7 +72,7 @@ class WorkflowTest {
             val f=fixtures.getJSONObject(i);val text=f.getString("text");val actual=model.predict(text)
             assertEquals(f.getString("normalized"),actual.normalized)
             for(k in 0..2) assertEquals(f.getJSONArray("probabilities").getDouble(k),actual.probabilities[k],1e-6)
-            assertEquals(f.getString("category"),Policy.decide(text,actual.probabilities,Rules.inspect(text),UrlInspector.inspect(text),model.confidence,model.margin).wire)
+            assertEquals(f.getString("category"),Policy.decide(text,actual.probabilities,LegacyRulesV1.inspect(text),UrlInspector.inspect(text),model.confidence,model.margin).wire)
         }
     }
     @Test fun exportDoesNotIncludeOriginalIdentifiers() {

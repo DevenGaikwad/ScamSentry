@@ -1,0 +1,2608 @@
+{
+  "schema_version": 2,
+  "tolerance": 1e-06,
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "description": "Fictional end-to-end contracts, not accuracy evidence",
+  "fixtures": [
+    {
+      "id": "legacy_input_00",
+      "text": "Let's meet in the library after class.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "let's meet in the library after class.",
+          "logits": [
+            2.87219510189302,
+            -0.8491712817027259,
+            -2.0230238201902413
+          ],
+          "probabilities": [
+            0.9985717937292917,
+            0.0012727306617569092,
+            0.0001554756089513155
+          ],
+          "active_count": 80,
+          "norm": 43.71658775650211
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_01",
+      "text": "Please bring your lab notebook before 9 tomorrow.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "please bring your lab notebook before numbertoken tomorrow.",
+          "logits": [
+            0.9462930912096079,
+            -0.8714014299445921,
+            -0.07489166126496216
+          ],
+          "probabilities": [
+            0.833935804843269,
+            0.032155088518794124,
+            0.13390910663793693
+          ],
+          "active_count": 141,
+          "norm": 52.09356276887526
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_02",
+      "text": "Send your OTP immediately to keep the account active.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "higher",
+        "estimate": {
+          "normalized": "send your otp immediately to keep the account active.",
+          "logits": [
+            1.7906398501434684,
+            -1.5655467126864189,
+            -0.2250931374569971
+          ],
+          "probabilities": [
+            0.9713494918183911,
+            0.0023811441585873307,
+            0.0262693640230215
+          ],
+          "active_count": 117,
+          "norm": 55.81573290685272
+        },
+        "observations": [
+          {
+            "code": "secret_request",
+            "source": "rule",
+            "severity": "high",
+            "title": "Request for a secret",
+            "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel."
+          },
+          {
+            "code": "urgency",
+            "source": "rule",
+            "severity": "info",
+            "title": "Time pressure",
+            "detail": "A deadline alone does not establish fraud. Take time to verify unexpected requests."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_03",
+      "text": "Fictional shop: 20 percent discount this weekend. Reply STOP to unsubscribe.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": {
+          "normalized": "fictional shop: numbertoken percent discount this weekend. reply stop to unsubscribe.",
+          "logits": [
+            -0.9231197348132749,
+            1.9559040690484168,
+            -1.0327843342350882
+          ],
+          "probabilities": [
+            0.0057020844644353474,
+            0.9896126772073947,
+            0.004685238328170046
+          ],
+          "active_count": 212,
+          "norm": 73.35867248416818
+        },
+        "observations": [
+          {
+            "code": "reward",
+            "source": "rule",
+            "severity": "info",
+            "title": "Reward or offer",
+            "detail": "Offers can be legitimate advertising. An unexpected prize still deserves independent checking."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_04",
+      "text": "Educational example: never share your OTP. A scam may say \"send your password\".",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "educational example: never share your otp. a scam may say \"send your password\".",
+          "logits": [
+            1.3768675307817848,
+            -0.6580154526882875,
+            -0.7188520780934451
+          ],
+          "probabilities": [
+            0.9527739414831454,
+            0.02489821433547309,
+            0.022327844181381503
+          ],
+          "active_count": 142,
+          "norm": 63.845343816879385
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_05",
+      "text": "https://example.org/notes",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org/notes",
+            "host": "example.org",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_06",
+      "text": "https://bank.example@review.test/login",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://bank.example@review.test/login",
+            "host": "review.test",
+            "codes": [
+              "userinfo"
+            ],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_07",
+      "text": "https://xn--bcher-kva.example",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://xn--bcher-kva.example",
+            "host": "xn--bcher-kva.example",
+            "codes": [
+              "idn"
+            ],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_08",
+      "text": "Meet\t me\n at 5",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "meet me at numbertoken",
+          "logits": [
+            0.9808820290647671,
+            0.05025175518472125,
+            -1.031133784249434
+          ],
+          "probabilities": [
+            0.8223184633927005,
+            0.1552940435116098,
+            0.022387493095689694
+          ],
+          "active_count": 56,
+          "norm": 27.174791032028974
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_09",
+      "text": "ＡＢＣ full width café é 😀",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "unsupported_scope",
+          "research_scope"
+        ],
+        "limitations": [
+          "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_10",
+      "text": "पैसे पाठवा",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "unsupported_scope",
+          "research_scope"
+        ],
+        "limitations": [
+          "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_11",
+      "text": "",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "invalid_input",
+          "research_scope"
+        ],
+        "limitations": [
+          "Enter a valid nonempty excerpt of at most 4,000 Unicode code points.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_12",
+      "text": "abc​defghijk",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": {
+          "normalized": "abc​defghijk",
+          "logits": [
+            2.9305786829152165,
+            -1.1678715208545836,
+            -1.7627071620605803
+          ],
+          "probabilities": [
+            0.9991285187093844,
+            0.0006481360127468192,
+            0.00022334527786874975
+          ],
+          "active_count": 1,
+          "norm": 6.436628982345549
+        },
+        "observations": [
+          {
+            "code": "invisible_char",
+            "source": "rule",
+            "severity": "caution",
+            "title": "Invisible characters",
+            "detail": "Hidden formatting can change text and links. Review the original carefully."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "weak_features",
+          "research_scope"
+        ],
+        "limitations": [
+          "Too few usable model features were found for reliable statistical interpretation.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_13",
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": {
+          "normalized": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "logits": [
+            2.894305135958146,
+            -1.1404594176365137,
+            -1.7538457183215799
+          ],
+          "probabilities": [
+            0.9990314973584581,
+            0.0007263759960943576,
+            0.00024212664544757324
+          ],
+          "active_count": 2,
+          "norm": 96.63859204703378
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "weak_features",
+          "repetitive_input",
+          "research_scope"
+        ],
+        "limitations": [
+          "Too few usable model features were found for reliable statistical interpretation.",
+          "Highly repetitive text is outside the evaluated message scope.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_14",
+      "text": "  ",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "invalid_input",
+          "research_scope"
+        ],
+        "limitations": [
+          "Enter a valid nonempty excerpt of at most 4,000 Unicode code points.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_15",
+      "text": "Visit https://example.org/a, and https://review.test/b.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": {
+          "normalized": "visit urltoken and urltoken",
+          "logits": [
+            -1.429338963475681,
+            0.9323726039998872,
+            0.4969663594758511
+          ],
+          "probabilities": [
+            0.009879698443532798,
+            0.6788706538774129,
+            0.3112496476790544
+          ],
+          "active_count": 50,
+          "norm": 40.51463532806487
+        },
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org/a",
+            "host": "example.org",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://review.test/b",
+            "host": "review.test",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_16",
+      "text": "https://example.org after the link",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": {
+          "normalized": "urltoken after the link",
+          "logits": [
+            0.20118838671483275,
+            0.014761172853178905,
+            -0.21594955956795592
+          ],
+          "probabilities": [
+            0.45665109784984564,
+            0.3270191629793226,
+            0.21632973917083165
+          ],
+          "active_count": 59,
+          "norm": 33.77612639129392
+        },
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org",
+            "host": "example.org",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_17",
+      "text": "A code １２３４ and an emoji 😀 in this message.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": {
+          "normalized": "a code numbertoken and an emoji 😀 in this message.",
+          "logits": [
+            0.053291901622619875,
+            0.48460673035129753,
+            -0.5378986319738632
+          ],
+          "probabilities": [
+            0.2847346559972709,
+            0.6165041625146394,
+            0.09876118148808978
+          ],
+          "active_count": 115,
+          "norm": 45.96911483970175
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_18",
+      "text": "Email bücher@example.org after class.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "unsupported_scope",
+          "research_scope"
+        ],
+        "limitations": [
+          "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_19",
+      "text": "Quoted example: Send your password immediately.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "higher",
+        "estimate": {
+          "normalized": "quoted example: send your password immediately.",
+          "logits": [
+            1.6058911878833655,
+            -0.5723452597873698,
+            -1.0335459280959436
+          ],
+          "probabilities": [
+            0.9717562701349748,
+            0.019643959930114287,
+            0.008599769934910857
+          ],
+          "active_count": 87,
+          "norm": 50.5043652919536
+        },
+        "observations": [
+          {
+            "code": "secret_request",
+            "source": "rule",
+            "severity": "high",
+            "title": "Request for a secret",
+            "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel."
+          },
+          {
+            "code": "urgency",
+            "source": "rule",
+            "severity": "info",
+            "title": "Time pressure",
+            "detail": "A deadline alone does not establish fraud. Take time to verify unexpected requests."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_20",
+      "text": "https://[2001:db8::1]/notes",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://[2001:db8::1]/notes",
+            "host": "2001:db8::1",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_21",
+      "text": "https://example.org:99999",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org:99999",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_22",
+      "text": "intent://review.test/path",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "intent://review.test/path",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "legacy_input_23",
+      "text": "zzzqqqwwwyyy",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": {
+          "normalized": "zzzqqqwwwyyy",
+          "logits": [
+            2.855406363293823,
+            -1.1163555942850867,
+            -1.7390507690086838
+          ],
+          "probabilities": [
+            0.9989204077048821,
+            0.0008130539889530767,
+            0.00026653830616476696
+          ],
+          "active_count": 0,
+          "norm": 0.0
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "weak_features",
+          "research_scope"
+        ],
+        "limitations": [
+          "Too few usable model features were found for reliable statistical interpretation.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "unrelated_example",
+      "text": "Example timetable. Send your OTP now.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "higher",
+        "estimate": {
+          "normalized": "example timetable. send your otp now.",
+          "logits": [
+            2.082097603772361,
+            -1.0303767606417849,
+            -1.0517208431305236
+          ],
+          "probabilities": [
+            0.9926113070162348,
+            0.003764952306927489,
+            0.0036237406768377836
+          ],
+          "active_count": 73,
+          "norm": 41.7364114733529
+        },
+        "observations": [
+          {
+            "code": "secret_request",
+            "source": "rule",
+            "severity": "high",
+            "title": "Request for a secret",
+            "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "warning_then_request",
+      "text": "Never share your OTP. Now send your OTP to confirm.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "higher",
+        "estimate": {
+          "normalized": "never share your otp. now send your otp to confirm.",
+          "logits": [
+            1.2497969032756335,
+            -1.374181190569918,
+            0.12438428729433659
+          ],
+          "probabilities": [
+            0.8754046068703997,
+            0.007964582550235307,
+            0.11663081057936504
+          ],
+          "active_count": 101,
+          "norm": 52.59266951145122
+        },
+        "observations": [
+          {
+            "code": "secret_request",
+            "source": "rule",
+            "severity": "high",
+            "title": "Request for a secret",
+            "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "educational_quote",
+      "text": "Educational example: \"Send your OTP immediately\".",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "educational example: \"send your otp immediately\".",
+          "logits": [
+            1.720631834841671,
+            -0.8639957266210154,
+            -0.8566361082206031
+          ],
+          "probabilities": [
+            0.9807242437587456,
+            0.009574358385478366,
+            0.009701397855776056
+          ],
+          "active_count": 74,
+          "norm": 45.618874515047736
+        },
+        "observations": [
+          {
+            "code": "urgency",
+            "source": "rule",
+            "severity": "info",
+            "title": "Time pressure",
+            "detail": "A deadline alone does not establish fraud. Take time to verify unexpected requests."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "negated_request",
+      "text": "Do not send your password to anyone.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "do not send your password to anyone.",
+          "logits": [
+            1.423706821127268,
+            -0.2392330338985228,
+            -1.1844737872286943
+          ],
+          "probabilities": [
+            0.9431890545590921,
+            0.04798338046548424,
+            0.008827564975423533
+          ],
+          "active_count": 92,
+          "norm": 48.780531448655694
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "quote_then_request",
+      "text": "Educational example: \"send your PIN\". Now send your OTP.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "higher",
+        "estimate": {
+          "normalized": "educational example: \"send your pin\". now send your otp.",
+          "logits": [
+            1.2110493087641618,
+            -0.6049650863002359,
+            -0.6060842224638734
+          ],
+          "probabilities": [
+            0.928271164232642,
+            0.035900361751684075,
+            0.035828474015673996
+          ],
+          "active_count": 79,
+          "norm": 50.69916173336141
+        },
+        "observations": [
+          {
+            "code": "secret_request",
+            "source": "rule",
+            "severity": "high",
+            "title": "Request for a secret",
+            "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "missing_model",
+      "text": "Please bring the laboratory notes after class.",
+      "source": "text",
+      "model_available": false,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "unavailable",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "model_unavailable",
+          "research_scope"
+        ],
+        "limitations": [
+          "The validated message model is unavailable. Only local observations are available.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "missing_model_request",
+      "text": "Send your password to confirm your identity.",
+      "source": "text",
+      "model_available": false,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "unavailable",
+        "risk": "higher",
+        "estimate": null,
+        "observations": [
+          {
+            "code": "secret_request",
+            "source": "rule",
+            "severity": "high",
+            "title": "Request for a secret",
+            "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "model_unavailable",
+          "research_scope"
+        ],
+        "limitations": [
+          "The validated message model is unavailable. Only local observations are available.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "short_ocr",
+      "text": "Meet me tomorrow",
+      "source": "ocr",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": {
+          "normalized": "meet me tomorrow",
+          "logits": [
+            3.4153270254690082,
+            -1.6995029189463366,
+            -1.715824106522619
+          ],
+          "probabilities": [
+            0.9997929388516292,
+            0.00010504367440592245,
+            0.00010201747396486903
+          ],
+          "active_count": 38,
+          "norm": 28.40560098450226
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "short_ocr",
+          "research_scope"
+        ],
+        "limitations": [
+          "Very little OCR text was available. Replace the image or enter a complete message.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "reviewed_ocr",
+      "text": "Please bring your project notebook after class.",
+      "source": "ocr",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "please bring your project notebook after class.",
+          "logits": [
+            1.954827554575488,
+            -1.5804097693640147,
+            -0.3744177852114208
+          ],
+          "probabilities": [
+            0.9830876374697995,
+            0.0017487544523073439,
+            0.015163608077893093
+          ],
+          "active_count": 106,
+          "norm": 51.56325586802807
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "ocr_review",
+          "research_scope"
+        ],
+        "limitations": [
+          "OCR characters can be mistaken. Review the extracted text before relying on observations.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "weak_features",
+      "text": "zqjzxqjz",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": {
+          "normalized": "zqjzxqjz",
+          "logits": [
+            2.855406363293823,
+            -1.1163555942850867,
+            -1.7390507690086838
+          ],
+          "probabilities": [
+            0.9989204077048821,
+            0.0008130539889530767,
+            0.00026653830616476696
+          ],
+          "active_count": 0,
+          "norm": 0.0
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "weak_features",
+          "research_scope"
+        ],
+        "limitations": [
+          "Too few usable model features were found for reliable statistical interpretation.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "repetitive",
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": {
+          "normalized": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "logits": [
+            2.8943104621963105,
+            -1.140463081933891,
+            -1.7538473802623669
+          ],
+          "probabilities": [
+            0.9990315120710688,
+            0.0007263643104029203,
+            0.0002421236185284216
+          ],
+          "active_count": 2,
+          "norm": 58.022533916486395
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "weak_features",
+          "repetitive_input",
+          "research_scope"
+        ],
+        "limitations": [
+          "Too few usable model features were found for reliable statistical interpretation.",
+          "Highly repetitive text is outside the evaluated message scope.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "over_limit",
+      "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "invalid_input",
+          "research_scope"
+        ],
+        "limitations": [
+          "Enter a valid nonempty excerpt of at most 4,000 Unicode code points.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "links_40",
+      "text": "Read these notes after class. https://u0.test https://u1.test https://u2.test https://u3.test https://u4.test https://u5.test https://u6.test https://u7.test https://u8.test https://u9.test https://u10.test https://u11.test https://u12.test https://u13.test https://u14.test https://u15.test https://u16.test https://u17.test https://u18.test https://u19.test https://u20.test https://u21.test https://u22.test https://u23.test https://u24.test https://u25.test https://u26.test https://u27.test https://u28.test https://u29.test https://u30.test https://u31.test https://u32.test https://u33.test https://u34.test https://u35.test https://u36.test https://u37.test https://u38.test https://u39.test",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": {
+          "normalized": "read these notes after class. urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken",
+          "logits": [
+            -1.3825224504798515,
+            0.9617862346869035,
+            0.4207362157930057
+          ],
+          "probabilities": [
+            0.010766834618299031,
+            0.7171246648438653,
+            0.2721085005378357
+          ],
+          "active_count": 95,
+          "norm": 104.78425017221774
+        },
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://u0.test",
+            "host": "u0.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u1.test",
+            "host": "u1.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u2.test",
+            "host": "u2.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u3.test",
+            "host": "u3.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u4.test",
+            "host": "u4.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u5.test",
+            "host": "u5.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u6.test",
+            "host": "u6.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u7.test",
+            "host": "u7.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u8.test",
+            "host": "u8.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u9.test",
+            "host": "u9.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u10.test",
+            "host": "u10.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u11.test",
+            "host": "u11.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u12.test",
+            "host": "u12.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u13.test",
+            "host": "u13.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u14.test",
+            "host": "u14.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u15.test",
+            "host": "u15.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u16.test",
+            "host": "u16.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u17.test",
+            "host": "u17.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u18.test",
+            "host": "u18.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u19.test",
+            "host": "u19.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u20.test",
+            "host": "u20.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u21.test",
+            "host": "u21.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u22.test",
+            "host": "u22.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u23.test",
+            "host": "u23.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u24.test",
+            "host": "u24.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u25.test",
+            "host": "u25.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u26.test",
+            "host": "u26.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u27.test",
+            "host": "u27.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u28.test",
+            "host": "u28.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u29.test",
+            "host": "u29.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u30.test",
+            "host": "u30.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u31.test",
+            "host": "u31.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u32.test",
+            "host": "u32.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u33.test",
+            "host": "u33.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u34.test",
+            "host": "u34.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u35.test",
+            "host": "u35.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u36.test",
+            "host": "u36.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u37.test",
+            "host": "u37.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u38.test",
+            "host": "u38.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u39.test",
+            "host": "u39.test",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "links_41",
+      "text": "Read these notes after class. https://u0.test https://u1.test https://u2.test https://u3.test https://u4.test https://u5.test https://u6.test https://u7.test https://u8.test https://u9.test https://u10.test https://u11.test https://u12.test https://u13.test https://u14.test https://u15.test https://u16.test https://u17.test https://u18.test https://u19.test https://u20.test https://u21.test https://u22.test https://u23.test https://u24.test https://u25.test https://u26.test https://u27.test https://u28.test https://u29.test https://u30.test https://u31.test https://u32.test https://u33.test https://u34.test https://u35.test https://u36.test https://u37.test https://u38.test https://u39.test https://u40.test",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": {
+          "normalized": "read these notes after class. urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken urltoken",
+          "logits": [
+            -1.3848431190667476,
+            0.962551398968696,
+            0.42229172009810934
+          ],
+          "probabilities": [
+            0.010704000989657968,
+            0.7168908793230978,
+            0.2724051196872443
+          ],
+          "active_count": 95,
+          "norm": 105.25114261944381
+        },
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://u0.test",
+            "host": "u0.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u1.test",
+            "host": "u1.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u2.test",
+            "host": "u2.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u3.test",
+            "host": "u3.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u4.test",
+            "host": "u4.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u5.test",
+            "host": "u5.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u6.test",
+            "host": "u6.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u7.test",
+            "host": "u7.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u8.test",
+            "host": "u8.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u9.test",
+            "host": "u9.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u10.test",
+            "host": "u10.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u11.test",
+            "host": "u11.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u12.test",
+            "host": "u12.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u13.test",
+            "host": "u13.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u14.test",
+            "host": "u14.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u15.test",
+            "host": "u15.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u16.test",
+            "host": "u16.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u17.test",
+            "host": "u17.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u18.test",
+            "host": "u18.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u19.test",
+            "host": "u19.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u20.test",
+            "host": "u20.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u21.test",
+            "host": "u21.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u22.test",
+            "host": "u22.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u23.test",
+            "host": "u23.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u24.test",
+            "host": "u24.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u25.test",
+            "host": "u25.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u26.test",
+            "host": "u26.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u27.test",
+            "host": "u27.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u28.test",
+            "host": "u28.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u29.test",
+            "host": "u29.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u30.test",
+            "host": "u30.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u31.test",
+            "host": "u31.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u32.test",
+            "host": "u32.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u33.test",
+            "host": "u33.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u34.test",
+            "host": "u34.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u35.test",
+            "host": "u35.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u36.test",
+            "host": "u36.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u37.test",
+            "host": "u37.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u38.test",
+            "host": "u38.test",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://u39.test",
+            "host": "u39.test",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "link_limit",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Only the first 40 addresses were inspected. Shorten the input to inspect every destination.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": false,
+        "links_truncated": true
+      }
+    },
+    {
+      "id": "upper_http",
+      "text": "HTTP://Example.ORG:80/x",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "HTTP://Example.ORG:80/x",
+            "host": "example.org",
+            "codes": [
+              "unencrypted_scheme"
+            ],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "ambiguous_authority",
+      "text": "https://a@b@review.test",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://a@b@review.test",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "empty_port",
+      "text": "https://example.org:",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org:",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "numeric_hex",
+      "text": "http://0x7f000001",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "http://0x7f000001",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "numeric_tld",
+      "text": "https://example.123",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.123",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "idna_capital_sharp",
+      "text": "https://faẞ.de",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://faẞ.de",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "ipv6_trailing_colon",
+      "text": "https://[1:2:3:4:5:6:7:8:]/x",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://[1:2:3:4:5:6:7:8:]/x",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "max_port",
+      "text": "https://example.org:65535",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org:65535",
+            "host": "example.org",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "idna_deviation",
+      "text": "https://faß.de",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://faß.de",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "backslash",
+      "text": "https://example.org\\evil",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org\\evil",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "ipv6_standalone",
+      "text": "https://[2001:db8::1]",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://[2001:db8::1]",
+            "host": "2001:db8::1",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "ipv6_bad",
+      "text": "https://[::::]/x",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://[::::]/x",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "standalone_url",
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "Standalone address: lexical observations only; message estimates are not website-risk probabilities.",
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": true,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "invalid_control",
+      "text": "Some laboratory notes\u0000after class.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "invalid_input",
+          "research_scope"
+        ],
+        "limitations": [
+          "Enter a valid nonempty excerpt of at most 4,000 Unicode code points.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "unsupported_with_request",
+      "text": "मराठी message send your OTP",
+      "source": "text",
+      "model_available": false,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "unavailable",
+        "risk": "higher",
+        "estimate": null,
+        "observations": [
+          {
+            "code": "secret_request",
+            "source": "rule",
+            "severity": "high",
+            "title": "Request for a secret",
+            "detail": "Keep one-time codes, PINs and passwords private. Verify the request through a known channel."
+          }
+        ],
+        "urls": [],
+        "quality_flags": [
+          "model_unavailable",
+          "unsupported_scope",
+          "research_scope"
+        ],
+        "limitations": [
+          "The validated message model is unavailable. Only local observations are available.",
+          "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "threshold_neutral",
+      "text": "Bring the project notes before the laboratory session.",
+      "source": "text",
+      "model_available": true,
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "bring the project notes before the laboratory session.",
+          "logits": [
+            2.508300414835441,
+            -0.361693409663136,
+            -2.146607005172252
+          ],
+          "probabilities": [
+            0.9939415998558375,
+            0.005820404659592829,
+            0.0002379954845695914
+          ],
+          "active_count": 110,
+          "norm": 53.962100167699475
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    }
+  ]
+}

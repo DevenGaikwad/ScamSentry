@@ -1,0 +1,6 @@
+{
+  "date":"2026-11-16",
+  "browser":{"installed":"Chromium 156.0.8078.79","production_static_build":"PASS","headless_workflows":"BLOCKED","reason":"Chromium process singleton Unix socket creation denied (Operation not permitted). No workflow result or screenshot was fabricated.","cloud_localhost":"connection refused; no reachable local preview from cloud browser"},
+  "android":{"local_kvm":false,"physical_phone":false,"software_emulator_retry":false},
+  "windows":{"batch_wrapper_executed":false,"reason":"Linux execution host"}
+}

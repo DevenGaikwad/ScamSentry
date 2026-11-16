@@ -10,7 +10,7 @@ class ScamSentryApp : Application() {
     val history by lazy { HistoryDatabase.create(this).entries() }
     override fun onCreate() {
         super.onCreate()
-        // Reports contain only redacted derived metadata. Still bound retention to 24 hours.
-        File(cacheDir,"exports").listFiles()?.filter { System.currentTimeMillis()-it.lastModified() > 86_400_000 }?.forEach { it.delete() }
+        // Reports contain only redacted derived metadata. Still clean up one-hour-old cache exports on startup.
+        File(cacheDir,"exports").listFiles()?.filter { System.currentTimeMillis()-it.lastModified() > 3_600_000 }?.forEach { it.delete() }
     }
 }

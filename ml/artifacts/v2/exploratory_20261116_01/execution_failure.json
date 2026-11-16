@@ -1,0 +1,5 @@
+{
+  "status": "INCOMPLETE",
+  "reason": "NumPy boolean in search-register serialization; baseline and first word report preserved. No tuning decisions made from failure.",
+  "retry_run": "exploratory_20261116_02"
+}

@@ -43,11 +43,12 @@ def privacy_transform(text):
 
 
 def observations(text):
+    from .context_rules import has_active_secret_request
     lower = normalize(text)
-    quoted = bool(re.search(r"\b(?:example|educational|scam awareness|quoted|warning about|do not share|never share|don't share)\b", lower))
     out = []
     for code, severity, title, detail, regex in RULES:
-        if re.search(regex, lower, re.S) and not (quoted and code == "secret_request"):
+        matched = has_active_secret_request(lower) if code == "secret_request" else bool(re.search(regex, lower, re.S))
+        if matched:
             out.append(dict(code=code, source="rule", severity=severity, title=title, detail=detail))
     if any(ch in text for ch in ZERO_WIDTH):
         out.append(dict(code="invisible_char", source="rule", severity="caution", title="Invisible characters", detail="Hidden formatting can change text and links. Review the original carefully."))

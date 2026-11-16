@@ -25,5 +25,14 @@ class HistoryMigrationTest {
         db.execSQL("DELETE FROM history")
         db.query("SELECT COUNT(*) FROM history").use { assertTrue(it.moveToFirst());assertEquals(0,it.getInt(0)) }
         db.close()
+    }    @Test fun migrationToThreePrunesExistingStorage() {
+        helper.createDatabase("retention_migration",2).apply {
+            for(i in 0..220) execSQL("INSERT INTO history(id,createdAt,category,summary,modelId,policyVersion,inputSource) VALUES ('id-$i',$i,'checking','Fictional summary','old','old','unknown')")
+            close()
+        }
+        val db=helper.runMigrationsAndValidate("retention_migration",3,true,HistoryDatabase.MIGRATION_2_3)
+        db.query("SELECT COUNT(*),MIN(createdAt) FROM history").use { assertTrue(it.moveToFirst());assertEquals(200,it.getInt(0));assertEquals(21,it.getInt(1)) }
+        db.close()
     }
+
 }
