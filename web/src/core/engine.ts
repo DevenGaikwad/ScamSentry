@@ -28,7 +28,8 @@ export function minimize(text:string):string {
   return text
     .replace(new RegExp(`${boundary}[\\p{L}\\p{N}_.+-]+@[\\p{L}\\p{N}_.-]+\\.[a-z]{2,}${boundary}`,'giu'),' emailtoken ')
     .replace(new RegExp(`${boundary}(?:\\+?\\p{Nd}[\\p{Nd} ()-]{6,}\\p{Nd})${boundary}`,'gu'),' numbertoken ')
-    .replace(/https?:\/\/[^\s<>]+|www\.[^\s<>]+/giu,' urltoken ')
+    // eslint-disable-next-line no-control-regex -- Explicit Python whitespace is part of the cross-runtime contract.
+    .replace(/https?:\/\/[^\p{Z}\u0009-\u000d\u001c-\u0020\u0085<>]+|www\.[^\p{Z}\u0009-\u000d\u001c-\u0020\u0085<>]+/giu,' urltoken ')
     .replace(/\p{Nd}+/gu,' numbertoken ')
 }
 function validNumber(x:unknown):x is number {return typeof x==='number'&&Number.isFinite(x)}
@@ -121,7 +122,8 @@ export function inspectOne(original:string):Address {
   }catch{return {original,host:null,codes:['unsupported_or_malformed'],valid:false}}
 }
 export function extractUrls(text:string):{addresses:Address[];truncated:boolean}{
-  const pattern=/(?<![\p{L}\p{N}_])(?:https?:\/\/|[a-z][a-z0-9+.-]*:\/\/|www\.)[^\s<>"\u200b]+|(?<![@\p{L}\p{N}_])(?:[a-z0-9-]+\.)+(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\.?(?![\p{L}\p{N}_.-])(?:[/?:#][^\s<>"]*)?/giu
+  // eslint-disable-next-line no-control-regex -- U+0085 and C0 separators must match the Python reference exactly.
+  const pattern=/(?<![\p{L}\p{N}_])(?:https?:\/\/|[a-z][a-z0-9+.-]*:\/\/|www\.)[^\p{Z}\u0009-\u000d\u001c-\u0020\u0085<>"\u200b]+|(?<![@\p{L}\p{N}_])(?:[a-z0-9-]+\.)+(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\.?(?![\p{L}\p{N}_.-])(?:[/?:#][^\p{Z}\u0009-\u000d\u001c-\u0020\u0085<>"]*)?/giu
   const addresses:Address[]=[]
   for(const m of text.matchAll(pattern)){if(addresses.length===40)return {addresses,truncated:true};let original=m[0].replace(/[.,;!)}]+$/g,'');while(original.endsWith(']')&&(original.match(/\]/g)??[]).length>(original.match(/\[/g)??[]).length)original=original.slice(0,-1);addresses.push(inspectOne(original))}
   return {addresses,truncated:false}

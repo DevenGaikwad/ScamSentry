@@ -50,19 +50,19 @@
       "id": "complete_host_kotlin_parity",
       "status": "PASS",
       "evidence": "assets/evidence/v2/host_full_contract_parity.json",
-      "detail": "53 complete domain cases; historical 24 numeric fixtures remain separate"
+      "detail": "59 complete domain/minimization cases; archived 24 numeric fixtures remain separate"
     },
     {
       "id": "browser_unit_parity",
       "status": "PASS",
       "evidence": "web/tests/parity.test.ts",
-      "detail": "57 unit/parity tests executed, including synthetic word/hybrid math"
+      "detail": "63 unit/parity tests executed after Unicode and tooling corrections"
     },
     {
       "id": "python_public_checks",
       "status": "PASS",
       "evidence": "ml/tests",
-      "detail": "74 executed Python tests, including actual tiny fit/export, filesystem privacy and APK inventory tamper/path checks"
+      "detail": "75 executed Python tests, including actual tiny fit/export, filesystem privacy and APK inventory tamper/path checks"
     },
     {
       "id": "repository_validator",
@@ -79,14 +79,14 @@
     {
       "id": "native_instrumentation",
       "status": "FAIL",
-      "evidence": "android/app/src/androidTest",
-      "detail": "First KVM API 35 run failed; post-shutdown adb collection stalled. Bounded collection repair prepared; diagnosis/rerun pending"
+      "evidence": "assets/evidence/v2/emulator_run2_failures.json",
+      "detail": "API 35: 4/11 passed, 7 failed, none skipped. Portable Unicode and serialization alignment fixes prepared; full native parity and minified smoke rerun pending"
     },
     {
       "id": "browser_workflow_privacy",
       "status": "PASS",
-      "evidence": "assets/evidence/v2/browser_workflows_run1.json",
-      "detail": "Eight production Playwright desktop/mobile workflows passed on published d984f9b; subsequent mobile-scroll/worker-reuse refinements require a new run"
+      "evidence": "assets/evidence/v2/browser_workflows_run2.json",
+      "detail": "Eight real production desktop/mobile workflows passed, including mobile scroll and worker reuse; latest Unicode/tooling changes require final run"
     },
     {
       "id": "browser_ocr",
@@ -135,6 +135,12 @@
       "status": "PASS",
       "evidence": "docs/UPGRADE_SPEC_V2_1.md",
       "detail": "Original v2 text and additive v2.1 extension retained"
+    },
+    {
+      "id": "minified_functional",
+      "status": "BLOCKED",
+      "evidence": "android/benchmark/src/main/java/in/deven/scamsentry/benchmark/ReleaseLikeSmokeTest.kt",
+      "detail": "R8/resource-shrunk functional smoke prepared for CI emulator; does not run or relax physical performance benchmarks"
     }
   ]
 }

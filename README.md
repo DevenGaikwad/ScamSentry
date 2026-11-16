@@ -22,7 +22,7 @@ These are production-build Chromium captures from [CI run 43864597675](https://g
 
 ## Verification status
 
-The first public CI run passed Python/source-archive checks, Android host tests/builds, and all eight desktop/mobile browser workflows. Android lint reported **0 errors and 9 warnings**; retained versions and target SDK are documented. KVM instrumentation failed and its report collection stalled after emulator shutdown. That gate remains failed until a repaired run supplies executed results. Physical-phone timing, accessibility, first-use offline operation and 16 KB runtime remain independent pending checks. [Machine-readable gates](docs/GATE_REPORT.json) · [Build evidence](assets/evidence/v2/ci_run1_build.json).
+The first public CI run passed Python/source-archive checks, Android host tests/builds, and all eight desktop/mobile browser workflows. Android lint reported **0 errors and 9 warnings**; retained versions and target SDK are documented. The repaired KVM report collected 11 executed cases: four passed and seven failed. It exposed Android regex initialization and serialization alignment defects; fixes and a complete 59-case native contract test are prepared for the final run. That gate remains failed until the new run supplies results. Physical-phone timing, accessibility, first-use offline operation and 16 KB runtime remain independent pending checks. [Machine-readable gates](docs/GATE_REPORT.json) · [Build evidence](assets/evidence/v2/ci_run1_build.json).
 
 ## What v0.2.0 changes
 
@@ -84,7 +84,7 @@ From `android/`:
 
 Windows uses `gradlew.bat` with the same tasks. The wrapper was regenerated through Gradle and its distribution digest is pinned. [Windows setup](docs/SETUP_WINDOWS.md) · [Dependency review](docs/DEPENDENCIES.md).
 
-Installable research releases use **disposable test signatures**, with arm64, x86_64 and universal APKs, checksums and a source-commit inventory. They are separate from owner-managed production signing. A different preview signing identity may require uninstalling a previous build. Release assets belong on the Releases page; APKs, datasets and signing secrets do not belong in source history.
+Installable research releases use **disposable test signatures**, with arm64, x86_64 and universal APKs, checksums and a source-commit inventory. They are separate from owner-managed production signing. A different preview signing identity may require uninstalling a previous build. The release includes a separate `RELEASE_VERIFICATION.json` generated from executed CI reports, and `DOWNLOAD_SHA256SUMS.txt` covers downloadable archives and assets. Release assets belong on the Releases page; APKs, datasets and signing secrets do not belong in source history.
 
 ## Reproduce public checks
 
@@ -97,7 +97,7 @@ python -m pytest ml/tests -q
 python scripts/validate_project.py --mode repository --format json
 ```
 
-An extracted ZIP uses `--mode archive`. No Git initialization or private `.joblib` is required for fit/export checks. Tiny fictional training fixtures exercise actual scikit-learn fitting and portable arithmetic. The archived 24 model/policy fixtures remain separate from the 53 complete v2 domain cases. Word and hybrid block exports also have synthetic cross-platform parity checks.
+An extracted ZIP uses `--mode archive`. No Git initialization or private `.joblib` is required for fit/export checks. Tiny fictional training fixtures exercise actual scikit-learn fitting and portable arithmetic. The archived 24 model/policy fixtures remain separate from the 59 complete v2 domain cases. Word and hybrid block exports also have synthetic cross-platform parity checks.
 
 Browser workflow tests: from `web/`, run `npx playwright install --with-deps chromium` then `npm run test:e2e`. Android instrumentation: `./gradlew :app:connectedDebugAndroidTest` with a functioning device/KVM emulator. [Test matrix](docs/TEST_MATRIX.md) · [Performance protocol](docs/PERFORMANCE.md).
 

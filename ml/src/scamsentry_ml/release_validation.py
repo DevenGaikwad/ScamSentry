@@ -8,11 +8,11 @@ import subprocess
 from .bundle import validate
 from .splits import verify
 
-CACHE = {'.git','.gradle','.kotlin','build','node_modules','.venv','__pycache__','.pytest_cache','dist','.vite','.vercel','test-results','playwright-report'}
+CACHE = {'.git','.gradle','.kotlin','build','node_modules','.venv','__pycache__','.pytest_cache','dist','.vite','.vercel','test-results','unit-results','playwright-report'}
 FORBIDDEN = re.compile(r'(?:^|/)(?:data/(?:raw|processed)|artifacts/private|\.env(?:\.[^/]*)?|local\.properties|signing\.properties|id_rsa|id_ed25519)(?:/|$)|\.(?:jks|keystore|joblib|pickle|pkl|p12|pfx|pem)$')
 TOKEN = re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
 ALLOWED_DIRS={'android','ml','scripts','docs','assets','web','release','install','.github'}
-ALLOWED_TOP={'README.md','LICENSE','THIRD_PARTY_NOTICES.md','RELEASE_NOTES.md','ARTIFACT_INVENTORY.json','SHA256SUMS.txt','.gitignore','.gitattributes','SECURITY.md','CONTRIBUTING.md','signing_report.json','archive_validation.json','apk_inspection.json'}
+ALLOWED_TOP={'README.md','LICENSE','THIRD_PARTY_NOTICES.md','RELEASE_NOTES.md','ARTIFACT_INVENTORY.json','SHA256SUMS.txt','.gitignore','.gitattributes','SECURITY.md','CONTRIBUTING.md','signing_report.json','archive_validation.json','apk_inspection.json','RELEASE_VERIFICATION.json'}
 TEXT = {'.py','.kt','.kts','.json','.md','.yml','.yaml','.toml','.txt','.xml','.csv','.ts','.tsx','.js','.mjs','.css','.html','.ps1','.bat','.properties','.svg','.sh','.lock'}
 
 def stage(name,status,count=0,details='',errors=None):

@@ -6,7 +6,7 @@ import java.net.IDN
 object UrlLexicalV2 {
     const val VERSION = "lexical_v2"
     const val MAX_LINKS = 40
-    private val pattern = Regex("(?iU)\\b(?:https?://|[a-z][a-z0-9+.-]*://|www\\.)[^\\s<>\"\\u200b]+|(?<![@\\w])(?:[a-z0-9-]+\\.)+(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\\.?(?![\\w.-])(?:[/?:#][^\\s<>\"]*)?")
+    private val pattern = Regex("(?i)${UnicodePattern.BOUNDARY}(?:https?://|[a-z][a-z0-9+.-]*://|www\\.)[^${UnicodePattern.SPACE_CONTENT}<>\"\\u200b]+|(?<![@${UnicodePattern.WORD_CONTENT}])(?:[a-z0-9-]+\\.)+(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\\.?(?![${UnicodePattern.WORD_CONTENT}.-])(?:[/?:#][^${UnicodePattern.SPACE_CONTENT}<>\"]*)?")
     data class Extraction(val addresses: List<UrlObservation>, val truncated: Boolean)
     fun extract(text: String): Extraction {
         val matches = pattern.findAll(text).take(MAX_LINKS + 1).toList()

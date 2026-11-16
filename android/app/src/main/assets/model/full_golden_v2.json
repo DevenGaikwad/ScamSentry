@@ -9,6 +9,7 @@
       "text": "Let's meet in the library after class.",
       "source": "text",
       "model_available": true,
+      "minimized": "Let's meet in the library after class.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -49,6 +50,7 @@
       "text": "Please bring your lab notebook before 9 tomorrow.",
       "source": "text",
       "model_available": true,
+      "minimized": "Please bring your lab notebook before  numbertoken  tomorrow.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -89,6 +91,7 @@
       "text": "Send your OTP immediately to keep the account active.",
       "source": "text",
       "model_available": true,
+      "minimized": "Send your OTP immediately to keep the account active.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -144,6 +147,7 @@
       "text": "Fictional shop: 20 percent discount this weekend. Reply STOP to unsubscribe.",
       "source": "text",
       "model_available": true,
+      "minimized": "Fictional shop:  numbertoken  percent discount this weekend. Reply STOP to unsubscribe.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -192,6 +196,7 @@
       "text": "Educational example: never share your OTP. A scam may say \"send your password\".",
       "source": "text",
       "model_available": true,
+      "minimized": "Educational example: never share your OTP. A scam may say \"send your password\".",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -232,6 +237,7 @@
       "text": "https://example.org/notes",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -269,6 +275,7 @@
       "text": "https://bank.example@review.test/login",
       "source": "text",
       "model_available": true,
+      "minimized": "https:// emailtoken /login",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -308,6 +315,7 @@
       "text": "https://xn--bcher-kva.example",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -347,6 +355,7 @@
       "text": "Meet\t me\n at 5",
       "source": "text",
       "model_available": true,
+      "minimized": "Meet\t me\n at  numbertoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -387,6 +396,7 @@
       "text": "ＡＢＣ full width café é 😀",
       "source": "text",
       "model_available": true,
+      "minimized": "ＡＢＣ full width café é 😀",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -415,6 +425,7 @@
       "text": "पैसे पाठवा",
       "source": "text",
       "model_available": true,
+      "minimized": "पैसे पाठवा",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -443,6 +454,7 @@
       "text": "",
       "source": "text",
       "model_available": true,
+      "minimized": "",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -471,6 +483,7 @@
       "text": "abc​defghijk",
       "source": "text",
       "model_available": true,
+      "minimized": "abc​defghijk",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -521,6 +534,7 @@
       "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "source": "text",
       "model_available": true,
+      "minimized": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -565,6 +579,7 @@
       "text": "  ",
       "source": "text",
       "model_available": true,
+      "minimized": "  ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -593,6 +608,7 @@
       "text": "Visit https://example.org/a, and https://review.test/b.",
       "source": "text",
       "model_available": true,
+      "minimized": "Visit  urltoken  and  urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -648,6 +664,7 @@
       "text": "https://example.org after the link",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken  after the link",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -697,6 +714,7 @@
       "text": "A code １２３４ and an emoji 😀 in this message.",
       "source": "text",
       "model_available": true,
+      "minimized": "A code  numbertoken  and an emoji 😀 in this message.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -737,6 +755,7 @@
       "text": "Email bücher@example.org after class.",
       "source": "text",
       "model_available": true,
+      "minimized": "Email  emailtoken  after class.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -765,6 +784,7 @@
       "text": "Quoted example: Send your password immediately.",
       "source": "text",
       "model_available": true,
+      "minimized": "Quoted example: Send your password immediately.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -820,6 +840,7 @@
       "text": "https://[2001:db8::1]/notes",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -857,6 +878,7 @@
       "text": "https://example.org:99999",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -896,6 +918,7 @@
       "text": "intent://review.test/path",
       "source": "text",
       "model_available": true,
+      "minimized": "intent://review.test/path",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -935,6 +958,7 @@
       "text": "zzzqqqwwwyyy",
       "source": "text",
       "model_available": true,
+      "minimized": "zzzqqqwwwyyy",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -977,6 +1001,7 @@
       "text": "Example timetable. Send your OTP now.",
       "source": "text",
       "model_available": true,
+      "minimized": "Example timetable. Send your OTP now.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1025,6 +1050,7 @@
       "text": "Never share your OTP. Now send your OTP to confirm.",
       "source": "text",
       "model_available": true,
+      "minimized": "Never share your OTP. Now send your OTP to confirm.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1073,6 +1099,7 @@
       "text": "Educational example: \"Send your OTP immediately\".",
       "source": "text",
       "model_available": true,
+      "minimized": "Educational example: \"Send your OTP immediately\".",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1121,6 +1148,7 @@
       "text": "Do not send your password to anyone.",
       "source": "text",
       "model_available": true,
+      "minimized": "Do not send your password to anyone.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1161,6 +1189,7 @@
       "text": "Educational example: \"send your PIN\". Now send your OTP.",
       "source": "text",
       "model_available": true,
+      "minimized": "Educational example: \"send your PIN\". Now send your OTP.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1209,6 +1238,7 @@
       "text": "Please bring the laboratory notes after class.",
       "source": "text",
       "model_available": false,
+      "minimized": "Please bring the laboratory notes after class.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1237,6 +1267,7 @@
       "text": "Send your password to confirm your identity.",
       "source": "text",
       "model_available": false,
+      "minimized": "Send your password to confirm your identity.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1273,6 +1304,7 @@
       "text": "Meet me tomorrow",
       "source": "ocr",
       "model_available": true,
+      "minimized": "Meet me tomorrow",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1315,6 +1347,7 @@
       "text": "Please bring your project notebook after class.",
       "source": "ocr",
       "model_available": true,
+      "minimized": "Please bring your project notebook after class.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1357,6 +1390,7 @@
       "text": "zqjzxqjz",
       "source": "text",
       "model_available": true,
+      "minimized": "zqjzxqjz",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1399,6 +1433,7 @@
       "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "source": "text",
       "model_available": true,
+      "minimized": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1443,6 +1478,7 @@
       "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "source": "text",
       "model_available": true,
+      "minimized": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1471,6 +1507,7 @@
       "text": "Read these notes after class. https://u0.test https://u1.test https://u2.test https://u3.test https://u4.test https://u5.test https://u6.test https://u7.test https://u8.test https://u9.test https://u10.test https://u11.test https://u12.test https://u13.test https://u14.test https://u15.test https://u16.test https://u17.test https://u18.test https://u19.test https://u20.test https://u21.test https://u22.test https://u23.test https://u24.test https://u25.test https://u26.test https://u27.test https://u28.test https://u29.test https://u30.test https://u31.test https://u32.test https://u33.test https://u34.test https://u35.test https://u36.test https://u37.test https://u38.test https://u39.test",
       "source": "text",
       "model_available": true,
+      "minimized": "Read these notes after class.  urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -1754,6 +1791,7 @@
       "text": "Read these notes after class. https://u0.test https://u1.test https://u2.test https://u3.test https://u4.test https://u5.test https://u6.test https://u7.test https://u8.test https://u9.test https://u10.test https://u11.test https://u12.test https://u13.test https://u14.test https://u15.test https://u16.test https://u17.test https://u18.test https://u19.test https://u20.test https://u21.test https://u22.test https://u23.test https://u24.test https://u25.test https://u26.test https://u27.test https://u28.test https://u29.test https://u30.test https://u31.test https://u32.test https://u33.test https://u34.test https://u35.test https://u36.test https://u37.test https://u38.test https://u39.test https://u40.test",
       "source": "text",
       "model_available": true,
+      "minimized": "Read these notes after class.  urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken   urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2039,6 +2077,7 @@
       "text": "HTTP://Example.ORG:80/x",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2078,6 +2117,7 @@
       "text": "https://a@b@review.test",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken  emailtoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2117,6 +2157,7 @@
       "text": "https://example.org:",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2156,6 +2197,7 @@
       "text": "http://0x7f000001",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2195,6 +2237,7 @@
       "text": "https://example.123",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2234,6 +2277,7 @@
       "text": "https://faẞ.de",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2273,6 +2317,7 @@
       "text": "https://[1:2:3:4:5:6:7:8:]/x",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2312,6 +2357,7 @@
       "text": "https://example.org:65535",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2349,6 +2395,7 @@
       "text": "https://faß.de",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2388,6 +2435,7 @@
       "text": "https://example.org\\evil",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2427,6 +2475,7 @@
       "text": "https://[2001:db8::1]",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2464,6 +2513,7 @@
       "text": "https://[::::]/x",
       "source": "text",
       "model_available": true,
+      "minimized": " urltoken ",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2503,6 +2553,7 @@
       "text": "Some laboratory notes\u0000after class.",
       "source": "text",
       "model_available": true,
+      "minimized": "Some laboratory notes\u0000after class.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2531,6 +2582,7 @@
       "text": "मराठी message send your OTP",
       "source": "text",
       "model_available": false,
+      "minimized": "मराठी message send your OTP",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2569,6 +2621,7 @@
       "text": "Bring the project notes before the laboratory session.",
       "source": "text",
       "model_available": true,
+      "minimized": "Bring the project notes before the laboratory session.",
       "expected": {
         "schema_version": 2,
         "policy_version": "ordinal_v2",
@@ -2599,6 +2652,250 @@
         ],
         "limitations": [
           "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "unicode_contacts",
+      "text": "Class notes: email élève@review.test or call १२३४५६७८९० tomorrow.",
+      "source": "text",
+      "model_available": true,
+      "minimized": "Class notes: email  emailtoken  or call  numbertoken  tomorrow.",
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "unsupported_scope",
+          "research_scope"
+        ],
+        "limitations": [
+          "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "unicode_url_whitespace",
+      "text": "Review https://example.org/ahttps://review.test/b after class.",
+      "source": "text",
+      "model_available": true,
+      "minimized": "Review  urltoken  urltoken  after class.",
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": {
+          "normalized": "review urltoken urltoken after class.",
+          "logits": [
+            -0.6599054149726093,
+            0.23049935615617811,
+            0.42940605881648763
+          ],
+          "probabilities": [
+            0.07714281936072355,
+            0.3800944966393752,
+            0.5427626839999012
+          ],
+          "active_count": 72,
+          "norm": 48.520825573703426
+        },
+        "observations": [],
+        "urls": [
+          {
+            "original": "https://example.org/a",
+            "host": "example.org",
+            "codes": [],
+            "valid": true
+          },
+          {
+            "original": "https://review.test/b",
+            "host": "review.test",
+            "codes": [],
+            "valid": true
+          }
+        ],
+        "quality_flags": [
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "unicode_host_boundary",
+      "text": "कexample.org class notes after laboratory.",
+      "source": "text",
+      "model_available": true,
+      "minimized": "कexample.org class notes after laboratory.",
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "unsupported_scope",
+          "research_scope"
+        ],
+        "limitations": [
+          "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "combining_email",
+      "text": "á@review.test: bring class notes after the laboratory.",
+      "source": "text",
+      "model_available": true,
+      "minimized": "á@review.test: bring class notes after the laboratory.",
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "unable",
+        "estimate": null,
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "unsupported_scope",
+          "research_scope"
+        ],
+        "limitations": [
+          "English messages are the research scope. Script checks do not establish language support; Marathi, Hindi and Hinglish are not validated.",
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "fullwidth_digits",
+      "text": "Meet at room １２３ after class; bring project notes.",
+      "source": "text",
+      "model_available": true,
+      "minimized": "Meet at room  numbertoken  after class; bring project notes.",
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "lower",
+        "estimate": {
+          "normalized": "meet at room numbertoken after class; bring project notes.",
+          "logits": [
+            1.0911848444992047,
+            -0.15667906638919338,
+            -0.9345057781099575
+          ],
+          "probabilities": [
+            0.8821769621020707,
+            0.09438699598106598,
+            0.023436041916863243
+          ],
+          "active_count": 128,
+          "norm": 52.74865277447265
+        },
+        "observations": [],
+        "urls": [],
+        "quality_flags": [
+          "research_scope"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy."
+        ],
+        "standalone_url": false,
+        "links_truncated": false
+      }
+    },
+    {
+      "id": "url_bom",
+      "text": "Read https://example.org/a﻿suffix after class.",
+      "source": "text",
+      "model_available": true,
+      "minimized": "Read  urltoken  after class.",
+      "expected": {
+        "schema_version": 2,
+        "policy_version": "ordinal_v2",
+        "observation_version": "local_context_v2",
+        "url_version": "lexical_v2",
+        "normalizer_version": "nfkc_ascii_ws_v1",
+        "model_id": "ss-char-lr-0.1.0",
+        "risk": "checking",
+        "estimate": {
+          "normalized": "read urltoken after class.",
+          "logits": [
+            0.3230306318794476,
+            -0.18649600816286438,
+            -0.13653462371652725
+          ],
+          "probabilities": [
+            0.5433159741686863,
+            0.21813240952122037,
+            0.23855161631009342
+          ],
+          "active_count": 62,
+          "norm": 37.30593435420435
+        },
+        "observations": [
+          {
+            "code": "invisible_char",
+            "source": "rule",
+            "severity": "caution",
+            "title": "Invisible characters",
+            "detail": "Hidden formatting can change text and links. Review the original carefully."
+          }
+        ],
+        "urls": [
+          {
+            "original": "https://example.org/a﻿suffix",
+            "host": null,
+            "codes": [
+              "unsupported_or_malformed"
+            ],
+            "valid": false
+          }
+        ],
+        "quality_flags": [
+          "research_scope",
+          "lexical_only"
+        ],
+        "limitations": [
+          "This historical research model cannot verify the sender or guarantee legitimacy.",
+          "Links were inspected as text. No destination or reputation service was contacted."
         ],
         "standalone_url": false,
         "links_truncated": false

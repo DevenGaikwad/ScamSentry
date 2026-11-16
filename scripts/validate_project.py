@@ -3,6 +3,8 @@ import argparse
 import json
 from pathlib import Path
 import sys
+# Inspection must not manufacture a cache inside an extracted distribution.
+sys.dont_write_bytecode=True
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'ml/src'))
 from scamsentry_ml.release_validation import validate_release

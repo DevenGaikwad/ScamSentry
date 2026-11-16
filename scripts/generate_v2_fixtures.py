@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'ml/src'))
 from scamsentry_ml.analysis_v2 import analyze
-from scamsentry_ml.contracts import PortableModel
+from scamsentry_ml.contracts import PortableModel, privacy_transform
 from scamsentry_ml.export import FIXTURES
 model=PortableModel(json.loads((ROOT/'ml/artifacts/bundle/model.json').read_text()))
 cases=[dict(id=f'legacy_input_{i:02d}',text=t,source='text',model_available=True) for i,t in enumerate(FIXTURES)]
@@ -39,9 +39,17 @@ extras=[
  ('invalid_control','Some laboratory notes\x00after class.','text',True),
  ('unsupported_with_request','मराठी message send your OTP','text',False),
  ('threshold_neutral','Bring the project notes before the laboratory session.','text',True),
+ ('unicode_contacts','Class notes: email élève@review.test or call १२३४५६७८९० tomorrow.','text',True),
+ ('unicode_url_whitespace','Review https://example.org/a\u0085https://review.test/b after class.','text',True),
+ ('unicode_host_boundary','कexample.org class notes after laboratory.','text',True),
+ ('combining_email','a\u0301@review.test: bring class notes after the laboratory.','text',True),
+ ('fullwidth_digits','Meet at room １２３ after class; bring project notes.','text',True),
+ ('url_bom','Read https://example.org/a\ufeffsuffix after class.','text',True),
 ]
 cases.extend(dict(id=i,text=t,source=s,model_available=a) for i,t,s,a in extras)
-for c in cases: c['expected']=analyze(c['text'],model if c['model_available'] else None,c['source'])
+for c in cases:
+    c['minimized']=privacy_transform(c['text'])
+    c['expected']=analyze(c['text'],model if c['model_available'] else None,c['source'])
 result=dict(schema_version=2,tolerance=1e-6,model_sha256=json.loads((ROOT/'ml/artifacts/bundle/manifest.json').read_text())['model_sha256'],description='Fictional end-to-end contracts, not accuracy evidence',fixtures=cases)
 for rel in ['ml/artifacts/parity/full_golden_v2.json','android/app/src/main/assets/model/full_golden_v2.json']:
     p=ROOT/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')

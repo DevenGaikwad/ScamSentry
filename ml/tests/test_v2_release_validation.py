@@ -4,6 +4,9 @@ from scamsentry_ml.release_validation import scan_release_tree
 from scamsentry_ml.release_validation import validate_release
 import hashlib
 import json
+from pathlib import Path
+import shutil
+import sys
 
 def test_archive_scans_without_git(tmp_path):
     (tmp_path/'README.md').write_text('Clean archive')
@@ -66,3 +69,14 @@ def test_inventory_rejects_path_escape_before_reading(tmp_path,name):
     (tmp_path/'ARTIFACT_INVENTORY.json').write_text(json.dumps(dict(artifacts=[dict(file=name)])))
     result=next(s for s in validate_release(tmp_path,'archive')['stages'] if s['stage']=='release_packaging')
     assert result['status']=='FAIL' and 'Unsafe APK inventory path' in result['errors'][0]
+
+def test_extracted_cli_does_not_create_rejected_bytecode_cache(tmp_path):
+    root=Path(__file__).resolve().parents[2]
+    (tmp_path/'scripts').mkdir()
+    shutil.copy2(root/'scripts/validate_project.py',tmp_path/'scripts/validate_project.py')
+    shutil.copytree(root/'ml/src/scamsentry_ml',tmp_path/'ml/src/scamsentry_ml',ignore=shutil.ignore_patterns('__pycache__'))
+    run=subprocess.run([sys.executable,str(tmp_path/'scripts/validate_project.py'),'--mode','archive','--format','json'],capture_output=True,text=True)
+    result=json.loads(run.stdout)
+    privacy=next(s for s in result['stages'] if s['stage']=='filesystem_privacy')
+    assert privacy['status']=='PASS'
+    assert not list(tmp_path.rglob('__pycache__'))

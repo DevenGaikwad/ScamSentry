@@ -1,0 +1,89 @@
+{
+  "source_commit": "1ebe27770d465a586edf8f36290eb8a5ef8c4d7d",
+  "workflow_run": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43869631929",
+  "device": "GitHub KVM API 35 google_apis x86_64 pixel_2",
+  "tests": 11,
+  "passed": 4,
+  "failed": 7,
+  "skipped": 0,
+  "cases": [
+    {
+      "name": "summariesSurviveWithUnknownLegacyInputSource",
+      "class_name": "in.deven.scamsentry.HistoryMigrationTest",
+      "seconds": 0.078,
+      "status": "FAIL",
+      "failure": "java.lang.AbstractMethodError: abstract method \"kotlinx.serialization.KSerializer[] kotlinx.serialization.internal.GeneratedSerializer.typeParametersSerializers()\""
+    },
+    {
+      "name": "migrationToThreePrunesExistingStorage",
+      "class_name": "in.deven.scamsentry.HistoryMigrationTest",
+      "seconds": 0.009,
+      "status": "FAIL",
+      "failure": "java.lang.AbstractMethodError: abstract method \"kotlinx.serialization.KSerializer[] kotlinx.serialization.internal.GeneratedSerializer.typeParametersSerializers()\""
+    },
+    {
+      "name": "bundledLatinOcrReadsOriginalFixtureAndRejectsMalformedBytes",
+      "class_name": "in.deven.scamsentry.OcrIntegrationTest",
+      "seconds": 2.713,
+      "status": "PASS",
+      "failure": null
+    },
+    {
+      "name": "allEightExifOrientationsPreservePixelLayout",
+      "class_name": "in.deven.scamsentry.OrientationExportTest",
+      "seconds": 0.006,
+      "status": "PASS",
+      "failure": null
+    },
+    {
+      "name": "secondExportKeepsFirstGrantFileAndPrunesExpiredFiles",
+      "class_name": "in.deven.scamsentry.OrientationExportTest",
+      "seconds": 0.007,
+      "status": "PASS",
+      "failure": null
+    },
+    {
+      "name": "retentionPrunesStorageTransactionally",
+      "class_name": "in.deven.scamsentry.RetentionTest",
+      "seconds": 0.248,
+      "status": "PASS",
+      "failure": null
+    },
+    {
+      "name": "packagedAndroidModelMatchesReference",
+      "class_name": "in.deven.scamsentry.WorkflowTest",
+      "seconds": 3.926,
+      "status": "FAIL",
+      "failure": "java.util.regex.PatternSyntaxException: Invalid value for match mode flags near index 4"
+    },
+    {
+      "name": "credentialRequestShowsEvidenceAndEditPath",
+      "class_name": "in.deven.scamsentry.WorkflowTest",
+      "seconds": 22.707,
+      "status": "FAIL",
+      "failure": "androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 20000 ms"
+    },
+    {
+      "name": "manualSummarySaveDeleteAndDisableControls",
+      "class_name": "in.deven.scamsentry.WorkflowTest",
+      "seconds": 22.342,
+      "status": "FAIL",
+      "failure": "androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 20000 ms"
+    },
+    {
+      "name": "exportDoesNotIncludeOriginalIdentifiers",
+      "class_name": "in.deven.scamsentry.WorkflowTest",
+      "seconds": 1.08,
+      "status": "FAIL",
+      "failure": "java.lang.NoClassDefFoundError: in.deven.scamsentry.core.UrlLexicalV2"
+    },
+    {
+      "name": "rotationKeepsDraftAndSharedInputReplacesPendingAnalysis",
+      "class_name": "in.deven.scamsentry.WorkflowTest",
+      "seconds": 47.026,
+      "status": "FAIL",
+      "failure": "java.lang.AssertionError: Activity never becomes requested state \"[DESTROYED]\" (last lifecycle transition = \"PAUSED\")"
+    }
+  ],
+  "physical_phone": false
+}

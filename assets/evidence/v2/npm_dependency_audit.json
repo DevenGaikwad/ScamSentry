@@ -1,0 +1,27 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {},
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 4,
+      "dev": 170,
+      "optional": 34,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 173
+    }
+  },
+  "audit_scope": {
+    "date": "2026-11-16",
+    "result": "No known npm advisories after a fresh install with scoped minimatch override",
+    "limitation": "Known advisory database only; not an application or native-library security proof"
+  }
+}

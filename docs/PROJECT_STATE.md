@@ -10,7 +10,7 @@ CI run https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675 passe
 
 The API 35 KVM instrumentation task failed. Collection after emulator shutdown then blocked on adb; cancellation requested, report pending. Repair moves bounded collection inside the emulator lifetime and preserves the test exit code. Do not describe device workflows as passed until actual reports establish that. Local machine has no `/dev/kvm` or phone; do not repeat known software-only emulator failures.
 
-Current local Python checks: 74 pass. New archive validator rejects caches and unexpected payload paths, checks APK inventory paths and tampering. Full release packaging now re-extracts and validates the complete APK-bearing ZIP, and rejects signing reports from another source commit. Browser refinements retain an idle worker, cancel active edits and scroll mobile results into view; their real workflow/timing rerun is pending.
+Current local Python checks: 75 pass. New archive validator rejects caches and unexpected payload paths, checks APK inventory paths and tampering. Full release packaging now re-extracts and validates the complete APK-bearing ZIP, and rejects signing reports from another source commit. Browser refinements retain an idle worker, cancel active edits and scroll mobile results into view; their real workflow/timing rerun is pending.
 
 ## Model and release scope
 
@@ -25,3 +25,11 @@ Three ABI APKs have been built with disposable TEST identities and verified sign
 Authorization covers public ScamSentry source and conditional zero-cost Vercel hosting. Vercel user billing reports active Hobby with no trial, but target team `team_SWRAhDlKOj1YObsysmS7m60F` returns 403 and its entitlement remains unverified. Earlier authorization link expired without observed approval. No paid plan, purchase, credits, permission email or private message was used. Continue independent GitHub work; do not bypass the connector scope restriction.
 
 Next: retrieve failed instrumentation reports; repair any runtime defect; publish reviewed source refinements; run CI with production browser workflows and bounded KVM tests; create the accurately labelled research prerelease and verify assets. Update this state and `GATE_REPORT.json` with observed results. Never turn pending gates into PASS to obtain a complete badge.
+
+## Runtime diagnosis after run 43869631929
+
+The repaired collection completed and preserved actual XML: 11 native cases, four passed / seven failed / zero skipped. OCR + malformed input, all eight EXIF orientations, export-file independence/expiry and transactional retention passed. Pattern initialization failed on unsupported `(?U)` flags, which also disrupted model/UI flows. Migration helper failures identify the mixed serialization core 1.7.3 / JSON 1.8.1 runtime. Fixes are explicit portable Unicode classes and a serialization 1.8.1 BOM, with a new full-contract Android test. Six new cases bring the pack to 59. These runtime corrections require a new emulator run.
+
+The second browser run passed all eight workflows, including mobile result scrolling and retained idle-worker behavior; its actual 25-sample timing record is preserved. Current local browser unit/parity: 63 pass. The source-extraction CI also exposed a validator-created bytecode cache; `validate_project.py` now disables bytecode writing before project imports, with a fresh-process regression and full-extraction validation. Python: 75 pass. The exact failed run remains visible; do not relabel it successful.
+
+The final manual workflow will also exercise a minified/profileable functional smoke case without running timing benchmarks on an emulator. Its release job builds `RELEASE_VERIFICATION.json` from actual JUnit and browser reports, checks the commit-linked model/APK inventory, validates the full ZIP, and publishes downloadable checksums plus an actual automated browser recording. Pending physical/Windows/hosting/research gates remain explicit.

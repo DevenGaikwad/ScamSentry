@@ -60,7 +60,9 @@ class WorkflowTest {
     }
     private fun screenshot(name: String) {
         val bitmap=compose.onRoot().captureToImage().asAndroidBitmap()
-        val path=File(compose.activity.getExternalFilesDir(null),"screenshots/$name").apply { parentFile?.mkdirs() }
+        val additional=androidx.test.platform.app.InstrumentationRegistry.getArguments().getString("additionalTestOutputDir")
+        val directory=additional?.let { File(it) } ?: File(compose.activity.getExternalFilesDir(null),"screenshots")
+        val path=File(directory,name).apply { parentFile?.mkdirs() }
         path.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG,100,it) }
     }
     @Test fun packagedAndroidModelMatchesReference() {

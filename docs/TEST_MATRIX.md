@@ -6,7 +6,7 @@ Status is evidence-specific. Host checks do not imply device checks. Historical 
 |---|---|---|
 | Context rules | Unrelated example labels, local negation, attached quotes, warning then new request, exception clauses | Python regressions and Kotlin ContextRulesV2Test pass |
 | Numeric baseline | 24 archived normalized/features/norm/logits/calibrated estimates and v1 categories | Host ParityTest pass; original bundle unchanged |
-| Complete domain contract | 53 fictional cases, including URL-only, unsupported text, absent model, short OCR, weak/repetitive input, exactly 40 and >40 links, malformed numeric/IDN/IPv6 hosts | Python-generated pack; Kotlin FullContractTest pass; browser parity pass |
+| Complete domain contract | 59 fictional cases, including URL-only, unsupported text, absent model, short OCR, weak/repetitive input, exactly 40 and >40 links, malformed numeric/IDN/IPv6 hosts | Python-generated pack; Kotlin FullContractTest pass; browser parity pass |
 | Word/hybrid export | Actual tiny fictional scikit-learn fit and export; both blocks, norms, logits, estimates | Python, Kotlin and TypeScript synthetic-reference tests pass |
 | Public fit/export | Tiny real LR fit; staged metadata; malformed class/shape/threshold/numeric contracts | Public Python tests; no private joblib skip |
 | Metrics | Known matrix, absent classes, no predicted positives, imbalance, deferral denominators | metrics_v2 tests pass |

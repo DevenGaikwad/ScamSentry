@@ -37,11 +37,15 @@ object TextContract {
         }
         return out.toString().replace(Regex(" +"), " ").trim(' ')
     }
+    private val email = Regex("(?i)${UnicodePattern.BOUNDARY}[${UnicodePattern.WORD_CONTENT}.+-]+@[${UnicodePattern.WORD_CONTENT}.-]+\\.[a-z]{2,}${UnicodePattern.BOUNDARY}")
+    private val phone = Regex("${UnicodePattern.BOUNDARY}(?:\\+?\\p{Nd}[\\p{Nd} ()-]{6,}\\p{Nd})${UnicodePattern.BOUNDARY}")
+    private val address = Regex("(?i)https?://[^${UnicodePattern.SPACE_CONTENT}<>]+|www\\.[^${UnicodePattern.SPACE_CONTENT}<>]+")
+    private val digits = Regex("\\p{Nd}+")
     fun minimize(text: String): String = text
-        .replace(Regex("(?iU)\\b[\\w.+-]+@[\\w.-]+\\.[a-z]{2,}\\b"), " emailtoken ")
-        .replace(Regex("(?U)\\b(?:\\+?\\d[\\d ()-]{6,}\\d)\\b"), " numbertoken ")
-        .replace(Regex("(?iU)https?://[^\\s<>]+|www\\.[^\\s<>]+"), " urltoken ")
-        .replace(Regex("(?U)\\d+"), " numbertoken ")
+        .replace(email, " emailtoken ")
+        .replace(phone, " numbertoken ")
+        .replace(address, " urltoken ")
+        .replace(digits, " numbertoken ")
     fun features(text: String): List<String> {
         val cps = normalize(text).codePoints().toArray()
         val out = ArrayList<String>()

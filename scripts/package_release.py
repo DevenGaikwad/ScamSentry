@@ -50,6 +50,8 @@ def main():
         artifacts.append(dict(artifact,source_commit=commit,min_sdk=26,version_code=2,version_name='0.2.0-preview',channel='research-preview'))
     manifest=json.loads((ROOT/'ml/artifacts/bundle/manifest.json').read_text())
     inventory=dict(schema_version=2,source_commit=commit,model=manifest,artifacts=artifacts,production_signing=False,byte_identical_builds_claimed=False,scope='Research preview; physical phone benchmarks and owner-managed production signing remain separate gates')
+    demo=out/'ScamSentry_Browser_Workflow.webm'
+    if demo.is_file():inventory['browser_recording']=dict(file=demo.name,source_commit=commit,bytes=demo.stat().st_size,sha256=hashlib.sha256(demo.read_bytes()).hexdigest(),scope='Actual automated production-browser workflow with fictional fixtures; not a native-phone recording or narrated faculty demo')
     (out/'ARTIFACT_INVENTORY.json').write_text(json.dumps(inventory,indent=2)+'\n')
     (out/'SHA256SUMS.txt').write_text(''.join(a['sha256']+'  install/'+a['file']+'\n' for a in artifacts))
     bundle=out/'ScamSentry_0.2.0_Research_Preview.zip'
@@ -58,8 +60,14 @@ def main():
         for artifact in artifacts:final.write(out/'install'/artifact['file'],'ScamSentry/install/'+artifact['file'])
         for name in ['ARTIFACT_INVENTORY.json','SHA256SUMS.txt','signing_report.json','archive_validation.json','apk_inspection.json']:
             final.write(out/name,'ScamSentry/'+name)
+        if (out/'RELEASE_VERIFICATION.json').is_file():final.write(out/'RELEASE_VERIFICATION.json','ScamSentry/RELEASE_VERIFICATION.json')
     full_validation=inspect_archive(bundle)
     (out/'full_package_validation.json').write_text(json.dumps(full_validation,indent=2)+'\n')
+    downloads=[out/'install'/a['file'] for a in artifacts]+[source,bundle]+[out/n for n in ['ARTIFACT_INVENTORY.json','SHA256SUMS.txt','apk_inspection.json','archive_validation.json','full_package_validation.json']]
+    if demo.is_file():downloads.append(demo)
+    downloads.extend(p for p in [out/'RELEASE_VERIFICATION.json',out/'model_manifest.json'] if p.is_file())
+    downloads.extend(sorted(out.glob('native_*.png')))
+    (out/'DOWNLOAD_SHA256SUMS.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in downloads))
     print(json.dumps(dict(archive=str(bundle),source_commit=commit,bytes=bundle.stat().st_size,sha256=hashlib.sha256(bundle.read_bytes()).hexdigest(),artifacts=artifacts),indent=2))
 
 if __name__=='__main__':main()

@@ -11,7 +11,7 @@ function compare(expected:unknown,actual:unknown,path:string){
  else expect(actual,path).toEqual(expected)
 }
 describe('complete Python–browser contract',()=>{
- for(const f of fixtures)it(f.id,()=>compare(f.expected,analyze(f.text,f.model_available?model:null,f.source),f.id))
+ for(const f of fixtures)it(f.id,()=>{expect(minimize(f.text),f.id+'/minimized').toBe(f.minimized);compare(f.expected,analyze(f.text,f.model_available?model:null,f.source),f.id)})
 })
 it('preserves Unicode features and identifier minimization',()=>{
  expect(normalize(' Ａ\t B  😀 ')).toBe('a b 😀')

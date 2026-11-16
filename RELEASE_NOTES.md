@@ -1,6 +1,6 @@
 # ScamSentry 0.2.0 — Research Preview
 
-Native Android and local-browser analysis share versioned preprocessing, observations, URL parsing, quality flags and decision policy. This preview fixes global secret-request suppression and the archive validator's skipped-scan failure, adds meaningful cross-platform regressions, improves native retention/OCR/export handling, and includes the functional worker-based browser companion.
+Native Android and local-browser analysis share versioned preprocessing, observations, URL parsing, quality flags and decision policy. This preview fixes global secret-request suppression and the archive validator's skipped-scan failure, adds meaningful cross-platform regressions, portable Unicode parsing on Android ICU and aligned serialization runtimes, improves native retention/OCR/export handling, and includes the functional worker-based browser companion.
 
 The approved estimator remains `ss-char-lr-0.1.0`; historical metrics are preserved. Eight v2 configurations were evaluated on allowed exploratory partitions. Word models improved clean development quality; noise-trained character models improved the synthetic substitution slice while losing clean quality. No replacement is promoted without the declared independent validation and resource evidence.
 
@@ -11,3 +11,5 @@ Raw datasets, private checkpoints and signing secrets are excluded. Drafts stay 
 Research limits remain explicit: historical English messages, no verified sender identity, no live reputation lookup, no validated Marathi/Hindi/Hinglish coverage, and no guaranteed detection. Browser OCR/PWA support is deferred. Physical-phone benchmarks, first-use offline OCR and 16 KB runtime behavior remain device gates even when host/CI checks pass. Consult `docs/GATE_REPORT.json`, the test matrix and model card for actual evidence.
 
 Conditional Vercel deployment requires verified free scope and access. No paid plan, trial, domain, inference service or database is required or activated.
+
+`RELEASE_VERIFICATION.json` records the final workflow's actual tests and source commit. `DOWNLOAD_SHA256SUMS.txt` covers release downloads; the source/APK bundle also includes its own APK checksum inventory. The browser workflow recording uses a production browser build and fictional content; it is separate from native screenshots, phone benchmarks and the narrated faculty demonstration.

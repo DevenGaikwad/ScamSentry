@@ -28,6 +28,7 @@ class FullContractTest {
         val fixtures=JSONObject(File(dir,"full_golden_v2.json").readText()).getJSONArray("fixtures")
         for (i in 0 until fixtures.length()) {
             val f=fixtures.getJSONObject(i)
+            assertEquals(f.getString("id"),f.getString("minimized"),TextContract.minimize(f.getString("text")))
             val actual=AnalysisEngine.analyze(f.getString("text"),if(f.getBoolean("model_available")) model else null,f.getString("source"))
             compare(f.getJSONObject("expected"),actual.contractJson(),f.getString("id"))
         }

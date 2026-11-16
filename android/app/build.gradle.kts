@@ -43,6 +43,9 @@ android {
 }
 ksp { arg("room.schemaLocation", "$projectDir/schemas") }
 dependencies {
+    // Align app + instrumentation runtimes with Room's generated serializers.
+    implementation(platform(libs.kotlinx.serialization.bom))
+    androidTestImplementation(platform(libs.kotlinx.serialization.bom))
     implementation(project(":core-analysis"))
     implementation(libs.androidx.core)
     implementation(libs.profileinstaller)

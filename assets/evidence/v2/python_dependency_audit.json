@@ -1,0 +1,81 @@
+{
+  "dependencies": [
+    {
+      "name": "numpy",
+      "version": "2.3.5",
+      "vulns": []
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.0",
+      "vulns": []
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.8.0",
+      "vulns": []
+    },
+    {
+      "name": "pandas",
+      "version": "2.2.3",
+      "vulns": []
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.3",
+      "vulns": []
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "vulns": []
+    },
+    {
+      "name": "pytest",
+      "version": "9.0.3",
+      "vulns": []
+    },
+    {
+      "name": "pluggy",
+      "version": "1.7.0",
+      "vulns": []
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.6.0",
+      "vulns": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "4.0.0",
+      "vulns": []
+    },
+    {
+      "name": "pytz",
+      "version": "2026.6",
+      "vulns": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6",
+      "vulns": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "vulns": []
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0",
+      "vulns": []
+    }
+  ],
+  "fixes": [],
+  "audit_scope": {
+    "date": "2026-11-16",
+    "command": "pip-audit 2.10.0 -r ml/requirements-lock.txt --no-deps",
+    "result": "No known vulnerabilities found for 14 explicitly pinned requirements",
+    "limitation": "Advisory database check only; does not cover Android native SDKs, application logic or unknown vulnerabilities"
+  }
+}

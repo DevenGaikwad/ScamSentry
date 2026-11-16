@@ -19,6 +19,8 @@ release/*
 **/dist/
 **/.vercel/
 **/test-results/
+**/unit-results/
 **/playwright-report/
 **/*.tsbuildinfo
 **/.kotlin/
+/assets/evidence/v2/web_demo_*.webm

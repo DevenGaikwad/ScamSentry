@@ -1,0 +1,215 @@
+{
+  "browser": "159.0.8154.6",
+  "platform": "linux",
+  "architecture": "x64",
+  "source_commit": "1ebe27770d465a586edf8f36290eb8a5ef8c4d7d",
+  "samples": 25,
+  "scope": "Fictional local-static-server workflow; first sample cold worker with populated HTTP cache; subsequent samples reuse the validated model. Automation roundtrip includes Playwright and detail interaction, not phone latency.",
+  "warm_analysis_median_ms": 0.39999999999417923,
+  "warm_analysis_p95_ms": 0.6000000000058208,
+  "warm_worker_total_median_ms": 0.39999999999417923,
+  "values": [
+    {
+      "fixture": "class",
+      "iteration": 0,
+      "characters": 70,
+      "analysis_ms": 5.80000000000291,
+      "worker_total_ms": 78.20000000001164,
+      "automation_roundtrip_ms": 188.1157639999999
+    },
+    {
+      "fixture": "class",
+      "iteration": 1,
+      "characters": 70,
+      "analysis_ms": 0.5999999999912689,
+      "worker_total_ms": 0.5999999999912689,
+      "automation_roundtrip_ms": 116.2780130000001
+    },
+    {
+      "fixture": "class",
+      "iteration": 2,
+      "characters": 70,
+      "analysis_ms": 0.6000000000058208,
+      "worker_total_ms": 0.6000000000058208,
+      "automation_roundtrip_ms": 132.20527500000003
+    },
+    {
+      "fixture": "class",
+      "iteration": 3,
+      "characters": 70,
+      "analysis_ms": 0.5,
+      "worker_total_ms": 0.5,
+      "automation_roundtrip_ms": 117.63489400000003
+    },
+    {
+      "fixture": "class",
+      "iteration": 4,
+      "characters": 70,
+      "analysis_ms": 0.40000000000873115,
+      "worker_total_ms": 0.40000000000873115,
+      "automation_roundtrip_ms": 132.44621000000006
+    },
+    {
+      "fixture": "secret",
+      "iteration": 0,
+      "characters": 60,
+      "analysis_ms": 0.6000000000058208,
+      "worker_total_ms": 0.6000000000058208,
+      "automation_roundtrip_ms": 110.08170000000018
+    },
+    {
+      "fixture": "secret",
+      "iteration": 1,
+      "characters": 60,
+      "analysis_ms": 0.3000000000029104,
+      "worker_total_ms": 0.3000000000029104,
+      "automation_roundtrip_ms": 116.94783199999983
+    },
+    {
+      "fixture": "secret",
+      "iteration": 2,
+      "characters": 60,
+      "analysis_ms": 0.39999999999417923,
+      "worker_total_ms": 0.39999999999417923,
+      "automation_roundtrip_ms": 113.94686599999977
+    },
+    {
+      "fixture": "secret",
+      "iteration": 3,
+      "characters": 60,
+      "analysis_ms": 0.5,
+      "worker_total_ms": 0.5,
+      "automation_roundtrip_ms": 116.81162799999993
+    },
+    {
+      "fixture": "secret",
+      "iteration": 4,
+      "characters": 60,
+      "analysis_ms": 0.39999999999417923,
+      "worker_total_ms": 0.6000000000058208,
+      "automation_roundtrip_ms": 105.68544999999995
+    },
+    {
+      "fixture": "offer",
+      "iteration": 0,
+      "characters": 84,
+      "analysis_ms": 0.40000000000873115,
+      "worker_total_ms": 0.40000000000873115,
+      "automation_roundtrip_ms": 95.94345299999986
+    },
+    {
+      "fixture": "offer",
+      "iteration": 1,
+      "characters": 84,
+      "analysis_ms": 0.40000000000873115,
+      "worker_total_ms": 0.40000000000873115,
+      "automation_roundtrip_ms": 107.02196800000002
+    },
+    {
+      "fixture": "offer",
+      "iteration": 2,
+      "characters": 84,
+      "analysis_ms": 0.39999999999417923,
+      "worker_total_ms": 0.39999999999417923,
+      "automation_roundtrip_ms": 117.20390100000031
+    },
+    {
+      "fixture": "offer",
+      "iteration": 3,
+      "characters": 84,
+      "analysis_ms": 0.40000000000873115,
+      "worker_total_ms": 0.40000000000873115,
+      "automation_roundtrip_ms": 106.25494799999979
+    },
+    {
+      "fixture": "offer",
+      "iteration": 4,
+      "characters": 84,
+      "analysis_ms": 0.5999999999912689,
+      "worker_total_ms": 0.5,
+      "automation_roundtrip_ms": 108.96648099999993
+    },
+    {
+      "fixture": "url",
+      "iteration": 0,
+      "characters": 38,
+      "analysis_ms": 0.5,
+      "worker_total_ms": 0.5,
+      "automation_roundtrip_ms": 108.40081099999998
+    },
+    {
+      "fixture": "url",
+      "iteration": 1,
+      "characters": 38,
+      "analysis_ms": 0.10000000000582077,
+      "worker_total_ms": 0.10000000000582077,
+      "automation_roundtrip_ms": 114.84217799999988
+    },
+    {
+      "fixture": "url",
+      "iteration": 2,
+      "characters": 38,
+      "analysis_ms": 0,
+      "worker_total_ms": 0.09999999999126885,
+      "automation_roundtrip_ms": 116.66892700000017
+    },
+    {
+      "fixture": "url",
+      "iteration": 3,
+      "characters": 38,
+      "analysis_ms": 0.20000000001164153,
+      "worker_total_ms": 0.20000000001164153,
+      "automation_roundtrip_ms": 100.04997999999978
+    },
+    {
+      "fixture": "url",
+      "iteration": 4,
+      "characters": 38,
+      "analysis_ms": 0.10000000000582077,
+      "worker_total_ms": 0.10000000000582077,
+      "automation_roundtrip_ms": 100.96139300000004
+    },
+    {
+      "fixture": "sparse",
+      "iteration": 0,
+      "characters": 8,
+      "analysis_ms": 0.20000000001164153,
+      "worker_total_ms": 0.20000000001164153,
+      "automation_roundtrip_ms": 106.55643599999985
+    },
+    {
+      "fixture": "sparse",
+      "iteration": 1,
+      "characters": 8,
+      "analysis_ms": 0.09999999999126885,
+      "worker_total_ms": 0.09999999999126885,
+      "automation_roundtrip_ms": 117.13651200000004
+    },
+    {
+      "fixture": "sparse",
+      "iteration": 2,
+      "characters": 8,
+      "analysis_ms": 0.09999999999126885,
+      "worker_total_ms": 0.09999999999126885,
+      "automation_roundtrip_ms": 115.70354899999984
+    },
+    {
+      "fixture": "sparse",
+      "iteration": 3,
+      "characters": 8,
+      "analysis_ms": 0,
+      "worker_total_ms": 0,
+      "automation_roundtrip_ms": 116.45673899999974
+    },
+    {
+      "fixture": "sparse",
+      "iteration": 4,
+      "characters": 8,
+      "analysis_ms": 0.10000000000582077,
+      "worker_total_ms": 0.10000000000582077,
+      "automation_roundtrip_ms": 117.01984200000061
+    }
+  ],
+  "physical_phone": false,
+  "heap_measured": false
+}

@@ -2,5 +2,5 @@
   "scope": "Host JVM; complete domain outputs",
   "tolerance": 1.0E-6,
   "status": "PASS",
-  "fixtures": 53
+  "fixtures": 59
 }

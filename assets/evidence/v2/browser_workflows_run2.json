@@ -1,0 +1,18 @@
+{
+  "source_commit": "1ebe27770d465a586edf8f36290eb8a5ef8c4d7d",
+  "workflow_run": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43869631929",
+  "scope": "Production-built React/Vite served locally on GitHub-hosted Ubuntu; Chromium desktop and mobile viewport; real worker; fictional fixtures",
+  "stats": {
+    "startTime": "2026-11-16T12:47:07.971Z",
+    "duration": 13115.978,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": [
+    "desktop-chromium",
+    "mobile-chromium"
+  ],
+  "physical_phone": false
+}

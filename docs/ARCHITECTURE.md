@@ -11,3 +11,24 @@ The approved schema-1 model is an immutable digest-checked JSON asset. Loading s
 Room schema 3 keeps redacted summaries only. Insert/prune is transactional, migrations preserve legacy summary metadata, and optional-history disabling clears data. FileProvider exposes only reviewed redacted exports with independent names and bounded cleanup. All eight EXIF orientations are applied to pixels before OCR/review.
 
 The static React companion runs the same approved estimator in a worker, with its own cancellation/request IDs and content-addressed assets. [Browser architecture](WEB_ARCHITECTURE.md) documents deployment, CSP and privacy details. The benchmark module prepares real release-like measurements; it supplies no fabricated profile or phone result.
+
+```mermaid
+flowchart TD
+  subgraph Android
+    Native["Compose editor and review"] --> VM["Versioned ViewModel"]
+    Image["Photo picker and bundled OCR"] --> Native
+    VM --> Kotlin["Kotlin analysis engine"]
+    VM --> History["Optional summary history"]
+    VM --> Export["Reviewed redacted export"]
+  end
+  subgraph Browser
+    React["React editor"] --> Worker["Cancellable local worker"]
+    Worker --> TS["TypeScript analysis engine"]
+  end
+  Model["Digest-checked approved model"] --> Kotlin
+  Model --> TS
+  Fixtures["Python reference and complete fixtures"] -.-> Kotlin
+  Fixtures -.-> TS
+```
+
+The dotted edges represent verification, not an inference service. Python is the reference/research implementation; neither client sends message input to it. Every runtime retains its own implementation of the versioned contract, with parity evidence for the same fixtures.

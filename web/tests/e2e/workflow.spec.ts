@@ -3,6 +3,13 @@ import { mkdirSync,writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 const evidence=join(process.cwd(),'../assets/evidence/v2')
 
+test.afterEach(async({page},info)=>{
+ if(info.status==='passed'&&info.project.name==='desktop-chromium'&&info.title.startsWith('real worker workflow')){
+  const video=page.video();await page.close()
+  if(video)await video.saveAs(join(evidence,'web_demo_desktop.webm'))
+ }
+})
+
 test('real worker workflow, local input privacy, redacted report and responsive layout',async({page,browser},info)=>{
  const requests:{url:string;body:string|null;method:string}[]=[];const errors:string[]=[]
  page.on('request',r=>requests.push({url:r.url(),body:r.postData(),method:r.method()}));page.on('pageerror',e=>errors.push(e.message))
