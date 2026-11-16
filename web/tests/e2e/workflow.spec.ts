@@ -3,7 +3,7 @@ import { mkdirSync,writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 const evidence=join(process.cwd(),'../assets/evidence/v2')
 
-test('real worker workflow, local input privacy, redacted report and responsive layout',async({page},info)=>{
+test('real worker workflow, local input privacy, redacted report and responsive layout',async({page,browser},info)=>{
  const requests:{url:string;body:string|null;method:string}[]=[];const errors:string[]=[]
  page.on('request',r=>requests.push({url:r.url(),body:r.postData(),method:r.method()}));page.on('pageerror',e=>errors.push(e.message))
  await page.goto('/');await expect(page.getByRole('heading',{name:'A second look before you act.'})).toBeVisible()
@@ -13,6 +13,7 @@ test('real worker workflow, local input privacy, redacted report and responsive 
  await page.getByLabel('Message to analyze').fill('Fictional account team: send your OTP immediately. Visit https://bank.example@review.test/verify '+canary)
  await page.getByRole('button',{name:'Analyze message',exact:true}).click()
  await expect(page.getByRole('heading',{name:'Higher risk',exact:true})).toBeVisible()
+ if(info.project.name==='mobile-chromium')await expect(page.getByRole('heading',{name:'Higher risk',exact:true})).toBeInViewport()
  await expect(page.getByRole('heading',{name:'Request for a secret',exact:true})).toBeVisible()
  await expect(page.getByText('review.test',{exact:true})).toBeVisible()
  await page.getByText('Inspect technical details',{exact:true}).click()
@@ -29,6 +30,24 @@ test('real worker workflow, local input privacy, redacted report and responsive 
  expect(errors).toEqual([])
  writeFileSync(join(evidence,`web_${info.project.name}_network.json`),JSON.stringify({scope:'Fictional workflow; URLs and methods only, no input bodies retained',input_transmitted:false,requests:requests.map(({url,method})=>({url,method})),page_errors:errors},null,2)+'\n')
  await page.getByRole('button',{name:'Clear',exact:true}).click();await expect(page.getByLabel('Message to analyze')).toHaveValue('');await expect(page.getByRole('heading',{name:'Higher risk',exact:true})).toHaveCount(0)
+ if(info.project.name==='desktop-chromium'){
+  const samples=[['class',"Let's meet in the library after class. Please bring the project notes."],['secret','Fictional team: send your OTP immediately to confirm access.'],['offer','Fictional stationery shop: weekend discount on notebooks. Reply STOP to unsubscribe.'],['url','https://bank.example@review.test/notes'],['sparse','zqjzxqjz']]
+  const values:{fixture:string;iteration:number;characters:number;analysis_ms:number;worker_total_ms:number;automation_roundtrip_ms:number}[]=[]
+  for(const [fixture,text] of samples){
+   await page.getByLabel('Message to analyze').fill(text)
+   for(let i=0;i<5;i++){
+    const start=performance.now()
+    await page.getByRole('button',{name:'Analyze message',exact:true}).click()
+    await expect(page.locator('.risk-card')).toBeVisible()
+    await page.getByText('Inspect technical details',{exact:true}).click()
+    const node=page.getByTestId('worker-timing');await expect(node).toBeVisible()
+    values.push({fixture,iteration:i,characters:Array.from(text).length,analysis_ms:Number(await node.getAttribute('data-analysis-ms')),worker_total_ms:Number(await node.getAttribute('data-worker-total-ms')),automation_roundtrip_ms:performance.now()-start})
+   }
+  }
+  const warm=values.slice(1),quantile=(xs:number[],q:number)=>{const a=[...xs].sort((a,b)=>a-b);return a[Math.ceil(q*a.length)-1]}
+  writeFileSync(join(evidence,'web_desktop-chromium_timings.json'),JSON.stringify({browser:await browser.version(),platform:process.platform,architecture:process.arch,source_commit:process.env.GITHUB_SHA??'local',samples:values.length,scope:'Fictional local-static-server workflow; first sample cold worker with populated HTTP cache; subsequent samples reuse the validated model. Automation roundtrip includes Playwright and detail interaction, not phone latency.',warm_analysis_median_ms:quantile(warm.map(v=>v.analysis_ms),.5),warm_analysis_p95_ms:quantile(warm.map(v=>v.analysis_ms),.95),warm_worker_total_median_ms:quantile(warm.map(v=>v.worker_total_ms),.5),values,physical_phone:false,heap_measured:false},null,2)+'\n')
+ }
+
 })
 
 test('edits reject stale work and subsequent analysis uses new text',async({page})=>{

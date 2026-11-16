@@ -12,7 +12,7 @@ CACHE = {'.git','.gradle','.kotlin','build','node_modules','.venv','__pycache__'
 FORBIDDEN = re.compile(r'(?:^|/)(?:data/(?:raw|processed)|artifacts/private|\.env(?:\.[^/]*)?|local\.properties|signing\.properties|id_rsa|id_ed25519)(?:/|$)|\.(?:jks|keystore|joblib|pickle|pkl|p12|pfx|pem)$')
 TOKEN = re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
 ALLOWED_DIRS={'android','ml','scripts','docs','assets','web','release','install','.github'}
-ALLOWED_TOP={'README.md','LICENSE','THIRD_PARTY_NOTICES.md','RELEASE_NOTES.md','ARTIFACT_INVENTORY.json','SHA256SUMS.txt','.gitignore','.gitattributes','SECURITY.md','CONTRIBUTING.md','signing_report.json','archive_validation.json'}
+ALLOWED_TOP={'README.md','LICENSE','THIRD_PARTY_NOTICES.md','RELEASE_NOTES.md','ARTIFACT_INVENTORY.json','SHA256SUMS.txt','.gitignore','.gitattributes','SECURITY.md','CONTRIBUTING.md','signing_report.json','archive_validation.json','apk_inspection.json'}
 TEXT = {'.py','.kt','.kts','.json','.md','.yml','.yaml','.toml','.txt','.xml','.csv','.ts','.tsx','.js','.mjs','.css','.html','.ps1','.bat','.properties','.svg','.sh','.lock'}
 
 def stage(name,status,count=0,details='',errors=None):
@@ -36,9 +36,10 @@ def candidate_paths(root,mode):
             p=Path(folder)/d
             if p.is_symlink():
                 errors.append(f'Symlink directory: {p.relative_to(root)}'); dirs.remove(d)
-            elif d in CACHE: dirs.remove(d)
+            elif d in CACHE:
+                errors.append(f'Build cache in archive: {p.relative_to(root)}'); dirs.remove(d)
         names.extend((Path(folder)/f).relative_to(root).as_posix() for f in files)
-    return sorted(names),stage('git_listing','NOT_APPLICABLE',len(names),'Archive filesystem walk',errors)
+    return sorted(names),stage('git_listing','NOT_APPLICABLE',len(names),'Archive walk; known build caches are rejected and excluded from descent',errors)
 
 def scan_release_tree(root,mode):
     root=Path(root).resolve(); names,listing=candidate_paths(root,mode)
@@ -72,6 +73,7 @@ def validate_release(root,mode):
             items=json.loads(inventory.read_text())['artifacts']
             if not items: raise ValueError('Artifact inventory is empty')
             for item in items:
+                if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*\.apk',item['file']):raise ValueError('Unsafe APK inventory path')
                 p=root/'install'/item['file']
                 if not p.is_file() or p.stat().st_size!=item['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']: raise ValueError('Release artifact checksum mismatch')
             stages.append(stage('release_packaging','PASS',len(items)))

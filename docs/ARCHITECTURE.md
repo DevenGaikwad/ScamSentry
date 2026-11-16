@@ -1,26 +1,13 @@
-# Architecture and trust boundaries
+# V2 architecture
 
-The app has two Gradle modules: a pure Kotlin/JVM analysis core and the Android app. The app uses Compose and Material 3, lifecycle ViewModel, structured Coroutines/Flow, Navigation Compose, DataStore preferences and Room summary history. Dependency injection is a small Application-owned graph.
+The native foundation remains Kotlin/Compose, Material 3, Navigation Compose, ViewModel, coroutines/Flow, Room and DataStore. Domain behavior is Android-independent in `core-analysis`; bitmap/URI/OCR, lifecycle, persistence and sharing stay in the app layer. Coherent editor, result, history, information and component files replace the original all-in-one screen file.
 
-```mermaid
-flowchart TD
-    Input["Typed or shared text"] --> Review["Reviewable editor"]
-    Image["Selected content URI"] --> Decode["Bounded decoding and bundled OCR"]
-    Decode --> Review
-    Review --> Core["Local analysis use case"]
-    Core --> Model["Minimized TF-IDF and calibrated LR"]
-    Core --> Rules["Original-text rules and URL syntax"]
-    Model --> Policy["Versioned ordinal policy"]
-    Rules --> Policy
-    Policy --> Result["Evidence, limits and next steps"]
-    Result --> Save["Explicit metadata-only save"]
-    Result --> Export["Redacted preview and explicit sharing"]
-```
+`AnalysisEngine` owns bounded input validation, script/feature quality, context observations, conservative URL extraction, estimate use, limitations and final-category precedence. The Python and TypeScript references follow the same schema-2 contract. A standalone address gets lexical observations, zero/weak features cannot produce reassuring model-only interpretation, exactly 40 addresses remain fully inspected, and a 41st match sets an explicit limitation. A concrete secret request stays visible even when statistical interpretation is unavailable.
 
-Untrusted inputs are text, intents, content providers, image bytes and model files. Incoming shares accept ACTION_SEND/text/plain; they never open destinations. A share replaces the current draft and cancels existing work. Editor versions and cancellation prevent obsolete results being applied. Process death deliberately discards draft content; rotation uses the ViewModel. Screenshot streams and bitmaps are bounded; source files are never copied to disk. OCR requests are serialized. A cancelled ML Kit task is allowed to finish privately before its bitmap is recycled, because its native Task is not coroutine-cancellable; stale results are still rejected by input version.
+The approved schema-1 model is an immutable digest-checked JSON asset. Loading stays off the UI thread and is cached. The Kotlin loader discards its parsed JSON, keeps numeric arrays/inverse vocabulary, streams counts, and computes explanations with the same active weights as inference. Model loading failures become an explicit limited state. Research schema-2 word/hybrid blocks remain separate and have tiny actual-fit cross-platform tests.
 
-Model features first minimize email/number/URL tokens, normalize NFKC, lowercase ASCII only, collapse a fixed whitespace set, count overlapping Unicode codepoint n-grams 3..5, apply sublinear TF and smoothed train-only IDF, L2-normalize, compute three logits, divide by fitted scalar temperature and apply stable softmax. This is implemented independently in Python and Kotlin. No network client, neural runtime or Python deserializer is used on phone.
+`MessageModel` and `OcrSource` define focused seams; constructor/factory ownership remains simple. The ViewModel serializes model initialization, OCR ownership and history operations, invalidates old work by input version, and checks cancellation before installing a result. Raw drafts are not placed in persistent navigation/saved-state storage. Window-size classes choose compact bottom navigation, wider navigation rails and paired editor/result panes on expanded windows.
 
-Model estimates, rule observations and lexical URL observations remain distinguishable. Policy never averages their outputs into a fake probability. Missing model, unsupported script and invalid input cannot create a lower-risk result. Observation spans are omitted rather than risking mismatched Python codepoint/Kotlin UTF-16 highlighting.
+Room schema 3 keeps redacted summaries only. Insert/prune is transactional, migrations preserve legacy summary metadata, and optional-history disabling clears data. FileProvider exposes only reviewed redacted exports with independent names and bounded cleanup. All eight EXIF orientations are applied to pixels before OCR/review.
 
-History is a separate repository and cannot block inference. Only category, fixed summary, timestamp and version metadata are saved after consent. No raw payload requires field encryption in this build. DataStore stores settings only. Backup is explicitly excluded. Export is a separate deliberate boundary with a redacted preview and narrow FileProvider cache path.
+The static React companion runs the same approved estimator in a worker, with its own cancellation/request IDs and content-addressed assets. [Browser architecture](WEB_ARCHITECTURE.md) documents deployment, CSP and privacy details. The benchmark module prepares real release-like measurements; it supplies no fabricated profile or phone result.

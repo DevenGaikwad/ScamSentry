@@ -44,3 +44,24 @@ Connect your own Android phone using a known USB cable, enable Developer options
 The app can run offline after installation; development setup normally downloads Gradle, SDK and Python dependencies. Prepare lawful caches before an offline classroom build. No offline-from-a-fresh-machine build claim is made.
 
 Common symptoms: missing SDK → set the local SDK path; incompatible Java → select the documented JDK; share target missing → inspect the installed app and text/plain MIME; OCR empty → choose a readable Latin-script screenshot and correct text; model unavailable → verify APK checksum/reinstall, never trust a fallback green state. Do not expose personal screenshots or signing secrets in bug reports.
+
+## V0.2.0 upgrade notes
+
+Clone `https://github.com/DevenGaikwad/ScamSentry` into a short ASCII path such as `C:\Projects\ScamSentry`. Keep JDK 21, SDK platform `android-37.0`, Build Tools 36.0.0, compile/target/min 37/36/26. The project now pins Gradle 9.6.0 / AGP 9.5.1; use the regenerated `android\gradlew.bat` rather than a globally installed older Gradle. Review `DEPENDENCIES.md` for the coherent stable group. Existing E: tools or unrelated project installations do not need moving.
+
+From PowerShell at the repository root:
+
+```powershell
+python -m pip install -r ml/requirements-lock.txt
+python -m pip install --no-deps -e ml
+python -m pytest ml/tests -q
+python scripts/validate_project.py --mode repository
+Set-Location android
+.\gradlew.bat :core-analysis:test :app:testDebugUnitTest :app:lintDebug
+.\gradlew.bat :app:assembleDebug :app:assembleDebugAndroidTest
+.\gradlew.bat :app:assembleRelease
+```
+
+Separate release assembly bounds compiler/lint/R8 memory residency. For a source ZIP, run the validator with `--mode archive` before building. No Git initialization or private joblib file is needed to validate source and synthetic export arithmetic.
+
+For the browser, use Node 24, enter `web`, then run `npm ci`, `npm run build`, `npm run preview` and open the displayed localhost URL. Text/URL analysis is functional after public model download. Browser OCR/PWA are not included. Installable release APKs use explicit disposable TEST signatures and versionCode 2. Windows batch invocation is provided by the official wrapper; this Linux execution did not independently run Windows.

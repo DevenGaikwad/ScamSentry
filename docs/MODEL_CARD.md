@@ -15,3 +15,9 @@ Research preview for English short-message resemblance, not authentication or gu
 - Licence and intended use: original code MIT; source-data-derived assets retain accompanying CC BY attribution and applicable third-party terms. Academic/research preview; no unsupported certification or medical/financial authenticity claim.
 
 See the gate report for what was actually verified. This card must not be used to infer that physical-device or public-release gates passed.
+
+## Application v0.2.0 integration
+
+The estimator and its historical reports remain unchanged. Application orchestration is now schema 2 / `ordinal_v2`, with local context v2 and lexical URL v2. The model's embedded ordinal-v1 thresholds remain .62/.18; the application explicitly adds quality, standalone-URL and unavailable-model precedence. These are separate versioned contracts.
+
+New exploratory word/character/hybrid comparisons are documented in [MODEL_COMPARISON.md](MODEL_COMPARISON.md). Their development improvements and synthetic-noise gains are not attached to this baseline's historical test score. The approved browser asset is byte-identical to the same baseline. Actual complete-domain fixtures compare Python, Kotlin and TypeScript; physical-phone and contemporary external evidence remain separate.

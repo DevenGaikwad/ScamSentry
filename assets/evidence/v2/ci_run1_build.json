@@ -1,0 +1,364 @@
+{
+  "schema_version": 2,
+  "source_commit": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+  "source_tree": "6f200cd8aca99332caba1d851883f3fbec4f44cd",
+  "workflow_run": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675",
+  "environment": "GitHub-hosted ubuntu-latest; Temurin JDK 21; platform 37.0; build tools 36.0.0",
+  "android_build": "PASS",
+  "tasks": [
+    "core-analysis:test",
+    "app:testDebugUnitTest",
+    "app:lintDebug",
+    "app:assembleDebug",
+    "app:assembleDebugAndroidTest",
+    "app:assembleRelease",
+    "benchmark:assembleBenchmark"
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 9,
+    "report": "ci_run1_lint.txt"
+  },
+  "core_junit_suites": [
+    {
+      "name": "in.deven.scamsentry.core.ResearchBlockParityTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.044"
+    },
+    {
+      "name": "in.deven.scamsentry.core.ContextRulesV2Test",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.044"
+    },
+    {
+      "name": "in.deven.scamsentry.core.ParityTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.203"
+    },
+    {
+      "name": "in.deven.scamsentry.core.FullContractTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.458"
+    }
+  ],
+  "signing": {
+    "artifacts": [
+      {
+        "file": "ScamSentry_0.2.0-preview_arm64-v8a_TEST-SIGNED.apk",
+        "abi": "arm64-v8a",
+        "bytes": 15759844,
+        "sha256": "023bb8b478c6e47ffe21767ab9cb7c70e12a00aa7a70695637f80d89d0e4bd87",
+        "signing": "Disposable TEST identity; not production",
+        "signature_verification": [
+          "Verifies",
+          "Verified using v1 scheme (JAR signing): false",
+          "Verified using v2 scheme (APK Signature Scheme v2): true",
+          "Verified using v3 scheme (APK Signature Scheme v3): true",
+          "Verified using v3.1 scheme (APK Signature Scheme v3.1): false",
+          "Verified using v4 scheme (APK Signature Scheme v4): false",
+          "Verified for SourceStamp: false",
+          "Number of signers: 1",
+          "Signer #1 certificate DN: CN=ScamSentry Disposable Research Test, OU=Academic Preview, O=ScamSentry, C=IN",
+          "Signer #1 certificate SHA-256 digest: deb2f90f8e2a15005b6977505ebe2f5eb78938abf1dd57c78d2f33cee5820094",
+          "Signer #1 certificate SHA-1 digest: 18c5c0bcc810ba2363d24f228f35945e86d98b7d",
+          "Signer #1 certificate MD5 digest: 85697bbe27f82a2b324b1942a6048baa",
+          "Signer #1 key algorithm: RSA",
+          "Signer #1 key size (bits): 2048",
+          "Signer #1 public key SHA-256 digest: 842b3804a159a5739547760d401a9bad40fd1b69b987aba794e0e6fff02db519",
+          "Signer #1 public key SHA-1 digest: 830b7bee63e0bead2c69e9a4945556aeca7a2505",
+          "Signer #1 public key MD5 digest: ee6fbd239a4219b04fd5b435209ee418"
+        ],
+        "zip_alignment_16k": "PASS"
+      },
+      {
+        "file": "ScamSentry_0.2.0-preview_x86_64_TEST-SIGNED.apk",
+        "abi": "x86_64",
+        "bytes": 16325083,
+        "sha256": "f59dc7fa9da2e9601d99517df7b642c4b6443dc57c60d3197a46708f5934a742",
+        "signing": "Disposable TEST identity; not production",
+        "signature_verification": [
+          "Verifies",
+          "Verified using v1 scheme (JAR signing): false",
+          "Verified using v2 scheme (APK Signature Scheme v2): true",
+          "Verified using v3 scheme (APK Signature Scheme v3): true",
+          "Verified using v3.1 scheme (APK Signature Scheme v3.1): false",
+          "Verified using v4 scheme (APK Signature Scheme v4): false",
+          "Verified for SourceStamp: false",
+          "Number of signers: 1",
+          "Signer #1 certificate DN: CN=ScamSentry Disposable Research Test, OU=Academic Preview, O=ScamSentry, C=IN",
+          "Signer #1 certificate SHA-256 digest: deb2f90f8e2a15005b6977505ebe2f5eb78938abf1dd57c78d2f33cee5820094",
+          "Signer #1 certificate SHA-1 digest: 18c5c0bcc810ba2363d24f228f35945e86d98b7d",
+          "Signer #1 certificate MD5 digest: 85697bbe27f82a2b324b1942a6048baa",
+          "Signer #1 key algorithm: RSA",
+          "Signer #1 key size (bits): 2048",
+          "Signer #1 public key SHA-256 digest: 842b3804a159a5739547760d401a9bad40fd1b69b987aba794e0e6fff02db519",
+          "Signer #1 public key SHA-1 digest: 830b7bee63e0bead2c69e9a4945556aeca7a2505",
+          "Signer #1 public key MD5 digest: ee6fbd239a4219b04fd5b435209ee418"
+        ],
+        "zip_alignment_16k": "PASS"
+      },
+      {
+        "file": "ScamSentry_0.2.0-preview_universal_TEST-SIGNED.apk",
+        "abi": "universal",
+        "bytes": 45849846,
+        "sha256": "f957e0dcf713eac90176fefcf4ebbc64676d65ad5241313998c900aed4908585",
+        "signing": "Disposable TEST identity; not production",
+        "signature_verification": [
+          "Verifies",
+          "Verified using v1 scheme (JAR signing): false",
+          "Verified using v2 scheme (APK Signature Scheme v2): true",
+          "Verified using v3 scheme (APK Signature Scheme v3): true",
+          "Verified using v3.1 scheme (APK Signature Scheme v3.1): false",
+          "Verified using v4 scheme (APK Signature Scheme v4): false",
+          "Verified for SourceStamp: false",
+          "Number of signers: 1",
+          "Signer #1 certificate DN: CN=ScamSentry Disposable Research Test, OU=Academic Preview, O=ScamSentry, C=IN",
+          "Signer #1 certificate SHA-256 digest: deb2f90f8e2a15005b6977505ebe2f5eb78938abf1dd57c78d2f33cee5820094",
+          "Signer #1 certificate SHA-1 digest: 18c5c0bcc810ba2363d24f228f35945e86d98b7d",
+          "Signer #1 certificate MD5 digest: 85697bbe27f82a2b324b1942a6048baa",
+          "Signer #1 key algorithm: RSA",
+          "Signer #1 key size (bits): 2048",
+          "Signer #1 public key SHA-256 digest: 842b3804a159a5739547760d401a9bad40fd1b69b987aba794e0e6fff02db519",
+          "Signer #1 public key SHA-1 digest: 830b7bee63e0bead2c69e9a4945556aeca7a2505",
+          "Signer #1 public key MD5 digest: ee6fbd239a4219b04fd5b435209ee418"
+        ],
+        "zip_alignment_16k": "PASS"
+      }
+    ],
+    "production_signing": false
+  },
+  "packaging": [
+    {
+      "file": "ScamSentry_0.2.0-preview_arm64-v8a_TEST-SIGNED.apk",
+      "bytes": 15759844,
+      "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "abis": [
+        "arm64-v8a"
+      ],
+      "libraries": [
+        {
+          "file": "lib/arm64-v8a/libandroidx.graphics.path.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/arm64-v8a/libdatastore_shared_counter.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/arm64-v8a/libmlkit_google_ocr_pipeline.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        }
+      ],
+      "alignment_scope": "ELF PT_LOAD only; ZIP checks and actual 16 KB page runtime are separate gates"
+    },
+    {
+      "file": "ScamSentry_0.2.0-preview_universal_TEST-SIGNED.apk",
+      "bytes": 45849846,
+      "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "libraries": [
+        {
+          "file": "lib/arm64-v8a/libandroidx.graphics.path.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/arm64-v8a/libdatastore_shared_counter.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/arm64-v8a/libmlkit_google_ocr_pipeline.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+          "elf_bits": 32,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/armeabi-v7a/libdatastore_shared_counter.so",
+          "elf_bits": 32,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/armeabi-v7a/libmlkit_google_ocr_pipeline.so",
+          "elf_bits": 32,
+          "load_alignment": [
+            4096,
+            4096,
+            4096
+          ],
+          "supports_16k_load_alignment": false
+        },
+        {
+          "file": "lib/x86/libandroidx.graphics.path.so",
+          "elf_bits": 32,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/x86/libdatastore_shared_counter.so",
+          "elf_bits": 32,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/x86/libmlkit_google_ocr_pipeline.so",
+          "elf_bits": 32,
+          "load_alignment": [
+            4096,
+            4096,
+            4096
+          ],
+          "supports_16k_load_alignment": false
+        },
+        {
+          "file": "lib/x86_64/libandroidx.graphics.path.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/x86_64/libdatastore_shared_counter.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/x86_64/libmlkit_google_ocr_pipeline.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        }
+      ],
+      "alignment_scope": "ELF PT_LOAD only; ZIP checks and actual 16 KB page runtime are separate gates"
+    },
+    {
+      "file": "ScamSentry_0.2.0-preview_x86_64_TEST-SIGNED.apk",
+      "bytes": 16325083,
+      "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "abis": [
+        "x86_64"
+      ],
+      "libraries": [
+        {
+          "file": "lib/x86_64/libandroidx.graphics.path.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/x86_64/libdatastore_shared_counter.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        },
+        {
+          "file": "lib/x86_64/libmlkit_google_ocr_pipeline.so",
+          "elf_bits": 64,
+          "load_alignment": [
+            16384,
+            16384,
+            16384
+          ],
+          "supports_16k_load_alignment": true
+        }
+      ],
+      "alignment_scope": "ELF PT_LOAD only; ZIP checks and actual 16 KB page runtime are separate gates"
+    }
+  ],
+  "instrumentation": "FAILED; actual report pending; no device PASS claimed",
+  "physical_phone": false
+}

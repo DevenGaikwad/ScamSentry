@@ -1,0 +1,538 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/24.22.1/x64/bin/node",
+      "/home/runner/work/ScamSentry/ScamSentry/web/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/home/runner/work/ScamSentry/ScamSentry/web/playwright.config.ts",
+    "rootDir": "/home/runner/work/ScamSentry/ScamSentry/web/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/DevenGaikwad/ScamSentry/commit/d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+        "commitHash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+        "buildHref": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675"
+      },
+      "gitCommit": {
+        "shortHash": "d984f9b",
+        "hash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+        "subject": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+        "body": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+        "author": {
+          "name": "Deven Gaikwad",
+          "email": "194242251+DevenGaikwad@users.noreply.github.com",
+          "time": 1794831188000
+        },
+        "committer": {
+          "name": "Deven Gaikwad",
+          "email": "194242251+DevenGaikwad@users.noreply.github.com",
+          "time": 1794831188000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/ScamSentry/ScamSentry/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/DevenGaikwad/ScamSentry/commit/d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "commitHash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "buildHref": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675"
+          },
+          "gitCommit": {
+            "shortHash": "d984f9b",
+            "hash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "subject": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "body": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "author": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "committer": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "desktop-chromium",
+        "name": "desktop-chromium",
+        "testDir": "/home/runner/work/ScamSentry/ScamSentry/web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/home/runner/work/ScamSentry/ScamSentry/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/DevenGaikwad/ScamSentry/commit/d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "commitHash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "buildHref": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675"
+          },
+          "gitCommit": {
+            "shortHash": "d984f9b",
+            "hash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "subject": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "body": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "author": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "committer": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "mobile-chromium",
+        "name": "mobile-chromium",
+        "testDir": "/home/runner/work/ScamSentry/ScamSentry/web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/runner/work/ScamSentry/ScamSentry/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/DevenGaikwad/ScamSentry/commit/d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "commitHash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "buildHref": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675"
+          },
+          "gitCommit": {
+            "shortHash": "d984f9b",
+            "hash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "subject": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "body": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "author": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "committer": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "name": "desktop-chromium",
+        "testDir": "/home/runner/work/ScamSentry/ScamSentry/web/tests/e2e",
+        "snapshotDir": "/home/runner/work/ScamSentry/ScamSentry/web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "launchOptions": {
+            "args": [
+              "--no-sandbox",
+              "--disable-dev-shm-usage"
+            ]
+          },
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/159.0.8154.6 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1050
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/runner/work/ScamSentry/ScamSentry/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/DevenGaikwad/ScamSentry/commit/d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "commitHash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "buildHref": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675"
+          },
+          "gitCommit": {
+            "shortHash": "d984f9b",
+            "hash": "d984f9b0ddda9607c27b7baccbbe28c710ee1493",
+            "subject": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "body": "Implement v2 shared analysis, native privacy upgrades, browser worker and reproducible optimization",
+            "author": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "committer": {
+              "name": "Deven Gaikwad",
+              "email": "194242251+DevenGaikwad@users.noreply.github.com",
+              "time": 1794831188000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "name": "mobile-chromium",
+        "testDir": "/home/runner/work/ScamSentry/ScamSentry/web/tests/e2e",
+        "snapshotDir": "/home/runner/work/ScamSentry/ScamSentry/web/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "launchOptions": {
+            "args": [
+              "--no-sandbox",
+              "--disable-dev-shm-usage"
+            ]
+          },
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/159.0.8154.6 Mobile Safari/537.36",
+          "viewport": {
+            "width": 412,
+            "height": 839
+          },
+          "screen": {
+            "width": 412,
+            "height": 915
+          },
+          "deviceScaleFactor": 2.625,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false,
+      "timeout": 15000
+    }
+  },
+  "suites": [
+    {
+      "title": "workflow.spec.ts",
+      "file": "workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real worker workflow, local input privacy, redacted report and responsive layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1136,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:22.780Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1459,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:26.562Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-19792291c3db1951a504",
+          "file": "workflow.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "edits reject stale work and subsequent analysis uses new text",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 564,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:24.124Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 541,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:28.091Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-e02d24851c5e2df6fe9a",
+          "file": "workflow.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "corrupt model yields a limited state and retains concrete rule observations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 915,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:24.701Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 827,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:28.641Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-37a84fdabccdf63400a1",
+          "file": "workflow.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "scope limits, standalone link and evidence navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 662,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:25.622Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 625,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-16T12:14:29.485Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-dc1355952d89912b7648",
+          "file": "workflow.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T12:14:22.121Z",
+    "duration": 8051.808,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

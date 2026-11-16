@@ -51,3 +51,7 @@ Runtime in this report is the Linux Python CPU reference only: warm p50 0.38 ms,
 ![Controlled robustness](../assets/evidence/robustness.png)
 
 ![Calibration reliability](../assets/evidence/calibration.png)
+
+## V2 continuation
+
+The historical measurements above are preserved. The known final test was not rescored for v2 model selection. [V2 comparison](MODEL_COMPARISON.md) reports the allowed development partition, original-input complete-policy evaluation, fixed-label counts, grouped uncertainty, threshold trade-offs and controlled perturbation slices. In v2, accepted coverage is defined as category other than `unable`; the narrower historical acceptance definition above must not be mixed with it. Stronger exploratory scores do not silently replace the approved model or become a new blind-test claim.

@@ -11,6 +11,21 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'ml/src'))
 from scamsentry_ml.release_validation import validate_release
 
+def inspect_archive(archive):
+    with tempfile.TemporaryDirectory(prefix='scamsentry-archive-check-') as temporary:
+        folder=Path(temporary)
+        with zipfile.ZipFile(archive) as z:
+            if z.testzip() is not None:raise ValueError('ZIP CRC failure')
+            for info in z.infolist():
+                if Path(info.filename).is_absolute() or '..' in Path(info.filename).parts:raise ValueError('Unsafe ZIP entry')
+                if (info.external_attr>>16)&0o170000==0o120000:raise ValueError('Symlink ZIP entry')
+            z.extractall(folder)
+            for info in z.infolist():
+                if info.external_attr>>16 & 0o111:(folder/info.filename).chmod(0o755)
+        validation=validate_release(folder/'ScamSentry','archive')
+        if validation['status']!='PASS':raise ValueError(json.dumps(validation))
+        return validation
+
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
@@ -22,21 +37,12 @@ def main():
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     source=out/'ScamSentry_0.2.0-preview_Source.zip'
     subprocess.run(['git','archive','--format=zip','--prefix=ScamSentry/','-o',str(source),commit],cwd=ROOT,check=True)
-    with tempfile.TemporaryDirectory(prefix='scamsentry-archive-check-') as temporary:
-        folder=Path(temporary)
-        with zipfile.ZipFile(source) as z:
-            if z.testzip() is not None:raise ValueError('ZIP CRC failure')
-            for info in z.infolist():
-                if Path(info.filename).is_absolute() or '..' in Path(info.filename).parts:raise ValueError('Unsafe ZIP entry')
-            z.extractall(folder)
-            for info in z.infolist():
-                if info.external_attr>>16 & 0o111:(folder/info.filename).chmod(0o755)
-        validation=validate_release(folder/'ScamSentry','archive')
-        if validation['status']!='PASS':raise ValueError(json.dumps(validation))
+    validation=inspect_archive(source)
     (out/'archive_validation.json').write_text(json.dumps(validation,indent=2)+'\n')
     if args.source_only:
         print(f'Source archive verified: {source}');return
     signing=json.loads((out/'signing_report.json').read_text())
+    if signing.get('source_commit')!=commit:raise ValueError('APK signing report belongs to another source commit')
     artifacts=[]
     for artifact in signing['artifacts']:
         file=out/'install'/artifact['file']
@@ -50,8 +56,10 @@ def main():
     with zipfile.ZipFile(source) as z,zipfile.ZipFile(bundle,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as final:
         for info in z.infolist():final.writestr(info,z.read(info))
         for artifact in artifacts:final.write(out/'install'/artifact['file'],'ScamSentry/install/'+artifact['file'])
-        for name in ['ARTIFACT_INVENTORY.json','SHA256SUMS.txt','signing_report.json','archive_validation.json']:
+        for name in ['ARTIFACT_INVENTORY.json','SHA256SUMS.txt','signing_report.json','archive_validation.json','apk_inspection.json']:
             final.write(out/name,'ScamSentry/'+name)
+    full_validation=inspect_archive(bundle)
+    (out/'full_package_validation.json').write_text(json.dumps(full_validation,indent=2)+'\n')
     print(json.dumps(dict(archive=str(bundle),source_commit=commit,bytes=bundle.stat().st_size,sha256=hashlib.sha256(bundle.read_bytes()).hexdigest(),artifacts=artifacts),indent=2))
 
 if __name__=='__main__':main()

@@ -64,3 +64,22 @@ All 60 numbered specification sections are retained. Status distinguishes implem
 | 58 | Resume and continuation protocol | checkpointed preview | docs/PROJECT_STATE.md; docs/ROADMAP.md; RELEASE_NOTES.md | Concrete local package with truthful blocked gates; not declared final release. |
 | 59 | Public communication, authorship, and résumé claims | checkpointed preview | docs/PROJECT_STATE.md; docs/ROADMAP.md; RELEASE_NOTES.md | Concrete local package with truthful blocked gates; not declared final release. |
 | 60 | Definition of done and final handoff | checkpointed preview | docs/PROJECT_STATE.md; docs/ROADMAP.md; RELEASE_NOTES.md | Concrete local package with truthful blocked gates; not declared final release. |
+
+## V2 additive traceability
+
+| Requirement | Implementation / evidence |
+|---|---|
+| Local context and suppression fix | ContextRulesV2, context_rules.py, shared complete fixtures |
+| Archive/repository scan truthfulness | release_validation.py, isolated regression tests, archive report |
+| Full Python/Kotlin/browser behavior | AnalysisEngine, analysis_v2.py, engine.ts; complete-domain parity |
+| Word, hybrid and robustness research | optimize_v2.py, blocks_v2.py, frozen exploratory run 02 |
+| Metrics, thresholds and promotion | metrics_v2.py, per-candidate JSON, MODEL_COMPARISON.md |
+| Native retention/OCR/export | Room schema 3, OcrSource ownership, EXIF transforms, ReportExport |
+| Adaptive UI and request lifecycle | window-size classes, screen files, version/cancellation guards |
+| Installable ABI previews | test-signing, APK inspection, checksum inventory, release packaging |
+| Browser local-input flow | content-addressed worker, production Playwright workflow/network tests |
+| Public exact repository | DevenGaikwad/ScamSentry; identical baseline/current source trees and provenance |
+| Conditional free host | WEB_DEPLOYMENT and ZERO_COST_DEPLOYMENT_CHECKLIST; actual scope access required |
+| Performance honesty | Benchmark module compiles; physical measurements remain an independent gate |
+
+The original complete specification remains in UPGRADE_SPEC_V2_1.md. Current executed, failed, blocked and not-applicable outcomes are in GATE_REPORT.json, rather than inferred from implementation presence.

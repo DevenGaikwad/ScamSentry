@@ -6,6 +6,24 @@ A native Android app and local-browser companion for inspecting suspicious messa
 
 [Verification workflow](https://github.com/DevenGaikwad/ScamSentry/actions) · [Research preview releases](https://github.com/DevenGaikwad/ScamSentry/releases) · [Model card](docs/MODEL_CARD.md) · [Privacy](docs/PRIVACY.md) · [Browser privacy](docs/WEB_PRIVACY.md)
 
+## Actual browser screenshots
+
+These are production-build Chromium captures from [CI run 43864597675](https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675), using fictional messages and reserved domains. They show the browser companion; native runtime screenshots have a separate device gate.
+
+![Browser desktop analysis workspace](assets/evidence/v2/web_desktop-chromium_home.png)
+
+![Browser desktop secret-request result and destination host](assets/evidence/v2/web_desktop-chromium_result.png)
+
+<details><summary>Mobile browser result</summary>
+
+![Mobile browser analysis and evidence](assets/evidence/v2/web_mobile-chromium_result.png)
+
+</details>
+
+## Verification status
+
+The first public CI run passed Python/source-archive checks, Android host tests/builds, and all eight desktop/mobile browser workflows. Android lint reported **0 errors and 9 warnings**; retained versions and target SDK are documented. KVM instrumentation failed and its report collection stalled after emulator shutdown. That gate remains failed until a repaired run supplies executed results. Physical-phone timing, accessibility, first-use offline operation and 16 KB runtime remain independent pending checks. [Machine-readable gates](docs/GATE_REPORT.json) · [Build evidence](assets/evidence/v2/ci_run1_build.json).
+
 ## What v0.2.0 changes
 
 - Repairs context suppression: an unrelated educational label or earlier “never share” warning cannot hide a new affirmative secret request.
@@ -59,7 +77,8 @@ From `android/`:
 
 ```sh
 ./gradlew :core-analysis:test :app:testDebugUnitTest :app:lintDebug
-./gradlew :app:assembleDebug :app:assembleDebugAndroidTest :app:assembleRelease
+./gradlew :app:assembleDebug :app:assembleDebugAndroidTest
+./gradlew :app:assembleRelease
 ./gradlew :benchmark:assembleBenchmark
 ```
 

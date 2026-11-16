@@ -37,6 +37,7 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: python-and-archive
+          retention-days: 14
           path: release/
   android:
     runs-on: ubuntu-latest
@@ -62,6 +63,7 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: android-preview
+          retention-days: 14
           path: |
             release/install/*.apk
             release/signing_report.json
@@ -95,6 +97,7 @@ jobs:
         if: always()
         with:
           name: browser-evidence
+          retention-days: 14
           path: |
             web/dist/
             web/test-results/
@@ -127,17 +130,12 @@ jobs:
           emulator-boot-timeout: 600
           emulator-options: -no-snapshot -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -memory 2048 -cores 2
           working-directory: android
-          script: ./gradlew --no-daemon :app:connectedDebugAndroidTest
-      - name: Collect actual instrumentation output
-        if: always()
-        run: |
-          mkdir -p release/device
-          adb pull /sdcard/Android/data/in.deven.scamsentry/files/screenshots release/device/ || true
-          adb logcat -d -t 1500 > release/device/logcat.txt || true
+          script: sh ../scripts/run_android_instrumentation.sh
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
           name: emulator-evidence
+          retention-days: 14
           path: |
             android/app/build/reports/androidTests/
             android/app/build/outputs/androidTest-results/
@@ -172,4 +170,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: DevenGaikwad/ScamSentry
         run: |
-          gh release create v0.2.0-preview --target "$GITHUB_SHA" --prerelease --title "ScamSentry 0.2.0 — Research Preview" --notes-file RELEASE_NOTES.md release/install/*.apk release/ScamSentry_0.2.0-preview_Source.zip release/ScamSentry_0.2.0_Research_Preview.zip release/ARTIFACT_INVENTORY.json release/SHA256SUMS.txt release/apk_inspection.json release/archive_validation.json
+          gh release create v0.2.0-preview --target "$GITHUB_SHA" --prerelease --title "ScamSentry 0.2.0 — Research Preview" --notes-file RELEASE_NOTES.md release/install/*.apk release/ScamSentry_0.2.0-preview_Source.zip release/ScamSentry_0.2.0_Research_Preview.zip release/ARTIFACT_INVENTORY.json release/SHA256SUMS.txt release/apk_inspection.json release/archive_validation.json release/full_package_validation.json

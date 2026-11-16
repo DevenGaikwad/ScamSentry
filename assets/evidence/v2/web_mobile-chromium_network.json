@@ -1,0 +1,35 @@
+{
+  "scope": "Fictional workflow; URLs and methods only, no input bodies retained",
+  "input_transmitted": false,
+  "requests": [
+    {
+      "url": "http://127.0.0.1:4173/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4173/assets/index-DCoIaLQu.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4173/assets/index-BiMPz5fP.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4173/fonts/space_grotesk.ttf",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4173/fonts/inter.ttf",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4173/assets/analysis.worker-CEfR4iHz.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:4173/model/model-14927b442dc9f33a.json",
+      "method": "GET"
+    }
+  ],
+  "page_errors": []
+}

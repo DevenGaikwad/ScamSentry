@@ -21,3 +21,11 @@ This is an internal defensive review, not OWASP certification. Assets include te
 Selected MASVS areas: STORAGE (minimization, deletion and backup), PLATFORM (intents/providers/permissions), CODE (bounds and schema validation), PRIVACY (explicit processing and export), CRYPTO (no raw-message encryption needed because no raw payload is persisted; Keystore field-encryption is future scope), NETWORK (no analysis networking; verify merged permissions). Authentication is not applicable to a local account-free product.
 
 Only controlled fictional fixtures and owned/authorized device environments are used. No live phishing site is opened or resolved. New cloud sync, remote feeds, analytics or model-update features would require a new trust-boundary review.
+
+## V2 additions
+
+Treat global context suppression as an evasion risk: benign education surrounding an active secret request must not suppress every match. Rules now examine bounded local negation and attached balanced educational quotations. Conservative URL parsing rejects multiple userinfo separators, unsupported schemes, malformed ports, backslashes, ambiguous numeric hosts and selected IDNA deviation cases; it never resolves a destination.
+
+The browser uses escaped text rendering, a local worker, digest-checked public assets, request IDs/stale-result rejection and a restrictive same-origin CSP. Corrupt assets do not trigger a toy-model or lower-risk fallback. Public hosting still sees ordinary access/asset requests; user messages do not become request bodies or URL state. Provider content terms apply to uploaded public assets independently of source licences. The absence of private-input analytics does not imply zero host logs.
+
+Release signing uses disposable research identities with explicit fingerprints/checksums, separate from owner-managed production signing. Archive scanning rejects dangerous paths and symlink escapes, distinguishes Git and filesystem modes, and never treats a skipped safety scan as executed. Test fixtures are fictional and harmless.

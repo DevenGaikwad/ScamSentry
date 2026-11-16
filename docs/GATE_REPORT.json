@@ -62,7 +62,7 @@
       "id": "python_public_checks",
       "status": "PASS",
       "evidence": "ml/tests",
-      "detail": "68 executed Python tests; private sklearn checkpoint no longer needed"
+      "detail": "74 executed Python tests, including actual tiny fit/export, filesystem privacy and APK inventory tamper/path checks"
     },
     {
       "id": "repository_validator",
@@ -72,21 +72,21 @@
     },
     {
       "id": "android_build_group",
-      "status": "BLOCKED",
-      "evidence": "docs/DEPENDENCIES.md",
-      "detail": "Full upgraded Android build checks still running; core tests passed separately"
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/ci_run1_build.json",
+      "detail": "Fresh remote core/app tests, lint (0 errors, 9 warnings), debug, test, minified release and benchmark assembly passed"
     },
     {
       "id": "native_instrumentation",
-      "status": "BLOCKED",
+      "status": "FAIL",
       "evidence": "android/app/src/androidTest",
-      "detail": "Tests prepared; no local KVM or phone; CI emulator execution pending"
+      "detail": "First KVM API 35 run failed; post-shutdown adb collection stalled. Bounded collection repair prepared; diagnosis/rerun pending"
     },
     {
       "id": "browser_workflow_privacy",
-      "status": "BLOCKED",
-      "evidence": "web/tests/e2e/workflow.spec.ts",
-      "detail": "Production tests prepared; local Chromium IPC socket creation denied; CI execution pending"
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/browser_workflows_run1.json",
+      "detail": "Eight production Playwright desktop/mobile workflows passed on published d984f9b; subsequent mobile-scroll/worker-reuse refinements require a new run"
     },
     {
       "id": "browser_ocr",
@@ -120,15 +120,15 @@
     },
     {
       "id": "github_source_publication",
-      "status": "BLOCKED",
-      "evidence": "docs/PROJECT_STATE.md",
-      "detail": "Correct public repository created; full source push and CI pending"
+      "status": "PASS",
+      "evidence": "docs/PUBLICATION_PROVENANCE.json",
+      "detail": "Public repository source tree 6f200cd8aca99332caba1d851883f3fbec4f44cd matches reviewed local tree; source push verified"
     },
     {
       "id": "installable_preview_release",
       "status": "BLOCKED",
-      "evidence": "scripts/sign_research_apks.py",
-      "detail": "ABI test-signing and verified packaging prepared; actual build/release pending"
+      "evidence": "assets/evidence/v2/ci_run1_build.json",
+      "detail": "Three real TEST-SIGNED ABI APKs built and verified; GitHub prerelease publication pending final CI"
     },
     {
       "id": "full_spec_preserved",
