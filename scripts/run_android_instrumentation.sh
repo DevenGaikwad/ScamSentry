@@ -9,6 +9,7 @@ timeout 20s adb shell svc wifi disable
 timeout 20s adb shell svc data disable
 timeout 20s adb shell settings get global airplane_mode_on > ../release/device/offline_airplane.txt
 timeout 20s adb shell settings get global wifi_on > ../release/device/offline_wifi.txt
+timeout 20s adb shell cmd wifi status > ../release/device/offline_wifi_status.txt
 # The legacy global setting can differ from subscription-specific effective state.
 timeout 20s adb shell settings get global mobile_data > ../release/device/offline_mobile_data.txt
 timeout 20s adb shell dumpsys connectivity > ../release/device/offline_connectivity.txt
@@ -24,6 +25,7 @@ timeout 20s adb logcat -d -t 1500 > ../release/device/logcat.txt || true
 timeout 20s adb shell getprop > ../release/device/emulator_properties.txt || true
 timeout 20s adb shell settings get global airplane_mode_on > ../release/device/offline_airplane_after.txt
 timeout 20s adb shell settings get global wifi_on > ../release/device/offline_wifi_after.txt
+timeout 20s adb shell cmd wifi status > ../release/device/offline_wifi_status_after.txt
 timeout 20s adb shell dumpsys connectivity > ../release/device/offline_connectivity_after.txt
 # AGP can return zero even when the runner crashes before discovering a case.
 # Read the executed XML instead of trusting only the Gradle exit code.

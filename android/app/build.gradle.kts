@@ -26,6 +26,7 @@ android {
             initWith(getByName("release"))
             signingConfig = signingConfigs.getByName("debug")
             matchingFallbacks += "release"
+            proguardFile("benchmark-proguard-rules.pro")
             testProguardFile("test-proguard-rules.pro")
         }
     }

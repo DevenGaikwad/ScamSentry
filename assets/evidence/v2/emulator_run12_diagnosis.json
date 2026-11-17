@@ -1,0 +1,23 @@
+{
+  "workflow_run": 44003285051,
+  "source_commit": "e291d918103ac01e92ad6ffa9219e56a430d70eb",
+  "debug": {
+    "executed": 16,
+    "failed": 0,
+    "skipped": 0
+  },
+  "minified_text": "PASS",
+  "minified_ocr": "FAIL before named test execution",
+  "crash": "--------- beginning of crash\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: FATAL EXCEPTION: main\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: Process: in.deven.scamsentry, PID: 4198\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: java.lang.NoClassDefFoundError: Failed resolution of: Landroidx/tracing/Trace;\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat androidx.test.runner.AndroidJUnitRunner.onCreate(r8-map-id-e9ba6a9d01bd5562f9a20c15564fdbba412e911d90540f0e6ef9743add2acc37:26)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat android.app.ActivityThread.handleBindApplication(ActivityThread.java:7495)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat android.app.ActivityThread$H.handleMessage(ActivityThread.java:2416)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat android.os.Handler.dispatchMessage(Handler.java:107)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat android.os.Looper.loopOnce(Looper.java:232)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat android.os.Looper.loop(Looper.java:317)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat android.app.ActivityThread.main(ActivityThread.java:8705)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat java.lang.reflect.Method.invoke(Native Method)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: androidx.tracing.Trace\n11-17 02:42:51.495  4198  4198 E AndroidRuntime: \t... 11 more\n",
+  "observed_airplane_mode_before_after": [
+    "1",
+    "1"
+  ],
+  "observed_wifi_persistence_setting_after": "3",
+  "corrections": [
+    "Preserve androidx.tracing.Trace public static API in QA variant only",
+    "Query actual Wi-Fi service status; retain raw settings as metadata",
+    "Fix visually observed system-bar icon contrast with fixed dark palette"
+  ],
+  "release": "SKIPPED; XML failure correctly blocks publication"
+}

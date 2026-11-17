@@ -44,7 +44,10 @@ def main():
     if len(quality['cases'])!=6:raise ValueError('Incomplete OCR rendering slices')
     device=emulator/'release/device'
     radios={name:(device/file).read_text().strip() for name,file in [('wifi','offline_wifi.txt'),('airplane_mode','offline_airplane.txt'),('wifi_after','offline_wifi_after.txt'),('airplane_mode_after','offline_airplane_after.txt'),('legacy_mobile_data_setting','offline_mobile_data.txt')]}
-    if any(radios[k]!='0' for k in ['wifi','wifi_after']) or any(radios[k]!='1' for k in ['airplane_mode','airplane_mode_after']):raise ValueError('Effective airplane/Wi-Fi state not verified')
+    if any(radios[k]!='1' for k in ['airplane_mode','airplane_mode_after']):raise ValueError('Airplane mode was not verified')
+    for key,filename in [('wifi_service','offline_wifi_status.txt'),('wifi_service_after','offline_wifi_status_after.txt')]:
+        radios[key]=(device/filename).read_text().strip()
+        if not any(line.strip().lower() in ['wifi is disabled','wi-fi is disabled'] for line in radios[key].splitlines()):raise ValueError('Effective Wi-Fi service state was not disabled')
     for filename in ['offline_connectivity.txt','offline_connectivity_after.txt']:
         if 'Active default network: none' not in (device/filename).read_text():raise ValueError('An active default network exists during the offline checks')
     checks={}
@@ -61,7 +64,7 @@ def main():
         target=OUT/('native_'+file.name)
         shutil.copy2(file,target)
         screenshots.append(dict(file=target.name,bytes=target.stat().st_size,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
-    report=dict(schema_version=2,source_commit=commit,source_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),workflow_url=f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",required_jobs=needs,python=python,extracted_source_python=extracted,browser_units=dict(tests=units['numTotalTests'],failed=0,skipped=0),browser_workflows=stats,native_debug=native,minified_functional=minified,distribution_checks=checks,packaged_model_sha256=expected,native_screenshots=screenshots,full_project_all_gates_passed=False,scope='GitHub-hosted Linux, desktop/mobile-view Chromium and API 35 x86_64 KVM functional checks. Minified benchmark variant uses debug signing and profileable manifest; no phone latency claim.',remaining=['Physical-phone performance and accessibility','Actual 16 KB runtime','First-use offline operation on a physical phone','Windows batch execution','Prospective independent model validation and known robustness trade-offs','Conditional free Vercel team access','Owner-managed production signing'])
+    report=dict(schema_version=2,source_commit=commit,source_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),workflow_url=f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",required_jobs=needs,python=python,extracted_source_python=extracted,browser_units=dict(tests=units['numTotalTests'],failed=0,skipped=0),browser_workflows=stats,native_debug=native,minified_functional=minified,distribution_checks=checks,packaged_model_sha256=expected,native_screenshots=screenshots,full_project_all_gates_passed=False,scope='GitHub-hosted Linux, desktop/mobile-view Chromium and API 35 x86_64 KVM functional checks. Minified benchmark variant uses debug signing, a profileable manifest and a QA-only tracing entry point; no phone latency claim.',remaining=['Physical-phone performance and accessibility','Actual 16 KB runtime','First-use offline operation on a physical phone','Windows batch execution','Prospective independent model validation and known robustness trade-offs','Conditional free Vercel team access','Owner-managed production signing'])
     report.update(android_core_host=host_core,android_app_host=host_app,browser_worker_timings=timing,minified_ocr=minified_ocr)
     report.update(windows_wrapper_and_core=windows,emulator_radio_state=radios,ocr_rendering_quality=quality)
     report['remaining'].remove('Windows batch execution')

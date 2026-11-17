@@ -21,3 +21,6 @@ Spacing uses 4/8/12/16/20/24/32 dp. Cards use 20 dp radii, action controls 14 dp
 Risk color always has a text label and description. Decorative marks are removed from screen-reader traversal. Input labels, result headings, polite result/error announcements and explicit settings labels provide semantics. Continuous decorative motion and fake scan delays are absent. Actual large-font, TalkBack and compact-device checks must be recorded separately; design intent alone does not pass accessibility.
 
 Contrast script `scripts/check_contrast.py` records text on actual primary surfaces and background text on blue buttons. Subtle borders are decorative separators, not the sole control indicator. Disabled controls use Material semantics. Real screenshots must come from a running packaged app and use fictional content. No image-generated app screen is substituted for runtime evidence.
+## System bars
+
+Actual minified API 35 captures exposed dark system icons over the fixed dark app background when the OS used light mode. MainActivity now uses the pinned Core 1.17 edge-to-edge API and explicitly requests light status/navigation icons. The change needs a fresh packaged-app capture; source color tokens alone do not establish system-bar readability.
