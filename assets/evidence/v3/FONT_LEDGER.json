@@ -1,0 +1,56 @@
+[
+  {
+    "family": "Archivo",
+    "upstream_repository": "google/fonts",
+    "commit": "6c70c829f09ea345d3590406693220ea35c6553f",
+    "download": "https://raw.githubusercontent.com/google/fonts/6c70c829f09ea345d3590406693220ea35c6553f/ofl/archivo/Archivo%5Bwdth%2Cwght%5D.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/6c70c829f09ea345d3590406693220ea35c6553f/ofl/archivo/OFL.txt",
+    "license": "SIL OFL 1.1",
+    "version": "Version 2.001",
+    "upstream_bytes": 658596,
+    "upstream_sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053",
+    "file": "web/public/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+    "bytes": 89152,
+    "sha256": "67c657ffeb2b35e51eeebd9695bb3d56e386abc43ca840ea4205293c48e5511b",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "default": 600.0,
+        "max": 900.0
+      },
+      {
+        "tag": "wdth",
+        "min": 62.0,
+        "default": 100.0,
+        "max": 125.0
+      }
+    ],
+    "subset": "U+0020\u201300FF, U+2000\u2013206F, U+2190\u201321FF, U+25A0,2713,2212,2715,FEFF,FFFD; original axis ranges retained",
+    "tool": "fontTools subset, Brotli 1.2.1"
+  },
+  {
+    "family": "GeistMono",
+    "upstream_repository": "vercel/geist-font",
+    "commit": "ef2597cfc42f4797676df105517ccc0a1cfa6569",
+    "download": "https://raw.githubusercontent.com/vercel/geist-font/ef2597cfc42f4797676df105517ccc0a1cfa6569/fonts/GeistMono/variable/GeistMono%5Bwght%5D.ttf",
+    "license_url": "https://raw.githubusercontent.com/vercel/geist-font/ef2597cfc42f4797676df105517ccc0a1cfa6569/OFL.txt",
+    "license": "SIL OFL 1.1",
+    "version": "Version 1.700",
+    "upstream_bytes": 171968,
+    "upstream_sha256": "87c2aff9723544a9adaea19d92e42a33705c9723624801b6e0224c2206a6af0d",
+    "file": "web/public/fonts/geistmono-latin-variable.0ec1b9a7c184.woff2",
+    "bytes": 34768,
+    "sha256": "0ec1b9a7c18409c5739ad65eaf769c31369b96eab4140f02b9925b0db839c754",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "default": 400.0,
+        "max": 900.0
+      }
+    ],
+    "subset": "U+0020\u201300FF, U+2000\u2013206F, U+2190\u201321FF, U+25A0,2713,2212,2715,FEFF,FFFD; original axis ranges retained",
+    "tool": "fontTools subset, Brotli 1.2.1"
+  }
+]

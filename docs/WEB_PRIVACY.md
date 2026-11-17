@@ -1,6 +1,6 @@
 # Browser privacy boundaries
 
-Message input, results and drafts live in browser memory. They are not submitted to a server, URL query/fragment, analytics service, feedback endpoint or browser-history store. No localStorage, sessionStorage, IndexedDB message database, account or remote explanation API is used. Reload/close discards the draft; Clear removes the current message/result and invalidates worker requests.
+Message input, results and drafts live in browser memory. They are not submitted to a server, URL query/fragment, analytics service, feedback endpoint or browser-history store. Only the optional exact localStorage allowlist `scamsentry.theme` (system/light/dark) and `scamsentry.motion` (auto/paused) stores presentation preferences. No draft, input, result or estimate is serialized. There is no sessionStorage history, IndexedDB database, application CacheStorage store, service worker, account or remote explanation API. Denied preference storage falls back safely to system defaults. Public paths and `history.state = null` carry no input. Native links support deep reload and back/forward. Reload/close discards the draft; Clear removes the current message/result and invalidates worker requests.
 
 The host receives ordinary page, font, JS and model-asset requests and may retain normal access logs. Initial connectivity is required. This is not a zero-network or offline-PWA claim. The model download is a public fixed asset independent of the input, requested with credentials omitted. The model is content-addressed and digest checked before use.
 

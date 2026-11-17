@@ -1,0 +1,131 @@
+{
+  "source": "web/src/style.css tokens; actual browser/keyboard review remains separate",
+  "pairings": [
+    {
+      "theme": "light",
+      "component": "body and labels",
+      "foreground": "#171717",
+      "background": "#f5f5f5",
+      "ratio": 16.444075025960643,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "light",
+      "component": "supporting text and placeholder",
+      "foreground": "#555",
+      "background": "#f5f5f5",
+      "ratio": 6.838163522021168,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "light",
+      "component": "disabled button text",
+      "foreground": "#555",
+      "background": "#e7e7e7",
+      "ratio": 6.028773229747866,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "light",
+      "component": "primary button and inverse risk category",
+      "foreground": "#f5f5f5",
+      "background": "#171717",
+      "ratio": 16.444075025960643,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "light",
+      "component": "input border against page",
+      "foreground": "#6b6b6b",
+      "background": "#f5f5f5",
+      "ratio": 4.888149081666193,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "theme": "light",
+      "component": "focus outline",
+      "foreground": "#171717",
+      "background": "#f5f5f5",
+      "ratio": 16.444075025960643,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "theme": "light",
+      "component": "neutral result text",
+      "foreground": "#171717",
+      "background": "#e7e7e7",
+      "ratio": 14.497693567172066,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "component": "body and labels",
+      "foreground": "#f4f4f4",
+      "background": "#101010",
+      "ratio": 17.30037939226659,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "component": "supporting text and placeholder",
+      "foreground": "#b8b8b8",
+      "background": "#101010",
+      "ratio": 9.592345675384383,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "component": "disabled button text",
+      "foreground": "#b8b8b8",
+      "background": "#222",
+      "ratio": 8.020453211959554,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "component": "primary button and inverse risk category",
+      "foreground": "#101010",
+      "background": "#f4f4f4",
+      "ratio": 17.30037939226659,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "component": "input border against page",
+      "foreground": "#aaa",
+      "background": "#101010",
+      "ratio": 8.190745866415133,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "component": "focus outline",
+      "foreground": "#f4f4f4",
+      "background": "#101010",
+      "ratio": 17.30037939226659,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "component": "neutral result text",
+      "foreground": "#f4f4f4",
+      "background": "#222",
+      "ratio": 14.465375640172933,
+      "minimum": 4.5,
+      "passed": true
+    }
+  ]
+}

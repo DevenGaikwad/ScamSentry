@@ -1,0 +1,17 @@
+{
+  "starting_commit": "526f6c095fce6d5919a4a2bf1c4d8fc007b7bce9",
+  "rollback_deployment": "dpl_8jHHiqAS4QBWX65G3nC8UiGg32mB",
+  "rollback_url": "https://scamsentry-bay.vercel.app/",
+  "project_id": "prj_pFepmjKZNLc2CT9eBKtPbrt23Gzc",
+  "prompt_sha256": "42f9813db44f449af56882d0d7039279a05319fd830dc41d5eb14f0258aab2fc",
+  "preserved_prefix_bytes": 148062,
+  "prefix_sha256": "3d50689d26b839df5639dea260e440872510b4b045b3e407b0c8128c4fbeaed7",
+  "frozen_files": {
+    "web/src/core/engine.ts": "ad945fec02cfa1087ff3d6e9e84498c1ed281f481dc4844b21af2a318e3b1aeb",
+    "web/src/analysis.worker.ts": "34b87f2a09a2a14426a728c0ce39f8cb9f144452520c9a083d516403c227d8e9",
+    "web/src/release-manifest.json": "5332819c33e15a6440b393d2ee9c4f2bf802cad6b3f2549e2481e44a6083662d",
+    "web/src/core/contracts.generated.json": "0e98d86998330dd9dece5b339a18bf3eba731d1c0ac9bfe0a8c3a04214a0180b",
+    "web/src/benchmark.json": "18d34a98f4a046ae0d8e91f89ed43bdc0e9f958e689c74ee603ee4da46732e38",
+    "web/public/model/model-14927b442dc9f33a.json": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa"
+  }
+}

@@ -1,0 +1,73 @@
+name: Verify editorial browser
+on:
+  push:
+    paths:
+      - 'web/**'
+      - 'assets/brand/**'
+      - 'assets/evidence/v3/**'
+      - 'docs/FRONTEND*'
+      - 'docs/WEB_*'
+      - 'docs/DESIGN_SYSTEM.md'
+      - 'README.md'
+      - 'THIRD_PARTY_NOTICES.md'
+      - '.github/workflows/frontend-v3.yml'
+  pull_request:
+    paths:
+      - 'web/**'
+      - 'assets/brand/**'
+      - 'assets/evidence/v3/**'
+      - 'docs/FRONTEND*'
+      - 'docs/WEB_*'
+      - 'docs/DESIGN_SYSTEM.md'
+      - 'README.md'
+      - 'THIRD_PARTY_NOTICES.md'
+      - '.github/workflows/frontend-v3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: editorial-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  browser:
+    env:
+      SCAMSENTRY_SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.1'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: mkdir -p unit-results
+      - run: npm test -- --reporter=json --outputFile=unit-results/unit.json
+      - name: Audit locked browser dependencies
+        timeout-minutes: 3
+        run: node scripts/audit-dependencies.mjs
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium firefox
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: browser-evidence
+          retention-days: 14
+          path: |
+            web/dist/
+            web/test-results/
+            web/unit-results/
+            web/playwright-report/
+            assets/evidence/v3/browser/
+            assets/evidence/v2/web_*.png
+            assets/evidence/v2/web_*.json
+            assets/evidence/v2/web_demo_*.webm

@@ -1,26 +1,11 @@
-# Quiet security studio
+# ScamSentry editorial system
 
-The identity uses a protective lens mark, deep navy surfaces and restrained semantic accents. App icon and small UI symbols are original vectors/drawing code. Space Grotesk headings and Inter body text are bundled with their SIL OFL notices; no runtime font request is used.
+Browser version 0.3.0. Light #f5f5f5 / #171717; dark #101010 / #f4f4f4. Supporting text #555 / #b8b8b8; rules #b8b8b8 / #555. Focus and primary controls use foreground/background inversion. Risk remains explicit text and distinct border/marker treatment; lower risk is never a green authentication badge.
 
-| Token | Value | Purpose |
-|---|---|---|
-| Background | #080C14 | Application foundation |
-| Surface | #101722 | Main cards and navigation |
-| Raised | #172131 | Result emphasis |
-| Border | #26354B | Card separation |
-| Main text | #F2F5FA | Essential content |
-| Supporting text | #B6C2D3 | Secondary information |
-| Action | #70A7FF | Primary action and navigation |
-| Concern | #FF6B7D | Higher-risk indicators |
-| Caution | #FFD166 | Needs checking/unable states |
-| Lower observed | #66D6A0 | Lower indicators; never verified-safe |
-| Interpretation | #B89BFF | Model and educational material |
+Archivo Variable is the display/body face; Geist Mono Variable supplies small labels. Both are self-hosted licensed WOFF2 subsets. Archivo’s genuine width axis drives short row emphasis; no scaleX text distortion. Gutter 48px desktop, 32px at 1023px and below, 20px at 639px and below; maximum inner editorial width 1600px. Alignment uses a 12-unit proportional grid with 24px base gaps, widened to 48/64/72px where the editorial hierarchy benefits. Mobile uses one column. Hero clamp 40px–184px; section display 40px–96px. Body 16–17px / 1.6; lead 20–26px / 1.45.
 
-Spacing uses 4/8/12/16/20/24/32 dp. Cards use 20 dp radii, action controls 14 dp, tags 8 dp. Body is 16 sp with 25 sp line-height; secondary text is 14 sp/22 sp. Text wraps without fixed-height result cards. Controls target at least 48 dp; the main action is 54 dp minimum. The editor is scrollable with IME insets. Compact layouts use labelled bottom navigation; larger layouts add a narrow explanatory sidebar and preserve the main workflow.
+Signal Aperture is an original angular SS mark; geometry and light/dark exports are in assets/brand. Primary header identity is selectable HTML plus SVG. Full creator credit is derived from one typed object in web/src/site.ts and wraps naturally. Historical Android assets retain their own typography and immutable identity.
 
-Risk color always has a text label and description. Decorative marks are removed from screen-reader traversal. Input labels, result headings, polite result/error announcements and explicit settings labels provide semantics. Continuous decorative motion and fake scan delays are absent. Actual large-font, TalkBack and compact-device checks must be recorded separately; design intent alone does not pass accessibility.
+Motion tokens: 160/360/620ms and cubic-bezier(.16,1,.3,1), with a slow 6s conceptual packet flow. Hero line reveal, chapter entrances, row sweeps, width emphasis, diagram nodes, chapter arrows, menu clip/stagger, neutral theme wipe, predefined decoding labels, reading rail, incoming public-page depth and fine-pointer brackets each have a functional static equivalent. No scroll hijack, private content snapshot, misleading security progress or essential delayed action.
 
-Contrast script `scripts/check_contrast.py` records text on actual primary surfaces and background text on blue buttons. Subtle borders are decorative separators, not the sole control indicator. Disabled controls use Material semantics. Real screenshots must come from a running packaged app and use fictional content. No image-generated app screen is substituted for runtime evidence.
-## System bars
-
-Actual minified API 35 captures exposed dark system icons over the fixed dark app background when the OS used light mode. MainActivity now uses the pinned Core 1.17 edge-to-edge API and explicitly requests light status/navigation icons. The change needs a fresh packaged-app capture; source color tokens alone do not establish system-bar readability.
+Keyboard focus is visibly outlined; native link/button semantics, modal focus containment/restoration, main skip link and one h1 per route are retained. Precise browser and contrast results belong in FRONTEND_VALIDATION.md after execution; this document is a design description, not certification.
