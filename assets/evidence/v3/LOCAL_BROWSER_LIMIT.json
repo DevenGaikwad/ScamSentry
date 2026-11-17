@@ -1,0 +1,8 @@
+{
+  "scope": "local Playwright launch",
+  "status": "ENVIRONMENT_BLOCKED",
+  "reason": "Chromium process_singleton_posix socket() Operation not permitted before any test page could launch",
+  "product_assertions_executed": 0,
+  "fallback": "Cloud Chrome visual workflows plus GitHub-hosted Chromium/mobile/Firefox tests",
+  "sandbox_relaxed": false
+}

@@ -101,7 +101,7 @@ jobs:
       - run: npm test -- --reporter=json --outputFile=unit-results/unit.json
       - run: npm audit --audit-level=moderate --json > unit-results/npm-audit.json
       - run: npm run build
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chromium firefox
       - run: npm run test:e2e
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
@@ -113,6 +113,7 @@ jobs:
             web/test-results/
             web/unit-results/
             web/playwright-report/
+            assets/evidence/v3/browser/
             assets/evidence/v2/web_*.png
             assets/evidence/v2/web_*.json
             assets/evidence/v2/web_demo_*.webm

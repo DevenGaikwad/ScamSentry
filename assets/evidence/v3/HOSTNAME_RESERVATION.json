@@ -1,0 +1,45 @@
+{
+  "attempts": [
+    {
+      "requested": "scamsentry.vercel.app",
+      "accepted": false,
+      "result": {
+        "status": 400,
+        "code": "alias_in_use",
+        "message": "Vercel API request failed (400: alias_in_use). The chosen alias \"scamsentry.vercel.app\" is already in use."
+      }
+    },
+    {
+      "requested": "scamsentry-ai.vercel.app",
+      "accepted": false,
+      "result": {
+        "status": 400,
+        "code": "alias_in_use",
+        "message": "Vercel API request failed (400: alias_in_use). The chosen alias \"scamsentry-ai.vercel.app\" is already in use."
+      }
+    },
+    {
+      "requested": "scamsentry-inspect.vercel.app",
+      "accepted": true,
+      "result": {
+        "result": {
+          "uid": "5955e17362554029b7cbd237ce70efefa952f22ef7590c2e94b46ee4e4e286453dbabea5612dd6b8ddaa355425fc6f04d632940c21d75d45b07131929ded5109",
+          "alias": "scamsentry-inspect.vercel.app",
+          "created": "2026-11-17T17:17:22.287Z"
+        }
+      }
+    }
+  ],
+  "projectDomain": {
+    "name": "scamsentry-inspect.vercel.app",
+    "apexName": "vercel.app",
+    "projectId": "prj_pFepmjKZNLc2CT9eBKtPbrt23Gzc",
+    "redirect": null,
+    "redirectStatusCode": null,
+    "gitBranch": null,
+    "customEnvironmentId": null,
+    "updatedAt": 1794936020065,
+    "createdAt": 1794936020065,
+    "verified": true
+  }
+}

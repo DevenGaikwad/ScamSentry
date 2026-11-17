@@ -25,8 +25,14 @@ The full Apache 2.0 licence is provided in `assets/licenses/Apache-2.0.txt` and 
 
 ## Browser companion added in 0.2.0
 
-React and React DOM 19.3.1 are MIT licensed; the React notice is included in `assets/licenses/React-MIT.txt`. TypeScript 6.0.3, Vite 8.3.8 and their pinned build/test dependencies retain their upstream licences in the npm packages and lockfile. Inter and Space Grotesk are self-hosted using the same included SIL OFL notices. No copied bank interface or unlicensed stock illustration is used. The geometric shield is original project SVG/CSS.
+React and React DOM 19.3.1 are MIT licensed; the React notice is included in `assets/licenses/React-MIT.txt`. TypeScript 6.0.3, Vite 8.3.8 and their pinned build/test dependencies retain their upstream licences in the npm packages and lockfile. The original 0.2.0 browser used Inter and Space Grotesk under SIL OFL; these remain bundled in Android and historical assets. The 0.3.0 browser uses Archivo and Geist Mono. No copied bank interface or unlicensed stock illustration is used. The historical geometric shield is original project SVG/CSS. It is replaced in the current browser by the original Signal Aperture SS monogram.
 
 The public browser model is byte-identical to the attributed baseline model-derived asset. Mendeley source attribution and CC BY 4.0 conditions remain applicable independently of the project's MIT code licence. No raw training messages, private checkpoints, user messages or screenshots are hosted. Research-only toy fixtures are explicitly fictional fit/export tests and are never production fallback assets.
 
 Browser OCR assets are not distributed in this release. Tesseract worker/WASM/language assets were not silently downloaded as part of a user analysis. Android ML Kit terms and bundled-model notices continue to apply to the native screenshot workflow.
+
+## Editorial browser 0.3.0
+
+Archivo Project Authors / Omnibus-Type: SIL OFL 1.1, upstream `google/fonts` commit `6c70c829f09ea345d3590406693220ea35c6553f`. Geist Project Authors: SIL OFL 1.1, upstream `vercel/geist-font` commit `ef2597cfc42f4797676df105517ccc0a1cfa6569`. The exact upstream licences accompany the browser at `web/public/fonts/archivo-OFL.txt` and `geistmono-OFL.txt`. [File hashes, actual variable axes, versions and subsetting record](assets/evidence/v3/FONT_LEDGER.json). The supplied variable fonts are subsetted to the interface character range with original axis ranges retained. Archivo includes weight 100–900 and width 62–125; Geist Mono includes weight 100–900. No third-party font CDN is contacted at runtime.
+
+The original [Signal Aperture vectors and geometry notes](assets/brand/README.md), social card, diagrams and motion are project contributions. No reference-site assets, portraits, awards, company logos or metrics are copied. Archived Android fonts, icons and already-published APKs are unchanged. This v3 design brief is not an Android or product 3.0 release.
