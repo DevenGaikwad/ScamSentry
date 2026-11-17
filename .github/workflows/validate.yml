@@ -1,7 +1,27 @@
 name: Verify ScamSentry preview
 on:
   push:
+    paths-ignore:
+      - 'web/**'
+      - 'assets/brand/**'
+      - 'assets/evidence/v3/**'
+      - 'docs/FRONTEND*'
+      - 'docs/WEB_*'
+      - 'docs/DESIGN_SYSTEM.md'
+      - 'README.md'
+      - 'THIRD_PARTY_NOTICES.md'
+      - '.github/workflows/frontend-v3.yml'
   pull_request:
+    paths-ignore:
+      - 'web/**'
+      - 'assets/brand/**'
+      - 'assets/evidence/v3/**'
+      - 'docs/FRONTEND*'
+      - 'docs/WEB_*'
+      - 'docs/DESIGN_SYSTEM.md'
+      - 'README.md'
+      - 'THIRD_PARTY_NOTICES.md'
+      - '.github/workflows/frontend-v3.yml'
   workflow_dispatch:
 permissions:
   contents: read
