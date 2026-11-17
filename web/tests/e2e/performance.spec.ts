@@ -24,9 +24,12 @@ test('matched baseline and editorial cold/warm lab measurements', async ({ brows
       for (const cache of ['cold', 'warm']) {
         await page.goto(url); await expect(page.locator('h1')).toBeVisible(); await page.evaluate(() => document.fonts.ready)
         await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))))
+        // Equal settling window includes the longest 620ms headline reveal before first interaction.
+        await page.waitForTimeout(1100)
         if (variant === 'editorial') await page.getByRole('navigation', { name: 'Main navigation', exact: true }).getByRole('link', { name: 'Learn', exact: true }).click()
         else await page.getByRole('button', { name: 'Learn', exact: true }).click()
         await expect(page.locator('h1')).toBeVisible()
+        await page.waitForTimeout(140)
         const metrics = await page.evaluate(() => ({ ...window.__scamLab, navigation: (performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming).toJSON(), resources: performance.getEntriesByType('resource').map(entry => { const resource = entry as PerformanceResourceTiming; return { path: new URL(resource.name).pathname, transfer: resource.transferSize, encoded: resource.encodedBodySize, duration: resource.duration } }), supported: PerformanceObserver.supportedEntryTypes }))
         expect(metrics.resources.some(resource => resource.path.includes('/model/'))).toBe(false)
         values.push({ variant, repeat, cache, ...metrics })

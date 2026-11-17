@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import benchmark from '../../src/benchmark.json'
+import benchmark from '../../src/benchmark.json' with { type: 'json' }
 
 const evidence = join(process.cwd(), '../assets/evidence/v3/browser')
 const canary = 'FICTIONAL_PRIVATE_CANARY_V3_8KQ'
