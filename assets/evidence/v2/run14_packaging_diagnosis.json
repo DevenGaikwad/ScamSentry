@@ -1,0 +1,13 @@
+{
+  "workflow_run": 44009789906,
+  "source_commit": "030bfbee98de36525487a7facf3cdca9bdcd3012",
+  "application_jobs": "PASS: Python/archive 75 each; browser 63 units and 8 workflows; Windows core 9; Android core 9/app 2/build/lint/sign/inspect; API 35 debug 16 and minified external text+actual system-picker/OCR/edit/analysis 2",
+  "publication": "BLOCKED before release creation",
+  "failed_stage": "filesystem_privacy on complete APK-bearing ZIP",
+  "finding": "Generated RELEASE_VERIFICATION.json copied the parameterized test ID for the synthetic private-key rejection fixture",
+  "correction": "Minimize credential-shaped strings only in exported JUnit labels, record number of minimized labels, preserve all test counts and reject failure/skip before label processing. Keep distribution credential scanner unchanged.",
+  "new_regressions": "Two tests cover credential-like parameter labels and mandatory failure/skip rejection",
+  "model_promoted": false,
+  "training_repeated": false,
+  "vercel": "DEFERRED_BY_OWNER"
+}

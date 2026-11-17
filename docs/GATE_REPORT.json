@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "release_status": "external_minified_ocr_verification_pending",
+  "release_status": "packaging_label_privacy_fix_pending",
   "all_gates_passed": false,
   "gates": [
     {
@@ -78,9 +78,9 @@
     },
     {
       "id": "native_instrumentation",
-      "status": "FAIL",
-      "evidence": "assets/evidence/v2/emulator_run13_diagnosis.json",
-      "detail": "16/16 passed in run 12; run 13 had 15/16 with a screenshot-helper failure. Device capture replaces that helper; functional assertions remain."
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/run14_verification_sanitized.json",
+      "detail": "All 16 API 35 debug cases executed, zero failed/skipped, including privacy races, migration, OCR, EXIF, retention, sharing and the 59-case native contract"
     },
     {
       "id": "browser_workflow_privacy",
@@ -127,8 +127,8 @@
     {
       "id": "installable_preview_release",
       "status": "BLOCKED",
-      "evidence": "assets/evidence/v2/ci_run1_build.json",
-      "detail": "Three real TEST-SIGNED ABI APKs built and verified; GitHub prerelease publication pending final CI"
+      "evidence": "assets/evidence/v2/run14_packaging_diagnosis.json",
+      "detail": "Signed APKs and all runtime checks passed; full-ZIP credential scan rejected an unminimized synthetic parameter label. No release created; focused report-label correction pending verification."
     },
     {
       "id": "full_spec_preserved",
@@ -138,14 +138,21 @@
     },
     {
       "id": "minified_functional",
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/run14_verification_sanitized.json",
+      "detail": "Both external minified text and actual system-picker/OCR/review/edit/analysis journeys executed, zero failures/skips; no test-only app keep rules"
+    },
+    {
+      "id": "full_distribution_privacy",
       "status": "FAIL",
-      "evidence": "assets/evidence/v2/emulator_run13_diagnosis.json",
-      "detail": "External minified text passed; in-process OCR runner cannot bootstrap after dependency shrinking. Replace it with external system-picker/OCR/review/correction/analysis, preserving optimized app rules."
+      "evidence": "assets/evidence/v2/run14_packaging_diagnosis.json",
+      "detail": "Strict full-ZIP scan stopped on synthetic private-key fixture text in JUnit parameter ID; minimize report labels and retain scanner."
     }
   ],
   "latest_observed_run": {
-    "id": 44005823981,
-    "source_commit": "a5b05e36d34a80aeee7b06776a0060c09e1b1f82",
-    "conclusion": "failure"
+    "id": 44009789906,
+    "source_commit": "030bfbee98de36525487a7facf3cdca9bdcd3012",
+    "application_jobs": "all five passed",
+    "publication": "blocked by credential-shaped synthetic fixture label in generated report"
   }
 }

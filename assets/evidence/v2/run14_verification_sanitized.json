@@ -1,0 +1,1345 @@
+{
+  "schema_version": 2,
+  "source_commit": "030bfbee98de36525487a7facf3cdca9bdcd3012",
+  "source_tree": "9d0182ac78a4188d1db2b4622295b7a69a8bf402",
+  "workflow_url": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/44009789906",
+  "required_jobs": {
+    "python": {
+      "result": "success",
+      "outputs": {}
+    },
+    "android": {
+      "result": "success",
+      "outputs": {}
+    },
+    "browser": {
+      "result": "success",
+      "outputs": {}
+    },
+    "windows": {
+      "result": "success",
+      "outputs": {}
+    },
+    "emulator": {
+      "result": "success",
+      "outputs": {}
+    }
+  },
+  "python": {
+    "tests": 75,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_normalization_codepoints"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://bank.example@review.test/login-review.test-codes0]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://b\\xfccher.example-xn--bcher-kva.example-codes1]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[http://example.org-example.org-codes2]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://example.org:99999-None-codes3]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[intent://review.test/x-None-codes4]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://%65xample.org-None-codes5]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_rules_preserve_context_and_urgency"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_privacy_minimization_idempotent"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_multiple_urls_and_no_email_false_match"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_partition_guard_detects_template_leak"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_corrupt_bundle_rejected"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_40_is_not_truncation"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_concrete_request_survives_missing_model_and_scope"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_limited_states"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[HTTP://Example.ORG:80/x-True-example.org]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://a@b@review.test-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org:-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org:0-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org:65535-True-example.org]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://[2001:db8::1]/x-True-2001:db8::1]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://[::::]/-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://b\\xfccher.example-True-xn--bcher-kva.example]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://fa\\xdf.de-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org\\\\evil-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://%65xample.org-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[http://0x7f000001]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[https://example.123]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[https://fa\\u1e9e.de]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[https://[1:2:3:4:5:6:7:8:]/x]"
+      },
+      {
+        "class_name": "tests.test_v2_blocks",
+        "name": "test_portable_research_reference"
+      },
+      {
+        "class_name": "tests.test_v2_blocks",
+        "name": "test_block_contract_rejects_implicit_normalization"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Please send your OTP to confirm the account.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Please send your OTP to confirm the account. For example, use the form.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Never share your OTP. Please send your password now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Do not share this notice. Send your OTP now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Educational notice. Give your PIN to confirm the account.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Do not share anything except your OTP.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Never share your OTP; however send your password now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Never share your OTP.\\nPlease reveal your verification code.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[A scam may say \"send your OTP\". Now provide your password.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Do not share this notice send your OTP now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Never share your OTP.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Do not send your password to anyone.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[You must not ever reveal your PIN.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Don\\u2019t share your OTP with strangers.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Educational example: \"Send your OTP\" is suspicious.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[A scam may say \"send your password\". Verify independently.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Scam awareness: \\u201cgive your PIN\\u201d is a typical request to avoid.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Your one-time code is 123456. Keep it private.]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_public_checkout_fit_export_math"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>0]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>1]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>2]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>3]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>4]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>5]"
+      },
+      {
+        "class_name": "tests.test_v2_metrics",
+        "name": "test_counts_and_denominators"
+      },
+      {
+        "class_name": "tests.test_v2_metrics",
+        "name": "test_absent_and_no_positive_are_not_perfect"
+      },
+      {
+        "class_name": "tests.test_v2_metrics",
+        "name": "test_deferral_does_not_hide_unresolved_positives"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_archive_scans_without_git"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_repository_without_git_fails"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[ml/data/raw/messages.csv-text,label]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[signing.jks-opaque]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[docs/notes.md-[redacted-fixture-marker]]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[ml/src/notes.py-***]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_archive_symlink_rejected"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_untracked_candidates_are_scanned"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_unexpected_archive_path_rejected"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_archive_rejects_cache_directory_without_unbounded_descent"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_packaged_inventory_checks_actual_bytes"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_inventory_rejects_path_escape_before_reading[../outside.apk]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_inventory_rejects_path_escape_before_reading[..\\\\outside.apk]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_inventory_rejects_path_escape_before_reading[/tmp/outside.apk]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_extracted_cli_does_not_create_rejected_bytecode_cache"
+      }
+    ],
+    "labels_redacted": 1
+  },
+  "extracted_source_python": {
+    "tests": 75,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_normalization_codepoints"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://bank.example@review.test/login-review.test-codes0]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://b\\xfccher.example-xn--bcher-kva.example-codes1]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[http://example.org-example.org-codes2]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://example.org:99999-None-codes3]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[intent://review.test/x-None-codes4]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_url_contract[https://%65xample.org-None-codes5]"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_rules_preserve_context_and_urgency"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_privacy_minimization_idempotent"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_multiple_urls_and_no_email_false_match"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_partition_guard_detects_template_leak"
+      },
+      {
+        "class_name": "tests.test_contracts",
+        "name": "test_corrupt_bundle_rejected"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_40_is_not_truncation"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_concrete_request_survives_missing_model_and_scope"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_limited_states"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[HTTP://Example.ORG:80/x-True-example.org]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://a@b@review.test-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org:-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org:0-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org:65535-True-example.org]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://[2001:db8::1]/x-True-2001:db8::1]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://[::::]/-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://b\\xfccher.example-True-xn--bcher-kva.example]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://fa\\xdf.de-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://example.org\\\\evil-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_conservative_urls[https://%65xample.org-False-None]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[http://0x7f000001]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[https://example.123]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[https://fa\\u1e9e.de]"
+      },
+      {
+        "class_name": "tests.test_v2_analysis",
+        "name": "test_ambiguous_browser_host_forms_rejected[https://[1:2:3:4:5:6:7:8:]/x]"
+      },
+      {
+        "class_name": "tests.test_v2_blocks",
+        "name": "test_portable_research_reference"
+      },
+      {
+        "class_name": "tests.test_v2_blocks",
+        "name": "test_block_contract_rejects_implicit_normalization"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Please send your OTP to confirm the account.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Please send your OTP to confirm the account. For example, use the form.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Never share your OTP. Please send your password now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Do not share this notice. Send your OTP now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Educational notice. Give your PIN to confirm the account.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Do not share anything except your OTP.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Never share your OTP; however send your password now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Never share your OTP.\\nPlease reveal your verification code.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[A scam may say \"send your OTP\". Now provide your password.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_affirmative_request_survives_independent_context[Do not share this notice send your OTP now.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Never share your OTP.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Do not send your password to anyone.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[You must not ever reveal your PIN.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Don\\u2019t share your OTP with strangers.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Educational example: \"Send your OTP\" is suspicious.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[A scam may say \"send your password\". Verify independently.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Scam awareness: \\u201cgive your PIN\\u201d is a typical request to avoid.]"
+      },
+      {
+        "class_name": "tests.test_v2_context",
+        "name": "test_negated_and_attached_educational_quotes_are_not_active_requests[Your one-time code is 123456. Keep it private.]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_public_checkout_fit_export_math"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>0]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>1]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>2]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>3]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>4]"
+      },
+      {
+        "class_name": "tests.test_v2_export",
+        "name": "test_contract_rejects_malformed[<lambda>5]"
+      },
+      {
+        "class_name": "tests.test_v2_metrics",
+        "name": "test_counts_and_denominators"
+      },
+      {
+        "class_name": "tests.test_v2_metrics",
+        "name": "test_absent_and_no_positive_are_not_perfect"
+      },
+      {
+        "class_name": "tests.test_v2_metrics",
+        "name": "test_deferral_does_not_hide_unresolved_positives"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_archive_scans_without_git"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_repository_without_git_fails"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[ml/data/raw/messages.csv-text,label]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[signing.jks-opaque]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[docs/notes.md-[redacted-fixture-marker]]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_reject_distribution_secrets[ml/src/notes.py-***]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_archive_symlink_rejected"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_untracked_candidates_are_scanned"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_unexpected_archive_path_rejected"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_archive_rejects_cache_directory_without_unbounded_descent"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_packaged_inventory_checks_actual_bytes"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_inventory_rejects_path_escape_before_reading[../outside.apk]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_inventory_rejects_path_escape_before_reading[..\\\\outside.apk]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_inventory_rejects_path_escape_before_reading[/tmp/outside.apk]"
+      },
+      {
+        "class_name": "tests.test_v2_release_validation",
+        "name": "test_extracted_cli_does_not_create_rejected_bytecode_cache"
+      }
+    ],
+    "labels_redacted": 1
+  },
+  "browser_units": {
+    "tests": 63,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browser_workflows": {
+    "startTime": "2026-11-17T03:23:35.746Z",
+    "duration": 19273.793999999998,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "native_debug": {
+    "tests": 16,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "in.deven.scamsentry.HistoryMigrationTest",
+        "name": "summariesSurviveWithUnknownLegacyInputSource"
+      },
+      {
+        "class_name": "in.deven.scamsentry.HistoryMigrationTest",
+        "name": "migrationToThreePrunesExistingStorage"
+      },
+      {
+        "class_name": "in.deven.scamsentry.NativeContractTest",
+        "name": "packagedModelAndUnicodeContractMatchEveryReference"
+      },
+      {
+        "class_name": "in.deven.scamsentry.OcrIntegrationTest",
+        "name": "bundledLatinOcrReadsOriginalFixtureAndRejectsMalformedBytes"
+      },
+      {
+        "class_name": "in.deven.scamsentry.OcrQualityTest",
+        "name": "recordExtractionErrorSeparatelyFromClassification"
+      },
+      {
+        "class_name": "in.deven.scamsentry.OrientationExportTest",
+        "name": "allEightExifOrientationsPreservePixelLayout"
+      },
+      {
+        "class_name": "in.deven.scamsentry.OrientationExportTest",
+        "name": "secondExportKeepsFirstGrantFileAndPrunesExpiredFiles"
+      },
+      {
+        "class_name": "in.deven.scamsentry.PrivacyRaceTest",
+        "name": "queuedSaveCannotSurviveHistoryBeingDisabled"
+      },
+      {
+        "class_name": "in.deven.scamsentry.PrivacyRaceTest",
+        "name": "cancellationAfterNativeCompletionRecyclesUndeliveredDraft"
+      },
+      {
+        "class_name": "in.deven.scamsentry.PrivacyRaceTest",
+        "name": "rapidImageReplacementKeepsLatestOutcomeAndClearOwnsPreview"
+      },
+      {
+        "class_name": "in.deven.scamsentry.RetentionTest",
+        "name": "retentionPrunesStorageTransactionally"
+      },
+      {
+        "class_name": "in.deven.scamsentry.WorkflowTest",
+        "name": "packagedAndroidModelMatchesReference"
+      },
+      {
+        "class_name": "in.deven.scamsentry.WorkflowTest",
+        "name": "credentialRequestShowsEvidenceAndEditPath"
+      },
+      {
+        "class_name": "in.deven.scamsentry.WorkflowTest",
+        "name": "manualSummarySaveDeleteAndDisableControls"
+      },
+      {
+        "class_name": "in.deven.scamsentry.WorkflowTest",
+        "name": "exportDoesNotIncludeOriginalIdentifiers"
+      },
+      {
+        "class_name": "in.deven.scamsentry.WorkflowTest",
+        "name": "rotationKeepsDraftAndSharedInputReplacesPendingAnalysis"
+      }
+    ]
+  },
+  "minified_functional": {
+    "tests": 2,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "in.deven.scamsentry.benchmark.ReleaseLikeSmokeTest",
+        "name": "minifiedScreenshotReviewRunsBundledOcrAndUsesEditedText"
+      },
+      {
+        "class_name": "in.deven.scamsentry.benchmark.ReleaseLikeSmokeTest",
+        "name": "minifiedTextFlowShowsCredentialObservation"
+      }
+    ]
+  },
+  "distribution_checks": {
+    "repository_validation.json": {
+      "schema_version": 2,
+      "mode": "repository",
+      "status": "PASS",
+      "stages": [
+        {
+          "stage": "git_listing",
+          "status": "PASS",
+          "inspected": 311,
+          "details": "Tracked and unignored candidates",
+          "errors": []
+        },
+        {
+          "stage": "filesystem_privacy",
+          "status": "PASS",
+          "inspected": 311,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "source_manifest",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "model_integrity",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "partition_isolation",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "required_files",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "release_packaging",
+          "status": "NOT_APPLICABLE",
+          "inspected": 0,
+          "details": "Source tree contains no packaged APK inventory",
+          "errors": []
+        }
+      ],
+      "candidate_count": 311
+    },
+    "archive_validation.json": {
+      "schema_version": 2,
+      "mode": "archive",
+      "status": "PASS",
+      "stages": [
+        {
+          "stage": "git_listing",
+          "status": "NOT_APPLICABLE",
+          "inspected": 311,
+          "details": "Archive walk; known build caches are rejected and excluded from descent",
+          "errors": []
+        },
+        {
+          "stage": "filesystem_privacy",
+          "status": "PASS",
+          "inspected": 311,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "source_manifest",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "model_integrity",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "partition_isolation",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "required_files",
+          "status": "PASS",
+          "inspected": 1,
+          "details": "",
+          "errors": []
+        },
+        {
+          "stage": "release_packaging",
+          "status": "NOT_APPLICABLE",
+          "inspected": 0,
+          "details": "Source tree contains no packaged APK inventory",
+          "errors": []
+        }
+      ],
+      "candidate_count": 311
+    }
+  },
+  "packaged_model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "native_screenshots": [
+    {
+      "file": "native_01_analyze_home.png",
+      "bytes": 122816,
+      "sha256": "9fb6f0a574b8adcdaeead96f7042e511b1db9c416f2adfbaa89371b529356a87"
+    },
+    {
+      "file": "native_02_credential_result.png",
+      "bytes": 77691,
+      "sha256": "a25d56bd2d0ea77bfd04d93506eed576bdf060409a53f175e33b10dd1e6439d1"
+    },
+    {
+      "file": "native_minified_credential_result.png",
+      "bytes": 135444,
+      "sha256": "22f938012ca589461d593d533c66d266bd391ee502e8a4bb79a69df4d4c9c901"
+    },
+    {
+      "file": "native_minified_ocr_result.png",
+      "bytes": 135444,
+      "sha256": "22f938012ca589461d593d533c66d266bd391ee502e8a4bb79a69df4d4c9c901"
+    },
+    {
+      "file": "native_minified_ocr_review.png",
+      "bytes": 143074,
+      "sha256": "8a6b4c0cac2d2b6fbea59c8e5752bace67a556c612ac78b6dd7c3185a5c056f3"
+    }
+  ],
+  "full_project_all_gates_passed": false,
+  "scope": "GitHub-hosted Linux, desktop/mobile-view Chromium and API 35 x86_64 KVM functional checks. Minified benchmark variant uses debug signing and a profileable manifest; an external UI driver runs text and system-picker/OCR/review journeys without test-only application keep rules; no phone latency claim.",
+  "remaining": [
+    "Physical-phone performance and accessibility",
+    "Actual 16 KB runtime",
+    "First-use offline operation on a physical phone",
+    "Prospective independent model validation and known robustness trade-offs",
+    "Conditional free Vercel team access",
+    "Owner-managed production signing"
+  ],
+  "android_core_host": {
+    "tests": 9,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "in.deven.scamsentry.core.FullContractTest",
+        "name": "fullPythonKotlinContracts"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "policyDoesNotTreatUrgencyAsProof"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "linksStayOfflineAndExposeActualHost"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "pythonKotlinGoldenParity"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "integrityFailuresAreControlled"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "unicodeAndSurrogateBoundaries"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ContextRulesV2Test",
+        "name": "unrelatedWarningsAndExamplesDoNotSuppressRequests"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ContextRulesV2Test",
+        "name": "localNegationAndAttachedQuotesRemainContextual"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ResearchBlockParityTest",
+        "name": "realSyntheticFitWordAndHybridParity"
+      }
+    ]
+  },
+  "android_app_host": {
+    "tests": 2,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "in.deven.scamsentry.ExportPrivacyTest",
+        "name": "previewOmitsIdentifiersAndUsesResultVersion"
+      },
+      {
+        "class_name": "in.deven.scamsentry.ExportPrivacyTest",
+        "name": "independentReportsSurviveLaterExportAndExpiredFilesArePruned"
+      }
+    ]
+  },
+  "browser_worker_timings": {
+    "browser": "159.0.8154.6",
+    "platform": "linux",
+    "architecture": "x64",
+    "source_commit": "030bfbee98de36525487a7facf3cdca9bdcd3012",
+    "samples": 25,
+    "scope": "Fictional local-static-server workflow; first sample cold worker with populated HTTP cache; subsequent samples reuse the validated model. Automation roundtrip includes Playwright and detail interaction, not phone latency.",
+    "warm_analysis_median_ms": 0.5,
+    "warm_analysis_p95_ms": 0.9000000000232831,
+    "warm_worker_total_median_ms": 0.5,
+    "values": [
+      {
+        "fixture": "class",
+        "iteration": 0,
+        "characters": 70,
+        "analysis_ms": 12.20000000006985,
+        "worker_total_ms": 149.5,
+        "automation_roundtrip_ms": 346.427142
+      },
+      {
+        "fixture": "class",
+        "iteration": 1,
+        "characters": 70,
+        "analysis_ms": 0.9000000000232831,
+        "worker_total_ms": 0.9000000000232831,
+        "automation_roundtrip_ms": 140.3346279999996
+      },
+      {
+        "fixture": "class",
+        "iteration": 2,
+        "characters": 70,
+        "analysis_ms": 0.9000000000232831,
+        "worker_total_ms": 0.9000000000232831,
+        "automation_roundtrip_ms": 119.77671599999985
+      },
+      {
+        "fixture": "class",
+        "iteration": 3,
+        "characters": 70,
+        "analysis_ms": 0.6999999999534339,
+        "worker_total_ms": 0.7999999999301508,
+        "automation_roundtrip_ms": 128.29182599999967
+      },
+      {
+        "fixture": "class",
+        "iteration": 4,
+        "characters": 70,
+        "analysis_ms": 0.7000000000698492,
+        "worker_total_ms": 0.7000000000698492,
+        "automation_roundtrip_ms": 175.97824800000035
+      },
+      {
+        "fixture": "secret",
+        "iteration": 0,
+        "characters": 60,
+        "analysis_ms": 0.8000000000465661,
+        "worker_total_ms": 0.8000000000465661,
+        "automation_roundtrip_ms": 129.0777790000002
+      },
+      {
+        "fixture": "secret",
+        "iteration": 1,
+        "characters": 60,
+        "analysis_ms": 0.5,
+        "worker_total_ms": 0.5,
+        "automation_roundtrip_ms": 145.075871
+      },
+      {
+        "fixture": "secret",
+        "iteration": 2,
+        "characters": 60,
+        "analysis_ms": 0.6999999999534339,
+        "worker_total_ms": 0.6999999999534339,
+        "automation_roundtrip_ms": 119.47307600000022
+      },
+      {
+        "fixture": "secret",
+        "iteration": 3,
+        "characters": 60,
+        "analysis_ms": 0.5999999999767169,
+        "worker_total_ms": 0.5999999999767169,
+        "automation_roundtrip_ms": 130.78473799999938
+      },
+      {
+        "fixture": "secret",
+        "iteration": 4,
+        "characters": 60,
+        "analysis_ms": 0.5,
+        "worker_total_ms": 0.5999999999767169,
+        "automation_roundtrip_ms": 119.99064799999996
+      },
+      {
+        "fixture": "offer",
+        "iteration": 0,
+        "characters": 84,
+        "analysis_ms": 0.5,
+        "worker_total_ms": 0.5,
+        "automation_roundtrip_ms": 122.25960499999928
+      },
+      {
+        "fixture": "offer",
+        "iteration": 1,
+        "characters": 84,
+        "analysis_ms": 0.5,
+        "worker_total_ms": 0.5,
+        "automation_roundtrip_ms": 114.30885500000022
+      },
+      {
+        "fixture": "offer",
+        "iteration": 2,
+        "characters": 84,
+        "analysis_ms": 0.5,
+        "worker_total_ms": 0.5,
+        "automation_roundtrip_ms": 132.82252100000005
+      },
+      {
+        "fixture": "offer",
+        "iteration": 3,
+        "characters": 84,
+        "analysis_ms": 0.5999999999767169,
+        "worker_total_ms": 0.5999999999767169,
+        "automation_roundtrip_ms": 130.08426899999995
+      },
+      {
+        "fixture": "offer",
+        "iteration": 4,
+        "characters": 84,
+        "analysis_ms": 0.40000000002328306,
+        "worker_total_ms": 0.40000000002328306,
+        "automation_roundtrip_ms": 121.293678
+      },
+      {
+        "fixture": "url",
+        "iteration": 0,
+        "characters": 38,
+        "analysis_ms": 0.5999999999767169,
+        "worker_total_ms": 0.5999999999767169,
+        "automation_roundtrip_ms": 119.6956140000002
+      },
+      {
+        "fixture": "url",
+        "iteration": 1,
+        "characters": 38,
+        "analysis_ms": 0.10000000009313226,
+        "worker_total_ms": 0.10000000009313226,
+        "automation_roundtrip_ms": 115.71388800000022
+      },
+      {
+        "fixture": "url",
+        "iteration": 2,
+        "characters": 38,
+        "analysis_ms": 0,
+        "worker_total_ms": 0,
+        "automation_roundtrip_ms": 128.23078499999974
+      },
+      {
+        "fixture": "url",
+        "iteration": 3,
+        "characters": 38,
+        "analysis_ms": 0.09999999997671694,
+        "worker_total_ms": 0.09999999997671694,
+        "automation_roundtrip_ms": 129.07211300000017
+      },
+      {
+        "fixture": "url",
+        "iteration": 4,
+        "characters": 38,
+        "analysis_ms": 0.19999999995343387,
+        "worker_total_ms": 0.19999999995343387,
+        "automation_roundtrip_ms": 115.7582739999998
+      },
+      {
+        "fixture": "sparse",
+        "iteration": 0,
+        "characters": 8,
+        "analysis_ms": 0.09999999997671694,
+        "worker_total_ms": 0.09999999997671694,
+        "automation_roundtrip_ms": 117.99387600000045
+      },
+      {
+        "fixture": "sparse",
+        "iteration": 1,
+        "characters": 8,
+        "analysis_ms": 0.19999999995343387,
+        "worker_total_ms": 0.19999999995343387,
+        "automation_roundtrip_ms": 113.58822799999962
+      },
+      {
+        "fixture": "sparse",
+        "iteration": 2,
+        "characters": 8,
+        "analysis_ms": 0.09999999997671694,
+        "worker_total_ms": 0.09999999997671694,
+        "automation_roundtrip_ms": 107.73513300000013
+      },
+      {
+        "fixture": "sparse",
+        "iteration": 3,
+        "characters": 8,
+        "analysis_ms": 0.09999999997671694,
+        "worker_total_ms": 0.09999999997671694,
+        "automation_roundtrip_ms": 139.1665640000001
+      },
+      {
+        "fixture": "sparse",
+        "iteration": 4,
+        "characters": 8,
+        "analysis_ms": 0.09999999997671694,
+        "worker_total_ms": 0.09999999997671694,
+        "automation_roundtrip_ms": 120.17202399999951
+      }
+    ],
+    "physical_phone": false,
+    "heap_measured": false
+  },
+  "minified_ocr": {
+    "tests": 1,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "in.deven.scamsentry.benchmark.ReleaseLikeSmokeTest",
+        "name": "minifiedScreenshotReviewRunsBundledOcrAndUsesEditedText"
+      }
+    ],
+    "scope": "External driver selects the owned screenshot through the system picker, observes actual OCR, edits review text and verifies analysis"
+  },
+  "windows_wrapper_and_core": {
+    "tests": 9,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "class_name": "in.deven.scamsentry.core.FullContractTest",
+        "name": "fullPythonKotlinContracts"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "policyDoesNotTreatUrgencyAsProof"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "linksStayOfflineAndExposeActualHost"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "pythonKotlinGoldenParity"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "integrityFailuresAreControlled"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ParityTest",
+        "name": "unicodeAndSurrogateBoundaries"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ContextRulesV2Test",
+        "name": "unrelatedWarningsAndExamplesDoNotSuppressRequests"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ContextRulesV2Test",
+        "name": "localNegationAndAttachedQuotesRemainContextual"
+      },
+      {
+        "class_name": "in.deven.scamsentry.core.ResearchBlockParityTest",
+        "name": "realSyntheticFitWordAndHybridParity"
+      }
+    ]
+  },
+  "emulator_radio_state": {
+    "wifi": "0",
+    "airplane_mode": "1",
+    "wifi_after": "0",
+    "airplane_mode_after": "1",
+    "legacy_mobile_data_setting": "1",
+    "wifi_service": "Wifi is disabled\nWifi scanning is only available when wifi is enabled",
+    "wifi_service_after": "Wifi is disabled\nWifi scanning is only available when wifi is enabled"
+  },
+  "ocr_rendering_quality": {
+    "scope": "Six synthetic rendering slices of one fictional English message; extraction errors are separate from model classifications; not population accuracy",
+    "model_id": "ss-char-lr-0.1.0",
+    "cases": [
+      {
+        "slice": "clean_sans",
+        "width": 720,
+        "height": 190,
+        "font": "sans-serif",
+        "font_pixels": 20,
+        "noise_seed": null,
+        "reference_characters": 107,
+        "character_edits": 0,
+        "cer": 0,
+        "reference_words": 13,
+        "word_edits": 0,
+        "wer": 0,
+        "observed_risk": "higher",
+        "reference_risk": "higher",
+        "ocr_warning_present": true
+      },
+      {
+        "slice": "small_sans",
+        "width": 480,
+        "height": 140,
+        "font": "sans-serif",
+        "font_pixels": 14,
+        "noise_seed": null,
+        "reference_characters": 107,
+        "character_edits": 0,
+        "cer": 0,
+        "reference_words": 13,
+        "word_edits": 0,
+        "wer": 0,
+        "observed_risk": "higher",
+        "reference_risk": "higher",
+        "ocr_warning_present": true
+      },
+      {
+        "slice": "large_serif",
+        "width": 1000,
+        "height": 240,
+        "font": "serif",
+        "font_pixels": 28,
+        "noise_seed": null,
+        "reference_characters": 107,
+        "character_edits": 2,
+        "cer": 0.018691588785046728,
+        "reference_words": 13,
+        "word_edits": 2,
+        "wer": 0.15384615384615385,
+        "observed_risk": "higher",
+        "reference_risk": "higher",
+        "ocr_warning_present": true
+      },
+      {
+        "slice": "low_contrast",
+        "width": 720,
+        "height": 200,
+        "font": "sans-serif",
+        "font_pixels": 22,
+        "noise_seed": null,
+        "reference_characters": 107,
+        "character_edits": 0,
+        "cer": 0,
+        "reference_words": 13,
+        "word_edits": 0,
+        "wer": 0,
+        "observed_risk": "higher",
+        "reference_risk": "higher",
+        "ocr_warning_present": true
+      },
+      {
+        "slice": "dark",
+        "width": 720,
+        "height": 200,
+        "font": "sans-serif",
+        "font_pixels": 22,
+        "noise_seed": null,
+        "reference_characters": 107,
+        "character_edits": 0,
+        "cer": 0,
+        "reference_words": 13,
+        "word_edits": 0,
+        "wer": 0,
+        "observed_risk": "higher",
+        "reference_risk": "higher",
+        "ocr_warning_present": true
+      },
+      {
+        "slice": "salt_noise",
+        "width": 720,
+        "height": 190,
+        "font": "sans-serif",
+        "font_pixels": 20,
+        "noise_seed": 42,
+        "reference_characters": 107,
+        "character_edits": 2,
+        "cer": 0.018691588785046728,
+        "reference_words": 13,
+        "word_edits": 2,
+        "wer": 0.15384615384615385,
+        "observed_risk": "higher",
+        "reference_risk": "higher",
+        "ocr_warning_present": true
+      }
+    ],
+    "physical_phone": false
+  },
+  "publication_status": "BLOCKED: full package scan correctly rejected a synthetic private-key marker in unminimized test parameter labels; corrected generator awaits CI",
+  "preservation_note": "Observed run 14 data; only credential-shaped fixture labels were minimized for safe public preservation. Test counts and outcomes are unchanged."
+}

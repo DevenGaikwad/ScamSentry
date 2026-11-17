@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
@@ -10,12 +11,19 @@ import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'release'
 
+# Test parameter IDs may contain synthetic credential fixtures; never export them.
+LABEL_CREDENTIAL_MARKER=re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
+
+def safe_label(value):
+    return LABEL_CREDENTIAL_MARKER.sub('[redacted-fixture-marker]',value or '')
+
 def junit(paths,minimum):
     paths=list(paths)
     cases=[case for path in paths for case in ET.parse(path).getroot().iter('testcase')]
     if len(cases)<minimum:raise ValueError(f'Missing executed JUnit cases: {len(cases)} < {minimum}')
     if any(c.find('failure') is not None or c.find('error') is not None or c.find('skipped') is not None for c in cases):raise ValueError('Failed or skipped JUnit case in release evidence')
-    return dict(tests=len(cases),failed=0,skipped=0,cases=[dict(class_name=c.get('classname'),name=c.get('name')) for c in cases])
+    redacted=sum(bool(LABEL_CREDENTIAL_MARKER.search((c.get('classname') or '')+' '+(c.get('name') or ''))) for c in cases)
+    return dict(tests=len(cases),failed=0,skipped=0,labels_redacted=redacted,cases=[dict(class_name=safe_label(c.get('classname')),name=safe_label(c.get('name'))) for c in cases])
 
 def main():
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
@@ -37,8 +45,8 @@ def main():
     required={'minifiedTextFlowShowsCredentialObservation','minifiedScreenshotReviewRunsBundledOcrAndUsesEditedText'}
     if not required.issubset({c['name'] for c in minified['cases']}):raise ValueError('A named external minified journey was not executed')
     minified_ocr=dict(tests=1,failed=0,skipped=0,cases=[c for c in minified['cases'] if c['name']=='minifiedScreenshotReviewRunsBundledOcrAndUsesEditedText'],scope='External driver selects the owned screenshot through the system picker, observes actual OCR, edits review text and verifies analysis')
-    python=junit([OUT/'python-artifact/python-junit.xml'],75)
-    extracted=junit([OUT/'python-artifact/archive-python-junit.xml'],75)
+    python=junit([OUT/'python-artifact/python-junit.xml'],77)
+    extracted=junit([OUT/'python-artifact/archive-python-junit.xml'],77)
     windows=junit((OUT/'windows-artifact').rglob('TEST-*.xml'),9)
     quality_paths=list(emulator.rglob('ocr_quality.json'))
     if len(quality_paths)!=1:raise ValueError('Missing unambiguous OCR rendering report')
