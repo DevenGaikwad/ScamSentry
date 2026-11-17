@@ -47,3 +47,6 @@ a[target="_blank"]>.arrow{display:inline-block;width:16px;height:16px;margin-lef
 .site-header{flex-wrap:wrap;row-gap:8px;padding-block:16px}.mobile-header-actions>a{min-height:44px}h1,h2,h3,h4{overflow-wrap:anywhere}
 
 .section-heading h2,.row-title,.phone-outline>span{min-width:0;overflow-wrap:anywhere}.mobile-menu nav>a>span:not(.menu-number){min-width:0;overflow-wrap:anywhere}@media(max-width:767px){.home-flow .section-heading,.hero-bottom,.home-evidence{grid-template-columns:minmax(0,1fr)}.home-flow .section-heading>*{min-width:0}}
+
+/* Intrinsic grid tracks must shrink when text is enlarged independently of the viewport. */
+main{overflow-wrap:anywhere}.count-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.editorial-section>*,.count-grid>*,.privacy-row>*{min-width:0;overflow-wrap:anywhere}@media(max-width:1023px){.privacy-row{grid-template-columns:28px minmax(0,1fr)}}@media(max-width:639px){.privacy-row{grid-template-columns:22px minmax(0,1fr)}}

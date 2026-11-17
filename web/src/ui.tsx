@@ -70,7 +70,7 @@ export function SignalDiagram({ kind = 'hero' }: { kind?: 'hero' | 'privacy' }) 
         <path d="M340 106H370V156H380M322 122V156H360" />
       </g>
       <g fill="currentColor"><rect className="diagram-node" x="124" y="128" width="8" height="8" /><rect className="diagram-node node-two" x="516" y="128" width="8" height="8" /><circle cx="360" cy="132" r="5" /></g>
-      <g className="diagram-labels" fill="currentColor"><text x="0" y="238">{kind === 'hero' ? '01 / YOUR INPUT' : '01 / PUBLIC ASSETS'}</text><text x="264" y="258">02 / LOCAL INSPECTION</text><text x="546" y="238">{kind === 'hero' ? '03 / YOUR JUDGMENT' : '03 / REVIEWED EXPORT'}</text></g>
+      <g className="diagram-labels" fill="currentColor"><text x="0" y="238">{kind === 'hero' ? '01 / YOUR INPUT' : '01 / PUBLIC ASSETS'}</text><text x="264" y="258">02 / LOCAL INSPECTION</text><text x="720" y="238" textAnchor="end">{kind === 'hero' ? '03 / YOUR JUDGMENT' : '03 / REVIEWED EXPORT'}</text></g>
     </svg>
     <figcaption><span className="status-square" aria-hidden="true" /> {kind === 'hero' ? 'Conceptual signal flow. No live traffic or inference progress is represented.' : 'Input is processed in browser memory. Only an explicitly downloaded redacted file leaves this flow.'}</figcaption>
   </figure>

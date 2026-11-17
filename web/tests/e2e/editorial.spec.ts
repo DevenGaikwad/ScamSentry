@@ -164,11 +164,16 @@ test('responsive layouts, fallback fonts, text spacing and all public pages', as
       await page.goto(path); await page.evaluate(() => document.fonts.ready)
       await page.evaluate(() => { const sizes = Array.from(document.querySelectorAll<HTMLElement>('body *')).map(element => ({ element, size: parseFloat(getComputedStyle(element).fontSize) })); sizes.forEach(({ element, size }) => { element.style.fontSize = `${size * 2}px` }) })
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)
-      if (overflow) console.log('TEXT_RESIZE_DIAGNOSTIC', width, path, await page.evaluate(() => Array.from(document.querySelectorAll<HTMLElement>('body *')).map(element => ({ tag: element.tagName, class: element.className, right: element.getBoundingClientRect().right, text: element.textContent?.slice(0, 60) })).filter(element => element.right > innerWidth + 1).slice(0, 20)))
-      records.push({ width, path: `${path} / 200% text resize`, overflow }); expect(overflow, `${path} 200% text resize at ${width}`).toBe(false)
+      if (overflow) console.log('TEXT_RESIZE_DIAGNOSTIC', width, path, await page.evaluate(() => ({ viewport: innerWidth, scrollWidth: document.documentElement.scrollWidth, unclipped: Array.from(document.querySelectorAll<HTMLElement>('body *')).filter(element => {
+        if (element.getBoundingClientRect().right <= innerWidth + 1) return false
+        for (let parent = element.parentElement; parent; parent = parent.parentElement) if (['auto', 'scroll', 'hidden', 'clip'].includes(getComputedStyle(parent).overflowX) && parent.getBoundingClientRect().right <= innerWidth + 1) return false
+        return true
+      }).map(element => ({ tag: element.tagName, class: String(element.className), right: element.getBoundingClientRect().right, text: element.textContent?.slice(0, 60) })).slice(0, 30) })))
+      records.push({ width, path: `${path} / 200% text resize`, overflow })
     }
   }
   writeFileSync(join(evidence, `${test.info().project.name}_layout-matrix.json`), JSON.stringify({ browserScope: 'viewport reflow, not hardware device certification', records }, null, 2))
+  expect(records.filter(record => record.overflow), 'All viewport and enlarged-text layouts must reflow').toEqual([])
 })
 
 test('editorial states and two neutral palettes have original stable screenshots', async ({ page }) => {
