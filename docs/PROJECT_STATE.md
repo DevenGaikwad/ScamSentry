@@ -1,9 +1,11 @@
 # Current continuation checkpoint
 
-17 November 2026. Independent Android/GitHub/browser-source work is delivered as a published research preview. **Vercel activation/deployment is explicitly deferred by the owner.** Do not generate another time-limited activation link in this phase.
+17 November 2026. Android/GitHub work is delivered as a published research preview. The owner subsequently resumed Vercel work; **the browser companion is now live on verified Hobby hosting** at https://scamsentry-bay.vercel.app/. Do not regenerate authorization links or redeploy the already verified output on resume.
 
 ## Durable release and source
 
+- Public browser app: https://scamsentry-bay.vercel.app/
+- Hosting evidence: [VERCEL_RELEASE_VERIFICATION.json](../assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json). Exact CI output from source bc227ba; production deployment dpl_8jHHiqAS4QBWX65G3nC8UiGg32mB. All 12 served files matched SHA-256 through unauthenticated HTTPS, with security headers and live smoke checks verified.
 - Public repository: https://github.com/DevenGaikwad/ScamSentry
 - Research prerelease: https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview
 - Immutable application/release source: `bc227ba189796c1167c3cd21c3a7ec973156ccfd`.
@@ -45,6 +47,10 @@ Six rendering slices measure actual bundled OCR errors separately from category.
 - Retained-model severe-obfuscation weakness and absence of eligible prospective independent data remain explicit. No 100% claim, multilingual validation, sender authentication or live-reputation capability is made.
 - Durable owner-managed production signing is separate from the published disposable TEST signature.
 - Browser OCR/PWA are honestly deferred under the specification's allowance; native OCR works and browser text/URL analysis is functional.
-- Vercel is deferred by owner. Only when that work is resumed, recheck free target account/team scope, current terms/usage and exact deployment settings. No paid plan, trial, purchase, domain, credits or database was activated.
+- Vercel production deployment is complete on Hobby; no paid plan, trial, purchase, domain, credits or database was activated. Vercel's GitHub integration was not installed, so the exact passing CI static output was uploaded through the authorized connector. This standalone project does not auto-deploy Git pushes. Use WEB_DEPLOYMENT.md for future updates; preserve the current artifact/source relationship.
 
 The local execution workspace became unavailable during this continuation. Durable remote source and genuine GitHub-hosted compiler/tests/runtime were used to finish. No unavailable local/browser tool was claimed as execution. Documentation-only handoff commits use [skip ci] after exact-source release verification; they do not retrigger training or imply a new APK build. `GATE_REPORT.json` intentionally retains `all_gates_passed: false` for the known failed and blocked research/device gates.
+
+## Hosting continuation completed
+
+The signed-in dashboard positively showed the news-lens-ai team on Hobby. Connector team access was authorized. The standalone scamsentry project is separate from other projects; no account/security setup was altered to deploy it. The production URL https://scamsentry-bay.vercel.app/ was verified without credentials or cookies. Browser smoke checks covered higher-risk/ordinary/unsupported messages, input invalidation, true host display, redacted preview, model identity and privacy navigation. Original live JPEGs, file inventory, build/source provenance and public HTTP reports are in assets/evidence/v2/hosting. Model experiments and historical-test scoring were not repeated; Android release/tag/source and original CI evidence were not changed.

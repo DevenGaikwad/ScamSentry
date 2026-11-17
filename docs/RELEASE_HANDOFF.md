@@ -1,6 +1,6 @@
 # Research-preview handoff
 
-[Public repository](https://github.com/DevenGaikwad/ScamSentry) · [v0.2.0-preview downloads](https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview) · [Executed workflow](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040)
+[Live browser app](https://scamsentry-bay.vercel.app/) · [Public repository](https://github.com/DevenGaikwad/ScamSentry) · [v0.2.0-preview downloads](https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview) · [Executed workflow](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040)
 
 Release source: `bc227ba189796c1167c3cd21c3a7ec973156ccfd`. The prerelease tag, source ZIP, APK inventory and executed verification report refer to this immutable commit. A later bot commit preserves reports/screenshots; later documentation edits do not claim to have produced the immutable APKs. [Source-to-release provenance](../assets/evidence/v2/final/SNAPSHOT_PROVENANCE.json).
 
@@ -58,6 +58,6 @@ For a 6–10 minute review use [FACULTY_DEMO.md](FACULTY_DEMO.md); course outlin
 - Severe obfuscation remains a known weakness of the retained model. The six OCR slices are correlated renderings of one fictional message, not a population OCR study. Marathi/Hindi/Hinglish, sender authenticity and live reputation are not validated.
 - Prospective campaign-diverse model evaluation needs eligible independent data; owner-managed durable production signing is separate. These gaps remain visible in [GATE_REPORT.json](GATE_REPORT.json), where `all_gates_passed` stays false.
 - Browser OCR/PWA are explicitly deferred under the specification's allowance. The browser text/URL tool is functional, has a verified production build and keeps message input local.
-- **Vercel activation and deployment are deferred by the owner.** No new activation link or deployment was performed. On a later deployment session recheck free target scope, current terms/usage and the deployed commit before publication. No paid plan, trial, domain, credit or database was activated.
+- **The browser app is now live on verified Hobby hosting:** https://scamsentry-bay.vercel.app/. Exact passing CI static output was deployed and all 12 public-file hashes, security headers and live workflows were verified. GitHub integration was not installed, so this standalone project does not auto-deploy Git pushes. See [WEB_DEPLOYMENT.md](WEB_DEPLOYMENT.md) and [hosting evidence](../assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json). No paid plan, trial, purchased domain, credit or database was activated.
 
 For rollback, use the immutable `baseline-0.1.0` branch/import and frozen reports only after reviewing compatibility and the known corrected defects. Do not overwrite archived results or silently downgrade an installed database. A fresh research install of an older differently signed preview is a separate owner-controlled action.

@@ -1,23 +1,27 @@
-# Conditional Vercel zero-cost review
+# Vercel Hobby hosting verification
 
-Review date: 16 November 2026. Personal academic preview only. No commercial protection claim or unlimited-traffic promise.
+Verified on **17 November 2026** after the owner resumed the previously deferred task. Intended use: personal academic research preview. Live app: [ScamSentry](https://scamsentry-bay.vercel.app/).
 
-**17 November owner instruction:** Vercel activation and deployment are deferred. No replacement activation link is generated in this phase. The account observations below are historical; recheck target entitlement and usage when deployment resumes.
-
-| Check | Observed status |
+| Check | Observed outcome |
 |---|---|
-| Authenticated account plan | Hobby, active; no active trial reported |
-| Target team scope | Connection returned 403; team authorization required |
-| Target team plan/entitlement | Not yet verified because scope is inaccessible |
-| Build root | `web` |
-| Framework/output | Vite / `npm run build` / `dist` |
-| Runtime | Static files, no inference functions or database |
-| Model | Approved attributed baseline; no raw corpus upload |
-| Paid upgrades, trial, payment method, domain, add-on, inference credits | None activated |
-| Public host URL | Not deployed pending scope access and final checks |
+| Authenticated account | devengaikwad; account reported active Hobby and no active trial |
+| Actual target team | news-lens-ai / NewsLens AI; signed-in dashboard explicitly displayed Hobby |
+| Connector team grant | Owner approved the requested team access; original API calls then succeeded |
+| Team usage before creation | Dashboard said usage would appear here and showed no projects; no exact remaining-quota figure is inferred |
+| New project | scamsentry, independent standalone project |
+| Hosting channel | Production READY; public alias verified without credentials/cookies |
+| Deployment root | web, containing the exact precompiled CI web/dist output |
+| Source-build recipe | React/TypeScript/Vite; source root web, npm ci, npm run build, dist; compiled in existing Node 24 CI |
+| Git integration | Not installed; reviewed CI static-file upload used; no automatic Git-push deployment claimed |
+| Runtime | Static files and local worker inference; no server prediction functions/database |
+| Public model | Approved attributed baseline, exact frozen digest; no raw corpus uploaded |
+| Paid upgrade / trial / payment method / domain purchase / credits / paid add-on | None activated or added for this task |
+| Public verification | All 12 served files returned unauthenticated HTTPS 200 with matching byte sizes/SHA-256; security headers and live workflows verified |
 
-Official Hobby documentation lists 100 GB fast transfer, 10 GB origin transfer and 1,000,000 CDN requests in included usage. Exhausted limits can make features unavailable. The project does not depend on paid overflow or a trial. Recheck the actual target plan and usage before mutation.
+The current official pricing lists Hobby at $0/month with included usage. Relevant published limits reviewed include 100 GB fast transfer, 10 GB origin transfer and 1,000,000 CDN requests. Hobby is intended for personal/noncommercial use; exhausted limits can pause availability. This deployment does not depend on paid overflow, a trial or unlimited traffic. Recheck current plan/usage/terms before future changes. No resource allowance is a promise of permanent uninterrupted hosting.
 
-The current terms restrict Hobby to personal/noncommercial use. The content terms describe provider use of submitted assets, including model-training provisions for Hobby and a settings opt-out. Only reviewed public assets are candidates for upload; private messages stay local. This is an implementation review, not a warranty about every source record or future provider terms.
+Provider content/data-preference terms were reviewed independently of dataset rights. Only already reviewed public code, model-derived assets, fonts and notices were uploaded; pasted messages stay local. Optional AI-training/data preferences were not changed on the owner's account as part of this deployment. No personal sign-in material or raw dataset is published in the hosting reports.
 
-References: [Hobby](https://vercel.com/docs/plans/hobby), [Terms, updated 19 October 2026](https://vercel.com/legal/terms), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and the original [Mendeley V1 publisher record](https://data.mendeley.com/datasets/f45bkkt8pr/1).
+[Actual deployment evidence](../assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json) · [Public asset/HTTP verification](../assets/evidence/v2/hosting/PUBLIC_HTTP_VERIFICATION.json) · [Update procedure](WEB_DEPLOYMENT.md).
+
+Primary references: [Hobby](https://vercel.com/docs/plans/hobby), [Pricing](https://vercel.com/pricing), [Limits](https://vercel.com/docs/limits), [Terms](https://vercel.com/legal/terms), [data-preference update](https://vercel.com/changelog/updates-to-terms-of-service-march-2026), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and the reviewed [Mendeley V1 record](https://data.mendeley.com/datasets/f45bkkt8pr/1).

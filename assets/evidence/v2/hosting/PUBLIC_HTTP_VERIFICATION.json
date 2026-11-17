@@ -1,0 +1,254 @@
+{
+  "verification_date": "2026-11-17",
+  "origin": "https://scamsentry-bay.vercel.app/",
+  "unauthenticated_http": true,
+  "credentials_or_cookies_sent": false,
+  "deployment_id": "dpl_8jHHiqAS4QBWX65G3nC8UiGg32mB",
+  "source_commit": "bc227ba189796c1167c3cd21c3a7ec973156ccfd",
+  "workflow_run": 44012744040,
+  "artifact_id": 14297915904,
+  "artifact_sha256": "71bd4ca5b68adced684d515a71450ca240e39d3ed19dc1ea318769a05a149185",
+  "all_files_match": true,
+  "files": [
+    {
+      "file": "assets/analysis.worker-RwoWKVhw.js",
+      "url": "https://scamsentry-bay.vercel.app/assets/analysis.worker-RwoWKVhw.js",
+      "status": 200,
+      "bytes": 12512,
+      "expected_bytes": 12512,
+      "sha256": "0f1071fb13024ec2a45dd3397e6f62ffdf915fc1ffca9dd5227a54efed8f8304",
+      "expected_sha256": "0f1071fb13024ec2a45dd3397e6f62ffdf915fc1ffca9dd5227a54efed8f8304",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "application/javascript; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "fonts/inter-OFL.txt",
+      "url": "https://scamsentry-bay.vercel.app/fonts/inter-OFL.txt",
+      "status": 200,
+      "bytes": 4377,
+      "expected_bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "expected_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "text/plain; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "assets/index-BWOWegka.js",
+      "url": "https://scamsentry-bay.vercel.app/assets/index-BWOWegka.js",
+      "status": 200,
+      "bytes": 247234,
+      "expected_bytes": 247234,
+      "sha256": "2c338f1eb9e9e4cfb2a36bc2cdb6a89622b41e92e29cd8097ddbe7fc10ab85d6",
+      "expected_sha256": "2c338f1eb9e9e4cfb2a36bc2cdb6a89622b41e92e29cd8097ddbe7fc10ab85d6",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "application/javascript; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "assets/index-BiMPz5fP.css",
+      "url": "https://scamsentry-bay.vercel.app/assets/index-BiMPz5fP.css",
+      "status": 200,
+      "bytes": 20576,
+      "expected_bytes": 20576,
+      "sha256": "0b9ccee9ba98340d9bf51f80ca4494c5af892c76bea21dceee141067ddcda1f1",
+      "expected_sha256": "0b9ccee9ba98340d9bf51f80ca4494c5af892c76bea21dceee141067ddcda1f1",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "text/css; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "fonts/inter.ttf",
+      "url": "https://scamsentry-bay.vercel.app/fonts/inter.ttf",
+      "status": 200,
+      "bytes": 876576,
+      "expected_bytes": 876576,
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "expected_sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "font/ttf",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "fonts/space-OFL.txt",
+      "url": "https://scamsentry-bay.vercel.app/fonts/space-OFL.txt",
+      "status": 200,
+      "bytes": 4495,
+      "expected_bytes": 4495,
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+      "expected_sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "text/plain; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "fonts/space_grotesk.ttf",
+      "url": "https://scamsentry-bay.vercel.app/fonts/space_grotesk.ttf",
+      "status": 200,
+      "bytes": 136676,
+      "expected_bytes": 136676,
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+      "expected_sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "font/ttf",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "index.html",
+      "url": "https://scamsentry-bay.vercel.app/",
+      "status": 200,
+      "bytes": 648,
+      "expected_bytes": 648,
+      "sha256": "f9325cf30d6135890522ea3ef1b248d860c49da7071c5d574a6696b65f4818e1",
+      "expected_sha256": "f9325cf30d6135890522ea3ef1b248d860c49da7071c5d574a6696b65f4818e1",
+      "match": true,
+      "headers": {
+        "cache-control": "no-cache",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "model/model-14927b442dc9f33a.json",
+      "url": "https://scamsentry-bay.vercel.app/model/model-14927b442dc9f33a.json",
+      "status": 200,
+      "bytes": 2369544,
+      "expected_bytes": 2369544,
+      "sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "expected_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "shield.svg",
+      "url": "https://scamsentry-bay.vercel.app/shield.svg",
+      "status": 200,
+      "bytes": 360,
+      "expected_bytes": 360,
+      "sha256": "13ea2ce06818c5e43c9601374f1fba9718f1aa9e5f6294d48cd5446819252840",
+      "expected_sha256": "13ea2ce06818c5e43c9601374f1fba9718f1aa9e5f6294d48cd5446819252840",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "image/svg+xml",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "url": "https://scamsentry-bay.vercel.app/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 3832,
+      "expected_bytes": 3832,
+      "sha256": "fb5cf20d59654af6dd90c2422c44ab404a5ef50af0b8c5b6863097fb7265ab71",
+      "expected_sha256": "fb5cf20d59654af6dd90c2422c44ab404a5ef50af0b8c5b6863097fb7265ab71",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "text/markdown; charset=utf-8",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "file": "LICENSE",
+      "url": "https://scamsentry-bay.vercel.app/LICENSE",
+      "status": 200,
+      "bytes": 1289,
+      "expected_bytes": 1289,
+      "sha256": "a947d350265ec0b8987d82d398e138b8cb92b206c7b8cb1fde3682bcdce4afdf",
+      "expected_sha256": "a947d350265ec0b8987d82d398e138b8cb92b206c7b8cb1fde3682bcdce4afdf",
+      "match": true,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "content-type": "application/octet-stream",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    }
+  ]
+}

@@ -4,7 +4,15 @@
 
 A native Android app and local-browser companion for inspecting suspicious messages and links. English message resemblance, transparent observations, actual destination hosts and uncertainty stay separate. Inputs are reviewed locally; no inbox access, message-upload service or automatic link opening is required.
 
-[Verification workflow](https://github.com/DevenGaikwad/ScamSentry/actions) · [Research preview releases](https://github.com/DevenGaikwad/ScamSentry/releases) · [Model card](docs/MODEL_CARD.md) · [Privacy](docs/PRIVACY.md) · [Browser privacy](docs/WEB_PRIVACY.md)
+[Open live browser app](https://scamsentry-bay.vercel.app/) · [Verification workflow](https://github.com/DevenGaikwad/ScamSentry/actions) · [Research preview releases](https://github.com/DevenGaikwad/ScamSentry/releases) · [Model card](docs/MODEL_CARD.md) · [Privacy](docs/PRIVACY.md) · [Browser privacy](docs/WEB_PRIVACY.md)
+
+## Live browser deployment
+
+Open **[ScamSentry](https://scamsentry-bay.vercel.app/)**. Text and URL analysis run in a local worker after the public app/model assets download. No account is required to use the tool. Native Android provides screenshot OCR; browser OCR/PWA remain outside this preview.
+
+The production deployment serves the exact browser output from source `bc227ba` / [CI run 44012744040](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040). Unauthenticated GETs returned 200 and SHA-256 matched every served file. [Original HTTP verification](assets/evidence/v2/hosting/PUBLIC_HTTP_VERIFICATION.json) · [Deployment and live smoke checks](assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json).
+
+![Actual live Vercel browser app](assets/evidence/v2/hosting/live_home_20261117.jpg)
 
 ## Install the research preview
 
@@ -98,7 +106,7 @@ npm run preview
 
 Open the displayed localhost URL. The model downloads as a public static asset and runs in a dedicated worker. Draft input remains in memory. [Architecture](docs/WEB_ARCHITECTURE.md) · [Deployment](docs/WEB_DEPLOYMENT.md).
 
-Vercel activation and deployment are **deferred by the owner on 17 November 2026**. The static build is ready; target account/team eligibility, current terms and usage must be rechecked when deployment resumes. No new activation link was generated and no paid plan, trial, domain, database or credits were activated. No live URL is claimed. [Zero-cost review](docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md).
+The [live browser app](https://scamsentry-bay.vercel.app/) is deployed on the verified **Hobby** team. Public access, all 12 served-file digests, security headers, model identity and live analysis were verified. The exact passing CI production output was uploaded because the Vercel GitHub integration is not installed; future Git pushes do not automatically update this deployment. No paid plan, trial, purchased domain, database or inference credits were activated. [Hosting evidence](assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json). [Zero-cost review](docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md).
 
 ## Build Android
 

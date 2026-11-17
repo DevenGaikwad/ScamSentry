@@ -49,14 +49,14 @@ COMPLETE describes the stated implementation/research outcome, not universal saf
 | 41 | Thresholds, calibration, and error reduction | COMPLETE | ml/artifacts/v2; docs/MODEL_COMPARISON.md | Calibration/threshold trade-offs and class errors examined together; no final-test tuning. |
 | 42 | Model promotion and statistical evidence | COMPLETE | docs/MODEL_COMPARISON.md | Baseline retained after measured clean/noise trade-offs and missing prospective/device evidence. |
 | 43 | Metric artifacts and reproducible reporting | COMPLETE | docs/METRIC_DEFINITIONS.md; assets/evidence/v2/model_tradeoffs.png | Machine-readable candidate metrics, comparison tables and plotted actual results. |
-| 44 | Vercel feasibility and zero-cost conditions | DEFERRED_BY_OWNER | docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md | 17 November instruction explicitly postpones Vercel activation/deployment; no new link or action. |
-| 45 | Browser application architecture | COMPLETE | web; docs/WEB_ARCHITECTURE.md | Functional static React/Vite client, worker inference, digest checks, redacted downloads and production browser evidence. |
+| 44 | Vercel feasibility and zero-cost conditions | COMPLETE | assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json | Owner resumed hosting; authenticated target team verified Hobby, current terms/limits checked, no paid plan/trial/domain/database/add-on activated. |
+| 45 | Browser application architecture | COMPLETE | web; docs/WEB_ARCHITECTURE.md; assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json | Functional worker-based React/Vite source plus live static deployment; public bytes/security headers and actual live workflows verified. |
 | 46 | Python, Kotlin, and browser parity | COMPLETE | ml/artifacts/parity; NativeContractTest.kt; web/tests/parity.test.ts | Python/Kotlin/browser contract, Unicode/privacy/URL edge cases and separate numeric/export checks. |
 | 47 | Browser screenshot support | DEFERRED | docs/WEB_ARCHITECTURE.md; web/src/App.tsx | Browser OCR/PWA not included; UI explicitly directs screenshot users to native Android. |
 | 48 | Copyright, permissions, and privacy | COMPLETE | THIRD_PARTY_NOTICES.md; ml/manifests/sources.json | Eligible public assets and attribution; no permission emails, inbox collection or paid inference. |
-| 49 | GitHub and conditional web deployment | PARTIAL | README.md; docs/WEB_DEPLOYMENT.md | Correct GitHub source public; conditional Vercel hosting deferred by owner. |
+| 49 | GitHub and conditional web deployment | COMPLETE | assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json; docs/WEB_DEPLOYMENT.md | Exact GitHub repository retained; live public Hobby URL verified. GitHub integration was absent, so reviewed passing CI static output was uploaded; future Git pushes are not automatic deployments. |
 | 50 | Added release gates | COMPLETE | docs/GATE_REPORT.json; assets/evidence/v2/final/RELEASE_VERIFICATION.json | Required original/additive gates have actual evidence; remaining failed/blocked/not-applicable outcomes stay visible and all_gates_passed remains false. |
-| 51 | Final execution instruction | COMPLETE WITH RECORDED LIMITS | docs/PROJECT_STATE.md; docs/RELEASE_HANDOFF.md | Independent authorized implementation, evaluation, source publication and installable preview completed. Vercel remains deferred by owner. |
+| 51 | Final execution instruction | COMPLETE WITH RECORDED LIMITS | docs/PROJECT_STATE.md; docs/RELEASE_HANDOFF.md | Independent implementation/evaluation/source/release work and the resumed free Vercel browser publication completed. Physical-device and prospective-data limits remain recorded. |
 
 ## Appendix A: all 30 required properties
 

@@ -108,9 +108,9 @@
     },
     {
       "id": "free_hosting_eligibility",
-      "status": "BLOCKED",
-      "evidence": "docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md",
-      "detail": "Vercel activation/deployment explicitly deferred by owner; no new activation link generated. Recheck current target entitlement, terms and usage when resumed."
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json",
+      "detail": "Owner resumed hosting. Signed-in news-lens-ai team dashboard showed Hobby; current terms/limits reviewed, with no paid plan/trial/add-on activated."
     },
     {
       "id": "no_cost",
@@ -222,9 +222,9 @@
     },
     {
       "id": "vercel_deployment",
-      "status": "BLOCKED",
-      "evidence": "docs/WEB_DEPLOYMENT.md",
-      "detail": "DEFERRED BY OWNER on 17 November 2026. Functioning static source/build is ready; no deployment/activation link performed in this phase."
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json",
+      "detail": "Production READY at https://scamsentry-bay.vercel.app/; 12 public files returned credential-free 200 with exact SHA-256, security headers, frozen model and live workflows verified. Exact passing CI static build uploaded; GitHub integration/automatic Git deployment are not configured."
     },
     {
       "id": "saved_ui_capture_review",
@@ -242,5 +242,12 @@
     "release_url": "https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview",
     "download_assets": 19,
     "server_asset_digests_match_inventory": true
+  },
+  "hosting": {
+    "url": "https://scamsentry-bay.vercel.app/",
+    "deployment_id": "dpl_8jHHiqAS4QBWX65G3nC8UiGg32mB",
+    "source_commit": "bc227ba189796c1167c3cd21c3a7ec973156ccfd",
+    "status": "READY_PUBLIC_AND_FUNCTIONAL",
+    "evidence": "assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json"
   }
 }

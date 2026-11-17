@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "verification_date": "2026-11-17",
+  "status": "READY_PUBLIC_AND_FUNCTIONAL",
+  "public_url": "https://scamsentry-bay.vercel.app/",
+  "aliases": [
+    "scamsentry-bay.vercel.app",
+    "scamsentry-news-lens-ai.vercel.app"
+  ],
+  "project": {
+    "name": "scamsentry",
+    "id": "prj_pFepmjKZNLc2CT9eBKtPbrt23Gzc",
+    "team": "news-lens-ai",
+    "team_id": "team_SWRAhDlKOj1YObsysmS7m60F"
+  },
+  "deployment": {
+    "id": "dpl_8jHHiqAS4QBWX65G3nC8UiGg32mB",
+    "url": "https://scamsentry-a2o8wg5o5-news-lens-ai.vercel.app",
+    "target": "production",
+    "ready_state": "READY",
+    "created_at_ms": 1794930859373,
+    "building_at_ms": 1794930860313,
+    "ready_at_ms": 1794930864508,
+    "platform_packaging_seconds": 4.195,
+    "static_builder_reported_ms": 43
+  },
+  "plan": {
+    "date": "2026-11-17",
+    "team": "news-lens-ai",
+    "teamId": "team_SWRAhDlKOj1YObsysmS7m60F",
+    "plan": "Hobby",
+    "source": "Signed-in Vercel team dashboard showed NewsLens AI Hobby; usage said Your usage will appear here; no projects existed",
+    "url": "https://vercel.com/news-lens-ai"
+  },
+  "budget": {
+    "paid_plan_activated": false,
+    "trial_activated": false,
+    "payment_method_added": false,
+    "domain_purchased": false,
+    "inference_credits_purchased": false,
+    "database_or_paid_addon_provisioned": false,
+    "scope": "Personal academic Hobby hosting within included limits; no unlimited/permanent-service promise"
+  },
+  "source": {
+    "repository": "https://github.com/DevenGaikwad/ScamSentry",
+    "built_commit": "bc227ba189796c1167c3cd21c3a7ec973156ccfd",
+    "repository_head_at_deployment": "4b339a9998995e0066feaa62b42a8e3cabda9e22",
+    "ci_workflow_run": 44012744040,
+    "ci_artifact_id": 14297915904,
+    "ci_artifact_sha256": "71bd4ca5b68adced684d515a71450ca240e39d3ed19dc1ea318769a05a149185",
+    "mode": "Exact precompiled production browser output from the passing CI run; no new Vite build or model fit",
+    "git_integration_installed": false,
+    "git_integration_status": "Vercel GitHub integration was absent. No new integration grant was requested. Standalone project + reviewed static-file uploads used instead.",
+    "automatic_git_push_deployment": false,
+    "source_root": "web",
+    "uploaded_layout": "CI web/dist contents under web/, with source security/cache headers adapted for static serving and source notices retained"
+  },
+  "deployment_settings_requested": {
+    "framework": null,
+    "rootDirectory": "web",
+    "buildCommand": "",
+    "installCommand": "",
+    "outputDirectory": ".",
+    "nodeVersion": "24.x"
+  },
+  "model": {
+    "id": "ss-char-lr-0.1.0",
+    "protocol": "ss-group-v1",
+    "analysis_policy": "ordinal_v2",
+    "sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+    "retrained": false,
+    "historical_test_rescored": false
+  },
+  "static_files": [
+    {
+      "path": "web/assets/analysis.worker-RwoWKVhw.js",
+      "bytes": 12512,
+      "sha1": "f7e7564d2e3e2be8653a0b7105401667211b5215",
+      "sha256": "0f1071fb13024ec2a45dd3397e6f62ffdf915fc1ffca9dd5227a54efed8f8304"
+    },
+    {
+      "path": "web/fonts/inter-OFL.txt",
+      "bytes": 4377,
+      "sha1": "cdd01b7e68db81d663f1c3820b6f7c40028900dd",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "web/assets/index-BWOWegka.js",
+      "bytes": 247234,
+      "sha1": "feab30be2085136a8880801fde8c0655fd1cadbe",
+      "sha256": "2c338f1eb9e9e4cfb2a36bc2cdb6a89622b41e92e29cd8097ddbe7fc10ab85d6"
+    },
+    {
+      "path": "web/assets/index-BiMPz5fP.css",
+      "bytes": 20576,
+      "sha1": "8ef9e42012bd22ab5bac2286fa2eb614f800770c",
+      "sha256": "0b9ccee9ba98340d9bf51f80ca4494c5af892c76bea21dceee141067ddcda1f1"
+    },
+    {
+      "path": "web/fonts/inter.ttf",
+      "bytes": 876576,
+      "sha1": "97d4f3722d62c6cc5340bf6220ada3d64ca367b1",
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+    },
+    {
+      "path": "web/fonts/space-OFL.txt",
+      "bytes": 4495,
+      "sha1": "e6f1aedf7c9e5b554e715b49567c62d63edb0954",
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+    },
+    {
+      "path": "web/fonts/space_grotesk.ttf",
+      "bytes": 136676,
+      "sha1": "dc03dcd18b41fb1d43c192aaa8519b0a33cde8b6",
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 648,
+      "sha1": "8e20c926846f305e6cf75ce4791a6bb13fae64dd",
+      "sha256": "f9325cf30d6135890522ea3ef1b248d860c49da7071c5d574a6696b65f4818e1"
+    },
+    {
+      "path": "web/model/model-14927b442dc9f33a.json",
+      "bytes": 2369544,
+      "sha1": "9b6d87f41960f314121b19ea5db323f4a4a92381",
+      "sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa"
+    },
+    {
+      "path": "web/shield.svg",
+      "bytes": 360,
+      "sha1": "bb41373b205bc9ad661b6910f514a39aff29841a",
+      "sha256": "13ea2ce06818c5e43c9601374f1fba9718f1aa9e5f6294d48cd5446819252840"
+    },
+    {
+      "path": "web/vercel.json",
+      "bytes": 1111,
+      "sha1": "2c0640a263cd41844bb6a3142b619e08dbed5509",
+      "sha256": "9e7814f42a1b78519e49d01a22f2c711da472665569ada0caf7c78351b8f2a5e"
+    },
+    {
+      "path": "web/THIRD_PARTY_NOTICES.md",
+      "bytes": 3832,
+      "sha1": "88ee33db253e79cbc915e2a3dc51cb1e80cc0d6c",
+      "sha256": "fb5cf20d59654af6dd90c2422c44ab404a5ef50af0b8c5b6863097fb7265ab71"
+    },
+    {
+      "path": "web/LICENSE",
+      "bytes": 1289,
+      "sha1": "e7566e5defcf650eb749cdb82378f8233b453fa4",
+      "sha256": "a947d350265ec0b8987d82d398e138b8cb92b206c7b8cb1fde3682bcdce4afdf"
+    }
+  ],
+  "public_http": {
+    "evidence": "PUBLIC_HTTP_VERIFICATION.json",
+    "credential_free": true,
+    "files_verified": 12,
+    "all_sha256_match": true,
+    "security_headers_verified": true
+  },
+  "live_browser": {
+    "origin": "https://scamsentry-bay.vercel.app/",
+    "scope": "Live hosted desktop browser smoke checks, separate from the existing production desktop/mobile CI workflows and physical-phone acceptance",
+    "cases": [
+      {
+        "id": "public_entry",
+        "status": "PASS",
+        "observed": "Unauthenticated HTTPS GET returned 200 with no credentials/cookies; HTML SHA-256 matches CI."
+      },
+      {
+        "id": "secret_request",
+        "status": "PASS",
+        "observed": "Built-in fictional secret request produced Higher risk and Request for a secret."
+      },
+      {
+        "id": "destination_host",
+        "status": "PASS",
+        "observed": "The result displayed review.test as the actual host for the fictional bank.example user-info URL."
+      },
+      {
+        "id": "redacted_report",
+        "status": "PASS",
+        "observed": "Preview contained model ss-char-lr-0.1.0 / policy ordinal_v2 and derived observations; original text/links were omitted."
+      },
+      {
+        "id": "ordinary_message",
+        "status": "PASS",
+        "observed": "Class reminder produced Lower observed risk with the sender-verification limitation."
+      },
+      {
+        "id": "edit_invalidation",
+        "status": "PASS",
+        "observed": "Editing the analyzed input cleared the old result before the next analysis."
+      },
+      {
+        "id": "unsupported_language",
+        "status": "PASS",
+        "observed": "Fictional Marathi input produced Unable to assess reliably and limited statistical interpretation."
+      },
+      {
+        "id": "model_identity",
+        "status": "PASS",
+        "observed": "Model/evidence page displayed frozen model ID, protocol, ordinal_v2 and the exact approved SHA-256."
+      },
+      {
+        "id": "privacy_navigation",
+        "status": "PASS",
+        "observed": "Privacy page displayed memory-only input, local worker inference, explicit initial-network/no-PWA and export limitations."
+      }
+    ],
+    "console_sample": {
+      "matching_error_warning_entries": 36,
+      "application_origin_entries": 0,
+      "browser_extension_entries": 36,
+      "note": "Observed extension metadata bridge errors are preserved as a scope limitation; no application-origin error was observed in this bounded sample."
+    },
+    "privacy_evidence": "The original CI canary/network checks cover the byte-identical deployed bundle. This live smoke session did not capture a new network trace and is not represented as one.",
+    "screenshots": [
+      {
+        "file": "live_home_20261117.jpg",
+        "bytes": 100335,
+        "sha256": "dcc580d1deb42da5f843f82a6ee08968a9653af3b67a73151aadd4c966d3fd45",
+        "git_blob_sha1": "af77b027fbab5b67f1a621ecac3bc778574d3021",
+        "scope": "Original JPEG captured from the live public app with fictional input only"
+      },
+      {
+        "file": "live_result_20261117.jpg",
+        "bytes": 149040,
+        "sha256": "6cd9af26e69b88f5f64bc67946a7bb3586ceb8249e4a07d06539a8f49e4a2a5b",
+        "git_blob_sha1": "3ce17fc1b99007d5ff27b28b6d568b7dbef92f24",
+        "scope": "Original JPEG captured from the live public app with fictional input only"
+      }
+    ]
+  },
+  "runtime_log_scan": {
+    "project_scope": "Only ScamSentry production deployment",
+    "lookback": "30m",
+    "levels": [
+      "error",
+      "fatal"
+    ],
+    "result": "No logs found for specified criteria",
+    "scope": "Static client app has no server prediction functions. Empty server logs do not measure browser-error rates."
+  },
+  "remaining": [
+    "Known retained-model severe-obfuscation weakness",
+    "Physical-phone performance/accessibility, first-use offline operation, actual 16 KB runtime",
+    "Prospective independent model validation and durable owner-managed production signing",
+    "Browser OCR/PWA remain explicitly deferred",
+    "Future Git-push auto deployment requires a separately installed/configured GitHub integration"
+  ],
+  "full_project_all_gates_passed": false
+}

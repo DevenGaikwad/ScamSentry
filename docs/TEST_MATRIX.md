@@ -28,7 +28,7 @@ Immutable release source: `bc227ba189796c1167c3cd21c3a7ec973156ccfd`. [Executed 
 | Physical performance | Cold/warm startup, text/OCR complete workflow, heap, battery, Baseline Profile comparison | BLOCKED: no physical phone; benchmark module and procedures ready |
 | Accessibility / device compatibility | TalkBack, enlarged fonts, compact/expanded/manual keyboard review; actual 16 KB page-size operation | BLOCKED pending suitable device/manual execution |
 | Prospective model validation | New independent campaign/source groups and preregistered frozen holdout | BLOCKED by absent eligible independent data; historical test not rescored |
-| Vercel | Zero-cost conditional deployment | DEFERRED BY OWNER; no activation link or deployment in this phase |
+| Vercel production | Verified Hobby team; exact passing CI output, 12 credential-free public SHA-256 checks, security/cache headers and live desktop smoke workflows | PASS; [hosting evidence](../assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json); static deployment, no Git-push auto deployment configured |
 
 Counts refer to executed JUnit/Vitest/Playwright cases, not each assertion or each fixture. The native full-contract method itself iterates the 59-case pack. Browser viewports are hosted Chromium emulation; API 35 is x86_64 KVM. Neither is a physical-phone performance measurement. Research preview signing is intentionally separate from owner-managed production identity.
 
