@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: verify-${{ github.ref }}
+  group: verify-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 jobs:
   python:
@@ -99,7 +99,9 @@ jobs:
       - run: npm run lint
       - run: mkdir -p unit-results
       - run: npm test -- --reporter=json --outputFile=unit-results/unit.json
-      - run: npm audit --audit-level=moderate --json > unit-results/npm-audit.json
+      - name: Audit locked browser dependencies
+        timeout-minutes: 3
+        run: node scripts/audit-dependencies.mjs
       - run: npm run build
       - run: npx playwright install --with-deps chromium firefox
       - run: npm run test:e2e
@@ -222,7 +224,7 @@ jobs:
           cp release/android-artifact/release/install/*.apk release/install/
           cp release/android-artifact/release/signing_report.json release/signing_report.json
           cp release/android-artifact/release/apk_inspection.json release/apk_inspection.json
-          cp release/browser-artifact/assets/evidence/v2/web_demo_desktop.webm release/ScamSentry_Browser_Workflow.webm
+          cp release/browser-artifact/assets/evidence/v3/browser/web_demo_desktop.webm release/ScamSentry_Browser_Workflow.webm
           cp ml/artifacts/bundle/manifest.json release/model_manifest.json
           python scripts/create_release_evidence.py
           python scripts/package_release.py

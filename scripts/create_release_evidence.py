@@ -31,7 +31,7 @@ def main():
     if set(needs)!={'python','android','browser','windows','emulator'} or any(v['result']!='success' for v in needs.values()):raise ValueError('A required workflow job did not pass')
     browser=OUT/'browser-artifact'
     stats=json.loads((browser/'web/test-results/results.json').read_text())['stats']
-    if stats['expected']<39 or any(stats[k] for k in ['skipped','unexpected','flaky']):raise ValueError('Browser workflow evidence incomplete')
+    if stats['expected']<42 or any(stats[k] for k in ['skipped','unexpected','flaky']):raise ValueError('Browser workflow evidence incomplete')
     units=json.loads((browser/'web/unit-results/unit.json').read_text())
     if units['numTotalTests']<63 or units['numFailedTests'] or units['numPendingTests']:raise ValueError('Browser unit evidence incomplete')
     timing=json.loads((browser/'assets/evidence/v3/browser/web_desktop-chromium_timings.json').read_text())

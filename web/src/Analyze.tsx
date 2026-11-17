@@ -32,7 +32,7 @@ function Report({ result, onClose }: { result: Analysis; onClose: () => void }) 
   return <dialog className="report-dialog" ref={ref} aria-labelledby="report-title" onCancel={event => { event.preventDefault(); onClose() }}>
     <div className="dialog-header"><span className="eyebrow">YOU CONTROL WHAT LEAVES</span><button className="icon-button" onClick={onClose} aria-label="Close report preview" autoFocus>×</button></div>
     <h2 id="report-title">Review before downloading.</h2><p>This is the exact text the file will contain. Original text and destinations are omitted.</p><pre data-testid="report-preview">{summary}</pre>
-    <div className="button-row"><button className="primary" onClick={download}>Download summary <span aria-hidden="true">↓</span></button><button className="secondary" onClick={onClose}>Cancel</button></div>
+    <div className="button-row"><button className="primary" onClick={download}>Download summary <Arrow down /></button><button className="secondary" onClick={onClose}>Cancel</button></div>
   </dialog>
 }
 const addressNotes: Record<string, string> = {
@@ -52,14 +52,14 @@ function Result({ session, onEdit }: { session: AnalysisSession; onEdit: () => v
     if (session.focusPending.current) {
       session.focusPending.current = false
       heading.current?.focus({ preventScroll: true })
-      heading.current?.scrollIntoView({ block: 'start', behavior: 'instant' })
+      heading.current?.closest('section')?.scrollIntoView({ block: 'start', behavior: 'instant' })
     }
   }, [result, session.focusPending])
   return <div className="result-stack">
     <section className={`risk-result risk-card ${result.risk}`} aria-labelledby="result-title">
-      <div className="result-top"><span className="eyebrow">YOUR SECOND LOOK</span><span className="risk-symbol" aria-hidden="true">{copy.symbol}</span></div>
+      <div className="result-top"><span className="eyebrow">YOUR SECOND LOOK</span><span className="risk-symbol" aria-hidden="true">{result.risk === 'lower' ? <Arrow down /> : copy.symbol}</span></div>
       <h2 ref={heading} tabIndex={-1} id="result-title">{copy.title}</h2><p>{copy.description}</p>
-      <p className="result-counts"><span>{result.observations.length} observed patterns</span><span>{result.urls.length} links inspected</span></p>
+      <p className="result-counts"><span>{result.observations.length} observed {result.observations.length === 1 ? 'pattern' : 'patterns'}</span><span>{result.urls.length} {result.urls.length === 1 ? 'link' : 'links'} inspected</span></p>
     </section>
     <section className="result-section" aria-labelledby="observations-title"><span className="eyebrow">01 / OBSERVATIONS</span><h3 id="observations-title">What we observed.</h3>
       {result.observations.length ? result.observations.map(observation => <div className={`observation ${observation.severity}`} key={observation.code}><span className="observation-marker" aria-hidden="true">{observation.severity === 'high' ? '!' : '·'}</span><div><h4>{observation.title}</h4><p>{observation.detail}</p></div></div>) : <div className="observation"><p>No configured message patterns found. A missing pattern does not establish legitimacy.</p></div>}
@@ -96,7 +96,7 @@ export function Analyze({ session }: { session: AnalysisSession }) {
         {session.error && <p className="error">{session.error}</p>}
         <div className="analyze-actions"><button className="primary" type="submit" disabled={!session.text.trim() || session.count > 4000 || session.busy}>Analyze message <Arrow /></button>{session.busy ? <button className="secondary" type="button" onClick={session.cancel}>Cancel</button> : <button className="secondary" type="button" onClick={() => { setSelected(null); session.edit(''); editor.current?.focus() }} disabled={!session.text}>Clear</button>}</div>
         <p className="status-text" role="status" aria-live="polite" aria-atomic="true">{session.busy ? session.stage === 'loading' ? 'Loading and verifying the public model… You can edit or cancel.' : 'Inspecting locally… You can edit or cancel.' : session.announcement}</p>
-        <p id="input-privacy" className="editor-footnote"><span aria-hidden="true">↳</span> No message uploads. No link opened. Reloading discards the draft.</p>
+        <p id="input-privacy" className="editor-footnote"><span aria-hidden="true">·</span> No message uploads. No link opened. Reloading discards the draft.</p>
       </form>
       <section className="examples" aria-labelledby="examples-title"><h2 className="eyebrow" id="examples-title">TRY A FICTIONAL EXAMPLE</h2><p className="muted">Select to edit. Analysis starts only when you choose.</p><div className="ruled-list">{examples.map((example, i) => <button type="button" key={example.label} className={`example-row ${selected === example.label ? 'selected' : ''}`} aria-pressed={selected === example.label} data-bracket onClick={() => { setSelected(example.label); session.edit(example.text); focusEditor() }}><span className="eyebrow">0{i + 1}</span><span className="row-title">{example.label}<small>{example.kind}</small></span><Arrow /></button>)}</div></section>
       <aside className="screenshot-note"><span className="eyebrow">STARTING WITH A SCREENSHOT?</span><p>Android includes local text recognition with an editable review step. Browser screenshot recognition is outside this preview.</p><Link href="/android" className="underlined">Explore Android <Arrow /></Link></aside></div>

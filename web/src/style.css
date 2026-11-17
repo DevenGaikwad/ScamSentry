@@ -38,3 +38,6 @@ html[data-motion=paused] *,html[data-motion=paused] *::before,html[data-motion=p
 @media(forced-colors:active){.primary{border:2px solid ButtonText}.status-square{background:CanvasText}.risk-result,.empty-result{border:2px solid CanvasText}.pointer-brackets,.theme-wipe{display:none}}
 
 a[target="_blank"]>.arrow{display:inline-block;width:16px;height:16px;margin-left:8px}.hero-cta>.arrow{width:28px;height:28px}.mobile-header-actions>a{display:flex;align-items:center;gap:4px}.mobile-header-actions>a>.arrow{width:14px;height:14px}.mobile-menu nav>a>.arrow{margin-left:auto;width:28px;height:28px}
+
+.risk-result{scroll-margin-top:28px}.risk-result h2:focus-visible{outline-color:currentColor}.risk-symbol .arrow{width:24px;height:24px}.back-top>.arrow{width:14px;height:14px;vertical-align:middle;margin-left:5px}
+.mobile-menu nav>a[aria-current]{border-left:3px solid var(--ink);padding-left:14px;background:var(--soft)}.mobile-header-actions>a[aria-current]{text-decoration:underline;text-underline-offset:5px}
