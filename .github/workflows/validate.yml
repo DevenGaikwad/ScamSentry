@@ -65,6 +65,8 @@ jobs:
         working-directory: android
       - run: ./gradlew --no-daemon :benchmark:assembleBenchmark
         working-directory: android
+      - run: ./gradlew --no-daemon -Pscamsentry.instrumentedBuild=benchmark :app:assembleBenchmarkAndroidTest
+        working-directory: android
       - run: python scripts/sign_research_apks.py
       - run: python scripts/inspect_v2_apks.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

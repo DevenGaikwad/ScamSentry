@@ -22,6 +22,14 @@ These are production-build Chromium captures from [CI run 43864597675](https://g
 
 ## Verification status
 
+Actual Android API 35 emulator captures from [run 43875523095](https://github.com/DevenGaikwad/ScamSentry/actions/runs/43875523095), source `1bd706e`. These are runtime captures using fictional content; they do not establish physical-phone performance.
+
+| Native editor | Native credential observation |
+|---|---|
+| ![Android editor](assets/evidence/v2/native_run5/01_analyze_home.png) | ![Android higher-risk result](assets/evidence/v2/native_run5/02_credential_result.png) |
+
+That run passed 11 of 12 debug cases, including complete 59-case Android parity and OCR. The remaining sharing failure occurred during ActivityScenario cleanup after the assertions completed. Minified verification exposed a driver selecting a noneditable wrapper and missing reflective ML Kit registrar constructors; scoped fixes and an additional minified OCR check are now prepared. The final release report records executed results for its exact commit.
+
 The first public CI run passed Python/source-archive checks, Android host tests/builds, and all eight desktop/mobile browser workflows. Android lint reported **0 errors and 9 warnings**; retained versions and target SDK are documented. The repaired KVM report collected 11 executed cases: four passed and seven failed. It exposed Android regex initialization and serialization alignment defects; fixes and a complete 59-case native contract test are prepared for the final run. That gate remains failed until the new run supplies results. Physical-phone timing, accessibility, first-use offline operation and 16 KB runtime remain independent pending checks. [Machine-readable gates](docs/GATE_REPORT.json) · [Build evidence](assets/evidence/v2/ci_run1_build.json).
 
 ## What v0.2.0 changes

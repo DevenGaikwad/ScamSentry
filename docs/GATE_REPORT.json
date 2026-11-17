@@ -79,8 +79,8 @@
     {
       "id": "native_instrumentation",
       "status": "FAIL",
-      "evidence": "assets/evidence/v2/emulator_run2_failures.json",
-      "detail": "API 35: 4/11 passed, 7 failed, none skipped. Portable Unicode and serialization alignment fixes prepared; full native parity and minified smoke rerun pending"
+      "evidence": "assets/evidence/v2/emulator_run5_diagnosis.json",
+      "detail": "API 35: 11/12 debug cases passed, including full 59-case native parity and OCR; test-only shared-intent cleanup fix prepared for the remaining teardown failure"
     },
     {
       "id": "browser_workflow_privacy",
@@ -138,9 +138,9 @@
     },
     {
       "id": "minified_functional",
-      "status": "BLOCKED",
-      "evidence": "android/benchmark/src/main/java/in/deven/scamsentry/benchmark/ReleaseLikeSmokeTest.kt",
-      "detail": "R8/resource-shrunk functional smoke prepared for CI emulator; does not run or relax physical performance benchmarks"
+      "status": "FAIL",
+      "evidence": "assets/evidence/v2/emulator_run5_diagnosis.json",
+      "detail": "Driver ACTION_SET_TEXT selected a noneditable wrapper; minified logs additionally exposed missing ML Kit registrar constructors. Corrected driver, scoped keep rules and minified OCR gate prepared"
     }
   ]
 }

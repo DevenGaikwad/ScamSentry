@@ -46,7 +46,11 @@ class WorkflowTest {
         compose.activityRule.scenario.recreate()
         compose.onNodeWithContentDescription("Message to analyze").assertTextContains(original)
         compose.onNodeWithText("Analyze message").performScrollTo().performClick()
-        compose.activityRule.scenario.onActivity { activity ->
+        val sharedActivity=compose.activity
+        val launchIntent=Intent(sharedActivity.intent)
+        try {
+        compose.runOnUiThread {
+            val activity=sharedActivity
             activity.startActivity(Intent(activity,MainActivity::class.java).apply {
                 action=Intent.ACTION_SEND; type="text/plain"
                 putExtra(Intent.EXTRA_TEXT,"Fictional team: send your OTP immediately.")
@@ -57,6 +61,11 @@ class WorkflowTest {
         compose.onNodeWithContentDescription("Message to analyze").assertTextContains("send your OTP")
         compose.onNodeWithText("Analyze message").performScrollTo().performClick()
         compose.waitUntil(20000) { compose.onAllNodesWithText("Request for a secret").fetchSemanticsNodes().isNotEmpty() }
+        } finally {
+            // ActivityScenario identifies its activity by the original launch intent.
+            // Production onNewIntent correctly updates it; restore only for rule teardown.
+            compose.runOnUiThread { sharedActivity.intent=launchIntent }
+        }
     }
     private fun screenshot(name: String) {
         val bitmap=compose.onRoot().captureToImage().asAndroidBitmap()

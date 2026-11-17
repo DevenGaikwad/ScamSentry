@@ -7,6 +7,7 @@ status=0
 mkdir -p ../release/device
 timeout 20s adb pull /sdcard/Android/data/in.deven.scamsentry/files/screenshots ../release/device/ || true
 timeout 20s adb logcat -d -t 1500 > ../release/device/debug_logcat.txt || true
+./gradlew --no-daemon -Pscamsentry.instrumentedBuild=benchmark :app:connectedBenchmarkAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=in.deven.scamsentry.OcrIntegrationTest --stacktrace || status=$?
 ./gradlew --no-daemon :benchmark:connectedBenchmarkAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=in.deven.scamsentry.benchmark.ReleaseLikeSmokeTest --stacktrace || status=$?
 timeout 20s adb pull /sdcard/Android/data/in.deven.scamsentry.benchmark/files/screenshots ../release/device/minified-screenshots || true
 timeout 20s adb logcat -d -t 1500 > ../release/device/logcat.txt || true

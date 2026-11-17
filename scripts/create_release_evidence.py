@@ -32,7 +32,8 @@ def main():
     host_core=junit((android/'android/core-analysis/build/test-results/test').rglob('TEST-*.xml'),9)
     host_app=junit((android/'android/app/build/test-results/testDebugUnitTest').rglob('TEST-*.xml'),2)
     emulator=OUT/'emulator-artifact'
-    native=junit((emulator/'android/app/build/outputs/androidTest-results').rglob('TEST-*.xml'),12)
+    native=junit((emulator/'android/app/build/outputs/androidTest-results/connected/debug').rglob('TEST-*.xml'),12)
+    minified_ocr=junit((emulator/'android/app/build/outputs/androidTest-results/connected/benchmark').rglob('TEST-*.xml'),1)
     minified=junit((emulator/'android/benchmark/build/outputs/androidTest-results').rglob('TEST-*.xml'),1)
     python=junit([OUT/'python-artifact/python-junit.xml'],75)
     extracted=junit([OUT/'python-artifact/archive-python-junit.xml'],75)
@@ -51,7 +52,7 @@ def main():
         shutil.copy2(file,target)
         screenshots.append(dict(file=target.name,bytes=target.stat().st_size,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
     report=dict(schema_version=2,source_commit=commit,source_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),workflow_url=f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",required_jobs=needs,python=python,extracted_source_python=extracted,browser_units=dict(tests=units['numTotalTests'],failed=0,skipped=0),browser_workflows=stats,native_debug=native,minified_functional=minified,distribution_checks=checks,packaged_model_sha256=expected,native_screenshots=screenshots,full_project_all_gates_passed=False,scope='GitHub-hosted Linux, desktop/mobile-view Chromium and API 35 x86_64 KVM functional checks. Minified benchmark variant uses debug signing and profileable manifest; no phone latency claim.',remaining=['Physical-phone performance and accessibility','Actual 16 KB runtime','First-use offline operation on a physical phone','Windows batch execution','Prospective independent model validation and known robustness trade-offs','Conditional free Vercel team access','Owner-managed production signing'])
-    report.update(android_core_host=host_core,android_app_host=host_app,browser_worker_timings=timing)
+    report.update(android_core_host=host_core,android_app_host=host_app,browser_worker_timings=timing,minified_ocr=minified_ocr)
     (OUT/'RELEASE_VERIFICATION.json').write_text(json.dumps(report,indent=2)+'\n')
     print('Observed release evidence verified; native screenshots:',len(screenshots))
 

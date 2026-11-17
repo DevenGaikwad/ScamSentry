@@ -6,6 +6,7 @@ plugins {
 android {
     namespace = "in.deven.scamsentry"
     compileSdk = 37
+    testBuildType = providers.gradleProperty("scamsentry.instrumentedBuild").getOrElse("debug")
     defaultConfig {
         applicationId = "in.deven.scamsentry"
         minSdk = 26

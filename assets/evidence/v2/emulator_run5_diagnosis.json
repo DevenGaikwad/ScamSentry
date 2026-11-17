@@ -1,0 +1,105 @@
+{
+  "source_commit": "1bd706e072c4d19cb45737f0f3706c2ab55d6d73",
+  "workflow_run": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43875523095",
+  "reports": [
+    {
+      "module": "minified_smoke",
+      "summary": {
+        "tests": "1",
+        "failures": "1",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.000",
+        "timestamp": "2026-11-16T13:39:53",
+        "hostname": "localhost"
+      },
+      "cases": [
+        {
+          "name": "minifiedTextFlowShowsCredentialObservation",
+          "status": "FAIL",
+          "failure": "java.lang.AssertionError: Minified app must complete local analysis"
+        }
+      ]
+    },
+    {
+      "module": "debug",
+      "summary": {
+        "tests": "12",
+        "failures": "1",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.000",
+        "timestamp": "2026-11-16T13:36:24",
+        "hostname": "localhost"
+      },
+      "cases": [
+        {
+          "name": "summariesSurviveWithUnknownLegacyInputSource",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "migrationToThreePrunesExistingStorage",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "packagedModelAndUnicodeContractMatchEveryReference",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "bundledLatinOcrReadsOriginalFixtureAndRejectsMalformedBytes",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "allEightExifOrientationsPreservePixelLayout",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "secondExportKeepsFirstGrantFileAndPrunesExpiredFiles",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "retentionPrunesStorageTransactionally",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "packagedAndroidModelMatchesReference",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "credentialRequestShowsEvidenceAndEditPath",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "manualSummarySaveDeleteAndDisableControls",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "exportDoesNotIncludeOriginalIdentifiers",
+          "status": "PASS",
+          "failure": null
+        },
+        {
+          "name": "rotationKeepsDraftAndSharedInputReplacesPendingAnalysis",
+          "status": "FAIL",
+          "failure": "java.lang.AssertionError: Activity never becomes requested state \"[DESTROYED]\" (last lifecycle transition = \"PAUSED\")"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    "ActivityScenario ignores lifecycle events after onNewIntent changes the launch intent; restore original intent in test-only finally after assertions",
+    "UiObject2 ACTION_SET_TEXT failed on descriptive wrapper; target actual EditText and verify accepted fixture",
+    "R8 removed public no-argument constructors for the three manifest-named ML Kit registrars"
+  ],
+  "physical_phone": false
+}

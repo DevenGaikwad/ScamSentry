@@ -25,8 +25,10 @@ class ReleaseLikeSmokeTest {
         val launch=Intent().setClassName(target,"$target.MainActivity")
         context.startActivity(launch.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
         device.wait(Until.findObject(By.text("Start inspecting")),10000)?.click()
-        val editor=requireNotNull(device.wait(Until.findObject(By.desc("Message to analyze")),15000))
-        editor.text="Fictional account team: send your OTP immediately to confirm access."
+        val editor=requireNotNull(device.wait(Until.findObject(By.clazz("android.widget.EditText").pkg(target)),15000))
+        val message="Fictional account team: send your OTP immediately to confirm access."
+        editor.text=message
+        assertTrue("The editable accessibility node must accept the fixture",editor.wait(Until.textEquals(message),5000))
         UiScrollable(UiSelector().scrollable(true)).scrollTextIntoView("Analyze message")
         requireNotNull(device.findObject(By.text("Analyze message"))).click()
         assertTrue("Minified app must complete local analysis",device.wait(Until.hasObject(By.text("Higher risk")),20000))
