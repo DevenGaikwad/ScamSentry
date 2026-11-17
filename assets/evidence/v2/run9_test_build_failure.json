@@ -1,0 +1,21 @@
+{
+  "workflow_run": 43998404388,
+  "source_commit": "8c12eab7d2f77a1ef2946b79febab22f721f0888",
+  "android_job": 133756201930,
+  "status": "FAIL",
+  "failed_task": ":app:minifyBenchmarkAndroidTestWithR8",
+  "missing_class": "javax.lang.model.element.Modifier",
+  "referenced_by": "com.google.errorprone.annotations.IncompatibleModifiers.value() and related annotation member",
+  "observed_passes": [
+    "75 Python tests",
+    "75 tests from actual source ZIP extraction",
+    "63 browser unit/parity tests",
+    "8 production browser workflows, zero skipped/flaky/unexpected",
+    "npm audit zero known advisories",
+    "Windows gradlew.bat and 9 core JUnit methods",
+    "Android core/app unit, lint, debug/test, release and benchmark assembly"
+  ],
+  "emulator": "SKIPPED after prerequisite failure",
+  "release": "SKIPPED after prerequisite failure",
+  "correction": "Test-only error_prone_annotations 2.46.0 removes deprecated Java compiler enum references; exact upstream tagged annotation/enum sources reviewed. No dontwarn or compiler stubs; minification retained. New CI required."
+}

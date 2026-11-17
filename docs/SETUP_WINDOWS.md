@@ -5,13 +5,13 @@ Open `android` directly in Android Studio. Existing Python/Node/MySQL/Vivado ins
 | Tool | Required configuration | Official reference |
 |---|---|---|
 | Android Studio | Stable installation with SDK Manager | https://developer.android.com/studio |
-| JDK | Compatible JDK 21; Gradle 9.3.1 supports running on 21 | https://docs.gradle.org/9.3.1/userguide/compatibility.html |
+| JDK | JDK 21 for the pinned Gradle 9.6.0 build | https://docs.gradle.org/9.6.0/userguide/compatibility.html |
 | Android SDK | Platform 37.0, build-tools 36.0.0, platform-tools | https://developer.android.com/tools/sdkmanager |
-| Gradle | Checked-in wrapper 9.3.1; no global install needed | https://docs.gradle.org/9.3.1/userguide/gradle_wrapper.html |
+| Gradle | Checked-in wrapper 9.6.0; no global install needed | https://docs.gradle.org/9.6.0/userguide/gradle_wrapper.html |
 | Python | 3.12.x, project-local virtual environment | https://www.python.org/downloads/windows/ |
 | Git | Optional for source history and future publication | https://git-scm.com/downloads/win |
 
-The exact Android dependencies are in `android/gradle/libs.versions.toml`. AGP 9.1.1 and Kotlin 2.4.10 were selected as a stable compatible baseline; Compose uses the pinned stable BOM. Version-catalog changes require build and parity checks. Use an up-to-date supported JDK patch for your own build; the temporary Linux toolchain used for this session is not bundled.
+The exact Android dependencies are in `android/gradle/libs.versions.toml`: AGP 9.5.1, Kotlin/Compose compiler 2.4.21 and the pinned Compose BOM. Version-catalog changes require build and parity checks. The original 0.1.0 dependency group remains in the preserved baseline branch. No JDK, SDK or dependency cache is bundled.
 
 PowerShell from the extracted project root:
 
@@ -64,4 +64,6 @@ Set-Location android
 
 Separate release assembly bounds compiler/lint/R8 memory residency. For a source ZIP, run the validator with `--mode archive` before building. No Git initialization or private joblib file is needed to validate source and synthetic export arithmetic.
 
-For the browser, use Node 24, enter `web`, then run `npm ci`, `npm run build`, `npm run preview` and open the displayed localhost URL. Text/URL analysis is functional after public model download. Browser OCR/PWA are not included. Installable release APKs use explicit disposable TEST signatures and versionCode 2. Windows batch invocation is provided by the official wrapper; this Linux execution did not independently run Windows.
+For the browser, use Node 24, enter `web`, then run `npm ci`, `npm run build`, `npm run preview` and open the displayed localhost URL. Text/URL analysis is functional after public model download. Browser OCR/PWA are not included. Installable release APKs use explicit disposable TEST signatures and versionCode 2.
+
+The actual Windows-hosted job in [run 43998404388](https://github.com/DevenGaikwad/ScamSentry/actions/runs/43998404388) passed `gradlew.bat --no-daemon :core-analysis:test` on source `8c12eab7d2f77a1ef2946b79febab22f721f0888`. This verifies the batch launcher and core suite on Windows; full Windows APK assembly and an owner's local SDK setup are separate. JSON model assets use LF on both platforms to preserve their frozen digest.

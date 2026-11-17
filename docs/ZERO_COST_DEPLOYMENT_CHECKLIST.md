@@ -2,6 +2,8 @@
 
 Review date: 16 November 2026. Personal academic preview only. No commercial protection claim or unlimited-traffic promise.
 
+**17 November owner instruction:** Vercel activation and deployment are deferred. No replacement activation link is generated in this phase. The account observations below are historical; recheck target entitlement and usage when deployment resumes.
+
 | Check | Observed status |
 |---|---|
 | Authenticated account plan | Hobby, active; no active trial reported |
