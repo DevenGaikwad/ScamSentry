@@ -1,0 +1,4 @@
+# The frozen model digest must survive Windows checkouts byte-for-byte.
+*.json text eol=lf
+*.sh text eol=lf
+gradlew text eol=lf

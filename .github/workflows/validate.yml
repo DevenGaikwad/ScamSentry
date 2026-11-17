@@ -118,6 +118,26 @@ jobs:
             assets/evidence/v2/web_*.png
             assets/evidence/v2/web_*.json
             assets/evidence/v2/web_demo_*.webm
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+      - run: .\gradlew.bat --no-daemon :core-analysis:test
+        working-directory: android
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: windows-evidence
+          retention-days: 14
+          path: |
+            android/core-analysis/build/test-results/test/*.xml
+            android/core-analysis/build/reports/*.json
   emulator:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -166,7 +186,7 @@ jobs:
             release/device/
   publish-preview:
     if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.repository == 'DevenGaikwad/ScamSentry'
-    needs: [python, android, browser, emulator]
+    needs: [python, android, browser, windows, emulator]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -193,6 +213,10 @@ jobs:
         with:
           name: python-and-archive
           path: release/python-artifact
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: windows-evidence
+          path: release/windows-artifact
       - name: Prepare immutable release assets
         run: |
           mkdir -p release/install

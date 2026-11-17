@@ -74,5 +74,6 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.androidx.test.runner)
     androidTestImplementation(libs.androidx.room.testing)
+    androidTestImplementation("com.google.errorprone:error_prone_annotations:2.36.0")
     debugImplementation(libs.compose.test.manifest)
 }

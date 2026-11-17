@@ -39,12 +39,12 @@ object ImageOrientation {
     }
 }
 interface OcrSource { suspend fun read(uri: Uri): OcrDraft }
-class OcrReader(private val context: Context) : OcrSource {
+class OcrReader(private val context: Context, private val decodeOverride: (suspend (Uri) -> OcrDraft)? = null) : OcrSource {
     override suspend fun read(uri: Uri): OcrDraft {
         // Assign ownership inside IO so prompt cancellation on dispatcher return cannot leak it.
         var owned: OcrDraft? = null
         try {
-            withContext(Dispatchers.IO) { owned = decode(uri) }
+            withContext(Dispatchers.IO) { owned = decodeOverride?.invoke(uri) ?: decode(uri) }
             currentCoroutineContext().ensureActive()
             return requireNotNull(owned).also { owned = null }
         } finally { owned?.close() }

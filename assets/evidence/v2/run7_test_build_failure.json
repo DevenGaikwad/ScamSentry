@@ -1,0 +1,12 @@
+{
+  "source_commit": "29406cfd7627fdb4f470529c8fd0cc79d1532596",
+  "workflow_run": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/43992976567",
+  "failed_task": "app:minifyBenchmarkAndroidTestWithR8",
+  "diagnosis": "Test-only annotation types absent from the instrumentation runtime classpath",
+  "missing_types": [
+    "com.google.errorprone.annotations.CanIgnoreReturnValue",
+    "com.google.errorprone.annotations.MustBeClosed"
+  ],
+  "remediation": "Add explicit error_prone_annotations 2.36.0 to androidTestImplementation; preserve R8 checks and shrinking",
+  "native_execution": "Not run; Android build gate failed"
+}

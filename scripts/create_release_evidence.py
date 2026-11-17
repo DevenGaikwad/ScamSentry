@@ -20,7 +20,7 @@ def junit(paths,minimum):
 def main():
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     needs=json.loads(os.environ['NEEDS_JSON'])
-    if set(needs)!={'python','android','browser','emulator'} or any(v['result']!='success' for v in needs.values()):raise ValueError('A required workflow job did not pass')
+    if set(needs)!={'python','android','browser','windows','emulator'} or any(v['result']!='success' for v in needs.values()):raise ValueError('A required workflow job did not pass')
     browser=OUT/'browser-artifact'
     stats=json.loads((browser/'web/test-results/results.json').read_text())['stats']
     if stats['expected']!=8 or any(stats[k] for k in ['skipped','unexpected','flaky']):raise ValueError('Browser workflow evidence incomplete')
@@ -32,11 +32,18 @@ def main():
     host_core=junit((android/'android/core-analysis/build/test-results/test').rglob('TEST-*.xml'),9)
     host_app=junit((android/'android/app/build/test-results/testDebugUnitTest').rglob('TEST-*.xml'),2)
     emulator=OUT/'emulator-artifact'
-    native=junit((emulator/'android/app/build/outputs/androidTest-results/connected/debug').rglob('TEST-*.xml'),12)
+    native=junit((emulator/'android/app/build/outputs/androidTest-results/connected/debug').rglob('TEST-*.xml'),16)
     minified_ocr=junit((emulator/'android/app/build/outputs/androidTest-results/connected/benchmark').rglob('TEST-*.xml'),1)
     minified=junit((emulator/'android/benchmark/build/outputs/androidTest-results').rglob('TEST-*.xml'),1)
     python=junit([OUT/'python-artifact/python-junit.xml'],75)
     extracted=junit([OUT/'python-artifact/archive-python-junit.xml'],75)
+    windows=junit((OUT/'windows-artifact').rglob('TEST-*.xml'),9)
+    quality_paths=list(emulator.rglob('ocr_quality.json'))
+    if len(quality_paths)!=1:raise ValueError('Missing unambiguous OCR rendering report')
+    quality=json.loads(quality_paths[0].read_text())
+    if len(quality['cases'])!=6:raise ValueError('Incomplete OCR rendering slices')
+    radios={name:(emulator/'release/device'/file).read_text().strip() for name,file in [('wifi','offline_wifi.txt'),('mobile_data','offline_mobile_data.txt')]}
+    if any(value!='0' for value in radios.values()):raise ValueError('Emulator radios were not disabled for offline checks')
     checks={}
     for name in ['repository_validation.json','archive_validation.json']:
         report=json.loads((OUT/'python-artifact'/name).read_text())
@@ -53,6 +60,8 @@ def main():
         screenshots.append(dict(file=target.name,bytes=target.stat().st_size,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
     report=dict(schema_version=2,source_commit=commit,source_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),workflow_url=f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",required_jobs=needs,python=python,extracted_source_python=extracted,browser_units=dict(tests=units['numTotalTests'],failed=0,skipped=0),browser_workflows=stats,native_debug=native,minified_functional=minified,distribution_checks=checks,packaged_model_sha256=expected,native_screenshots=screenshots,full_project_all_gates_passed=False,scope='GitHub-hosted Linux, desktop/mobile-view Chromium and API 35 x86_64 KVM functional checks. Minified benchmark variant uses debug signing and profileable manifest; no phone latency claim.',remaining=['Physical-phone performance and accessibility','Actual 16 KB runtime','First-use offline operation on a physical phone','Windows batch execution','Prospective independent model validation and known robustness trade-offs','Conditional free Vercel team access','Owner-managed production signing'])
     report.update(android_core_host=host_core,android_app_host=host_app,browser_worker_timings=timing,minified_ocr=minified_ocr)
+    report.update(windows_wrapper_and_core=windows,emulator_radio_state=radios,ocr_rendering_quality=quality)
+    report['remaining'].remove('Windows batch execution')
     (OUT/'RELEASE_VERIFICATION.json').write_text(json.dumps(report,indent=2)+'\n')
     print('Observed release evidence verified; native screenshots:',len(screenshots))
 
