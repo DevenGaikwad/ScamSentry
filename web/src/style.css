@@ -43,3 +43,5 @@ a[target="_blank"]>.arrow{display:inline-block;width:16px;height:16px;margin-lef
 .mobile-menu nav>a[aria-current]{border-left:3px solid var(--ink);padding-left:14px;background:var(--soft)}.mobile-header-actions>a[aria-current]{text-decoration:underline;text-underline-offset:5px}
 
 .evidence-lead>div,.section-heading{min-width:0}.section-heading h2{overflow-wrap:break-word}@media(max-width:359px){.editorial-section .section-heading h2{font-size:40px}}
+
+.site-header{flex-wrap:wrap;row-gap:8px;padding-block:16px}.mobile-header-actions>a{min-height:44px}h1,h2,h3,h4{overflow-wrap:anywhere}

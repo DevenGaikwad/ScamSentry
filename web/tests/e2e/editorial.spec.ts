@@ -150,6 +150,16 @@ test('responsive layouts, fallback fonts, text spacing and all public pages', as
   await page.goto('/'); await page.addStyleTag({ content: '*{line-height:1.5!important;letter-spacing:.12em!important;word-spacing:.16em!important}p{margin-bottom:2em!important}' })
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
   await capture(page, '320-fallback-text-spacing')
+  await page.unroute('**/fonts/**')
+  for (const width of [1363, 320]) {
+    await page.setViewportSize({ width, height: 936 })
+    for (const path of ['/', '/analyze', '/learn', '/evidence', '/privacy', '/android']) {
+      await page.goto(path); await page.evaluate(() => document.fonts.ready)
+      await page.evaluate(() => { const sizes = Array.from(document.querySelectorAll<HTMLElement>('body *')).map(element => ({ element, size: parseFloat(getComputedStyle(element).fontSize) })); sizes.forEach(({ element, size }) => { element.style.fontSize = `${size * 2}px` }) })
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)
+      records.push({ width, path: `${path} / 200% text resize`, overflow }); expect(overflow, `${path} 200% text resize at ${width}`).toBe(false)
+    }
+  }
   writeFileSync(join(evidence, `${test.info().project.name}_layout-matrix.json`), JSON.stringify({ browserScope: 'viewport reflow, not hardware device certification', records }, null, 2))
 })
 
