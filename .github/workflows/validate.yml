@@ -83,6 +83,8 @@ jobs:
             android/core-analysis/build/reports/*.json
             android/core-analysis/build/test-results/test/*.xml
             android/app/build/test-results/testDebugUnitTest/*.xml
+            android/app/build/outputs/mapping/benchmarkAndroidTest/mapping.txt
+            android/app/build/outputs/mapping/benchmarkAndroidTest/configuration.txt
   browser:
     runs-on: ubuntu-latest
     timeout-minutes: 20

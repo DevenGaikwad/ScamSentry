@@ -48,17 +48,18 @@ class WorkflowTest {
         compose.onNodeWithText("Analyze message").performScrollTo().performClick()
         val sharedActivity=compose.activity
         val launchIntent=Intent(sharedActivity.intent)
+        val sharedText="Fictional team: send your OTP immediately."
         try {
         compose.runOnUiThread {
             val activity=sharedActivity
             activity.startActivity(Intent(activity,MainActivity::class.java).apply {
                 action=Intent.ACTION_SEND; type="text/plain"
-                putExtra(Intent.EXTRA_TEXT,"Fictional team: send your OTP immediately.")
+                putExtra(Intent.EXTRA_TEXT,sharedText)
                 addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             })
         }
         compose.waitUntil(10000) { compose.onAllNodesWithContentDescription("Message to analyze").fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithContentDescription("Message to analyze").assertTextContains("send your OTP")
+        compose.onNodeWithContentDescription("Message to analyze").assertTextContains(sharedText)
         compose.onNodeWithText("Analyze message").performScrollTo().performClick()
         compose.waitUntil(20000) { compose.onAllNodesWithText("Request for a secret").fetchSemanticsNodes().isNotEmpty() }
         } finally {

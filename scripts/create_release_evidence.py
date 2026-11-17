@@ -42,8 +42,11 @@ def main():
     if len(quality_paths)!=1:raise ValueError('Missing unambiguous OCR rendering report')
     quality=json.loads(quality_paths[0].read_text())
     if len(quality['cases'])!=6:raise ValueError('Incomplete OCR rendering slices')
-    radios={name:(emulator/'release/device'/file).read_text().strip() for name,file in [('wifi','offline_wifi.txt'),('mobile_data','offline_mobile_data.txt')]}
-    if any(value!='0' for value in radios.values()):raise ValueError('Emulator radios were not disabled for offline checks')
+    device=emulator/'release/device'
+    radios={name:(device/file).read_text().strip() for name,file in [('wifi','offline_wifi.txt'),('airplane_mode','offline_airplane.txt'),('wifi_after','offline_wifi_after.txt'),('airplane_mode_after','offline_airplane_after.txt'),('legacy_mobile_data_setting','offline_mobile_data.txt')]}
+    if any(radios[k]!='0' for k in ['wifi','wifi_after']) or any(radios[k]!='1' for k in ['airplane_mode','airplane_mode_after']):raise ValueError('Effective airplane/Wi-Fi state not verified')
+    for filename in ['offline_connectivity.txt','offline_connectivity_after.txt']:
+        if 'Active default network: none' not in (device/filename).read_text():raise ValueError('An active default network exists during the offline checks')
     checks={}
     for name in ['repository_validation.json','archive_validation.json']:
         report=json.loads((OUT/'python-artifact'/name).read_text())

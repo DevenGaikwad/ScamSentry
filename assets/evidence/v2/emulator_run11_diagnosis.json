@@ -1,0 +1,35 @@
+{
+  "workflow_run": 44000057342,
+  "source_commit": "4d54d2af860e4f72ef1b1d9879312c697781cdea",
+  "status": "FAIL",
+  "debug": {
+    "executed": 16,
+    "passed": 15,
+    "failed": 1,
+    "skipped": 0,
+    "failure": "Sharing test asserts a substring with an exact-item API; observed EditableText is the correct full shared fixture. Test now compares the complete intended text."
+  },
+  "minified_external_text_ui": "PASS",
+  "minified_ocr": {
+    "status": "FAIL",
+    "executed_named_test_cases": 0,
+    "runner_report": "Process crashed",
+    "gradle_exit_status": "incorrectly zero despite XML runner failure",
+    "diagnosis": "Exact crash stack absent from truncated general logs. Add immediate crash-buffer capture and preserve externally filtered JUnit test entry point. Root cause remains unconfirmed until new evidence."
+  },
+  "new_cases_passed": [
+    "OCR completion cancellation cleanup",
+    "Rapid screenshot replacement and clear ownership",
+    "History-off queued save",
+    "Six controlled OCR rendering slices"
+  ],
+  "offline": {
+    "wifi_setting": "0",
+    "legacy_mobile_data_setting": "1",
+    "active_default_network": "none",
+    "correction": "Enable/query actual airplane mode, retain legacy value as metadata, and check effective connectivity before/after. Do not equate the old global mobile_data flag with subscription-specific state."
+  },
+  "builds": "All host, debug, release, benchmark and minified test APK builds PASS",
+  "other_jobs": "Python/archive, browser and Windows PASS",
+  "publication": "SKIPPED after required runtime failure"
+}
