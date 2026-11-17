@@ -178,6 +178,8 @@ test('responsive layouts, fallback fonts, text spacing and all public pages', as
 
 test('editorial states and two neutral palettes have original stable screenshots', async ({ page }) => {
   test.setTimeout(120000)
+  // Stills show the complete static equivalent; the separate tour records live motion.
+  await page.emulateMedia({ reducedMotion: 'reduce' })
   for (const theme of ['light', 'dark'] as const) {
     await page.goto('/'); await preferences(page, theme); await capture(page, `${theme}-home`)
     for (const path of ['/learn', '/learn/sender-identity', '/evidence', '/privacy', '/android']) { await page.goto(path); await capture(page, `${theme}-${path.slice(1).replace('/', '-')}`) }
