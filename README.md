@@ -6,31 +6,54 @@ A native Android app and local-browser companion for inspecting suspicious messa
 
 [Verification workflow](https://github.com/DevenGaikwad/ScamSentry/actions) · [Research preview releases](https://github.com/DevenGaikwad/ScamSentry/releases) · [Model card](docs/MODEL_CARD.md) · [Privacy](docs/PRIVACY.md) · [Browser privacy](docs/WEB_PRIVACY.md)
 
-## Actual browser screenshots
+## Install the research preview
 
-These are production-build Chromium captures from [CI run 43864597675](https://github.com/DevenGaikwad/ScamSentry/actions/runs/43864597675), using fictional messages and reserved domains. They show the browser companion; native runtime screenshots have a separate device gate.
+[Download v0.2.0-preview](https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview). Choose the **arm64** APK for a compatible phone, **x86_64** for a matching emulator, or the larger universal fallback. Minimum Android 8 / API 26; versionCode 2. APKs use a **disposable TEST signing identity**. They are research previews; an older preview signed with another key may need to be uninstalled before installing this one.
 
-![Browser desktop analysis workspace](assets/evidence/v2/web_desktop-chromium_home.png)
+[Installation, exact artifacts and checksums](docs/RELEASE_HANDOFF.md) · [APK inventory](assets/evidence/v2/final/ARTIFACT_INVENTORY.json) · [Download SHA-256](assets/evidence/v2/final/DOWNLOAD_SHA256SUMS.txt)
 
-![Browser desktop secret-request result and destination host](assets/evidence/v2/web_desktop-chromium_result.png)
+## Executed verification
+
+[Final workflow run 44012744040](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040) passed for immutable release source [bc227ba](https://github.com/DevenGaikwad/ScamSentry/commit/bc227ba189796c1167c3cd21c3a7ec973156ccfd). Later evidence/documentation commits preserve the same application source. [Observed machine-readable report](assets/evidence/v2/final/RELEASE_VERIFICATION.json) · [Current gates](docs/GATE_REPORT.json).
+
+| Check | Actual result |
+|---|---|
+| Python public checkout | 77 passed; zero skipped |
+| Extracted non-Git source ZIP | 77 passed; actual archive/privacy validation passed |
+| Browser unit / cross-platform parity | 63 passed |
+| Production browser desktop/mobile workflows | 8 passed; zero skips or flakes |
+| Linux Kotlin core / Android app unit tests | 9 / 2 passed |
+| Windows batch wrapper / core | 9 passed |
+| API 35 Android debug instrumentation | 16 passed; zero skipped |
+| External minified UI journeys | 2 passed: text and system-picker/OCR/review/edit/analysis |
+| Android build and lint | Debug, test, minified release and benchmark assembled; lint 0 errors / 9 warnings |
+| Release packaging | Three test-signed APKs, ABI/model/signature/alignment checks, source/full ZIP validation and downloadable checksums passed |
+
+The emulator had airplane mode enabled, Wi-Fi service disabled and no default network before/after execution. The minified target is the R8/resource-shrunk, profileable benchmark variant with debug signing; it uses an external UI driver without application test-only keep rules. This is functional emulator evidence. Physical-phone latency, accessibility, distributed-release first-use offline operation and 16 KB page-size runtime remain separate open gates.
+
+## Actual runtime screenshots
+
+Original fictional-content captures from that exact workflow are retained with [provenance and digests](assets/evidence/v2/final/SNAPSHOT_PROVENANCE.json). They are actual native/browser execution, not design mockups.
+
+| Android editor | Android credential observation |
+|---|---|
+| ![Native Android editor](assets/evidence/v2/final/native_01_analyze_home.png) | ![Native Android credential observation](assets/evidence/v2/final/native_02_credential_result.png) |
+
+| Minified Android OCR review | Minified Android analysis |
+|---|---|
+| ![Actual bundled OCR review after system photo picker](assets/evidence/v2/final/native_minified_ocr_review.png) | ![Minified Android result after explicit text correction](assets/evidence/v2/final/native_minified_ocr_result.png) |
+
+![Production desktop browser analysis workspace](assets/evidence/v2/final/web_desktop-chromium_home.png)
+
+![Production desktop browser secret-request result](assets/evidence/v2/final/web_desktop-chromium_result.png)
 
 <details><summary>Mobile browser result</summary>
 
-![Mobile browser analysis and evidence](assets/evidence/v2/web_mobile-chromium_result.png)
+![Production mobile browser result](assets/evidence/v2/final/web_mobile-chromium_result.png)
 
 </details>
 
-## Verification status
-
-Actual Android API 35 emulator captures from [run 43875523095](https://github.com/DevenGaikwad/ScamSentry/actions/runs/43875523095), source `1bd706e`. These are runtime captures using fictional content; they do not establish physical-phone performance.
-
-| Native editor | Native credential observation |
-|---|---|
-| ![Android editor](assets/evidence/v2/native_run5/01_analyze_home.png) | ![Android higher-risk result](assets/evidence/v2/native_run5/02_credential_result.png) |
-
-That run passed 11 of 12 debug cases, including complete 59-case Android parity and OCR. The remaining sharing failure occurred during ActivityScenario cleanup after the assertions completed. Minified verification exposed a driver selecting a noneditable wrapper and missing reflective ML Kit registrar constructors; scoped fixes and an additional minified OCR check are now prepared. The final release report records executed results for its exact commit.
-
-The first public CI run passed Python/source-archive checks, Android host tests/builds, and all eight desktop/mobile browser workflows. Android lint reported **0 errors and 9 warnings**; retained versions and target SDK are documented. The repaired KVM report collected 11 executed cases: four passed and seven failed. It exposed Android regex initialization and serialization alignment defects; fixes and a complete 59-case native contract test are prepared for the final run. That gate remains failed until the new run supplies results. Physical-phone timing, accessibility, first-use offline operation and 16 KB runtime remain independent pending checks. [Machine-readable gates](docs/GATE_REPORT.json) · [Build evidence](assets/evidence/v2/ci_run1_build.json).
+[Actual browser workflow recording](https://github.com/DevenGaikwad/ScamSentry/releases/download/v0.2.0-preview/ScamSentry_Browser_Workflow.webm) uses the production build and fictional inputs; it is separate from a native-phone recording or narrated faculty rehearsal.
 
 ## What v0.2.0 changes
 
@@ -75,7 +98,7 @@ npm run preview
 
 Open the displayed localhost URL. The model downloads as a public static asset and runs in a dedicated worker. Draft input remains in memory. [Architecture](docs/WEB_ARCHITECTURE.md) · [Deployment](docs/WEB_DEPLOYMENT.md).
 
-Public Vercel hosting is conditional: account Hobby status was observed, but the target team requires connector authorization. No paid plan, trial, domain, database or credits were activated. No live deployment URL is claimed until verified. [Zero-cost review](docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md).
+Vercel activation and deployment are **deferred by the owner on 17 November 2026**. The static build is ready; target account/team eligibility, current terms and usage must be rechecked when deployment resumes. No new activation link was generated and no paid plan, trial, domain, database or credits were activated. No live URL is claimed. [Zero-cost review](docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md).
 
 ## Build Android
 
@@ -113,6 +136,6 @@ Real-data experiments are opt-in, require the reviewed source and frozen partiti
 
 ## Provenance and credit
 
-Original preview archive SHA-256: `fbfc705ce7959c5ae48c96942475c45f3d39416189150e2123888f52f6766dca`. Original local baseline commit: `499fa7879d499a715306424d0e95da2b2c554158`, preserved under `baseline-0.1.0`. Frozen historical documents remain in [docs/history/0.1.0](docs/history/0.1.0). The complete attached [v2.1 implementation specification](docs/UPGRADE_SPEC_V2_1.md) is preserved.
+Original preview archive SHA-256: `fbfc705ce7959c5ae48c96942475c45f3d39416189150e2123888f52f6766dca`. Original local baseline commit: `499fa7879d499a715306424d0e95da2b2c554158`; the identical imported baseline tree is public at commit `111450b974c8a0ffd153af5e908a89c29f60769c` on `baseline-0.1.0`. These commit identities are distinct; see [publication provenance](docs/PUBLICATION_PROVENANCE.json). Frozen historical documents remain in [docs/history/0.1.0](docs/history/0.1.0). The complete attached [v2.1 implementation specification](docs/UPGRADE_SPEC_V2_1.md) is preserved.
 
 Deven Sachin Gaikwad · B.Tech ECE, AI/ML · DES Pune University. Dataset: Sandhya Mishra and Devpriya Soni (2022), [Mendeley Data V1](https://data.mendeley.com/datasets/f45bkkt8pr/1), DOI 10.17632/f45bkkt8pr.1, CC BY 4.0. Changes include minimization, deduplication, grouping, quarantine and normalization; no endorsement is implied. Inter and Space Grotesk retain SIL OFL notices. [MIT code licence](LICENSE) · [Full third-party notices](THIRD_PARTY_NOTICES.md).

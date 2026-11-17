@@ -1,25 +1,35 @@
 # V2 verification matrix
 
-Status is evidence-specific. Host checks do not imply device checks. Historical v1 evidence is preserved under `docs/history/0.1.0` and existing baseline evidence files; new results use `assets/evidence/v2`.
+Immutable release source: `bc227ba189796c1167c3cd21c3a7ec973156ccfd`. [Executed CI run 44012744040](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040); [original report](../assets/evidence/v2/final/RELEASE_VERIFICATION.json). All results below are scoped; host checks do not imply phone acceptance. Historical reports and failed attempts remain preserved.
 
-| Area | Executed / prepared checks | Evidence or status |
+| Area | Executed checks | Result / boundary |
 |---|---|---|
-| Context rules | Unrelated example labels, local negation, attached quotes, warning then new request, exception clauses | Python regressions and Kotlin ContextRulesV2Test pass |
-| Numeric baseline | 24 archived normalized/features/norm/logits/calibrated estimates and v1 categories | Host ParityTest pass; original bundle unchanged |
-| Complete domain contract | 59 fictional cases, including URL-only, unsupported text, absent model, short OCR, weak/repetitive input, exactly 40 and >40 links, malformed numeric/IDN/IPv6 hosts | Python-generated pack; Kotlin FullContractTest pass; browser parity pass |
-| Word/hybrid export | Actual tiny fictional scikit-learn fit and export; both blocks, norms, logits, estimates | Python, Kotlin and TypeScript synthetic-reference tests pass |
-| Public fit/export | Tiny real LR fit; staged metadata; malformed class/shape/threshold/numeric contracts | Public Python tests; no private joblib skip |
-| Metrics | Known matrix, absent classes, no predicted positives, imbalance, deferral denominators | metrics_v2 tests pass |
-| Distribution validation | Non-Git archive walk, repository Git failure, raw data, synthetic token/private-key markers, keystore-like path, symlink escape | Explicit stage output and isolated Python regressions |
-| Android build | Core + app unit tests, lint, debug/test/release APKs and benchmark assembly | Fresh public CI PASS; lint 0 errors / 9 warnings; signed APK/package evidence in ci_run1_build.json |
-| History | Transactional insert/prune; schema 2→3 prunes legacy rows; v1 summaries preserved | KVM run 1 failed; actual reports and repaired rerun pending |
-| OCR | Original fictional image, malformed bytes, all 8 EXIF pixel layouts, reviewed text | KVM run 1 failed; no physical-device claim |
-| Lifecycle / concurrency | Rotation keeps draft, new share replaces pending input, cancellation/version guards | Browser stale-result workflow PASS; native runtime diagnosis pending |
-| Export | Redaction, current version metadata, independent files and expired-file pruning | Host app unit tests PASS; native tests prepared; sharing errors visible |
-| Browser workflow | Real worker, desktop/mobile layout, corrupt model, local-input request checks, redacted report, navigation | Eight real production Playwright desktop/mobile workflows PASS on d984f9b; new worker/scroll refinements need rerun |
-| Browser OCR | No compatible fully reviewed/validated browser asset chain established | Deferred; explicit UI limitation |
-| Physical performance | Cold/warm startup, inference, OCR, scrolling, heap, 16 KB runtime, fresh offline operation | Blocked: no physical phone / local KVM |
-| Windows invocation | Regenerated official wrapper; SDK/Windows instructions retained | Batch execution not run on this Linux host |
-| Remote CI / release | Independent Python/archive, Android, browser, KVM emulator and explicit preview publication jobs | Public source verified; Python/Android/browser jobs PASS, instrumentation failed; prerelease pending |
+| Context observations | Independent warning/request contexts, negation referents, attached educational quotations, urgency | PASS across Python, Kotlin and browser; no global suppression |
+| Numeric baseline | 24 archived normalized/features/norm/logits/estimates and v1 categories | PASS; original model bytes unchanged |
+| Complete contract | 59 fictional domain/minimization cases, Unicode, model absence, short OCR, weak/repetitive input, URL-only, IDN/numeric/IPv6, 40/>40 links | PASS in Python, JVM Kotlin, Android runtime and TypeScript; separate from numeric fixtures |
+| Word/hybrid export | Actual tiny fictional scikit-learn fits, both feature blocks, norms/logits/estimates | PASS across three implementations; research fixtures are not the shipping model |
+| Public Python/source | Real tiny fit/export, metadata/schema/numeric guards, metrics/denominators, archive/data/secret/keystore/cache/symlink guards, inventory tampering, public evidence minimization | 77 checkout + 77 extracted-source passes, zero skips |
+| Distribution | Actual Git repository and non-Git source/full ZIP extraction, CRC/path/credential/raw-data scans, signed APK inventory bytes | PASS; a synthetic fixture label previously stopped run 14 and was corrected without weakening the scanner |
+| Linux Android build | 9 core + 2 app unit tests; debug/test/minified release/benchmark; lint | PASS; lint 0 errors / 9 warnings |
+| Windows batch/core | Actual gradlew.bat launcher and same core suite | 9 PASS; does not claim a complete Windows SDK/device run |
+| History | Schema migrations preserve metadata; schema 3 prunes legacy data; transactional retention; queued-save/disable race; manual save/delete/off controls | PASS in API 35 debug instrumentation |
+| OCR integration | Actual bundled Latin OCR from original PNG; malformed image; six rendering variants; all eight EXIF pixel layouts | PASS functional checks; nonzero measured extraction error retained for serif/noise; one-message variants do not estimate population accuracy |
+| OCR ownership | Rapid replacement, completion cancellation, clear/recycle ownership | PASS controlled Android runtime races |
+| Lifecycle / sharing | Rotation retains draft; shared input replaces pending analysis; request/version cancellation | PASS runtime cases; physical external-share interoperability remains manual |
+| Exports | Identifier redaction, result-version metadata, independent files, bounded expiration | PASS host/native; delayed third-party recipient behavior remains a separate acceptance check |
+| API 35 debug instrumentation | Contracts, Room, OCR, EXIF, privacy races and Compose workflows | 16 PASS; zero failures/skips |
+| Minified functional target | External UI driver: typed credential and actual photo picker → bundled OCR → review → correction → result | 2 PASS; zero failures/skips; R8/resource shrinking retained without QA app keep rules |
+| Offline emulator state | Airplane mode enabled, actual Wi-Fi service disabled, no active default network before/after | PASS; fresh physical-phone distributed-release first use remains open |
+| Browser units/parity | Production model contract, request invalidation, block export, Unicode/parser/privacy behaviors | 63 PASS |
+| Browser workflows/privacy | Production desktop/mobile input, actual worker, corrupt model, stale result, navigation, reviewed redacted download and input/network canaries | 8 PASS; zero skips/flakes; no physical-mobile browser claim |
+| APK inspection | Three disposable TEST-signed packages, ABI/version/model/signature/ZIP/ELF alignment and digest inventory | PASS; installed footprint and 16 KB runtime are not inferred |
+| GitHub release | Public exact owner/name; release target/source matches reports, inventory and downloadable assets | PASS; see RELEASE_HANDOFF.md |
+| Browser OCR/PWA | Explicit UI limitation with native screenshot alternative | Deferred within allowed scope; no fabricated extraction or offline web claim |
+| Physical performance | Cold/warm startup, text/OCR complete workflow, heap, battery, Baseline Profile comparison | BLOCKED: no physical phone; benchmark module and procedures ready |
+| Accessibility / device compatibility | TalkBack, enlarged fonts, compact/expanded/manual keyboard review; actual 16 KB page-size operation | BLOCKED pending suitable device/manual execution |
+| Prospective model validation | New independent campaign/source groups and preregistered frozen holdout | BLOCKED by absent eligible independent data; historical test not rescored |
+| Vercel | Zero-cost conditional deployment | DEFERRED BY OWNER; no activation link or deployment in this phase |
 
-Browser test canaries and screenshots are fictional. No private input is included in log artifacts. A CI emulator is functional evidence, not a phone performance benchmark. APK signature/ZIP/ELF checks and runtime page-size behavior have independent outcomes.
+Counts refer to executed JUnit/Vitest/Playwright cases, not each assertion or each fixture. The native full-contract method itself iterates the 59-case pack. Browser viewports are hosted Chromium emulation; API 35 is x86_64 KVM. Neither is a physical-phone performance measurement. Research preview signing is intentionally separate from owner-managed production identity.
+
+Original PNG files were captured by CI and checked against release-server digests. The connected GitHub reader exposes UTF-8 text only and the local execution workspace became unavailable, so the agent could not independently view the final PNG pixels in this continuation. Manual visual/accessibility acceptance remains open; original downloadable captures are provided for review.

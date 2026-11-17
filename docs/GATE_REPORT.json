@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "release_status": "packaging_label_privacy_fix_pending",
+  "release_status": "published_research_preview_with_recorded_limits",
   "all_gates_passed": false,
   "gates": [
     {
       "id": "historical_preservation",
       "status": "PASS",
       "evidence": "docs/history/0.1.0",
-      "detail": "Original model, test reports, baseline Git tag and archive digest preserved"
+      "detail": "Original model, test reports, baseline import branch and archive digest preserved"
     },
     {
       "id": "source_eligibility",
@@ -61,32 +61,32 @@
     {
       "id": "python_public_checks",
       "status": "PASS",
-      "evidence": "ml/tests",
-      "detail": "75 executed Python tests, including actual tiny fit/export, filesystem privacy and APK inventory tamper/path checks"
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "77 executed checkout cases and 77 executed source-extraction cases, zero skipped; actual tiny fit/export, metrics, privacy/filesystem, inventory and public-label regressions."
     },
     {
       "id": "repository_validator",
       "status": "PASS",
-      "evidence": "ml/src/scamsentry_ml/release_validation.py",
-      "detail": "Actual candidate scan with explicit stages; archive mode has separate tests"
+      "evidence": "assets/evidence/v2/final/full_package_validation.json",
+      "detail": "Exact candidate repository, non-Git source ZIP and full installable ZIP passed real filesystem scans and model/APK inventory checks."
     },
     {
       "id": "android_build_group",
       "status": "PASS",
-      "evidence": "assets/evidence/v2/ci_run1_build.json",
-      "detail": "Fresh remote core/app tests, lint (0 errors, 9 warnings), debug, test, minified release and benchmark assembly passed"
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "Exact-source Linux core 9/app 2 tests, lint 0 errors / 9 warnings, debug/test/minified release and benchmark assembly; all three TEST-signed packages inspected."
     },
     {
       "id": "native_instrumentation",
       "status": "PASS",
-      "evidence": "assets/evidence/v2/run14_verification_sanitized.json",
-      "detail": "All 16 API 35 debug cases executed, zero failed/skipped, including privacy races, migration, OCR, EXIF, retention, sharing and the 59-case native contract"
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "All 16 API 35 debug cases executed, zero failed/skipped: contracts, migration, retention, privacy races, sharing, OCR/EXIF and workflows."
     },
     {
       "id": "browser_workflow_privacy",
       "status": "PASS",
-      "evidence": "assets/evidence/v2/browser_workflows_run2.json",
-      "detail": "Eight real production desktop/mobile workflows passed, including mobile scroll and worker reuse; latest Unicode/tooling changes require final run"
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "All eight exact-source production desktop/mobile Chromium workflows passed with zero skips/flakes; actual worker, corrupt-model errors, stale-input handling and network canaries."
     },
     {
       "id": "browser_ocr",
@@ -103,14 +103,14 @@
     {
       "id": "windows_wrapper_execution",
       "status": "PASS",
-      "evidence": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/44005823981",
-      "detail": "Actual Windows batch launcher and nine core JUnit methods passed"
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "Actual Windows gradlew.bat launcher and nine core JUnit methods passed for the immutable release source."
     },
     {
       "id": "free_hosting_eligibility",
       "status": "BLOCKED",
       "evidence": "docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md",
-      "detail": "Vercel activation/deployment deferred explicitly by owner on 17 November; target entitlement must be rechecked later."
+      "detail": "Vercel activation/deployment explicitly deferred by owner; no new activation link generated. Recheck current target entitlement, terms and usage when resumed."
     },
     {
       "id": "no_cost",
@@ -122,13 +122,13 @@
       "id": "github_source_publication",
       "status": "PASS",
       "evidence": "docs/PUBLICATION_PROVENANCE.json",
-      "detail": "Public repository source tree 6f200cd8aca99332caba1d851883f3fbec4f44cd matches reviewed local tree; source push verified"
+      "detail": "Public DevenGaikwad/ScamSentry verified; original imported baseline identity distinguished from original local commit; release source pinned by final inventory."
     },
     {
       "id": "installable_preview_release",
-      "status": "BLOCKED",
-      "evidence": "assets/evidence/v2/run14_packaging_diagnosis.json",
-      "detail": "Signed APKs and all runtime checks passed; full-ZIP credential scan rejected an unminimized synthetic parameter label. No release created; focused report-label correction pending verification."
+      "status": "PASS",
+      "evidence": "docs/RELEASE_HANDOFF.md",
+      "detail": "v0.2.0-preview published with three installable disposable TEST-signed APKs, actual source/model/inventory linkage, source/full ZIPs, runtime screenshots, browser recording and download checksums."
     },
     {
       "id": "full_spec_preserved",
@@ -139,20 +139,102 @@
     {
       "id": "minified_functional",
       "status": "PASS",
-      "evidence": "assets/evidence/v2/run14_verification_sanitized.json",
-      "detail": "Both external minified text and actual system-picker/OCR/review/edit/analysis journeys executed, zero failures/skips; no test-only app keep rules"
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "Both named external minified text and actual system-picker/OCR/review/edit/analysis journeys executed with zero failures/skips; no test-only app keep rules."
     },
     {
       "id": "full_distribution_privacy",
-      "status": "FAIL",
-      "evidence": "assets/evidence/v2/run14_packaging_diagnosis.json",
-      "detail": "Strict full-ZIP scan stopped on synthetic private-key fixture text in JUnit parameter ID; minimize report labels and retain scanner."
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/final/full_package_validation.json",
+      "detail": "Strict complete-ZIP credential/raw-data scan passed after minimizing synthetic credential-shaped JUnit labels; scanner and failed/skipped gates remain unchanged. Historical run14 failure retained."
+    },
+    {
+      "id": "error_tradeoff",
+      "status": "PASS",
+      "evidence": "docs/MODEL_COMPARISON.md",
+      "detail": "Smishing recall/FNR and precision/FPR reviewed with clean/noise trade-offs; no claim of universally improved errors."
+    },
+    {
+      "id": "statistical_interpretation",
+      "status": "PASS",
+      "evidence": "docs/METRIC_DEFINITIONS.md",
+      "detail": "Supports, fixed denominators, grouped uncertainty and comparable exploratory units reported; known historical test excluded from new scoring."
+    },
+    {
+      "id": "three_platform_parity",
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "Frozen model numeric fixtures, 59-case complete contract and real synthetic word/hybrid exports checked across Python, Kotlin and TypeScript; Android ICU parity also executed."
+    },
+    {
+      "id": "browser_functionality",
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "Real text/URL analysis and controlled model failures passed against production static output; browser OCR/PWA are explicitly deferred."
+    },
+    {
+      "id": "rights_without_permission_requests",
+      "status": "PASS",
+      "evidence": "THIRD_PARTY_NOTICES.md",
+      "detail": "Reviewed CC BY 4.0 primary source, code/font/dependency notices and public approved assets; no dataset permission emails or raw corpus publication."
+    },
+    {
+      "id": "native_offline_emulator",
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/final/RELEASE_VERIFICATION.json",
+      "detail": "Airplane mode1 and actual Wi-Fi service disabled before/after; no active default network; bundled OCR and text journeys executed on API 35 x86_64 emulator."
+    },
+    {
+      "id": "apk_identity_and_alignment",
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/final/apk_inspection.json",
+      "detail": "Three APKs inspected for exact ABI/package/version/model/signature, byte size, ZIP and ELF alignment. Actual 16 KB runtime not inferred."
+    },
+    {
+      "id": "manual_accessibility",
+      "status": "BLOCKED",
+      "evidence": "docs/DEVICE_CHECKLIST.md",
+      "detail": "TalkBack, maximum-font correction/result flows and manual compact/expanded keyboard acceptance require physical/manual execution."
+    },
+    {
+      "id": "runtime_16k_pages",
+      "status": "BLOCKED",
+      "evidence": "docs/DEVICE_CHECKLIST.md",
+      "detail": "Static ZIP/64-bit ELF alignment passed; no actual 16 KB page-size runtime execution claimed."
+    },
+    {
+      "id": "physical_first_use_offline",
+      "status": "BLOCKED",
+      "evidence": "docs/DEVICE_CHECKLIST.md",
+      "detail": "Fresh offline CI minified text/OCR passed, but distributed release APK needs first-use acceptance on an owner-controlled phone."
+    },
+    {
+      "id": "prospective_model_validation",
+      "status": "BLOCKED",
+      "evidence": "docs/ML_OPTIMIZATION_PLAN.md",
+      "detail": "No eligible independent prospective holdout acquired. Historical test preserved without rescoring; baseline robustness weakness remains."
+    },
+    {
+      "id": "production_signing_identity",
+      "status": "BLOCKED",
+      "evidence": "docs/RELEASE_HANDOFF.md",
+      "detail": "Disposable research TEST signatures are published; an owner-controlled durable production key remains separate."
+    },
+    {
+      "id": "vercel_deployment",
+      "status": "BLOCKED",
+      "evidence": "docs/WEB_DEPLOYMENT.md",
+      "detail": "DEFERRED BY OWNER on 17 November 2026. Functioning static source/build is ready; no deployment/activation link performed in this phase."
     }
   ],
   "latest_observed_run": {
-    "id": 44009789906,
-    "source_commit": "030bfbee98de36525487a7facf3cdca9bdcd3012",
+    "id": 44012744040,
+    "source_commit": "bc227ba189796c1167c3cd21c3a7ec973156ccfd",
     "application_jobs": "all five passed",
-    "publication": "blocked by credential-shaped synthetic fixture label in generated report"
+    "publication": "research prerelease published; actual asset checksums and reports preserved",
+    "evidence_commit": "0462ac28b074febce68eeb38087db039de834fb4",
+    "release_url": "https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview",
+    "download_assets": 19,
+    "server_asset_digests_match_inventory": true
   }
 }
