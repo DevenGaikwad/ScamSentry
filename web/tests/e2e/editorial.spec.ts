@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import benchmark from '../../src/benchmark.json'
 
 const evidence = join(process.cwd(), '../assets/evidence/v3/browser')
 const canary = 'FICTIONAL_PRIVATE_CANARY_V3_8KQ'
@@ -30,6 +31,10 @@ test('public routes, native history, not-found and exact creator credit', async 
   expect(await page.evaluate(() => history.state)).toBeNull()
   expect(page.url()).not.toContain(canary)
   const tab = await context.newPage(); await tab.goto('/android'); await expect(tab.getByRole('heading', { level: 1 })).toHaveText('A second look.On Android.'); await tab.close()
+  await page.goto('/evidence')
+  const matrix = page.getByRole('table', { name: `Historical test confusion matrix — ${benchmark.records} records`, exact: true })
+  expect(await matrix.locator('tbody tr').allTextContents()).toEqual(benchmark.confusion_matrix.map((row, i) => ['Ordinary', 'Promotion / spam', 'Smishing-like'][i] + row.join('') + row.reduce((a, b) => a + b, 0)))
+  await expect(page.getByText(/Errors in that subset: 8\/767/)).toBeVisible()
   await page.goto('/missing-chapter'); await expect(page.getByRole('heading', { level: 1 })).toHaveText('This pageisn’t here.')
   await expect(page.locator('footer .creator-credit')).toHaveText(credit)
   await expect(page.locator('h1')).toHaveCount(1)
@@ -148,7 +153,9 @@ test('responsive layouts, fallback fonts, text spacing and all public pages', as
   }
   await page.setViewportSize({ width: 320, height: 936 }); await page.route('**/fonts/**', route => route.abort())
   await page.goto('/'); await page.addStyleTag({ content: '*{line-height:1.5!important;letter-spacing:.12em!important;word-spacing:.16em!important}p{margin-bottom:2em!important}' })
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+  const spacingBounds = await page.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth, overflow: Array.from(document.querySelectorAll<HTMLElement>('body *')).map(element => ({ tag: element.tagName, class: element.className, right: element.getBoundingClientRect().right, width: element.getBoundingClientRect().width, text: element.textContent?.slice(0, 90) })).filter(element => element.right > innerWidth + 1).slice(0, 25) }))
+  if (spacingBounds.scroll > spacingBounds.width) console.log('REFLOW_DIAGNOSTIC', JSON.stringify(spacingBounds))
+  expect(spacingBounds.scroll <= spacingBounds.width).toBe(true)
   await capture(page, '320-fallback-text-spacing')
   await page.unroute('**/fonts/**')
   for (const width of [1363, 320]) {
@@ -157,6 +164,7 @@ test('responsive layouts, fallback fonts, text spacing and all public pages', as
       await page.goto(path); await page.evaluate(() => document.fonts.ready)
       await page.evaluate(() => { const sizes = Array.from(document.querySelectorAll<HTMLElement>('body *')).map(element => ({ element, size: parseFloat(getComputedStyle(element).fontSize) })); sizes.forEach(({ element, size }) => { element.style.fontSize = `${size * 2}px` }) })
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)
+      if (overflow) console.log('TEXT_RESIZE_DIAGNOSTIC', width, path, await page.evaluate(() => Array.from(document.querySelectorAll<HTMLElement>('body *')).map(element => ({ tag: element.tagName, class: element.className, right: element.getBoundingClientRect().right, text: element.textContent?.slice(0, 60) })).filter(element => element.right > innerWidth + 1).slice(0, 20)))
       records.push({ width, path: `${path} / 200% text resize`, overflow }); expect(overflow, `${path} 200% text resize at ${width}`).toBe(false)
     }
   }
@@ -180,11 +188,13 @@ test('editorial states and two neutral palettes have original stable screenshots
 })
 
 test('motion demonstration remains interruptible and preserves navigation', async ({ page }) => {
-  await page.goto('/'); await page.getByRole('link', { name: 'Inspect a message', exact: true }).click()
-  await nav(page, 'Learn'); await page.getByRole('link', { name: /Keep codes private/ }).click(); await nav(page, 'Evidence'); await nav(page, 'Privacy'); await nav(page, 'Android'); await nav(page, 'Analyze')
+  await page.goto('/'); await page.waitForTimeout(700)
+  await preferences(page, 'dark'); await page.waitForTimeout(600); await preferences(page, 'light'); await page.waitForTimeout(600)
+  await page.getByRole('link', { name: 'Inspect a message', exact: true }).click()
+  await nav(page, 'Learn'); await page.waitForTimeout(600); await page.getByRole('link', { name: /Keep codes private/ }).click(); await nav(page, 'Evidence'); await page.waitForTimeout(600); await nav(page, 'Privacy'); await page.waitForTimeout(600); await nav(page, 'Android'); await page.waitForTimeout(600); await nav(page, 'Analyze')
   await page.getByRole('button', { name: /02 Secret request/ }).click()
-  await page.getByRole('button', { name: 'Analyze message', exact: true }).click(); await expect(page.getByRole('heading', { name: 'Higher risk', exact: true })).toBeVisible()
-  await page.getByRole('button', { name: 'Redacted report', exact: true }).click(); await page.keyboard.press('Escape')
+  await page.getByRole('button', { name: 'Analyze message', exact: true }).click(); await expect(page.getByRole('heading', { name: 'Higher risk', exact: true })).toBeVisible(); await page.waitForTimeout(700)
+  await page.getByRole('button', { name: 'Redacted report', exact: true }).click(); await page.waitForTimeout(600); await page.keyboard.press('Escape')
   expect(await page.locator('dialog').count()).toBe(0)
   const video = page.video(); await page.close()
   if (video) await video.saveAs(join(evidence, `${test.info().project.name}_motion-demo.webm`))
