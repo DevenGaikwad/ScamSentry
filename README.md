@@ -33,11 +33,11 @@ The emulator had airplane mode enabled, Wi-Fi service disabled and no default ne
 
 ## Actual runtime screenshots
 
-Original fictional-content captures from that exact workflow are retained with [provenance and digests](assets/evidence/v2/final/SNAPSHOT_PROVENANCE.json). They are actual native/browser execution, not design mockups.
+Original fictional-content captures from that exact workflow are retained with [provenance and digests](assets/evidence/v2/final/SNAPSHOT_PROVENANCE.json). They are actual native/browser execution, not design mockups. [Saved-capture visual review](assets/evidence/v2/capture_review_20261117.json) records the observed layouts and a corrected filename mismatch. The original `native_02_credential_result.png` records the processing state and remains preserved in the immutable evidence.
 
-| Android editor | Android credential observation |
+| Android editor | Minified Android credential observation |
 |---|---|
-| ![Native Android editor](assets/evidence/v2/final/native_01_analyze_home.png) | ![Native Android credential observation](assets/evidence/v2/final/native_02_credential_result.png) |
+| ![Native Android editor](assets/evidence/v2/final/native_01_analyze_home.png) | ![Completed minified Android credential observation](assets/evidence/v2/final/native_minified_credential_result.png) |
 
 | Minified Android OCR review | Minified Android analysis |
 |---|---|

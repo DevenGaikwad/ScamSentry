@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-17",
+  "reviewer": "AI-assisted visual review",
+  "release_source_commit": "bc227ba189796c1167c3cd21c3a7ec973156ccfd",
+  "evidence_commit": "0462ac28b074febce68eeb38087db039de834fb4",
+  "workflow_run": 44012744040,
+  "method": "Read-only cloud browser inspection of the original native and production-browser PNGs; long mobile image also inspected at native pixel scale. No app, CI, model fitting or historical-test scoring was rerun.",
+  "captures": [
+    {
+      "file": "native_01_analyze_home.png",
+      "bytes": 122879,
+      "sha256": "8cbebd1410ad23a842efa5f832d432fce54891324e8146d25d0f36c81ed94f09",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/native_01_analyze_home.png"
+    },
+    {
+      "file": "native_02_credential_result.png",
+      "bytes": 77755,
+      "sha256": "1367a056374bb4bfcb10a20130a37890e131f3f12c2c35b6547f68ae7d488f56",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/native_02_credential_result.png"
+    },
+    {
+      "file": "native_minified_credential_result.png",
+      "bytes": 136010,
+      "sha256": "6955faab86d9931bebc6e6d686ac8b5bb6739818507184f5b7546e3a4a713c8a",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/native_minified_credential_result.png"
+    },
+    {
+      "file": "native_minified_ocr_result.png",
+      "bytes": 136010,
+      "sha256": "6955faab86d9931bebc6e6d686ac8b5bb6739818507184f5b7546e3a4a713c8a",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/native_minified_ocr_result.png"
+    },
+    {
+      "file": "native_minified_ocr_review.png",
+      "bytes": 143727,
+      "sha256": "f2fffe282e87de6f5c65ba812b6e1b8104e96c1fcf2a4193c1bfefc7efca842c",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/native_minified_ocr_review.png"
+    },
+    {
+      "file": "web_desktop-chromium_home.png",
+      "bytes": 291575,
+      "sha256": "d8836fc331ffa20efc74fc5adbd324cde1b9eaac0489772dd50ba7ffd9dc4945",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/web_desktop-chromium_home.png"
+    },
+    {
+      "file": "web_desktop-chromium_result.png",
+      "bytes": 294759,
+      "sha256": "5c0ccffea15086f4c069c4128da3fd174e87717f16186855a27aba794551bd92",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/web_desktop-chromium_result.png"
+    },
+    {
+      "file": "web_mobile-chromium_result.png",
+      "bytes": 893858,
+      "sha256": "007dbf62c945bc4a63660edb7eab510f3bc2c6a311b5d88671b278ac2a09d975",
+      "url": "https://raw.githubusercontent.com/DevenGaikwad/ScamSentry/0462ac28b074febce68eeb38087db039de834fb4/assets/evidence/v2/final/web_mobile-chromium_result.png"
+    }
+  ],
+  "observed": [
+    {
+      "area": "Native editor",
+      "result": "Dark theme, light system-status icons, input scope/count and Analyze/History/Learn navigation are visible in the actual default-font API35 capture."
+    },
+    {
+      "area": "Native OCR review",
+      "result": "The original selected image, explicit correction warning, source Screenshot and actual extracted OTP text are visible before analysis."
+    },
+    {
+      "area": "Minified completed results",
+      "result": "Both saved minified result captures show Analysis complete, Higher risk, and Request for a secret with independent-verification guidance."
+    },
+    {
+      "area": "Browser desktop",
+      "result": "Original workspace and completed result use coherent panels with separate observed patterns, destination host and statistical interpretation."
+    },
+    {
+      "area": "Browser mobile",
+      "result": "Recorded narrow layout stacks the result and observation cards. Native-scale review shows readable risk guidance, urgency limitation and actual host review.test separately from user-info bank.example."
+    }
+  ],
+  "findings": [
+    {
+      "id": "DOC-CAPTURE-01",
+      "status": "CORRECTED_IN_DOCUMENTATION",
+      "file": "native_02_credential_result.png",
+      "observed": "The legacy filename says result, but its pixels show Analyzing your message / Processing locally on this device / Cancel.",
+      "resolution": "README now uses native_minified_credential_result.png for the completed native result. The original processing PNG and immutable release evidence remain unchanged."
+    }
+  ],
+  "scope_limits": [
+    "Static captured states do not prove live keyboard, scrolling reachability, TalkBack, maximum-font accessibility or physical-phone behavior.",
+    "Default-font emulator and hosted desktop/mobile-view Chromium captures are separate from a real phone or a live Vercel deployment.",
+    "Original release assets, source tag, model and CI reports were not changed by this documentation correction."
+  ],
+  "review_status": "SAVED_CAPTURE_REVIEW_COMPLETE_WITH_DOCUMENTED_LABEL_CORRECTION"
+}

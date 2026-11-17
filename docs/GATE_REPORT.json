@@ -225,6 +225,12 @@
       "status": "BLOCKED",
       "evidence": "docs/WEB_DEPLOYMENT.md",
       "detail": "DEFERRED BY OWNER on 17 November 2026. Functioning static source/build is ready; no deployment/activation link performed in this phase."
+    },
+    {
+      "id": "saved_ui_capture_review",
+      "status": "PASS",
+      "evidence": "assets/evidence/v2/capture_review_20261117.json",
+      "detail": "All eight original final PNGs viewed in restored browser; long mobile capture also checked at native scale. Corrected README to use completed minified result; legacy debug processing PNG preserved. No live accessibility/device claim."
     }
   ],
   "latest_observed_run": {
