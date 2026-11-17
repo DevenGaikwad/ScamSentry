@@ -1,0 +1,253 @@
+[
+  {
+    "manifest": [
+      "package: name='in.deven.scamsentry' versionCode='2' versionName='0.2.0-preview' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'",
+      "minSdkVersion:'26'",
+      "targetSdkVersion:'36'",
+      "native-code: 'arm64-v8a'"
+    ],
+    "permissions": [
+      "package: in.deven.scamsentry",
+      "permission: in.deven.scamsentry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "uses-permission: name='in.deven.scamsentry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'"
+    ],
+    "file": "ScamSentry_0.2.0-preview_arm64-v8a_TEST-SIGNED.apk",
+    "bytes": 15747556,
+    "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "libraries": [
+      {
+        "file": "lib/arm64-v8a/libandroidx.graphics.path.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/arm64-v8a/libdatastore_shared_counter.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/arm64-v8a/libmlkit_google_ocr_pipeline.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      }
+    ],
+    "alignment_scope": "ELF PT_LOAD only; ZIP checks and actual 16 KB page runtime are separate gates"
+  },
+  {
+    "manifest": [
+      "package: name='in.deven.scamsentry' versionCode='2' versionName='0.2.0-preview' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'",
+      "minSdkVersion:'26'",
+      "targetSdkVersion:'36'",
+      "native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'"
+    ],
+    "permissions": [
+      "package: in.deven.scamsentry",
+      "permission: in.deven.scamsentry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "uses-permission: name='in.deven.scamsentry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'"
+    ],
+    "file": "ScamSentry_0.2.0-preview_universal_TEST-SIGNED.apk",
+    "bytes": 45833462,
+    "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+    "abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "libraries": [
+      {
+        "file": "lib/arm64-v8a/libandroidx.graphics.path.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/arm64-v8a/libdatastore_shared_counter.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/arm64-v8a/libmlkit_google_ocr_pipeline.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+        "elf_bits": 32,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/armeabi-v7a/libdatastore_shared_counter.so",
+        "elf_bits": 32,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/armeabi-v7a/libmlkit_google_ocr_pipeline.so",
+        "elf_bits": 32,
+        "load_alignment": [
+          4096,
+          4096,
+          4096
+        ],
+        "supports_16k_load_alignment": false
+      },
+      {
+        "file": "lib/x86/libandroidx.graphics.path.so",
+        "elf_bits": 32,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/x86/libdatastore_shared_counter.so",
+        "elf_bits": 32,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/x86/libmlkit_google_ocr_pipeline.so",
+        "elf_bits": 32,
+        "load_alignment": [
+          4096,
+          4096,
+          4096
+        ],
+        "supports_16k_load_alignment": false
+      },
+      {
+        "file": "lib/x86_64/libandroidx.graphics.path.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/x86_64/libdatastore_shared_counter.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/x86_64/libmlkit_google_ocr_pipeline.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      }
+    ],
+    "alignment_scope": "ELF PT_LOAD only; ZIP checks and actual 16 KB page runtime are separate gates"
+  },
+  {
+    "manifest": [
+      "package: name='in.deven.scamsentry' versionCode='2' versionName='0.2.0-preview' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'",
+      "minSdkVersion:'26'",
+      "targetSdkVersion:'36'",
+      "native-code: 'x86_64'"
+    ],
+    "permissions": [
+      "package: in.deven.scamsentry",
+      "permission: in.deven.scamsentry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "uses-permission: name='in.deven.scamsentry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'"
+    ],
+    "file": "ScamSentry_0.2.0-preview_x86_64_TEST-SIGNED.apk",
+    "bytes": 16308699,
+    "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+    "abis": [
+      "x86_64"
+    ],
+    "libraries": [
+      {
+        "file": "lib/x86_64/libandroidx.graphics.path.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/x86_64/libdatastore_shared_counter.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      },
+      {
+        "file": "lib/x86_64/libmlkit_google_ocr_pipeline.so",
+        "elf_bits": 64,
+        "load_alignment": [
+          16384,
+          16384,
+          16384
+        ],
+        "supports_16k_load_alignment": true
+      }
+    ],
+    "alignment_scope": "ELF PT_LOAD only; ZIP checks and actual 16 KB page runtime are separate gates"
+  }
+]

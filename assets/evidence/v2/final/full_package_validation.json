@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "mode": "archive",
+  "status": "PASS",
+  "stages": [
+    {
+      "stage": "git_listing",
+      "status": "NOT_APPLICABLE",
+      "inspected": 323,
+      "details": "Archive walk; known build caches are rejected and excluded from descent",
+      "errors": []
+    },
+    {
+      "stage": "filesystem_privacy",
+      "status": "PASS",
+      "inspected": 323,
+      "details": "",
+      "errors": []
+    },
+    {
+      "stage": "source_manifest",
+      "status": "PASS",
+      "inspected": 1,
+      "details": "",
+      "errors": []
+    },
+    {
+      "stage": "model_integrity",
+      "status": "PASS",
+      "inspected": 1,
+      "details": "",
+      "errors": []
+    },
+    {
+      "stage": "partition_isolation",
+      "status": "PASS",
+      "inspected": 1,
+      "details": "",
+      "errors": []
+    },
+    {
+      "stage": "required_files",
+      "status": "PASS",
+      "inspected": 1,
+      "details": "",
+      "errors": []
+    },
+    {
+      "stage": "release_packaging",
+      "status": "PASS",
+      "inspected": 3,
+      "details": "",
+      "errors": []
+    }
+  ],
+  "candidate_count": 323
+}
