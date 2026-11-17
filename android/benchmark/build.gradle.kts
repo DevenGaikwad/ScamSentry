@@ -4,6 +4,7 @@ android {
     compileSdk = 37
     defaultConfig { minSdk = 26; targetSdk = 36; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
     targetProjectPath = ":app"
+    sourceSets.getByName("main").assets.directories.add("$projectDir/../app/src/androidTest/assets")
     buildTypes {
         create("benchmark") { isDebuggable = true; signingConfig = signingConfigs.getByName("debug"); matchingFallbacks += "release" }
     }

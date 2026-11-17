@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "date": "2026-11-16",
-  "release_status": "v2_verification_in_progress",
+  "date": "2026-11-17",
+  "release_status": "external_minified_ocr_verification_pending",
   "all_gates_passed": false,
   "gates": [
     {
@@ -79,8 +79,8 @@
     {
       "id": "native_instrumentation",
       "status": "FAIL",
-      "evidence": "assets/evidence/v2/emulator_run5_diagnosis.json",
-      "detail": "API 35: 11/12 debug cases passed, including full 59-case native parity and OCR; test-only shared-intent cleanup fix prepared for the remaining teardown failure"
+      "evidence": "assets/evidence/v2/emulator_run13_diagnosis.json",
+      "detail": "16/16 passed in run 12; run 13 had 15/16 with a screenshot-helper failure. Device capture replaces that helper; functional assertions remain."
     },
     {
       "id": "browser_workflow_privacy",
@@ -102,15 +102,15 @@
     },
     {
       "id": "windows_wrapper_execution",
-      "status": "BLOCKED",
-      "evidence": "android/gradlew.bat",
-      "detail": "Official wrapper regenerated; Windows execution unavailable on Linux"
+      "status": "PASS",
+      "evidence": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/44005823981",
+      "detail": "Actual Windows batch launcher and nine core JUnit methods passed"
     },
     {
       "id": "free_hosting_eligibility",
       "status": "BLOCKED",
       "evidence": "docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md",
-      "detail": "User account Hobby observed; target team access/entitlement not yet verified"
+      "detail": "Vercel activation/deployment deferred explicitly by owner on 17 November; target entitlement must be rechecked later."
     },
     {
       "id": "no_cost",
@@ -139,8 +139,13 @@
     {
       "id": "minified_functional",
       "status": "FAIL",
-      "evidence": "assets/evidence/v2/emulator_run5_diagnosis.json",
-      "detail": "Driver ACTION_SET_TEXT selected a noneditable wrapper; minified logs additionally exposed missing ML Kit registrar constructors. Corrected driver, scoped keep rules and minified OCR gate prepared"
+      "evidence": "assets/evidence/v2/emulator_run13_diagnosis.json",
+      "detail": "External minified text passed; in-process OCR runner cannot bootstrap after dependency shrinking. Replace it with external system-picker/OCR/review/correction/analysis, preserving optimized app rules."
     }
-  ]
+  ],
+  "latest_observed_run": {
+    "id": 44005823981,
+    "source_commit": "a5b05e36d34a80aeee7b06776a0060c09e1b1f82",
+    "conclusion": "failure"
+  }
 }

@@ -33,8 +33,10 @@ def main():
     host_app=junit((android/'android/app/build/test-results/testDebugUnitTest').rglob('TEST-*.xml'),2)
     emulator=OUT/'emulator-artifact'
     native=junit((emulator/'android/app/build/outputs/androidTest-results/connected/debug').rglob('TEST-*.xml'),16)
-    minified_ocr=junit((emulator/'android/app/build/outputs/androidTest-results/connected/benchmark').rglob('TEST-*.xml'),1)
-    minified=junit((emulator/'android/benchmark/build/outputs/androidTest-results').rglob('TEST-*.xml'),1)
+    minified=junit((emulator/'android/benchmark/build/outputs/androidTest-results').rglob('TEST-*.xml'),2)
+    required={'minifiedTextFlowShowsCredentialObservation','minifiedScreenshotReviewRunsBundledOcrAndUsesEditedText'}
+    if not required.issubset({c['name'] for c in minified['cases']}):raise ValueError('A named external minified journey was not executed')
+    minified_ocr=dict(tests=1,failed=0,skipped=0,cases=[c for c in minified['cases'] if c['name']=='minifiedScreenshotReviewRunsBundledOcrAndUsesEditedText'],scope='External driver selects the owned screenshot through the system picker, observes actual OCR, edits review text and verifies analysis')
     python=junit([OUT/'python-artifact/python-junit.xml'],75)
     extracted=junit([OUT/'python-artifact/archive-python-junit.xml'],75)
     windows=junit((OUT/'windows-artifact').rglob('TEST-*.xml'),9)
@@ -60,15 +62,16 @@ def main():
     if len(packages)!=3 or any(p['model_sha256']!=expected for p in packages):raise ValueError('APK model evidence mismatch')
     screenshots=[]
     for file in sorted(emulator.rglob('*.png')):
-        if file.name not in ['01_analyze_home.png','02_credential_result.png','minified_credential_result.png']:continue
+        if file.name not in ['01_analyze_home.png','02_credential_result.png','minified_credential_result.png','minified_ocr_review.png','minified_ocr_result.png']:continue
         target=OUT/('native_'+file.name)
         shutil.copy2(file,target)
         screenshots.append(dict(file=target.name,bytes=target.stat().st_size,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
-    report=dict(schema_version=2,source_commit=commit,source_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),workflow_url=f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",required_jobs=needs,python=python,extracted_source_python=extracted,browser_units=dict(tests=units['numTotalTests'],failed=0,skipped=0),browser_workflows=stats,native_debug=native,minified_functional=minified,distribution_checks=checks,packaged_model_sha256=expected,native_screenshots=screenshots,full_project_all_gates_passed=False,scope='GitHub-hosted Linux, desktop/mobile-view Chromium and API 35 x86_64 KVM functional checks. Minified benchmark variant uses debug signing, a profileable manifest and a QA-only tracing entry point; no phone latency claim.',remaining=['Physical-phone performance and accessibility','Actual 16 KB runtime','First-use offline operation on a physical phone','Windows batch execution','Prospective independent model validation and known robustness trade-offs','Conditional free Vercel team access','Owner-managed production signing'])
+    report=dict(schema_version=2,source_commit=commit,source_tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],cwd=ROOT,text=True).strip(),workflow_url=f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",required_jobs=needs,python=python,extracted_source_python=extracted,browser_units=dict(tests=units['numTotalTests'],failed=0,skipped=0),browser_workflows=stats,native_debug=native,minified_functional=minified,distribution_checks=checks,packaged_model_sha256=expected,native_screenshots=screenshots,full_project_all_gates_passed=False,scope='GitHub-hosted Linux, desktop/mobile-view Chromium and API 35 x86_64 KVM functional checks. Minified benchmark variant uses debug signing and a profileable manifest; an external UI driver runs text and system-picker/OCR/review journeys without test-only application keep rules; no phone latency claim.',remaining=['Physical-phone performance and accessibility','Actual 16 KB runtime','First-use offline operation on a physical phone','Windows batch execution','Prospective independent model validation and known robustness trade-offs','Conditional free Vercel team access','Owner-managed production signing'])
     report.update(android_core_host=host_core,android_app_host=host_app,browser_worker_timings=timing,minified_ocr=minified_ocr)
     report.update(windows_wrapper_and_core=windows,emulator_radio_state=radios,ocr_rendering_quality=quality)
     report['remaining'].remove('Windows batch execution')
     (OUT/'RELEASE_VERIFICATION.json').write_text(json.dumps(report,indent=2)+'\n')
     print('Observed release evidence verified; native screenshots:',len(screenshots))
+    print('RELEASE_VERIFICATION_JSON='+json.dumps(report,separators=(',',':')))
 
 if __name__=='__main__':main()

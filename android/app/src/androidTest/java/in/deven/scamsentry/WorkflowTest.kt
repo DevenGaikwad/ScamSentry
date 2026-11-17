@@ -16,7 +16,6 @@ import org.junit.runner.RunWith
 import `in`.deven.scamsentry.data.ReportExport
 import `in`.deven.scamsentry.core.AnalysisResult
 import `in`.deven.scamsentry.core.Risk
-import androidx.compose.ui.graphics.asAndroidBitmap
 import java.io.File
 import android.graphics.Bitmap
 import android.content.Intent
@@ -69,11 +68,13 @@ class WorkflowTest {
         }
     }
     private fun screenshot(name: String) {
-        val bitmap=compose.onRoot().captureToImage().asAndroidBitmap()
+        compose.waitForIdle()
+        val bitmap=requireNotNull(androidx.test.platform.app.InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()) { "Device screenshot unavailable" }
         val additional=androidx.test.platform.app.InstrumentationRegistry.getArguments().getString("additionalTestOutputDir")
         val directory=additional?.let { File(it) } ?: File(compose.activity.getExternalFilesDir(null),"screenshots")
         val path=File(directory,name).apply { parentFile?.mkdirs() }
-        path.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG,100,it) }
+        try { path.outputStream().use { check(bitmap.compress(Bitmap.CompressFormat.PNG,100,it)) } }
+        finally { bitmap.recycle() }
     }
     @Test fun packagedAndroidModelMatchesReference() {
         val assets=compose.activity.assets

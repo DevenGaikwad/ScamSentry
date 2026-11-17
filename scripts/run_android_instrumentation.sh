@@ -16,10 +16,9 @@ timeout 20s adb shell dumpsys connectivity > ../release/device/offline_connectiv
 ./gradlew --no-daemon :app:connectedDebugAndroidTest --stacktrace || status=$?
 timeout 20s adb pull /sdcard/Android/data/in.deven.scamsentry/files/screenshots ../release/device/ || true
 timeout 20s adb logcat -d -t 1500 > ../release/device/debug_logcat.txt || true
-./gradlew --no-daemon -Pscamsentry.instrumentedBuild=benchmark :app:connectedBenchmarkAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=in.deven.scamsentry.OcrIntegrationTest --stacktrace || status=$?
+./gradlew --no-daemon :benchmark:connectedBenchmarkAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=in.deven.scamsentry.benchmark.ReleaseLikeSmokeTest --stacktrace || status=$?
 timeout 20s adb logcat -b crash -d > ../release/device/minified_ocr_crash.txt || true
 timeout 20s adb logcat -d -t 8000 > ../release/device/minified_ocr_logcat.txt || true
-./gradlew --no-daemon :benchmark:connectedBenchmarkAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=in.deven.scamsentry.benchmark.ReleaseLikeSmokeTest --stacktrace || status=$?
 timeout 20s adb pull /sdcard/Android/data/in.deven.scamsentry.benchmark/files/screenshots ../release/device/minified-screenshots || true
 timeout 20s adb logcat -d -t 1500 > ../release/device/logcat.txt || true
 timeout 20s adb shell getprop > ../release/device/emulator_properties.txt || true
@@ -35,7 +34,7 @@ from pathlib import Path
 sys.path.insert(0,'../scripts')
 from create_release_evidence import junit
 root=Path('.')
-for name,path,minimum in [('debug','app/build/outputs/androidTest-results/connected/debug',16),('minified OCR','app/build/outputs/androidTest-results/connected/benchmark',1),('minified UI','benchmark/build/outputs/androidTest-results',1)]:
+for name,path,minimum in [('debug','app/build/outputs/androidTest-results/connected/debug',16),('external minified UI and OCR','benchmark/build/outputs/androidTest-results',2)]:
     report=junit((root/path).rglob('TEST-*.xml'),minimum)
     print(name,report['tests'],'executed; zero failures/skips')
 PY

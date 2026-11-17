@@ -6,7 +6,6 @@ plugins {
 android {
     namespace = "in.deven.scamsentry"
     compileSdk = 37
-    testBuildType = providers.gradleProperty("scamsentry.instrumentedBuild").getOrElse("debug")
     defaultConfig {
         applicationId = "in.deven.scamsentry"
         minSdk = 26
@@ -26,8 +25,6 @@ android {
             initWith(getByName("release"))
             signingConfig = signingConfigs.getByName("debug")
             matchingFallbacks += "release"
-            proguardFile("benchmark-proguard-rules.pro")
-            testProguardFile("test-proguard-rules.pro")
         }
     }
     splits {
@@ -76,7 +73,5 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.androidx.test.runner)
     androidTestImplementation(libs.androidx.room.testing)
-    // 2.46 removes deprecated javax.lang.model enum references absent on Android.
-    androidTestImplementation("com.google.errorprone:error_prone_annotations:2.46.0")
     debugImplementation(libs.compose.test.manifest)
 }

@@ -1,0 +1,27 @@
+{
+  "workflow_run": 44005823981,
+  "source_commit": "a5b05e36d34a80aeee7b06776a0060c09e1b1f82",
+  "debug": {
+    "executed": 16,
+    "passed": 15,
+    "failed": 1,
+    "skipped": 0,
+    "failure": "WindowCapture_androidKt.forceRedraw: null Handler.post while taking the initial UI screenshot; existing functional assertions remain enabled"
+  },
+  "minified_text": "PASS",
+  "minified_in_process_ocr": {
+    "status": "FAIL before named case discovery",
+    "exception": "NoClassDefFoundError: kotlin.LazyKt",
+    "entry": "androidx.test.platform.io.TestDirCalculator.<init> called by AndroidJUnitRunner.registerTestStorage/onCreate",
+    "preceding_run": "Trace keep rule fixed the preceding missing androidx.tracing.Trace class; the next shared-library failure confirms the test topology is unsuitable"
+  },
+  "offline_wifi_service_before_after": [
+    "Wifi is disabled",
+    "Wifi is disabled"
+  ],
+  "correction": "Use external UI Automator through actual system picker, bundled OCR, review, correction and analysis; remove in-process minified tests and test-only app keep rules. Use device capture for debug screenshots.",
+  "build_jobs": "PASS",
+  "python_browser_windows": "PASS",
+  "release": "SKIPPED; runtime XML correctly blocks publication",
+  "workspace": "Local execution workspace became unavailable after reports were retrieved; continue source editing and hosted CI through the connected GitHub tools"
+}
