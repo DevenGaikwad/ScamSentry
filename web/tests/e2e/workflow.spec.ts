@@ -52,7 +52,7 @@ test('real worker workflow, local input privacy, redacted report and responsive 
    }
   }
   const warm=values.slice(1),quantile=(xs:number[],q:number)=>{const a=[...xs].sort((a,b)=>a-b);return a[Math.ceil(q*a.length)-1]}
-  writeFileSync(join(evidence,'web_desktop-chromium_timings.json'),JSON.stringify({browser:await browser.version(),platform:process.platform,architecture:process.arch,source_commit:process.env.GITHUB_SHA??'local',samples:values.length,scope:'Fictional local-static-server workflow; first sample cold worker with populated HTTP cache; subsequent samples reuse the validated model. Automation roundtrip includes Playwright and detail interaction, not phone latency.',warm_analysis_median_ms:quantile(warm.map(v=>v.analysis_ms),.5),warm_analysis_p95_ms:quantile(warm.map(v=>v.analysis_ms),.95),warm_worker_total_median_ms:quantile(warm.map(v=>v.worker_total_ms),.5),values,physical_phone:false,heap_measured:false},null,2)+'\n')
+  writeFileSync(join(evidence,'web_desktop-chromium_timings.json'),JSON.stringify({browser:await browser.version(),platform:process.platform,architecture:process.arch,source_commit:process.env.SCAMSENTRY_SOURCE_SHA??process.env.GITHUB_SHA??'local',samples:values.length,scope:'Fictional local-static-server workflow; first sample cold worker with populated HTTP cache; subsequent samples reuse the validated model. Automation roundtrip includes Playwright and detail interaction, not phone latency.',warm_analysis_median_ms:quantile(warm.map(v=>v.analysis_ms),.5),warm_analysis_p95_ms:quantile(warm.map(v=>v.analysis_ms),.95),warm_worker_total_median_ms:quantile(warm.map(v=>v.worker_total_ms),.5),values,physical_phone:false,heap_measured:false},null,2)+'\n')
  }
 
 })

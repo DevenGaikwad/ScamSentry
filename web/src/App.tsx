@@ -4,7 +4,7 @@ import { Android, Article, Evidence, Home, Learn, NotFound, Privacy } from './Pa
 import { PreferencesProvider, usePreferences } from './preferences'
 import { Link, Router, usePageMetadata } from './router'
 import { creatorCredit, navigation, site } from './site'
-import { Arrow, External, Mark, PointerBrackets, ReadingRail, useEditorialEffects } from './ui'
+import { Arrow, containDialogFocus, External, Mark, PointerBrackets, ReadingRail, useEditorialEffects } from './ui'
 import { useAnalysis } from './useAnalysis'
 import type { AnalysisSession } from './useAnalysis'
 import './style.css'
@@ -30,7 +30,7 @@ function Header({ path }: { path: string }) {
   useEffect(() => setOpen(false), [path])
   const active = (target: string) => path === target || target === '/learn' && path.startsWith('/learn/')
   return <header className="site-header"><Link className="brand" href="/" aria-label="ScamSentry home"><Mark /><span>ScamSentry<span className="brand-sub">A SECOND LOOK</span></span></Link><nav className="desktop-navigation" aria-label="Main navigation">{navigation.map(item => <Link href={item.path} key={item.path} aria-current={active(item.path) ? 'page' : undefined}>{item.name}</Link>)}</nav><div className="desktop-preferences"><PreferenceControls /></div><div className="mobile-header-actions"><Link href="/analyze" aria-current={path === '/analyze' ? 'page' : undefined}>Analyze <Arrow /></Link><button ref={trigger} className="menu-trigger" aria-expanded={open} aria-controls="mobile-menu" aria-haspopup="dialog" onClick={() => setOpen(true)}>Menu <span aria-hidden="true">+</span></button></div>
-    {open && <dialog ref={dialog} className="mobile-menu" id="mobile-menu" aria-labelledby="menu-title" onCancel={event => { event.preventDefault(); setOpen(false) }}><div className="dialog-header"><h2 className="eyebrow" id="menu-title">SCAMSENTRY / CHAPTERS</h2><button className="icon-button" aria-label="Close menu" onClick={() => setOpen(false)} autoFocus>×</button></div><nav aria-label="Mobile navigation"><Link href="/" aria-current={path === '/' ? 'page' : undefined} onClick={() => setOpen(false)}>00 <span>Home</span><Arrow /></Link>{navigation.map(item => <Link key={item.path} href={item.path} aria-current={active(item.path) ? 'page' : undefined} onClick={() => setOpen(false)}>{item.chapter} <span>{item.name}</span><Arrow /></Link>)}</nav><PreferenceControls /><p className="muted">Local inspection. Independent judgment.</p></dialog>}
+    {open && <dialog ref={dialog} className="mobile-menu" id="mobile-menu" aria-labelledby="menu-title" onKeyDown={containDialogFocus} onCancel={event => { event.preventDefault(); setOpen(false) }}><div className="dialog-header"><h2 className="eyebrow" id="menu-title">SCAMSENTRY / CHAPTERS</h2><button className="icon-button" aria-label="Close menu" onClick={() => setOpen(false)} autoFocus>×</button></div><nav aria-label="Mobile navigation"><Link href="/" aria-current={path === '/' ? 'page' : undefined} onClick={() => setOpen(false)}><span className="menu-number" aria-hidden="true">00</span><span>Home</span><Arrow /></Link>{navigation.map(item => <Link key={item.path} href={item.path} aria-current={active(item.path) ? 'page' : undefined} onClick={() => setOpen(false)}><span className="menu-number" aria-hidden="true">{item.chapter}</span><span>{item.name}</span><Arrow /></Link>)}</nav><PreferenceControls /><p className="muted">Local inspection. Independent judgment.</p></dialog>}
   </header>
 }
 function Shell({ path, session }: { path: string; session: AnalysisSession }) {

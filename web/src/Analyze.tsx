@@ -3,7 +3,7 @@ import type { Analysis } from './core/engine'
 import type { AnalysisSession } from './useAnalysis'
 import { examples, riskCopy } from './site'
 import { usePreferences } from './preferences'
-import { Arrow, Chapter, PageIntro } from './ui'
+import { Arrow, Chapter, containDialogFocus, PageIntro } from './ui'
 import { Link } from './router'
 
 export function redactedSummary(result: Analysis): string {
@@ -29,7 +29,7 @@ function Report({ result, onClose }: { result: Analysis; onClose: () => void }) 
     document.body.append(anchor); anchor.click(); anchor.remove()
     onClose()
   }
-  return <dialog className="report-dialog" ref={ref} aria-labelledby="report-title" onCancel={event => { event.preventDefault(); onClose() }}>
+  return <dialog className="report-dialog" ref={ref} aria-labelledby="report-title" onKeyDown={containDialogFocus} onCancel={event => { event.preventDefault(); onClose() }}>
     <div className="dialog-header"><span className="eyebrow">YOU CONTROL WHAT LEAVES</span><button className="icon-button" onClick={onClose} aria-label="Close report preview" autoFocus>×</button></div>
     <h2 id="report-title">Review before downloading.</h2><p>This is the exact text the file will contain. Original text and destinations are omitted.</p><pre data-testid="report-preview">{summary}</pre>
     <div className="button-row"><button className="primary" onClick={download}>Download summary <Arrow down /></button><button className="secondary" onClick={onClose}>Cancel</button></div>

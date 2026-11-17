@@ -1,7 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
+import type { KeyboardEvent, ReactNode } from 'react'
 import { Link } from './router'
 import { usePreferences } from './preferences'
+
+export function containDialogFocus(event: KeyboardEvent<HTMLDialogElement>) {
+  if (event.key !== 'Tab') return
+  const dialog = event.currentTarget
+  const items = Array.from(dialog.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])')).filter(element => element.getClientRects().length > 0)
+  const first = items[0], last = items.at(-1)
+  if (!first) { event.preventDefault(); dialog.focus(); return }
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus() }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus() }
+}
 
 export function Mark({ className = '' }: { className?: string }) {
   return <svg className={`ss-mark ${className}`} width="32" height="32" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="7" strokeLinejoin="miter" aria-hidden="true"><path d="M30 12H16L8 20V28L28 36V44L20 52H6M58 12H44L36 20V28L56 36V44L48 52H34" /></svg>
