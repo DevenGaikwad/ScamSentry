@@ -188,7 +188,14 @@ test('editorial states and two neutral palettes have original stable screenshots
 })
 
 test('motion demonstration remains interruptible and preserves navigation', async ({ page }) => {
-  await page.goto('/'); await page.waitForTimeout(700)
+  await page.goto('/'); await page.waitForTimeout(70)
+  await menu(page); await page.getByRole('button', { name: 'Pause motion', exact: true }).filter({ visible: true }).click()
+  const closePause = page.getByRole('button', { name: 'Close menu' }); if (await closePause.isVisible()) await closePause.click()
+  await expect(page.locator('.home-hero>.eyebrow>span[aria-hidden="true"]')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
+  await menu(page); await page.getByRole('button', { name: 'Resume motion', exact: true }).filter({ visible: true }).click()
+  const closeResume = page.getByRole('button', { name: 'Close menu' }); if (await closeResume.isVisible()) await closeResume.click()
+  await expect(page.locator('.home-hero>.eyebrow>span[aria-hidden="true"]')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
+  await page.waitForTimeout(700)
   await preferences(page, 'dark'); await page.waitForTimeout(600); await preferences(page, 'light'); await page.waitForTimeout(600)
   await page.getByRole('link', { name: 'Inspect a message', exact: true }).click()
   await nav(page, 'Learn'); await page.waitForTimeout(600); await page.getByRole('link', { name: /Keep codes private/ }).click(); await nav(page, 'Evidence'); await page.waitForTimeout(600); await nav(page, 'Privacy'); await page.waitForTimeout(600); await nav(page, 'Android'); await page.waitForTimeout(600); await nav(page, 'Analyze')

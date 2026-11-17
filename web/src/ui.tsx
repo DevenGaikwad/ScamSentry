@@ -40,7 +40,7 @@ export function DecodedLabel({ children }: { children: string }) {
       }, 32)
     })
     observer.observe(element.current)
-    return () => { observer.disconnect(); clearInterval(timer) }
+    return () => { observer.disconnect(); clearInterval(timer); setVisual(children) }
   }, [running, children])
   return <span className="eyebrow" ref={element}><span className="sr-only">{children}</span><span aria-hidden="true">{running ? visual : children}</span></span>
 }
