@@ -1,6 +1,6 @@
 # Performance and device protocol
 
-Exact-source final functional evidence is [CI run 44012744040](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040), source `bc227ba189796c1167c3cd21c3a7ec973156ccfd`. [Observed report](../assets/evidence/v2/final/RELEASE_VERIFICATION.json) and [artifact inventory](../assets/evidence/v2/final/ARTIFACT_INVENTORY.json) retain machine-readable values. Functional tests, download sizes and CPU intervals are distinct from physical-phone performance.
+Browser 0.4.0 and Android 0.3.0-preview were tested from source `01765677ea3e7a95b8983498168604cfec83090c`. The current warm worker analysis median was **0.400 ms** and p95 was **0.700 ms** on 24 warm fictional inputs in Linux Chromium. One cold-worker input used a populated HTTP cache. The release verification holds the full sample list and scope. Physical-phone latency, battery, allocations and fresh-network browser load remain unmeasured. [Verification report](https://github.com/DevenGaikwad/ScamSentry/releases/download/v0.3.0-preview/RELEASE_VERIFICATION.json)
 
 ## Native runtime and benchmark preparation
 
@@ -14,7 +14,7 @@ Collect at least 10 cold starts, 30 warm text samples and 10 screenshot workflow
 
 No generated Baseline Profile is invented or checked in. Generate it only from actual exercised journeys, then repeat the same protocol with/without it. Physical heap/allocation/battery, startup and OCR latency remain open. Provisional p95 text <250 ms and a few-second screenshot workflow are goals rather than reported phone outcomes.
 
-## Executed browser interval
+## Historical v2 browser interval
 
 Final environment: Chromium `159.0.8154.6`, `linux` / `x64`, production static build, 25 fictional iterations. The first sample starts a cold worker with a populated HTTP cache; 24 later samples reuse the validated model.
 
@@ -28,12 +28,12 @@ Original values and automation roundtrips are in [web_desktop-chromium_timings.j
 
 ## Signed download sizes and alignment
 
-| Final test-signed APK | Exact bytes | Decimal MB |
+| Android 0.3.0-preview APK | Exact bytes | Decimal MB |
 |---|---:|---:|
-| arm64-v8a | 15,747,556 | 15.748 |
-| x86_64 | 16,308,699 | 16.309 |
-| universal | 45,833,462 | 45.833 |
+| arm64-v8a | 15,276,765 | 15.277 |
+| x86_64 | 15,837,908 | 15.838 |
+| universal | 45,362,671 | 45.363 |
 
-The actual arm64 download is below the provisional 20 MB goal. These are signed download sizes, not installed footprint. The universal fallback includes arm64-v8a, armeabi-v7a, x86 and x86_64; split downloads are ABI-specific. Exact signatures and SHA-256 values are in [RELEASE_HANDOFF.md](RELEASE_HANDOFF.md).
+The arm64 download meets the provisional 20 MB goal. Sizes refer to signed APK downloads. The universal fallback contains arm64-v8a, armeabi-v7a, x86 and x86_64. [Artifact inventory](https://github.com/DevenGaikwad/ScamSentry/releases/download/v0.3.0-preview/ARTIFACT_INVENTORY.json)
 
-APK signature verification, ZIP alignment and all packaged 64-bit ELF PT_LOAD alignment checks passed. Static 16 KB alignment does not prove execution on an actual 16 KB page-size system; that runtime gate remains open. [APK inspection](../assets/evidence/v2/final/apk_inspection.json).
+APK signature, ZIP alignment and packaged 64-bit ELF PT_LOAD alignment checks passed. Execution on a device with 16 KB pages remains open. [Release audit](V4_ACCEPTANCE.md)

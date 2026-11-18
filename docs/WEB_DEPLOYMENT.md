@@ -1,6 +1,14 @@
-# Current motion deployment
+# Current browser deployment
 
-Production **https://scamsentry-inspect.vercel.app/** serves frontend 0.3.1, deployment `dpl_DPMbrs8DMDG7nni1AKRZNSRsaQCV`, from tested source `f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05` / merged source `3766d195c41e793e66edcbf472432f766c0e27d5`. The recovered CI artifact SHA-256 is `e753319ebed0ce4f64da5e3df2e94fa90247b160b35dfa61fea5a0c36c55e110`. All 27 public files match exact CI bytes through unauthenticated HTTPS, including the worker and model; unknown paths return a real 404 and the old hostname redirects with 307 while retaining deep paths. [Release evidence](../assets/evidence/v3/motion/final/RELEASE_VERIFICATION.json) · [Public verification](../assets/evidence/v3/motion/final/PUBLIC_HTTP_VERIFICATION.json).
+[https://scamsentry-inspect.vercel.app/](https://scamsentry-inspect.vercel.app/) runs ScamSentry 0.4.0 from production deployment `dpl_2JiT261gaKJEote3xTvuHtxnkCDx`. It serves the exact passing browser artifact from [GitHub Actions](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44296081682). Preview and production used the same 28 deployment inputs, including the static hosting configuration. The [receipt](../assets/evidence/v4/RELEASE_RECEIPT.json) maps the tested build, signed Android release and production identities.
+
+The standalone Vercel project `scamsentry` serves the preferred address on Hobby hosting. The existing project-level 307 rule preserves paths and queries from the legacy hostname. The [public verification](../assets/evidence/v4/PUBLIC_HTTP_VERIFICATION.json) records all 27 public file hashes, security and cache headers, and real missing-page and missing-asset responses.
+
+Use a passing precompiled browser artifact and the existing hosting configuration for future releases. Keep the prior healthy deployment as rollback and verify the live alias, worker, model, static files and paths after publishing.
+
+## Historical v3.1 motion deployment
+
+The earlier deployment `dpl_DPMbrs8DMDG7nni1AKRZNSRsaQCV` served browser 0.3.1 from tested source `f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05` and merged source `3766d195c41e793e66edcbf472432f766c0e27d5`. The recovered CI artifact SHA-256 was `e753319ebed0ce4f64da5e3df2e94fa90247b160b35dfa61fea5a0c36c55e110`. All 27 public files matched CI bytes, including the worker and model. The recorded probes verified 404 responses and the path-preserving legacy 307. [Release evidence](../assets/evidence/v3/motion/final/RELEASE_VERIFICATION.json) · [Public verification](../assets/evidence/v3/motion/final/PUBLIC_HTTP_VERIFICATION.json)
 
 The protected preview was reviewed through existing account access without changing its protections. Its anonymous worker asset fetch cannot use Vercel sign-in cookies, so model availability was explicitly limited there. Public production requires and receives a separate full-model runtime check; this is not concealed by a worker change or authentication override. [Preview observations](../assets/evidence/v3/motion/PREVIEW_REVIEW.json).
 
@@ -8,11 +16,9 @@ The project remains the existing standalone Hobby project. No Git integration wa
 
 The legacy-host redirect is a persistent project rule, version `3338d802-a021-4a74-af57-04d1f58b8e04`, scoped to `scamsentry-bay.vercel.app`. Root, deep paths and query preservation were verified after publishing it. [Exact configuration and probes](../assets/evidence/v3/motion/final/HOSTNAME_ROUTE.json). Retain this rule on future updates; a source upload alone does not establish redirect persistence.
 
-## Preserved deployment history
+## Historical v3 editorial deployment
 
-# Current browser deployment
-
-Production: **https://scamsentry-inspect.vercel.app/**. Existing project `scamsentry` (`prj_pFepmjKZNLc2CT9eBKtPbrt23Gzc`) in the previously verified Hobby team. Current deployment `dpl_HUWQrorzT2fmY9P5QLJFNZkACyJQ` contains the exact editorial CI build tested at `f2b44da` and merged at `0e248cc`. [Current verification](FRONTEND_VALIDATION.md) · [Fresh public file/route/header report](../assets/evidence/v3/final/PUBLIC_HTTP_VERIFICATION.json).
+Deployment `dpl_HUWQrorzT2fmY9P5QLJFNZkACyJQ` served the exact editorial CI build tested at `f2b44da` and merged at `0e248cc`. [Editorial validation](FRONTEND_VALIDATION.md) · [Public file, route and header report](../assets/evidence/v3/final/PUBLIC_HTTP_VERIFICATION.json)
 
 The `scamsentry-bay.vercel.app` compatibility hostname responds with a 307 redirect to the preferred hostname, including deep paths. No purchased domain is needed. The static deployment has a real not-found response, shareable public routes, a strict same-origin CSP, local-worker inference and self-hosted licensed fonts. The approved model identity is unchanged.
 
@@ -22,7 +28,7 @@ The `scamsentry-bay.vercel.app` compatibility hostname responds with a 307 redir
 
 The following describes the older deployment, not the current production source or file count.
 
-# Browser deployment and updates
+### Browser deployment and updates
 
 The live production app is **[ScamSentry](https://scamsentry-bay.vercel.app/)**, project `scamsentry` in the verified `news-lens-ai` **Hobby** team. No account is required to use the public app. [Deployment/source/plan/smoke evidence](../assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json) · [Credential-free HTTP and digest verification](../assets/evidence/v2/hosting/PUBLIC_HTTP_VERIFICATION.json).
 

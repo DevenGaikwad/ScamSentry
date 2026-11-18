@@ -1,4 +1,8 @@
-# V2 verification matrix
+# Verification matrix
+
+[Browser 0.4.0 and Android 0.3.0-preview acceptance results](V4_ACCEPTANCE.md)
+
+## Historical v2 verification
 
 Immutable release source: `bc227ba189796c1167c3cd21c3a7ec973156ccfd`. [Executed CI run 44012744040](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040); [original report](../assets/evidence/v2/final/RELEASE_VERIFICATION.json). All results below are scoped; host checks do not imply phone acceptance. Historical reports and failed attempts remain preserved.
 

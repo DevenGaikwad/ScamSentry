@@ -1,0 +1,28 @@
+{
+  "origin": "https://scamsentry-inspect.vercel.app/",
+  "deployment": "dpl_2JiT261gaKJEote3xTvuHtxnkCDx",
+  "web_version": "0.4.0",
+  "checked_at": "2026-11-18T12:00:35.828Z",
+  "headline": "A second look. Before you act.",
+  "headline_visual_lines": [
+    "A SECOND LOOK.",
+    "BEFORE YOU ACT."
+  ],
+  "hero_svg_orthogonal_segments": 21,
+  "live_local_analysis": true,
+  "fictional_credential_request": {
+    "observed_risk": "Higher risk",
+    "signal": "Request for a secret",
+    "displayed_actual_host": "review.test",
+    "model": "ss-char-lr-0.1.0",
+    "score_semantics": "ordinal_v2",
+    "class_estimates_rendered": true
+  },
+  "fictional_ordinary_message": {
+    "observed_risk": "Lower observed risk",
+    "class_resemblance": "ordinary messages"
+  },
+  "report_preview_omitted_raw_input_marker": true,
+  "report_preview_omitted_input_host": true,
+  "input_cleared_at_end": true
+}

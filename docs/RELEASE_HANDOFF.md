@@ -1,5 +1,7 @@
 # Historical 0.2.0 research-preview handoff
 
+[Current browser and Android release audit](V4_ACCEPTANCE.md)
+
 [Live browser app](https://scamsentry-bay.vercel.app/) · [Public repository](https://github.com/DevenGaikwad/ScamSentry) · [v0.2.0-preview downloads](https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview) · [Executed workflow](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040)
 
 Release source: `bc227ba189796c1167c3cd21c3a7ec973156ccfd`. The prerelease tag, source ZIP, APK inventory and executed verification report refer to this immutable commit. A later bot commit preserves reports/screenshots; later documentation edits do not claim to have produced the immutable APKs. [Source-to-release provenance](../assets/evidence/v2/final/SNAPSHOT_PROVENANCE.json).

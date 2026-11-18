@@ -1,6 +1,6 @@
 # Priorities after the research preview
 
-Delivered: exact public repository, successful exact-source CI, three installable test-signed APKs, reviewed source/full ZIPs, original runtime captures, browser recording, checksums, handoff and the verified live Hobby browser app at https://scamsentry-bay.vercel.app/. See [RELEASE_HANDOFF.md](RELEASE_HANDOFF.md). Completed research is preserved; do not repeat it on resume.
+Browser 0.4.0 is live, and Android 0.3.0-preview provides three verified TEST-signed APKs. The release audit records exact source, public downloads, tests and outstanding device and model validation. [Live app](https://scamsentry-inspect.vercel.app/) · [Release audit](V4_ACCEPTANCE.md)
 
 | Priority | Entry requirement | Exit evidence |
 |---|---|---|

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "deployment": {
+    "merged_source": "01765677ea3e7a95b8983498168604cfec83090c",
+    "tree": "b90bc234f8226c607b07d1ba87c6c6f081a5b391",
+    "browser_version": "0.4.0",
+    "browser_test_source": "01765677ea3e7a95b8983498168604cfec83090c",
+    "browser_ci_run": "44296081682",
+    "browser_artifact_id": "14424586316",
+    "artifact_sha256": "7ac090337b0728d7b63f0cbb445dc15ceabf59096722e680cab622ee167b3cfb",
+    "production_origin": "https://scamsentry-inspect.vercel.app/",
+    "production_deployment": "dpl_2JiT261gaKJEote3xTvuHtxnkCDx",
+    "preview_deployment": "dpl_AJhUMzk4NyKBA1W25mMqwdNAiB6q",
+    "rollback_deployment": "dpl_DPMbrs8DMDG7nni1AKRZNSRsaQCV",
+    "legacy_route_version": "3338d802-a021-4a74-af57-04d1f58b8e04",
+    "checked_deployment_input_count": 28,
+    "configuration_sha1": "ffe80f8b08fa8982659f95f8b2ef857001e8ecb7"
+  },
+  "browser_suites": {
+    "units": 72,
+    "browser": 66,
+    "skips": 0,
+    "failures": 0,
+    "flakes": 0
+  },
+  "native": {
+    "release": "https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.3.0-preview",
+    "source": "01765677ea3e7a95b8983498168604cfec83090c",
+    "apk_digests": [
+      {
+        "name": "ScamSentry_0.3.0-preview_arm64-v8a_TEST-SIGNED.apk",
+        "bytes": 15276765,
+        "sha256": "6f7eaa3ea338c665025851f17eb9419e8a767be1baa35ccdbcd0ca02ce8c79f9"
+      },
+      {
+        "name": "ScamSentry_0.3.0-preview_universal_TEST-SIGNED.apk",
+        "bytes": 45362671,
+        "sha256": "4e1381001612dceebdb7d5cbc92188fef6d6dc9ed1170c0f37671e64d916de30"
+      },
+      {
+        "name": "ScamSentry_0.3.0-preview_x86_64_TEST-SIGNED.apk",
+        "bytes": 15837908,
+        "sha256": "e4b75ba12e3d637bdeee7582407942ad4a35777f0baf4d5cf4339fc1e2922aad"
+      }
+    ],
+    "debug_journeys": 17,
+    "minified_journeys": 2,
+    "tests_current_workflow": "https://github.com/DevenGaikwad/ScamSentry/actions/runs/44296081682",
+    "tag": "v0.3.0-preview",
+    "package": "in.deven.scamsentry",
+    "version_name": "0.3.0-preview",
+    "version_code": 3,
+    "min_sdk": 26,
+    "target_sdk": 36,
+    "tested_emulator_sdk": 35,
+    "tested_emulator_abi": "x86_64",
+    "signing_channel": "disposable TEST",
+    "certificate_sha256": "74afda318712f307e5387caa7caeb7d744f7e7f18eed3af560b96e1e2fc489a1"
+  },
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "captures": [
+    {
+      "file": "browser-home-light.png",
+      "pixels": [
+        1440,
+        1050
+      ],
+      "sha256": "961a49982d884627b4825e179f587ac0af8df7d4f65acd612f6240697586e4c1",
+      "scope": "Home, desktop Chromium, light theme",
+      "archive_member": "assets/evidence/v3/motion/browser/desktop-chromium_hero-light.png",
+      "source": "01765677ea3e7a95b8983498168604cfec83090c"
+    },
+    {
+      "file": "browser-home-dark.png",
+      "pixels": [
+        1440,
+        1050
+      ],
+      "sha256": "3dd3391758eb30deb48bed5b53b36e04193fd42c7f3dee52c821b33feaa1962d",
+      "scope": "Home, desktop Chromium, dark theme",
+      "archive_member": "assets/evidence/v3/motion/browser/desktop-chromium_hero-dark.png",
+      "source": "01765677ea3e7a95b8983498168604cfec83090c"
+    },
+    {
+      "file": "browser-home-mobile.png",
+      "pixels": [
+        412,
+        839
+      ],
+      "sha256": "312b92e2b52336cb975798e1f7f7c4d7564de1a1f096fb3b449e949040cc8dcd",
+      "scope": "Home, Chromium phone viewport, light theme",
+      "archive_member": "assets/evidence/v3/motion/browser/mobile-chromium_hero-light.png",
+      "source": "01765677ea3e7a95b8983498168604cfec83090c"
+    }
+  ],
+  "public_http_file_count": 27,
+  "scope": "Exact source and checksum evidence from release CI. Native emulator scope is API 35 x86_64. Physical phone gates are tracked separately.",
+  "verified_release_media_and_archives": {
+    "native_minified_analyze_home.png": {
+      "size": 122766,
+      "sha256": "5b8c587011d3a55a851321af43ad149be90e0ccae07c7b8e43a9f67355dd0bd4",
+      "downloaded_and_matched": true
+    },
+    "native_minified_ocr_review.png": {
+      "size": 157017,
+      "sha256": "860c475b83ee580a1f1b45c6e784e3662f57033d085adc0684736e63056c14c4",
+      "downloaded_and_matched": true
+    },
+    "native_03_dark_editor.png": {
+      "size": 130217,
+      "sha256": "08683fdc24ce70ebb6dfbf8d917383365cc2d08ff8b865e4588068cc1700c05f",
+      "downloaded_and_matched": true
+    },
+    "ScamSentry_Editorial_Motion.webm": {
+      "size": 1005495,
+      "sha256": "bfb32fdf73e411a12853ab7ee18613560eb356c2b109274869a1add36cd7a7a2",
+      "downloaded_and_matched": true,
+      "browser_archive_member": "assets/evidence/v3/motion/browser/desktop-chromium_motion-tour.webm"
+    },
+    "ScamSentry_0.3.0-preview_Source.zip": {
+      "size": 13589942,
+      "sha256": "3eaee89202750959a367d9c4f8d4bcee68eec33128d5fd2c806ee41d932f400b",
+      "downloaded_and_matched": true
+    },
+    "ScamSentry_0.3.0_Research_Preview.zip": {
+      "size": 50336652,
+      "sha256": "4f08828266347bafc3124e86ec0856377b090d010d8f6d36b1a49054594ef2d7",
+      "downloaded_and_matched": true
+    }
+  },
+  "python_suites": {
+    "repository": 77,
+    "extracted_source": 77
+  },
+  "toolchain": {
+    "browser": {
+      "node": "24.22.1",
+      "react": "19.3.1",
+      "typescript": "6.0.3",
+      "vite": "8.3.8",
+      "playwright": "1.65.1"
+    },
+    "android": {
+      "jdk": 21,
+      "gradle": "9.6.0",
+      "agp": "9.5.1",
+      "kotlin": "2.4.21",
+      "compose_bom": "2026.09.00"
+    },
+    "python": "3.12"
+  }
+}

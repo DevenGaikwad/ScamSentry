@@ -1,5 +1,7 @@
 # Editorial frontend validation
 
+[Current browser 0.4.0 verification](V4_ACCEPTANCE.md)
+
 Verified continuation: 18 November 2026. The v3 application is complete; this handoff preserves its original passing build before the separately requested motion follow-up.
 
 ## Source and production identity

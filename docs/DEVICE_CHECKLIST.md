@@ -11,7 +11,7 @@ Use an owner-controlled phone. Record model, Android/API level, RAM/chipset, bui
 | Malformed/provider failure | Pick controlled malformed/oversized fixture or revoke provider access | Clear recoverable error, responsive main UI, bounded memory |
 | Rotation and process death | Rotate editor/OCR; background, then kill process | Rotation retains draft safely; process restart discards it and requires re-selection |
 | History and deletion | Confirm default off, enable, save, restart, delete, clear, disable | Only approved derived metadata retained; no raw text/image/host saved. Rapid save/disable/delete cannot restore deleted summaries or show a stale saved marker |
-| History migration | Install/construct v1 fixture then apply v2 | Old summary/model/policy preserved; input method marked unknown |
+| History migration | Construct a v1 or v2 database fixture, then exercise the current schema 3 migration | Eligible summaries and model/policy evidence survive, input method defaults to unknown where absent, and the retention cap is enforced |
 | Export | Inspect preview containing fictional identifier-rich input | Exact shared report omits raw message, URLs and screenshot; narrow temporary URI access |
 | Missing/corrupt model | Use controlled test artifact | Unable/limited state, no invented probability or lower-risk fallback |
 | Large font and small display | Main flow at 1.3×/1.5×/2× fonts and compact size | No clipped warnings, hidden actions, broken hostname inspection or keyboard overlap |

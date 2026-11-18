@@ -45,7 +45,7 @@ The app can run offline after installation; development setup normally downloads
 
 Common symptoms: missing SDK → set the local SDK path; incompatible Java → select the documented JDK; share target missing → inspect the installed app and text/plain MIME; OCR empty → choose a readable Latin-script screenshot and correct text; model unavailable → verify APK checksum/reinstall, never trust a fallback green state. Do not expose personal screenshots or signing secrets in bug reports.
 
-## V0.2.0 upgrade notes
+## Release build notes
 
 Clone `https://github.com/DevenGaikwad/ScamSentry` into a short ASCII path such as `C:\Projects\ScamSentry`. Keep JDK 21, SDK platform `android-37.0`, Build Tools 36.0.0, compile/target/min 37/36/26. The project now pins Gradle 9.6.0 / AGP 9.5.1; use the regenerated `android\gradlew.bat` rather than a globally installed older Gradle. Review `DEPENDENCIES.md` for the coherent stable group. Existing E: tools or unrelated project installations do not need moving.
 
@@ -64,6 +64,6 @@ Set-Location android
 
 Separate release assembly bounds compiler/lint/R8 memory residency. For a source ZIP, run the validator with `--mode archive` before building. No Git initialization or private joblib file is needed to validate source and synthetic export arithmetic.
 
-For the browser, use Node 24, enter `web`, then run `npm ci`, `npm run build`, `npm run preview` and open the displayed localhost URL. Text/URL analysis is functional after public model download. Browser OCR/PWA are not included. Installable release APKs use explicit disposable TEST signatures and versionCode 2.
+For the browser, use Node 24, enter `web`, then run `npm ci`, `npm run build` and `npm run preview`. Open the displayed localhost URL. Text and link analysis become available after the public model loads. The current Android APKs use a disposable TEST signature and versionCode 3. [Preview downloads](https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.3.0-preview)
 
-The actual Windows-hosted job in [run 43998404388](https://github.com/DevenGaikwad/ScamSentry/actions/runs/43998404388) passed `gradlew.bat --no-daemon :core-analysis:test` on source `8c12eab7d2f77a1ef2946b79febab22f721f0888`. This verifies the batch launcher and core suite on Windows; full Windows APK assembly and an owner's local SDK setup are separate. JSON model assets use LF on both platforms to preserve their frozen digest.
+The current release's Windows job verified the batch launcher and Kotlin core tests. CI assembled the Android release on Linux. JSON model assets use LF line endings to preserve their frozen digest on both platforms. [Release workflow](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44296081682)

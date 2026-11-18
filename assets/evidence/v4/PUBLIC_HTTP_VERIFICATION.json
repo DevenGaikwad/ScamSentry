@@ -1,0 +1,547 @@
+{
+  "origin": "https://scamsentry-inspect.vercel.app",
+  "checked_at": "2026-11-18T11:58:53.805487+00:00",
+  "files": [
+    {
+      "path": "404.html",
+      "route": "/404",
+      "status": 200,
+      "size": 1538,
+      "sha256": "92efeecf715cfb9de9b5aaece4fcb30401ba46dc082d3264797dabab5165314e",
+      "expected_sha256": "92efeecf715cfb9de9b5aaece4fcb30401ba46dc082d3264797dabab5165314e",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "analyze.html",
+      "route": "/analyze",
+      "status": 200,
+      "size": 1598,
+      "sha256": "df1ff5cef4f60a1931e993b95cc0965e579a91e14c049167e4829804a86402c3",
+      "expected_sha256": "df1ff5cef4f60a1931e993b95cc0965e579a91e14c049167e4829804a86402c3",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "android.html",
+      "route": "/android",
+      "status": 200,
+      "size": 1650,
+      "sha256": "58768634dfcc2adfc395a37983697aa1b84aabd6382bcc266a458ec9e1c4561b",
+      "expected_sha256": "58768634dfcc2adfc395a37983697aa1b84aabd6382bcc266a458ec9e1c4561b",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "assets/analysis.worker-RwoWKVhw.js",
+      "route": "/assets/analysis.worker-RwoWKVhw.js",
+      "status": 200,
+      "size": 12512,
+      "sha256": "0f1071fb13024ec2a45dd3397e6f62ffdf915fc1ffca9dd5227a54efed8f8304",
+      "expected_sha256": "0f1071fb13024ec2a45dd3397e6f62ffdf915fc1ffca9dd5227a54efed8f8304",
+      "match": true,
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "assets/index-DvVKTYzW.js",
+      "route": "/assets/index-DvVKTYzW.js",
+      "status": 200,
+      "size": 297837,
+      "sha256": "1222def11c66ba5010a4f4f62b1dda50c6fedd47a94064134915e9ea2856419c",
+      "expected_sha256": "1222def11c66ba5010a4f4f62b1dda50c6fedd47a94064134915e9ea2856419c",
+      "match": true,
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "assets/index-dzUUdtjT.css",
+      "route": "/assets/index-dzUUdtjT.css",
+      "status": 200,
+      "size": 40432,
+      "sha256": "a17ac923912cebd350ad5be67b6a617ea53ab6055b7b85b92b62a8e0d13c0470",
+      "expected_sha256": "a17ac923912cebd350ad5be67b6a617ea53ab6055b7b85b92b62a8e0d13c0470",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "evidence.html",
+      "route": "/evidence",
+      "status": 200,
+      "size": 1680,
+      "sha256": "16706f755dfbb31037304265012fa0b69dd778a3449c36d958198bf2417600ef",
+      "expected_sha256": "16706f755dfbb31037304265012fa0b69dd778a3449c36d958198bf2417600ef",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "favicon.svg",
+      "route": "/favicon.svg",
+      "status": 200,
+      "size": 288,
+      "sha256": "f51dcf7e156c4f9d4197a31e13478e77907dabd2379c9981c82255944dd1f9cd",
+      "expected_sha256": "f51dcf7e156c4f9d4197a31e13478e77907dabd2379c9981c82255944dd1f9cd",
+      "match": true,
+      "headers": {
+        "Content-Type": "image/svg+xml",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "fonts/archivo-OFL.txt",
+      "route": "/fonts/archivo-OFL.txt",
+      "status": 200,
+      "size": 4388,
+      "sha256": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b",
+      "expected_sha256": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+      "route": "/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+      "status": 200,
+      "size": 89152,
+      "sha256": "67c657ffeb2b35e51eeebd9695bb3d56e386abc43ca840ea4205293c48e5511b",
+      "expected_sha256": "67c657ffeb2b35e51eeebd9695bb3d56e386abc43ca840ea4205293c48e5511b",
+      "match": true,
+      "headers": {
+        "Content-Type": "font/woff2",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "fonts/geistmono-OFL.txt",
+      "route": "/fonts/geistmono-OFL.txt",
+      "status": 200,
+      "size": 4384,
+      "sha256": "021caa749f89fecd7c2e40a50499de29e84d2bc19251659b47d499c2fbfffc17",
+      "expected_sha256": "021caa749f89fecd7c2e40a50499de29e84d2bc19251659b47d499c2fbfffc17",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "fonts/geistmono-latin-variable.0ec1b9a7c184.woff2",
+      "route": "/fonts/geistmono-latin-variable.0ec1b9a7c184.woff2",
+      "status": 200,
+      "size": 34768,
+      "sha256": "0ec1b9a7c18409c5739ad65eaf769c31369b96eab4140f02b9925b0db839c754",
+      "expected_sha256": "0ec1b9a7c18409c5739ad65eaf769c31369b96eab4140f02b9925b0db839c754",
+      "match": true,
+      "headers": {
+        "Content-Type": "font/woff2",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "index.html",
+      "route": "/",
+      "status": 200,
+      "size": 1648,
+      "sha256": "4669dd9bdf3e49a575e75643c127245144da913aefc39225f51a8520b1d5103b",
+      "expected_sha256": "4669dd9bdf3e49a575e75643c127245144da913aefc39225f51a8520b1d5103b",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "learn/actual-host.html",
+      "route": "/learn/actual-host",
+      "status": 200,
+      "size": 1566,
+      "sha256": "bff27bdc0bb5abe9d03146ed2ab80922d8b15e139951b253e965101b61d3801e",
+      "expected_sha256": "bff27bdc0bb5abe9d03146ed2ab80922d8b15e139951b253e965101b61d3801e",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "learn/authentication-codes.html",
+      "route": "/learn/authentication-codes",
+      "status": 200,
+      "size": 1612,
+      "sha256": "667d0e224390b149ac9eee64cc4dfb5d7ecdddaf338ccdb9b9d661e1dea286da",
+      "expected_sha256": "667d0e224390b149ac9eee64cc4dfb5d7ecdddaf338ccdb9b9d661e1dea286da",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "learn/promotion-and-smishing.html",
+      "route": "/learn/promotion-and-smishing",
+      "status": 200,
+      "size": 1626,
+      "sha256": "0b443bc9af9f5c11be5d4910a4478f97d342f2d8e817822aa02cf18b603ed69d",
+      "expected_sha256": "0b443bc9af9f5c11be5d4910a4478f97d342f2d8e817822aa02cf18b603ed69d",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "learn/sender-identity.html",
+      "route": "/learn/sender-identity",
+      "status": 200,
+      "size": 1648,
+      "sha256": "7635499be7c6781f83392df87f61f64f9064e30551724d9b56449ba6006b9af5",
+      "expected_sha256": "7635499be7c6781f83392df87f61f64f9064e30551724d9b56449ba6006b9af5",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "learn/unexpected-payments.html",
+      "route": "/learn/unexpected-payments",
+      "status": 200,
+      "size": 1604,
+      "sha256": "f70c78eebd9c85442fad69940f04227c2e5e1e4f3e6c4e52456232c7ebfe0e39",
+      "expected_sha256": "f70c78eebd9c85442fad69940f04227c2e5e1e4f3e6c4e52456232c7ebfe0e39",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "learn/useful-uncertainty.html",
+      "route": "/learn/useful-uncertainty",
+      "status": 200,
+      "size": 1626,
+      "sha256": "9bb8012c8c8671a17838a0caac123f51f177bcabac0d6c42d49f9a13277515ed",
+      "expected_sha256": "9bb8012c8c8671a17838a0caac123f51f177bcabac0d6c42d49f9a13277515ed",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "learn.html",
+      "route": "/learn",
+      "status": 200,
+      "size": 1658,
+      "sha256": "4e15b16608800c917f2979012e11c48fb5fd9adfb6b0c10b772c2568c89889ab",
+      "expected_sha256": "4e15b16608800c917f2979012e11c48fb5fd9adfb6b0c10b772c2568c89889ab",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "model/model-14927b442dc9f33a.json",
+      "route": "/model/model-14927b442dc9f33a.json",
+      "status": 200,
+      "size": 2369544,
+      "sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "expected_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "match": true,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "preferences-init.js",
+      "route": "/preferences-init.js",
+      "status": 200,
+      "size": 513,
+      "sha256": "d931797cc3b2d37ef953abb96a24963e849dd7ef0e47d9f8dcc426c4b0786787",
+      "expected_sha256": "d931797cc3b2d37ef953abb96a24963e849dd7ef0e47d9f8dcc426c4b0786787",
+      "match": true,
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "privacy.html",
+      "route": "/privacy",
+      "status": 200,
+      "size": 1630,
+      "sha256": "7ff593ad923e174afc116cfd6318856a88e5ca027bd4f3304e1837d31f448771",
+      "expected_sha256": "7ff593ad923e174afc116cfd6318856a88e5ca027bd4f3304e1837d31f448771",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "robots.txt",
+      "route": "/robots.txt",
+      "status": 200,
+      "size": 82,
+      "sha256": "ed1844bff527efb26435638982435c5f7a8994292742b50a07186919c8815832",
+      "expected_sha256": "ed1844bff527efb26435638982435c5f7a8994292742b50a07186919c8815832",
+      "match": true,
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "signal-aperture.svg",
+      "route": "/signal-aperture.svg",
+      "status": 200,
+      "size": 272,
+      "sha256": "0f08a8e3f797e0c8de1279435af2f981816e5ff80dc66ea91e7e807cb5e1ceea",
+      "expected_sha256": "0f08a8e3f797e0c8de1279435af2f981816e5ff80dc66ea91e7e807cb5e1ceea",
+      "match": true,
+      "headers": {
+        "Content-Type": "image/svg+xml",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "sitemap.xml",
+      "route": "/sitemap.xml",
+      "status": 200,
+      "size": 1003,
+      "sha256": "3eb283bc844e357c923f9e9e3bf8cc92c2c281ed2370513b9cce90991f828f60",
+      "expected_sha256": "3eb283bc844e357c923f9e9e3bf8cc92c2c281ed2370513b9cce90991f828f60",
+      "match": true,
+      "headers": {
+        "Content-Type": "application/xml",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    },
+    {
+      "path": "social-preview.png",
+      "route": "/social-preview.png",
+      "status": 200,
+      "size": 32343,
+      "sha256": "1a0f0dccf4bbc208f99485a15fc56ce5239242c83669288014a74c6dcec4f113",
+      "expected_sha256": "1a0f0dccf4bbc208f99485a15fc56ce5239242c83669288014a74c6dcec4f113",
+      "match": true,
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Cache-Control": "no-cache",
+        "Referrer-Policy": "no-referrer",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      }
+    }
+  ],
+  "legacy_redirects": {
+    "/": {
+      "status": 307,
+      "location": "https://scamsentry-inspect.vercel.app/"
+    },
+    "/learn/actual-host": {
+      "status": 307,
+      "location": "https://scamsentry-inspect.vercel.app/learn/actual-host"
+    },
+    "/privacy?source=verification&read=1": {
+      "status": 307,
+      "location": "https://scamsentry-inspect.vercel.app/privacy?source=verification&read=1"
+    }
+  },
+  "missing_paths": {
+    "/missing-v4-route": {
+      "status": 404,
+      "location": null
+    },
+    "/assets/missing-v4-asset.js": {
+      "status": 404,
+      "location": null
+    }
+  },
+  "all_files_match": true,
+  "expected_headers": true,
+  "cache_policy_pass": true,
+  "routes_pass": true
+}
