@@ -1,0 +1,29 @@
+{
+  "run_id": "robust_hybrid_20261118_01",
+  "seed": 42,
+  "folds": 3,
+  "maximum_fits": 13,
+  "threads": 2,
+  "wall_seconds": 420,
+  "max_peak_rss_kib": 2097152,
+  "bootstrap_repetitions": 1000,
+  "cv_min_smishing_recall": 0.82,
+  "cv_max_ordinary_to_smishing": 0.03,
+  "cv_clean_f1_weight": 0.75,
+  "cv_augmentation_eval_severity": 0.14,
+  "promotion": {
+    "minimum_macro_f1_gain": 0.01,
+    "maximum_smishing_recall_drop": 0.02,
+    "maximum_ordinary_high_rate": 0.03,
+    "require_positive_paired_interval": true,
+    "require_severe_slice_improvement": true,
+    "require_prospective_data": true,
+    "require_physical_device": true
+  },
+  "candidates": [
+    {"name":"char_medium_mild","family":"char","C":3.0,"class_weight":"balanced","min_df":2,"budget":14000,"noise":0.16},
+    {"name":"word_mild","family":"word","C":1.5,"class_weight":"balanced","min_df":2,"budget":6500,"noise":0.10},
+    {"name":"hybrid_equal_mild","family":"hybrid","C":2.0,"class_weight":"balanced","min_df":2,"budget":8500,"weights":[1.0,1.0],"noise":0.14},
+    {"name":"hybrid_char_mild","family":"hybrid","C":3.5,"class_weight":"balanced","min_df":2,"budget":11000,"weights":[1.0,0.55],"noise":0.22}
+  ]
+}

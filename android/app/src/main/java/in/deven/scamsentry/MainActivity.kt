@@ -6,6 +6,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.core.view.WindowCompat
+import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import `in`.deven.scamsentry.ui.usesDarkTheme
 import `in`.deven.scamsentry.ui.ScamSentryTheme
 import `in`.deven.scamsentry.ui.ScamSentryRoot
 
@@ -14,13 +18,18 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.enableEdgeToEdge(window)
-        // The product uses a dark palette even when the OS is in light mode.
-        WindowCompat.getInsetsController(window,window.decorView).apply {
-            isAppearanceLightStatusBars=false
-            isAppearanceLightNavigationBars=false
+        if (savedInstanceState == null) model.receive(intent)
+        setContent {
+            val presentation by model.presentation.collectAsStateWithLifecycle()
+            val dark = usesDarkTheme(presentation.theme)
+            SideEffect {
+                WindowCompat.getInsetsController(window, window.decorView).apply {
+                    isAppearanceLightStatusBars = !dark
+                    isAppearanceLightNavigationBars = !dark
+                }
+            }
+            ScamSentryTheme(dark) { ScamSentryRoot(model, presentation) }
         }
-        if(savedInstanceState==null) model.receive(intent)
-        setContent { ScamSentryTheme { ScamSentryRoot(model) } }
     }
     override fun onNewIntent(intent: Intent) { super.onNewIntent(intent); setIntent(intent); model.receive(intent) }
 }

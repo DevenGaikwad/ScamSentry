@@ -2,32 +2,21 @@ name: Verify ScamSentry preview
 on:
   push:
     paths-ignore:
-      - 'web/**'
-      - 'assets/brand/**'
-      - 'assets/evidence/v3/**'
-      - 'docs/FRONTEND*'
-      - 'docs/WEB_*'
-      - 'docs/DESIGN_SYSTEM.md'
-      - 'README.md'
-      - 'THIRD_PARTY_NOTICES.md'
-      - '.github/workflows/frontend-v3.yml'
+      - 'assets/evidence/**'
   pull_request:
     paths-ignore:
-      - 'web/**'
-      - 'assets/brand/**'
-      - 'assets/evidence/v3/**'
-      - 'docs/FRONTEND*'
-      - 'docs/WEB_*'
-      - 'docs/DESIGN_SYSTEM.md'
-      - 'README.md'
-      - 'THIRD_PARTY_NOTICES.md'
-      - '.github/workflows/frontend-v3.yml'
+      - 'assets/evidence/**'
   workflow_dispatch:
+    inputs:
+      publish_preview:
+        description: Publish the verified native research preview on main
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
   group: verify-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   python:
     runs-on: ubuntu-latest
@@ -50,7 +39,8 @@ jobs:
       - run: python scripts/package_release.py --source-only
       - name: Test the actual non-Git source extraction
         run: |
-          python -m zipfile -e release/ScamSentry_0.2.0-preview_Source.zip /tmp/scamsentry-source
+          version="$(python scripts/release_identity.py)"
+          python -m zipfile -e "release/ScamSentry_${version}_Source.zip" /tmp/scamsentry-source
           chmod +x /tmp/scamsentry-source/ScamSentry/android/gradlew
           python /tmp/scamsentry-source/ScamSentry/scripts/validate_project.py --mode archive --format json
           cd /tmp/scamsentry-source/ScamSentry
@@ -134,8 +124,8 @@ jobs:
             web/dist/
             web/test-results/
             web/unit-results/
-            web/playwright-report/
             assets/evidence/v3/browser/
+            assets/evidence/v3/motion/browser/
             assets/evidence/v2/web_*.png
             assets/evidence/v2/web_*.json
             assets/evidence/v2/web_demo_*.webm
@@ -206,7 +196,7 @@ jobs:
             android/benchmark/build/outputs/connected_android_test_additional_output/
             release/device/
   publish-preview:
-    if: (github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[publish-preview]'))) && github.ref == 'refs/heads/main' && github.repository == 'DevenGaikwad/ScamSentry'
+    if: ((github.event_name == 'workflow_dispatch' && inputs.publish_preview) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[publish-preview]'))) && github.ref == 'refs/heads/main' && github.repository == 'DevenGaikwad/ScamSentry'
     needs: [python, android, browser, windows, emulator]
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -258,6 +248,5 @@ jobs:
         run: |
           shopt -s nullglob
           screenshots=(release/native_*.png)
-          gh release create v0.2.0-preview --target "$GITHUB_SHA" --prerelease --title "ScamSentry 0.2.0 — Research Preview" --notes-file RELEASE_NOTES.md release/install/*.apk release/ScamSentry_0.2.0-preview_Source.zip release/ScamSentry_0.2.0_Research_Preview.zip release/ScamSentry_Browser_Workflow.webm release/RELEASE_VERIFICATION.json release/model_manifest.json release/ARTIFACT_INVENTORY.json release/SHA256SUMS.txt release/DOWNLOAD_SHA256SUMS.txt release/apk_inspection.json release/archive_validation.json release/full_package_validation.json "${screenshots[@]}"
-      - name: Preserve observed release evidence in source
-        run: python scripts/snapshot_release_evidence.py
+          version="$(python scripts/release_identity.py)"
+          gh release create "v${version}" --target "$GITHUB_SHA" --prerelease --title "ScamSentry ${version%-preview} Android Research Preview" --notes-file RELEASE_NOTES.md release/install/*.apk "release/ScamSentry_${version}_Source.zip" "release/ScamSentry_${version%-preview}_Research_Preview.zip" release/ScamSentry_Browser_Workflow.webm release/RELEASE_VERIFICATION.json release/model_manifest.json release/ARTIFACT_INVENTORY.json release/SHA256SUMS.txt release/DOWNLOAD_SHA256SUMS.txt release/apk_inspection.json release/archive_validation.json release/full_package_validation.json "${screenshots[@]}"

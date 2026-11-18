@@ -70,7 +70,7 @@ def main():
     if len(packages)!=3 or any(p['model_sha256']!=expected for p in packages):raise ValueError('APK model evidence mismatch')
     screenshots=[]
     for file in sorted(emulator.rglob('*.png')):
-        if file.name not in ['01_analyze_home.png','02_credential_result.png','minified_credential_result.png','minified_ocr_review.png','minified_ocr_result.png']:continue
+        if file.name not in ['01_analyze_home.png','02_credential_result.png','minified_analyze_home.png','03_dark_editor.png','minified_credential_result.png','minified_ocr_review.png','minified_ocr_result.png']:continue
         target=OUT/('native_'+file.name)
         shutil.copy2(file,target)
         screenshots.append(dict(file=target.name,bytes=target.stat().st_size,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))

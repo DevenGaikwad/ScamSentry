@@ -5,8 +5,8 @@ This file does not replace applicable upstream licences. No endorsement is impli
 | Component | Attribution / terms | Distribution |
 |---|---|---|
 | Primary training corpus | Sandhya Mishra; Devpriya Soni (2022), Mendeley Data V1, DOI 10.17632/f45bkkt8pr.1. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Raw corpus excluded. Bundled trained model derives from minimized, normalized, deduplicated and grouped records; this attribution accompanies that artifact. |
-| Space Grotesk | Florian Karsten and contributors, SIL OFL 1.1; see assets/fonts/space-OFL.txt | Bundled heading font |
-| Inter | Rasmus Andersson and contributors, SIL OFL 1.1; see assets/fonts/inter-OFL.txt | Bundled body font |
+| Archivo | Archivo Project Authors, SIL OFL 1.1 | Bundled static Latin display font. See archivo-OFL.txt. |
+| Geist Mono | Geist Project Authors, SIL OFL 1.1 | Bundled static Latin metadata font. See geistmono-OFL.txt. |
 | AndroidX / Compose / Room / DataStore | Android Open Source Project, Apache 2.0 | Gradle-resolved app dependencies; preserve dependency notices |
 | Kotlin / Coroutines | JetBrains and contributors, Apache 2.0 | App/runtime dependencies |
 | ML Kit Latin text recognition | Google; [ML Kit terms](https://developers.google.com/ml-kit/terms) and applicable Google APIs/SDK terms | Bundled OCR library/model; not relicensed as MIT |
@@ -22,3 +22,5 @@ The original icon, drawing-code symbols, interface, fictional demo scenarios, pi
 Before any public release, inspect final merged dependencies and their notices, perform the recorded rights/privacy review, and manage a deliberate signing identity. This preview is not a claim of a completed legal audit of every underlying public message.
 
 The full Apache 2.0 licence is provided in `assets/licenses/Apache-2.0.txt` and bundled in the APK under `assets/licenses/`. Font licence texts are also bundled.
+
+Packaged fonts.json identifies the fixed instances and both upstream and packaged SHA-256 values.

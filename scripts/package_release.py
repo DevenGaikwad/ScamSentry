@@ -10,6 +10,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'ml/src'))
 from scamsentry_ml.release_validation import validate_release
+from release_identity import release_identity
 
 def inspect_archive(archive):
     with tempfile.TemporaryDirectory(prefix='scamsentry-archive-check-') as temporary:
@@ -35,7 +36,8 @@ def main():
     dirty=subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()
     if dirty:raise ValueError('Review and commit source before packaging')
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
-    source=out/'ScamSentry_0.2.0-preview_Source.zip'
+    version, code = release_identity()
+    source=out/f'ScamSentry_{version}_Source.zip'
     subprocess.run(['git','archive','--format=zip','--prefix=ScamSentry/','-o',str(source),commit],cwd=ROOT,check=True)
     validation=inspect_archive(source)
     (out/'archive_validation.json').write_text(json.dumps(validation,indent=2)+'\n')
@@ -43,18 +45,19 @@ def main():
         print(f'Source archive verified: {source}');return
     signing=json.loads((out/'signing_report.json').read_text())
     if signing.get('source_commit')!=commit:raise ValueError('APK signing report belongs to another source commit')
+    if (signing['version_name'], signing['version_code']) != (version, code):raise ValueError('APK release identity mismatch')
     artifacts=[]
     for artifact in signing['artifacts']:
         file=out/'install'/artifact['file']
         if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=artifact['sha256']:raise ValueError('Signed APK digest mismatch')
-        artifacts.append(dict(artifact,source_commit=commit,min_sdk=26,version_code=2,version_name='0.2.0-preview',channel='research-preview'))
+        artifacts.append(dict(artifact,source_commit=commit,min_sdk=26,version_code=code,version_name=version,channel='research-preview'))
     manifest=json.loads((ROOT/'ml/artifacts/bundle/manifest.json').read_text())
     inventory=dict(schema_version=2,source_commit=commit,model=manifest,artifacts=artifacts,production_signing=False,byte_identical_builds_claimed=False,scope='Research preview; physical phone benchmarks and owner-managed production signing remain separate gates')
     demo=out/'ScamSentry_Browser_Workflow.webm'
     if demo.is_file():inventory['browser_recording']=dict(file=demo.name,source_commit=commit,bytes=demo.stat().st_size,sha256=hashlib.sha256(demo.read_bytes()).hexdigest(),scope='Actual automated production-browser workflow with fictional fixtures; not a native-phone recording or narrated faculty demo')
     (out/'ARTIFACT_INVENTORY.json').write_text(json.dumps(inventory,indent=2)+'\n')
     (out/'SHA256SUMS.txt').write_text(''.join(a['sha256']+'  install/'+a['file']+'\n' for a in artifacts))
-    bundle=out/'ScamSentry_0.2.0_Research_Preview.zip'
+    bundle=out/('ScamSentry_'+version.removesuffix('-preview')+'_Research_Preview.zip')
     with zipfile.ZipFile(source) as z,zipfile.ZipFile(bundle,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as final:
         for info in z.infolist():final.writestr(info,z.read(info))
         for artifact in artifacts:final.write(out/'install'/artifact['file'],'ScamSentry/install/'+artifact['file'])

@@ -67,6 +67,25 @@ class WorkflowTest {
             compose.runOnUiThread { sharedActivity.intent=launchIntent }
         }
     }
+    @Test fun displayPreferencePersistsWithoutLosingDraft() {
+        onboard()
+        val input = "Fictional lab reminder: bring the project notes."
+        compose.onNodeWithContentDescription("Message to analyze").performTextInput(input)
+        compose.onNodeWithContentDescription("Settings and model information").performClick()
+        compose.onNodeWithText("Dark").performScrollTo().performClick()
+        compose.waitUntil(10_000) {
+            compose.onAllNodes(hasText("Dark") and isSelected()).fetchSemanticsNodes().isNotEmpty()
+        }
+        compose.activityRule.scenario.recreate()
+        compose.onNodeWithText("Dark").assertIsSelected()
+        compose.onNodeWithText("Analyze").performClick()
+        compose.onNodeWithText("A second look. Before you act.").assertExists()
+        compose.onNodeWithContentDescription("Message to analyze").assertTextContains(input)
+        screenshot("03_dark_editor.png")
+        compose.onNodeWithContentDescription("Settings and model information").performClick()
+        compose.onNodeWithText("System").performScrollTo().performClick()
+        compose.onNodeWithText("System").assertIsSelected()
+    }
     private fun screenshot(name: String) {
         compose.waitForIdle()
         val bitmap=requireNotNull(androidx.test.platform.app.InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()) { "Device screenshot unavailable" }

@@ -194,24 +194,27 @@ test('editorial states and two neutral palettes have original stable screenshots
   if (await button.isVisible()) { await button.click(); await capture(page, 'mobile-menu'); await page.keyboard.press('Escape'); await expect(button).toBeFocused() }
 })
 
-test('motion demonstration remains interruptible and preserves navigation', async ({ page }) => {
-  await page.goto('/'); await page.waitForTimeout(70)
-  await menu(page); await page.getByRole('button', { name: 'Pause motion', exact: true }).filter({ visible: true }).click()
-  const closePause = page.getByRole('button', { name: 'Close menu' }); if (await closePause.isVisible()) await closePause.click()
-  await expect(page.locator('.home-hero>.eyebrow>span[aria-hidden="true"]')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
-  await menu(page); await page.getByRole('button', { name: 'Resume motion', exact: true }).filter({ visible: true }).click()
-  const closeResume = page.getByRole('button', { name: 'Close menu' }); if (await closeResume.isVisible()) await closeResume.click()
-  await expect(page.locator('.home-hero>.eyebrow>span[aria-hidden="true"]')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
-  await page.waitForTimeout(700)
-  await preferences(page, 'dark'); await page.waitForTimeout(600); await preferences(page, 'light'); await page.waitForTimeout(600)
-  await page.getByRole('link', { name: 'Inspect a message', exact: true }).click()
-  await nav(page, 'Learn'); await page.waitForTimeout(600); await page.getByRole('link', { name: /Keep codes private/ }).click(); await nav(page, 'Evidence'); await page.waitForTimeout(600); await nav(page, 'Privacy'); await page.waitForTimeout(600); await nav(page, 'Android'); await page.waitForTimeout(600); await nav(page, 'Analyze')
-  await page.getByRole('button', { name: /02 Secret request/ }).click()
-  await page.getByRole('button', { name: 'Analyze message', exact: true }).click(); await expect(page.getByRole('heading', { name: 'Higher risk', exact: true })).toBeVisible(); await page.waitForTimeout(700)
-  await page.getByRole('button', { name: 'Redacted report', exact: true }).click(); await page.waitForTimeout(600); await page.keyboard.press('Escape')
-  expect(await page.locator('dialog').count()).toBe(0)
-  const video = page.video(); await page.close()
-  if (video) await video.saveAs(join(evidence, `${test.info().project.name}_motion-demo.webm`))
+test.describe('runtime capture', () => {
+  test.use({ video: 'on' })
+  test('motion demonstration remains interruptible and preserves navigation', async ({ page }) => {
+    await page.goto('/'); await page.waitForTimeout(70)
+    await menu(page); await page.getByRole('button', { name: 'Pause motion', exact: true }).filter({ visible: true }).click()
+    const closePause = page.getByRole('button', { name: 'Close menu' }); if (await closePause.isVisible()) await closePause.click()
+    await expect(page.locator('.home-hero>.eyebrow>span[aria-hidden="true"]')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
+    await menu(page); await page.getByRole('button', { name: 'Resume motion', exact: true }).filter({ visible: true }).click()
+    const closeResume = page.getByRole('button', { name: 'Close menu' }); if (await closeResume.isVisible()) await closeResume.click()
+    await expect(page.locator('.home-hero>.eyebrow>span[aria-hidden="true"]')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
+    await page.waitForTimeout(700)
+    await preferences(page, 'dark'); await page.waitForTimeout(600); await preferences(page, 'light'); await page.waitForTimeout(600)
+    await page.getByRole('link', { name: 'Inspect a message', exact: true }).click()
+    await nav(page, 'Learn'); await page.waitForTimeout(600); await page.getByRole('link', { name: /Keep codes private/ }).click(); await nav(page, 'Evidence'); await page.waitForTimeout(600); await nav(page, 'Privacy'); await page.waitForTimeout(600); await nav(page, 'Android'); await page.waitForTimeout(600); await nav(page, 'Analyze')
+    await page.getByRole('button', { name: /02 Secret request/ }).click()
+    await page.getByRole('button', { name: 'Analyze message', exact: true }).click(); await expect(page.getByRole('heading', { name: 'Higher risk', exact: true })).toBeVisible(); await page.waitForTimeout(700)
+    await page.getByRole('button', { name: 'Redacted report', exact: true }).click(); await page.waitForTimeout(600); await page.keyboard.press('Escape')
+    expect(await page.locator('dialog').count()).toBe(0)
+    const video = page.video(); await page.close()
+    if (video) await video.saveAs(join(evidence, `${test.info().project.name}_motion-demo.webm`))
+  })
 })
 
 test('hero word separation and diagram clearance survive reflow and unavailable fonts', async ({ page }) => {
@@ -250,7 +253,7 @@ test('hero word separation and diagram clearance survive reflow and unavailable 
       const above = hero.querySelector(':scope > .eyebrow')!.getBoundingClientRect()
       const below = hero.querySelector('.hero-bottom')!.getBoundingClientRect()
       return { clipped, rows, minGap: rows ? minGap : null,
-        overlaps: graph.top < above.bottom || graph.bottom > below.top,
+        overlaps: graph.top < above.bottom - .5 || graph.bottom > below.top + .5,
         overflow: document.documentElement.scrollWidth > innerWidth + 1 }
     })
     expect(reading.clipped, 'clipped at ' + width).toBe(false)

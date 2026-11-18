@@ -1,0 +1,49 @@
+{
+  "run": "robust_hybrid_20261118_01",
+  "selected_by_training_only_cv": null,
+  "fits": 12,
+  "partitions": {
+    "train": {
+      "records": 3444,
+      "groups": 3244,
+      "supports": {
+        "0": 2901,
+        "1": 244,
+        "2": 299
+      }
+    },
+    "development": {
+      "records": 861,
+      "groups": 813,
+      "supports": {
+        "0": 725,
+        "2": 75,
+        "1": 61
+      }
+    },
+    "calibration": {
+      "records": 574,
+      "groups": 541,
+      "supports": {
+        "0": 484,
+        "2": 50,
+        "1": 40
+      }
+    }
+  },
+  "historical_test_scored": false,
+  "development_independent": false,
+  "promotion": "RETAIN_SHIPPING_BASELINE",
+  "gates": {
+    "prospective_data": "BLOCKED",
+    "physical_device": "BLOCKED",
+    "new_model_runtime_parity": "NOT APPLICABLE"
+  },
+  "scope": "CPU Python host timings; no device or browser candidate performance claim",
+  "python": "3.12.14",
+  "sklearn": "1.8.0",
+  "numpy": "2.3.5",
+  "threads": 2,
+  "wall_seconds": 36.79383630500024,
+  "peak_rss_kib": 200448
+}

@@ -5,8 +5,8 @@ This file does not replace applicable upstream licences. No endorsement is impli
 | Component | Attribution / terms | Distribution |
 |---|---|---|
 | Primary training corpus | Sandhya Mishra; Devpriya Soni (2022), Mendeley Data V1, DOI 10.17632/f45bkkt8pr.1. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Raw corpus excluded. Bundled trained model derives from minimized, normalized, deduplicated and grouped records; this attribution accompanies that artifact. |
-| Space Grotesk | Florian Karsten and contributors, SIL OFL 1.1; see assets/fonts/space-OFL.txt | Bundled heading font |
-| Inter | Rasmus Andersson and contributors, SIL OFL 1.1; see assets/fonts/inter-OFL.txt | Bundled body font |
+| Archivo | Archivo Project Authors, SIL OFL 1.1 | Bundled web font and static Latin Android display instance |
+| Geist Mono | Geist Project Authors, SIL OFL 1.1 | Bundled web and static Latin Android metadata fonts |
 | AndroidX / Compose / Room / DataStore | Android Open Source Project, Apache 2.0 | Gradle-resolved app dependencies; preserve dependency notices |
 | Kotlin / Coroutines | JetBrains and contributors, Apache 2.0 | App/runtime dependencies |
 | ML Kit Latin text recognition | Google; [ML Kit terms](https://developers.google.com/ml-kit/terms) and applicable Google APIs/SDK terms | Bundled OCR library/model; not relicensed as MIT |
@@ -36,3 +36,5 @@ Browser OCR assets are not distributed in this release. Tesseract worker/WASM/la
 Archivo Project Authors / Omnibus-Type: SIL OFL 1.1, upstream `google/fonts` commit `6c70c829f09ea345d3590406693220ea35c6553f`. Geist Project Authors: SIL OFL 1.1, upstream `vercel/geist-font` commit `ef2597cfc42f4797676df105517ccc0a1cfa6569`. The exact upstream licences accompany the browser at `web/public/fonts/archivo-OFL.txt` and `geistmono-OFL.txt`. [File hashes, actual variable axes, versions and subsetting record](assets/evidence/v3/FONT_LEDGER.json). The supplied variable fonts are subsetted to the interface character range with original axis ranges retained. Archivo includes weight 100–900 and width 62–125; Geist Mono includes weight 100–900. No third-party font CDN is contacted at runtime.
 
 The original [Signal Aperture vectors and geometry notes](assets/brand/README.md), social card, diagrams and motion are project contributions. No reference-site assets, portraits, awards, company logos or metrics are copied. Archived Android fonts, icons and already-published APKs are unchanged. This v3 design brief is not an Android or product 3.0 release.
+
+The current [Android font ledger](android/app/src/main/assets/third_party/fonts.json) records the checked upstream TTF digests, instance axes and packaged digests. Android uses the platform sans-serif body font for broad script coverage. Previous native previews used Inter and Space Grotesk under the archived OFL notices in assets/fonts/.

@@ -1,0 +1,25 @@
+[
+  {
+    "family": "Archivo",
+    "input_ttf_sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053",
+    "axes_pinned": {
+      "wght": 900,
+      "wdth": 96
+    },
+    "file": "android/app/src/main/res/font/archivo_black.ttf",
+    "bytes": 34464,
+    "sha256": "f4560782541cd568eb667907bed6e4dbe7ec06d00c616843b30364d5728b1eca",
+    "tool": "fontTools static instance, Latin and interface punctuation subset"
+  },
+  {
+    "family": "GeistMono",
+    "input_ttf_sha256": "87c2aff9723544a9adaea19d92e42a33705c9723624801b6e0224c2206a6af0d",
+    "axes_pinned": {
+      "wght": 400
+    },
+    "file": "android/app/src/main/res/font/geist_mono.ttf",
+    "bytes": 25216,
+    "sha256": "683a60da6d08883f70c38edb3cffd88486eafa024d7612eeee35d8c29a45b09e",
+    "tool": "fontTools static instance, Latin and interface punctuation subset"
+  }
+]

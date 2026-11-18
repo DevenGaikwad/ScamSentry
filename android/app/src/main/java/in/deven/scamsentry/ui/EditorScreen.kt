@@ -1,47 +1,26 @@
 package `in`.deven.scamsentry.ui
 
-import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import androidx.activity.compose.BackHandler
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.PickVisualMediaRequest
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.*
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.*
-import androidx.compose.material3.windowsizeclass.*
-import android.app.Activity
 import androidx.compose.runtime.*
-import androidx.compose.ui.res.stringResource
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.*
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.navigation.compose.*
-import `in`.deven.scamsentry.*
+import `in`.deven.scamsentry.AnalysisViewModel
+import `in`.deven.scamsentry.EditorState
 import `in`.deven.scamsentry.R
-import `in`.deven.scamsentry.core.*
-import `in`.deven.scamsentry.data.*
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
+import `in`.deven.scamsentry.Stage
+import `in`.deven.scamsentry.core.TextContract
 
 private val samples=listOf(
     "Let's meet in the library after class. Please bring the project notes.",
@@ -51,23 +30,33 @@ private val samples=listOf(
     "पैसे पाठवा. हा फक्त काल्पनिक नमुना आहे."
 )
 
-@Composable internal fun EditorPage(state: EditorState,vm: AnalysisViewModel,onImage: ()->Unit,historyEnabled: Boolean) {
+@Composable internal fun EditorPage(state: EditorState,vm: AnalysisViewModel,onImage: ()->Unit,historyEnabled: Boolean, animate: Boolean = false) {
     val context=LocalContext.current
     val messageDescription=stringResource(R.string.message_description)
     var sampleMenu by remember { mutableStateOf(false) }
+    var editing by remember { mutableStateOf(false) }
+    val reviewing = state.stage == Stage.REVIEWING
+    val count = state.text.codePointCount(0, state.text.length)
     Page {
-        Tag(if(state.stage==Stage.REVIEWING) "SCREENSHOT REVIEW" else "LOCAL ANALYSIS",Studio.Purple)
-        Text(if(state.stage==Stage.REVIEWING) "Read it. Correct it.\nThen inspect it." else "A second look\nbefore you act.",style=MaterialTheme.typography.headlineLarge)
-        Text("Inspect suspicious messages and links with clear observations and an on-device research model.",color=Studio.Muted)
-        if(state.preview!=null && !state.preview.isRecycled) {
-            Image(state.preview.asImageBitmap(),contentDescription="Selected screenshot; inspect the extracted text below",modifier=Modifier.fillMaxWidth().heightIn(max=180.dp).clip(RoundedCornerShape(16.dp)))
+        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Tag(if (reviewing) "SCREENSHOT REVIEW" else "LOCAL INSPECTION")
+            Heading(if (reviewing) "Read it. Correct it. Then inspect it." else "A second look. Before you act.")
+            if (!reviewing) EditorialPipeline(animate && !editing && !sampleMenu)
+            Text(
+                if (reviewing) "Correct the extracted text below before choosing Analyze."
+                else "Inspect a message or link on this device.",
+                color = studio.muted,
+            )
         }
-        state.ocrWarning?.let { Panel { Text("Review extracted text",color=Studio.Amber,fontWeight=FontWeight.SemiBold); Text(it,color=Studio.Muted) } }
+        if(state.preview!=null && !state.preview.isRecycled) {
+            Image(state.preview.asImageBitmap(),contentDescription="Selected screenshot; inspect the extracted text below",modifier=Modifier.fillMaxWidth().heightIn(max = 160.dp))
+        }
+        state.ocrWarning?.let { Panel { Text("Review extracted text",color=studio.caution,fontWeight=FontWeight.SemiBold); Text(it,color=studio.muted) } }
         Panel {
             Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.SpaceBetween) { Text("Your message",style=MaterialTheme.typography.titleMedium); Tag(state.source) }
-            OutlinedTextField(value=state.text,onValueChange={ vm.edit(it) },placeholder={ Text("Paste a message or a link here…") },modifier=Modifier.fillMaxWidth().heightIn(min=170.dp).semantics { contentDescription=messageDescription },shape=RoundedCornerShape(12.dp),supportingText={ Text("${state.text.codePointCount(0,state.text.length)} / 4,000 characters • English research scope") },isError=state.text.codePointCount(0,state.text.length)>4000)
-            state.error?.let { Text(it,color=Studio.Red,modifier=Modifier.semantics { liveRegion=LiveRegionMode.Polite }) }
-            Primary(stringResource(R.string.analyze_message),state.text.isNotBlank() && state.text.codePointCount(0,state.text.length)<=4000,vm::analyze)
+            OutlinedTextField(value=state.text,onValueChange={ vm.edit(it) },placeholder={ Text("Paste a message or a link here…") },modifier=Modifier.fillMaxWidth().heightIn(min = 128.dp).onFocusChanged { editing = it.isFocused }.semantics { contentDescription = messageDescription }, shape = RectangleShape, supportingText = { Text("$count / 4,000 characters · English research scope") }, isError = count > TextContract.MAX_CODEPOINTS)
+            state.error?.let { Text(it,color=studio.danger,modifier=Modifier.semantics { liveRegion=LiveRegionMode.Polite }) }
+            Primary(stringResource(R.string.analyze_message),state.text.isNotBlank() && count <= TextContract.MAX_CODEPOINTS,vm::analyze)
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
                 OutlinedButton(onClick={
                     val clipboard=context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -77,9 +66,9 @@ private val samples=listOf(
                 TextButton(onClick=vm::clear,modifier=Modifier.heightIn(min=48.dp)) { Text(stringResource(R.string.clear)) }
             }
         }
-        OutlinedButton(onClick=onImage,modifier=Modifier.fillMaxWidth().heightIn(min=56.dp),shape=RoundedCornerShape(14.dp)) { Mark(kind="image"); Spacer(Modifier.width(12.dp)); Text(stringResource(if(state.stage==Stage.REVIEWING) R.string.replace_screenshot else R.string.choose_screenshot)) }
+        OutlinedButton(onClick=onImage,modifier=Modifier.fillMaxWidth().heightIn(min=56.dp),shape=RectangleShape) { Mark(kind="image"); Spacer(Modifier.width(12.dp)); Text(stringResource(if(state.stage==Stage.REVIEWING) R.string.replace_screenshot else R.string.choose_screenshot)) }
         Box { TextButton(onClick={ sampleMenu=true },modifier=Modifier.heightIn(min=48.dp)) { Text("Try a fictional example") }; DropdownMenu(expanded=sampleMenu,onDismissRequest={ sampleMenu=false }) { listOf("Class coordination","Credential request","Promotional offer","Legitimate urgency","Unsupported language").forEachIndexed { i,label -> DropdownMenuItem(text={ Text(label) },onClick={ vm.edit(samples[i],"Fictional demo");sampleMenu=false }) } } }
-        Row(horizontalArrangement=Arrangement.spacedBy(12.dp),verticalAlignment=Alignment.CenterVertically) { Mark(color=Studio.Green); Text(if(historyEnabled) "History is enabled. Saving a redacted summary is still manual." else "You choose what to inspect. History is off.",color=Studio.Muted,style=MaterialTheme.typography.bodyMedium) }
+        Row(horizontalArrangement=Arrangement.spacedBy(12.dp),verticalAlignment=Alignment.CenterVertically) { Text(if(historyEnabled) "History is enabled. Saving a redacted summary is still manual." else "You choose what to inspect. History is off.",color=studio.muted,style=MaterialTheme.typography.bodyMedium) }
     }
 }
 

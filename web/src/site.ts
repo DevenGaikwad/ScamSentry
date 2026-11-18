@@ -10,7 +10,7 @@ export const site = {
   origin: 'https://scamsentry-inspect.vercel.app',
   repository: 'https://github.com/DevenGaikwad/ScamSentry',
   version: '0.4.0',
-  release: 'https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview',
+  release: 'https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.3.0-preview',
 } as const
 export const riskCopy: Record<Risk, { title: string; description: string; symbol: string }> = {
   higher: { title: 'Higher risk', description: 'There are indicators that deserve careful independent verification.', symbol: '!' },
@@ -82,10 +82,4 @@ export const articles = [
     explanation: 'The first is a promotional format. The second includes a request for a secret. Read the concrete observation instead of treating a broad class as a security verdict.',
     steps: ['Distinguish an advertisement from a request for credentials or money.', 'Check any transaction separately, including the recipient and terms.', 'Use the tool as a second look while retaining your own judgment.'],
   },
-] as const
-
-export const androidDownloads = [
-  { abi: 'arm64-v8a', label: 'Compatible phones', bytes: 15747556, digest: 'e9d49467d868f93fe10e52e2b3fa55d7b45476655a3cc8e5df40cd86ebc8dc6e' },
-  { abi: 'x86_64', label: 'Matching emulators', bytes: 16308699, digest: 'e82d0ea9b3fac83359b3bea1101c3b6737a17f92b883d105d8a7bc5a5bba4926' },
-  { abi: 'universal', label: 'Larger ABI fallback', bytes: 45833462, digest: '7531923ec1fa01ac9840d79871573424454e9501b0220506cb7b0bf07f06729c' },
 ] as const

@@ -8,12 +8,15 @@ import os
 import subprocess
 import zipfile
 
+from release_identity import release_identity
+
 ROOT=Path(__file__).resolve().parents[1]
 def inspect(path,sdk):
     aapt=sdk/'build-tools/36.0.0'/('aapt2.exe' if os.name=='nt' else 'aapt2')
     badging=subprocess.check_output([str(aapt),'dump','badging',str(path)],text=True)
     permissions=subprocess.check_output([str(aapt),'dump','permissions',str(path)],text=True)
-    if not all(s in badging for s in ["versionCode='2'","versionName='0.2.0-preview'","minSdkVersion:'26'","targetSdkVersion:'36'"]):raise ValueError('APK manifest version/API mismatch')
+    version, code = release_identity()
+    if not all(s in badging for s in ["package: name='in.deven.scamsentry'",f"versionCode='{code}'",f"versionName='{version}'","minSdkVersion:'26'","targetSdkVersion:'36'"]):raise ValueError('APK manifest version/API mismatch')
     if any(s in permissions for s in ['android.permission.INTERNET','android.permission.READ_SMS','android.permission.READ_CONTACTS','android.permission.CAMERA']):raise ValueError('Unexpected sensitive/network permission')
     with zipfile.ZipFile(path) as z:
         models=[n for n in z.namelist() if n=='assets/model/model.json']
@@ -33,6 +36,15 @@ def inspect(path,sdk):
                     for i in range(count):
                         if struct.unpack_from(endian+'I',raw,off+i*entsize)[0]==1:align.append(struct.unpack_from(endian+'I',raw,off+i*entsize+28)[0])
                 libraries.append(dict(file=name,elf_bits=64 if bits==2 else 32,load_alignment=align,supports_16k_load_alignment=all(a>=16384 for a in align)))
+        removed = {"android.permission.READ_MEDIA_IMAGES", "android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}
+        if any(permission in permissions for permission in removed):raise ValueError("Unexpected broad storage access")
+        for notice in ("archivo-OFL.txt", "geistmono-OFL.txt", "fonts.json"):
+            if f"assets/third_party/{notice}" not in z.namelist():raise ValueError("Missing font provenance")
+        for font in ("archivo_black", "geist_mono"):
+            if not any(name.endswith(f"/{font}.ttf") for name in z.namelist()):
+                # R8/resource optimization can rename the compiled font path. Inspect the resource table too.
+                resources = subprocess.check_output([str(aapt), "dump", "resources", str(path)], text=True)
+                if f"font/{font}" not in resources:raise ValueError("Missing compiled editorial font")
         model_sha=hashlib.sha256(z.read(models[0])).hexdigest()
         if model_sha!=hashlib.sha256((ROOT/'ml/artifacts/bundle/model.json').read_bytes()).hexdigest():raise ValueError('Packaged model mismatch')
         if any(x['elf_bits']==64 and not x['supports_16k_load_alignment'] for x in libraries):raise ValueError('64-bit ELF load alignment below 16 KB')
@@ -41,6 +53,7 @@ def inspect(path,sdk):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--sdk',type=Path,default=Path(os.environ.get('ANDROID_HOME','/missing-sdk')));p.add_argument('--input',type=Path,default=Path('release/install'));p.add_argument('--output',type=Path,default=Path('release/apk_inspection.json'));a=p.parse_args()
     results=[inspect(p,a.sdk) for p in sorted(a.input.glob('*.apk'))]
-    if not results:raise ValueError('No APKs inspected')
+    if len(results)!=3 or {tuple(item['abis']) for item in results}!={('arm64-v8a',),('x86_64',),('arm64-v8a','x86_64')}:
+        raise ValueError('Expected arm64, x86_64 and universal variants')
     a.output.write_text(json.dumps(results,indent=2)+'\n');print(f'Inspected {len(results)} actual APKs')
 if __name__=='__main__':main()
