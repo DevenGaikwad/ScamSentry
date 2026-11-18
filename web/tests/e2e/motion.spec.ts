@@ -129,7 +129,7 @@ test('orthogonal hero packets move, stop offscreen and fall back to the same sta
   expect(await graph.locator('.pipeline-wires line').evaluateAll(lines => lines.every(line =>
     (line.getAttribute('x1') === line.getAttribute('x2')) !==
     (line.getAttribute('y1') === line.getAttribute('y2'))))).toBe(true)
-  await expect(page.locator('.home-hero > .eyebrow')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
+  await expect(page.locator('.home-hero > .eyebrow > span[aria-hidden="true"]')).toHaveText('SCAMSENTRY / A PERSONAL RESEARCH PREVIEW')
   await page.evaluate(async () => {
     const elements = document.querySelectorAll('.hero-mask > span, .theme-wipe')
     await Promise.allSettled([...elements].flatMap(node => node.getAnimations().map(animation => animation.finished)))
