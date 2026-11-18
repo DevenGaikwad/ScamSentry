@@ -9,6 +9,8 @@ for (const [path, expected] of Object.entries(checkpoint.frozen_files)) {
 const prompt = await readFile('../docs/FRONTEND_SPEC_V3.md')
 assert.equal(createHash('sha256').update(prompt).digest('hex'), checkpoint.prompt_sha256)
 assert.equal(createHash('sha256').update(prompt.subarray(0, checkpoint.preserved_prefix_bytes)).digest('hex'), checkpoint.prefix_sha256)
+const followUp = await readFile('../docs/FRONTEND_MOTION_SPEC_V3_1.md')
+assert.equal(createHash('sha256').update(followUp).digest('hex'), 'b23416c8085f8a9b97f78343f73f13dd06bdc211d43072194e1adbb876f4ded6', 'Motion specification must remain verbatim')
 const fonts = JSON.parse(await readFile('../assets/evidence/v3/FONT_LEDGER.json', 'utf8'))
 for (const font of fonts) {
   const bytes = await readFile(`../${font.file}`)

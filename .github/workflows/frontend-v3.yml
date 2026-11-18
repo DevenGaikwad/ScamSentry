@@ -68,6 +68,7 @@ jobs:
             web/unit-results/
             web/playwright-report/
             assets/evidence/v3/browser/
+            assets/evidence/v3/motion/browser/
             assets/evidence/v2/web_*.png
             assets/evidence/v2/web_*.json
             assets/evidence/v2/web_demo_*.webm
