@@ -1,0 +1,1095 @@
+{
+  "source_commit": "eab21504af687212438be2405301c9d66eae9545",
+  "browser": "159.0",
+  "platform": "linux",
+  "viewport": "1363x936, DPR 1",
+  "network": "identical local gzip-enabled static servers, no CPU or network throttling",
+  "samples": "3 cold fresh contexts and 3 warm navigations per variant",
+  "interaction": "Learn navigation; event duration samples are lab observations, not field INP",
+  "limitation": "Firefox may not expose LCP, layout-shift or event timing; unsupported metrics remain zero and are not a passing field claim",
+  "values": [
+    {
+      "variant": "baseline-526f6c0",
+      "repeat": 0,
+      "cache": "cold",
+      "lcp": 106,
+      "cls": 0,
+      "events": [
+        24,
+        24
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4174/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 146,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -3,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "secureConnectionStart": 0,
+        "requestStart": -1,
+        "finalResponseHeadersStart": 1,
+        "firstInterimResponseStart": 0,
+        "responseStart": 1,
+        "responseEnd": 1,
+        "transferSize": 717,
+        "encodedBodySize": 417,
+        "decodedBodySize": 648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 14,
+        "domContentLoadedEventStart": 75,
+        "domContentLoadedEventEnd": 77,
+        "domComplete": 145,
+        "loadEventStart": 145,
+        "loadEventEnd": 146,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/assets/index-BWOWegka.js",
+          "transfer": 77587,
+          "encoded": 77287,
+          "duration": 26
+        },
+        {
+          "path": "/assets/index-BiMPz5fP.css",
+          "transfer": 5888,
+          "encoded": 5588,
+          "duration": 17
+        },
+        {
+          "path": "/shield.svg",
+          "transfer": 523,
+          "encoded": 223,
+          "duration": 74
+        },
+        {
+          "path": "/fonts/inter.ttf",
+          "transfer": 876876,
+          "encoded": 876576,
+          "duration": 37
+        },
+        {
+          "path": "/fonts/space_grotesk.ttf",
+          "transfer": 136976,
+          "encoded": 136676,
+          "duration": 4
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "baseline-526f6c0",
+      "repeat": 0,
+      "cache": "warm",
+      "lcp": 71,
+      "cls": 0,
+      "events": [
+        24,
+        24
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4174/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 61,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "secureConnectionStart": 0,
+        "requestStart": 1,
+        "finalResponseHeadersStart": 2,
+        "firstInterimResponseStart": 0,
+        "responseStart": 2,
+        "responseEnd": 2,
+        "transferSize": 717,
+        "encodedBodySize": 417,
+        "decodedBodySize": 648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 7,
+        "unloadEventEnd": 7,
+        "domInteractive": 14,
+        "domContentLoadedEventStart": 50,
+        "domContentLoadedEventEnd": 50,
+        "domComplete": 61,
+        "loadEventStart": 61,
+        "loadEventEnd": 61,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/assets/index-BiMPz5fP.css",
+          "transfer": 0,
+          "encoded": 5588,
+          "duration": 0
+        },
+        {
+          "path": "/assets/index-BWOWegka.js",
+          "transfer": 0,
+          "encoded": 77287,
+          "duration": 13
+        },
+        {
+          "path": "/shield.svg",
+          "transfer": 0,
+          "encoded": 223,
+          "duration": 38
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "baseline-526f6c0",
+      "repeat": 1,
+      "cache": "cold",
+      "lcp": 105,
+      "cls": 0,
+      "events": [
+        16,
+        16
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4174/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 165,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": 4,
+        "domainLookupEnd": 4,
+        "connectStart": 4,
+        "connectEnd": 5,
+        "secureConnectionStart": 0,
+        "requestStart": 5,
+        "finalResponseHeadersStart": 6,
+        "firstInterimResponseStart": 0,
+        "responseStart": 6,
+        "responseEnd": 6,
+        "transferSize": 717,
+        "encodedBodySize": 417,
+        "decodedBodySize": 648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 18,
+        "domContentLoadedEventStart": 79,
+        "domContentLoadedEventEnd": 80,
+        "domComplete": 165,
+        "loadEventStart": 165,
+        "loadEventEnd": 165,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/assets/index-BWOWegka.js",
+          "transfer": 77587,
+          "encoded": 77287,
+          "duration": 33
+        },
+        {
+          "path": "/assets/index-BiMPz5fP.css",
+          "transfer": 5888,
+          "encoded": 5588,
+          "duration": 34
+        },
+        {
+          "path": "/shield.svg",
+          "transfer": 523,
+          "encoded": 223,
+          "duration": 82
+        },
+        {
+          "path": "/fonts/inter.ttf",
+          "transfer": 876876,
+          "encoded": 876576,
+          "duration": 33
+        },
+        {
+          "path": "/fonts/space_grotesk.ttf",
+          "transfer": 136976,
+          "encoded": 136676,
+          "duration": 2
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "baseline-526f6c0",
+      "repeat": 1,
+      "cache": "warm",
+      "lcp": 67,
+      "cls": 0,
+      "events": [],
+      "navigation": {
+        "name": "http://127.0.0.1:4174/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 63,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "secureConnectionStart": 0,
+        "requestStart": 1,
+        "finalResponseHeadersStart": 2,
+        "firstInterimResponseStart": 0,
+        "responseStart": 2,
+        "responseEnd": 2,
+        "transferSize": 717,
+        "encodedBodySize": 417,
+        "decodedBodySize": 648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 7,
+        "unloadEventEnd": 7,
+        "domInteractive": 15,
+        "domContentLoadedEventStart": 52,
+        "domContentLoadedEventEnd": 52,
+        "domComplete": 63,
+        "loadEventStart": 63,
+        "loadEventEnd": 63,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/assets/index-BiMPz5fP.css",
+          "transfer": 0,
+          "encoded": 5588,
+          "duration": 0
+        },
+        {
+          "path": "/assets/index-BWOWegka.js",
+          "transfer": 0,
+          "encoded": 77287,
+          "duration": 14
+        },
+        {
+          "path": "/shield.svg",
+          "transfer": 0,
+          "encoded": 223,
+          "duration": 40
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "baseline-526f6c0",
+      "repeat": 2,
+      "cache": "cold",
+      "lcp": 137,
+      "cls": 0,
+      "events": [
+        24,
+        24
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4174/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 152,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 1,
+        "domainLookupEnd": 1,
+        "connectStart": 1,
+        "connectEnd": 2,
+        "secureConnectionStart": 0,
+        "requestStart": 2,
+        "finalResponseHeadersStart": 3,
+        "firstInterimResponseStart": 0,
+        "responseStart": 3,
+        "responseEnd": 3,
+        "transferSize": 717,
+        "encodedBodySize": 417,
+        "decodedBodySize": 648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 20,
+        "domContentLoadedEventStart": 85,
+        "domContentLoadedEventEnd": 86,
+        "domComplete": 152,
+        "loadEventStart": 152,
+        "loadEventEnd": 152,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/assets/index-BWOWegka.js",
+          "transfer": 77587,
+          "encoded": 77287,
+          "duration": 26
+        },
+        {
+          "path": "/assets/index-BiMPz5fP.css",
+          "transfer": 5888,
+          "encoded": 5588,
+          "duration": 28
+        },
+        {
+          "path": "/shield.svg",
+          "transfer": 523,
+          "encoded": 223,
+          "duration": 83
+        },
+        {
+          "path": "/fonts/inter.ttf",
+          "transfer": 876876,
+          "encoded": 876576,
+          "duration": 35
+        },
+        {
+          "path": "/fonts/space_grotesk.ttf",
+          "transfer": 136976,
+          "encoded": 136676,
+          "duration": 3
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "baseline-526f6c0",
+      "repeat": 2,
+      "cache": "warm",
+      "lcp": 66,
+      "cls": 0,
+      "events": [],
+      "navigation": {
+        "name": "http://127.0.0.1:4174/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 63,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "secureConnectionStart": 0,
+        "requestStart": 1,
+        "finalResponseHeadersStart": 1,
+        "firstInterimResponseStart": 0,
+        "responseStart": 1,
+        "responseEnd": 1,
+        "transferSize": 717,
+        "encodedBodySize": 417,
+        "decodedBodySize": 648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 7,
+        "unloadEventEnd": 7,
+        "domInteractive": 13,
+        "domContentLoadedEventStart": 52,
+        "domContentLoadedEventEnd": 53,
+        "domComplete": 63,
+        "loadEventStart": 63,
+        "loadEventEnd": 63,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/assets/index-BiMPz5fP.css",
+          "transfer": 0,
+          "encoded": 5588,
+          "duration": 0
+        },
+        {
+          "path": "/assets/index-BWOWegka.js",
+          "transfer": 0,
+          "encoded": 77287,
+          "duration": 12
+        },
+        {
+          "path": "/shield.svg",
+          "transfer": 0,
+          "encoded": 223,
+          "duration": 39
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "editorial",
+      "repeat": 0,
+      "cache": "cold",
+      "lcp": 1398,
+      "cls": 0,
+      "events": [
+        24,
+        24
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 144,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -4,
+        "domainLookupStart": 1,
+        "domainLookupEnd": 1,
+        "connectStart": 1,
+        "connectEnd": 1,
+        "secureConnectionStart": 0,
+        "requestStart": 1,
+        "finalResponseHeadersStart": 3,
+        "firstInterimResponseStart": 0,
+        "responseStart": 3,
+        "responseEnd": 3,
+        "transferSize": 994,
+        "encodedBodySize": 694,
+        "decodedBodySize": 1648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 47,
+        "domContentLoadedEventStart": 90,
+        "domContentLoadedEventEnd": 92,
+        "domComplete": 144,
+        "loadEventStart": 144,
+        "loadEventEnd": 144,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/preferences-init.js",
+          "transfer": 596,
+          "encoded": 296,
+          "duration": 24
+        },
+        {
+          "path": "/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+          "transfer": 89452,
+          "encoded": 89152,
+          "duration": 25
+        },
+        {
+          "path": "/assets/index-CE0KFv-k.js",
+          "transfer": 88215,
+          "encoded": 87915,
+          "duration": 36
+        },
+        {
+          "path": "/assets/index-B2-FUewJ.css",
+          "transfer": 8213,
+          "encoded": 7913,
+          "duration": 35
+        },
+        {
+          "path": "/favicon.svg",
+          "transfer": 537,
+          "encoded": 237,
+          "duration": 54
+        },
+        {
+          "path": "/fonts/geistmono-latin-variable.0ec1b9a7c184.woff2",
+          "transfer": 35068,
+          "encoded": 34768,
+          "duration": 1
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "editorial",
+      "repeat": 0,
+      "cache": "warm",
+      "lcp": 1341,
+      "cls": 0,
+      "events": [],
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 89,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "secureConnectionStart": 0,
+        "requestStart": 1,
+        "finalResponseHeadersStart": 2,
+        "firstInterimResponseStart": 0,
+        "responseStart": 2,
+        "responseEnd": 2,
+        "transferSize": 994,
+        "encodedBodySize": 694,
+        "decodedBodySize": 1648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 10,
+        "unloadEventEnd": 11,
+        "domInteractive": 34,
+        "domContentLoadedEventStart": 78,
+        "domContentLoadedEventEnd": 79,
+        "domComplete": 89,
+        "loadEventStart": 89,
+        "loadEventEnd": 89,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/preferences-init.js",
+          "transfer": 0,
+          "encoded": 296,
+          "duration": 19
+        },
+        {
+          "path": "/assets/index-B2-FUewJ.css",
+          "transfer": 0,
+          "encoded": 7913,
+          "duration": 0
+        },
+        {
+          "path": "/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+          "transfer": 0,
+          "encoded": 89152,
+          "duration": 19
+        },
+        {
+          "path": "/assets/index-CE0KFv-k.js",
+          "transfer": 0,
+          "encoded": 87915,
+          "duration": 19
+        },
+        {
+          "path": "/favicon.svg",
+          "transfer": 0,
+          "encoded": 237,
+          "duration": 44
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "editorial",
+      "repeat": 1,
+      "cache": "cold",
+      "lcp": 1402,
+      "cls": 0,
+      "events": [
+        24,
+        24,
+        16,
+        16,
+        16
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 142,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": 1,
+        "domainLookupEnd": 1,
+        "connectStart": 2,
+        "connectEnd": 2,
+        "secureConnectionStart": 0,
+        "requestStart": 2,
+        "finalResponseHeadersStart": 3,
+        "firstInterimResponseStart": 0,
+        "responseStart": 3,
+        "responseEnd": 3,
+        "transferSize": 994,
+        "encodedBodySize": 694,
+        "decodedBodySize": 1648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 44,
+        "domContentLoadedEventStart": 85,
+        "domContentLoadedEventEnd": 87,
+        "domComplete": 142,
+        "loadEventStart": 142,
+        "loadEventEnd": 142,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/preferences-init.js",
+          "transfer": 596,
+          "encoded": 296,
+          "duration": 21
+        },
+        {
+          "path": "/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+          "transfer": 89452,
+          "encoded": 89152,
+          "duration": 21
+        },
+        {
+          "path": "/assets/index-B2-FUewJ.css",
+          "transfer": 8213,
+          "encoded": 7913,
+          "duration": 35
+        },
+        {
+          "path": "/assets/index-CE0KFv-k.js",
+          "transfer": 88215,
+          "encoded": 87915,
+          "duration": 33
+        },
+        {
+          "path": "/favicon.svg",
+          "transfer": 537,
+          "encoded": 237,
+          "duration": 57
+        },
+        {
+          "path": "/fonts/geistmono-latin-variable.0ec1b9a7c184.woff2",
+          "transfer": 35068,
+          "encoded": 34768,
+          "duration": 2
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "editorial",
+      "repeat": 1,
+      "cache": "warm",
+      "lcp": 1312,
+      "cls": 0,
+      "events": [],
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 76,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "secureConnectionStart": 0,
+        "requestStart": 1,
+        "finalResponseHeadersStart": 1,
+        "firstInterimResponseStart": 0,
+        "responseStart": 1,
+        "responseEnd": 1,
+        "transferSize": 994,
+        "encodedBodySize": 694,
+        "decodedBodySize": 1648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 7,
+        "unloadEventEnd": 7,
+        "domInteractive": 25,
+        "domContentLoadedEventStart": 63,
+        "domContentLoadedEventEnd": 64,
+        "domComplete": 76,
+        "loadEventStart": 76,
+        "loadEventEnd": 76,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/assets/index-B2-FUewJ.css",
+          "transfer": 0,
+          "encoded": 7913,
+          "duration": 0
+        },
+        {
+          "path": "/preferences-init.js",
+          "transfer": 0,
+          "encoded": 296,
+          "duration": 13
+        },
+        {
+          "path": "/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+          "transfer": 0,
+          "encoded": 89152,
+          "duration": 14
+        },
+        {
+          "path": "/assets/index-CE0KFv-k.js",
+          "transfer": 0,
+          "encoded": 87915,
+          "duration": 15
+        },
+        {
+          "path": "/favicon.svg",
+          "transfer": 0,
+          "encoded": 237,
+          "duration": 39
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "editorial",
+      "repeat": 2,
+      "cache": "cold",
+      "lcp": 1430,
+      "cls": 0,
+      "events": [
+        24,
+        24,
+        16,
+        16,
+        16
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 137,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": 1,
+        "domainLookupEnd": 1,
+        "connectStart": 1,
+        "connectEnd": 2,
+        "secureConnectionStart": 0,
+        "requestStart": 2,
+        "finalResponseHeadersStart": 3,
+        "firstInterimResponseStart": 0,
+        "responseStart": 3,
+        "responseEnd": 3,
+        "transferSize": 994,
+        "encodedBodySize": 694,
+        "decodedBodySize": 1648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 42,
+        "domContentLoadedEventStart": 79,
+        "domContentLoadedEventEnd": 80,
+        "domComplete": 137,
+        "loadEventStart": 137,
+        "loadEventEnd": 137,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/preferences-init.js",
+          "transfer": 596,
+          "encoded": 296,
+          "duration": 19
+        },
+        {
+          "path": "/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+          "transfer": 89452,
+          "encoded": 89152,
+          "duration": 18
+        },
+        {
+          "path": "/assets/index-B2-FUewJ.css",
+          "transfer": 8213,
+          "encoded": 7913,
+          "duration": 28
+        },
+        {
+          "path": "/assets/index-CE0KFv-k.js",
+          "transfer": 88215,
+          "encoded": 87915,
+          "duration": 27
+        },
+        {
+          "path": "/favicon.svg",
+          "transfer": 537,
+          "encoded": 237,
+          "duration": 46
+        },
+        {
+          "path": "/fonts/geistmono-latin-variable.0ec1b9a7c184.woff2",
+          "transfer": 35068,
+          "encoded": 34768,
+          "duration": 4
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    },
+    {
+      "variant": "editorial",
+      "repeat": 2,
+      "cache": "warm",
+      "lcp": 1336,
+      "cls": 0,
+      "events": [
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 73,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": -1,
+        "domainLookupStart": -1,
+        "domainLookupEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "secureConnectionStart": 0,
+        "requestStart": 1,
+        "finalResponseHeadersStart": 2,
+        "firstInterimResponseStart": 0,
+        "responseStart": 2,
+        "responseEnd": 2,
+        "transferSize": 994,
+        "encodedBodySize": 694,
+        "decodedBodySize": 1648,
+        "responseStatus": 200,
+        "contentType": "text/html",
+        "serverTiming": [],
+        "unloadEventStart": 6,
+        "unloadEventEnd": 7,
+        "domInteractive": 26,
+        "domContentLoadedEventStart": 60,
+        "domContentLoadedEventEnd": 61,
+        "domComplete": 73,
+        "loadEventStart": 73,
+        "loadEventEnd": 73,
+        "type": "navigate",
+        "redirectCount": 0
+      },
+      "resources": [
+        {
+          "path": "/preferences-init.js",
+          "transfer": 0,
+          "encoded": 296,
+          "duration": 13
+        },
+        {
+          "path": "/assets/index-B2-FUewJ.css",
+          "transfer": 0,
+          "encoded": 7913,
+          "duration": 0
+        },
+        {
+          "path": "/fonts/archivo-latin-variable.67c657ffeb2b.woff2",
+          "transfer": 0,
+          "encoded": 89152,
+          "duration": 13
+        },
+        {
+          "path": "/assets/index-CE0KFv-k.js",
+          "transfer": 0,
+          "encoded": 87915,
+          "duration": 13
+        },
+        {
+          "path": "/favicon.svg",
+          "transfer": 0,
+          "encoded": 237,
+          "duration": 38
+        }
+      ],
+      "supported": [
+        "event",
+        "first-input",
+        "largest-contentful-paint",
+        "mark",
+        "measure",
+        "navigation",
+        "paint",
+        "resource"
+      ]
+    }
+  ]
+}

@@ -4,15 +4,29 @@
 
 A native Android app and local-browser companion for inspecting suspicious messages and links. English message resemblance, transparent observations, actual destination hosts and uncertainty stay separate. Inputs are reviewed locally; no inbox access, message-upload service or automatic link opening is required.
 
-[Open live browser app](https://scamsentry-bay.vercel.app/) · [Verification workflow](https://github.com/DevenGaikwad/ScamSentry/actions) · [Research preview releases](https://github.com/DevenGaikwad/ScamSentry/releases) · [Model card](docs/MODEL_CARD.md) · [Privacy](docs/PRIVACY.md) · [Browser privacy](docs/WEB_PRIVACY.md)
+[Open live browser app](https://scamsentry-inspect.vercel.app/) · [Verification workflow](https://github.com/DevenGaikwad/ScamSentry/actions) · [Research preview releases](https://github.com/DevenGaikwad/ScamSentry/releases) · [Model card](docs/MODEL_CARD.md) · [Privacy](docs/PRIVACY.md) · [Browser privacy](docs/WEB_PRIVACY.md)
 
 ## Live browser deployment
 
-Open **[ScamSentry](https://scamsentry-bay.vercel.app/)**. Text and URL analysis run in a local worker after the public app/model assets download. No account is required to use the tool. Native Android provides screenshot OCR; browser OCR/PWA remain outside this preview.
+Open **[ScamSentry](https://scamsentry-inspect.vercel.app/)**. Text and URL analysis run in a local worker after the public app/model assets download. No account is required to use the tool. Native Android provides screenshot OCR; browser OCR/PWA remain outside this preview.
 
-The production deployment serves the exact browser output from source `bc227ba` / [CI run 44012744040](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040). Unauthenticated GETs returned 200 and SHA-256 matched every served file. [Original HTTP verification](assets/evidence/v2/hosting/PUBLIC_HTTP_VERIFICATION.json) · [Deployment and live smoke checks](assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json).
+The editorial browser redesign is merged in `0e248cc766d58bc97c7dc504bbd03b21b7aa8b57` (the same tree tested as `f2b44da`). Production serves the exact output of [CI run 44158226922](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44158226922). Shareable pages, neutral light/dark themes, reduced-motion controls, a custom SS monogram and complete creator credits are implemented. The older `scamsentry-bay` hostname redirects to `scamsentry-inspect`, including deep paths.
 
-![Actual live Vercel browser app](assets/evidence/v2/hosting/live_home_20261117.jpg)
+[Frontend verification](docs/FRONTEND_VALIDATION.md) · [Public HTTP verification](assets/evidence/v3/final/PUBLIC_HTTP_VERIFICATION.json) · [Capture provenance](assets/evidence/v3/final/PROVENANCE.json)
+
+| Editorial home | Analysis, dark theme |
+|---|---|
+| ![Actual browser editorial home](assets/evidence/v3/final/desktop-chromium_light-home.png) | ![Actual fictional secret-request result](assets/evidence/v3/final/desktop-chromium_dark-secret-result.png) |
+
+<details><summary>Evidence page, mobile home and motion recording</summary>
+
+![Accessible historical model evidence](assets/evidence/v3/final/desktop-chromium_light-evidence.png)
+
+![Actual mobile homepage](assets/evidence/v3/final/mobile-chromium_light-home.png)
+
+[Original desktop motion capture](assets/evidence/v3/final/desktop-chromium_motion-demo.webm). These are v3 baseline captures, not acceptance evidence for the subsequent v3.1 motion work.
+
+</details>
 
 ## Install the research preview
 
@@ -20,7 +34,7 @@ The production deployment serves the exact browser output from source `bc227ba` 
 
 [Installation, exact artifacts and checksums](docs/RELEASE_HANDOFF.md) · [APK inventory](assets/evidence/v2/final/ARTIFACT_INVENTORY.json) · [Download SHA-256](assets/evidence/v2/final/DOWNLOAD_SHA256SUMS.txt)
 
-## Executed verification
+## Executed Android / research release verification
 
 [Final workflow run 44012744040](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040) passed for immutable release source [bc227ba](https://github.com/DevenGaikwad/ScamSentry/commit/bc227ba189796c1167c3cd21c3a7ec973156ccfd). Later evidence/documentation commits preserve the same application source. [Observed machine-readable report](assets/evidence/v2/final/RELEASE_VERIFICATION.json) · [Current gates](docs/GATE_REPORT.json).
 
@@ -39,7 +53,7 @@ The production deployment serves the exact browser output from source `bc227ba` 
 
 The emulator had airplane mode enabled, Wi-Fi service disabled and no default network before/after execution. The minified target is the R8/resource-shrunk, profileable benchmark variant with debug signing; it uses an external UI driver without application test-only keep rules. This is functional emulator evidence. Physical-phone latency, accessibility, distributed-release first-use offline operation and 16 KB page-size runtime remain separate open gates.
 
-## Actual runtime screenshots
+## Android / earlier browser release screenshots
 
 Original fictional-content captures from that exact workflow are retained with [provenance and digests](assets/evidence/v2/final/SNAPSHOT_PROVENANCE.json). They are actual native/browser execution, not design mockups. [Saved-capture visual review](assets/evidence/v2/capture_review_20261117.json) records the observed layouts and a corrected filename mismatch. The original `native_02_credential_result.png` records the processing state and remains preserved in the immutable evidence.
 
@@ -106,7 +120,7 @@ npm run preview
 
 Open the displayed localhost URL. The model downloads as a public static asset and runs in a dedicated worker. Draft input remains in memory. [Architecture](docs/WEB_ARCHITECTURE.md) · [Deployment](docs/WEB_DEPLOYMENT.md).
 
-The [live browser app](https://scamsentry-bay.vercel.app/) is deployed on the verified **Hobby** team. Public access, all 12 served-file digests, security headers, model identity and live analysis were verified. The exact passing CI production output was uploaded because the Vercel GitHub integration is not installed; future Git pushes do not automatically update this deployment. No paid plan, trial, purchased domain, database or inference credits were activated. [Hosting evidence](assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json). [Zero-cost review](docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md).
+The [live browser app](https://scamsentry-inspect.vercel.app/) is deployed on the verified **Hobby** team. Current browser source, served-file digests, routing and headers are recorded in the [editorial verification](docs/FRONTEND_VALIDATION.md). The exact passing CI production output was uploaded because the Vercel GitHub integration is not installed; future Git pushes do not automatically update this deployment. No paid plan, trial, purchased domain, database or inference credits were activated. [Hosting evidence](assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json). [Zero-cost review](docs/ZERO_COST_DEPLOYMENT_CHECKLIST.md).
 
 ## Build Android
 
@@ -146,4 +160,4 @@ Real-data experiments are opt-in, require the reviewed source and frozen partiti
 
 Original preview archive SHA-256: `fbfc705ce7959c5ae48c96942475c45f3d39416189150e2123888f52f6766dca`. Original local baseline commit: `499fa7879d499a715306424d0e95da2b2c554158`; the identical imported baseline tree is public at commit `111450b974c8a0ffd153af5e908a89c29f60769c` on `baseline-0.1.0`. These commit identities are distinct; see [publication provenance](docs/PUBLICATION_PROVENANCE.json). Frozen historical documents remain in [docs/history/0.1.0](docs/history/0.1.0). The complete attached [v2.1 implementation specification](docs/UPGRADE_SPEC_V2_1.md) is preserved.
 
-Deven Sachin Gaikwad · B.Tech ECE, AI/ML · DES Pune University. Dataset: Sandhya Mishra and Devpriya Soni (2022), [Mendeley Data V1](https://data.mendeley.com/datasets/f45bkkt8pr/1), DOI 10.17632/f45bkkt8pr.1, CC BY 4.0. Changes include minimization, deduplication, grouping, quarantine and normalization; no endorsement is implied. Inter and Space Grotesk retain SIL OFL notices. [MIT code licence](LICENSE) · [Full third-party notices](THIRD_PARTY_NOTICES.md).
+Deven Sachin Gaikwad · B.Tech Electronics and Communication Engineering (AI and ML) · DES Pune University. Dataset: Sandhya Mishra and Devpriya Soni (2022), [Mendeley Data V1](https://data.mendeley.com/datasets/f45bkkt8pr/1), DOI 10.17632/f45bkkt8pr.1, CC BY 4.0. Changes include minimization, deduplication, grouping, quarantine and normalization; no endorsement is implied. The browser uses self-hosted Archivo and Geist Mono with SIL OFL notices; historical Android/browser assets retain their original notices. [MIT code licence](LICENSE) · [Full third-party notices](THIRD_PARTY_NOTICES.md).

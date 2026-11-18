@@ -1,3 +1,15 @@
+# Current browser deployment
+
+Production: **https://scamsentry-inspect.vercel.app/**. Existing project `scamsentry` (`prj_pFepmjKZNLc2CT9eBKtPbrt23Gzc`) in the previously verified Hobby team. Current deployment `dpl_HUWQrorzT2fmY9P5QLJFNZkACyJQ` contains the exact editorial CI build tested at `f2b44da` and merged at `0e248cc`. [Current verification](FRONTEND_VALIDATION.md) · [Fresh public file/route/header report](../assets/evidence/v3/final/PUBLIC_HTTP_VERIFICATION.json).
+
+The `scamsentry-bay.vercel.app` compatibility hostname responds with a 307 redirect to the preferred hostname, including deep paths. No purchased domain is needed. The static deployment has a real not-found response, shareable public routes, a strict same-origin CSP, local-worker inference and self-hosted licensed fonts. The approved model identity is unchanged.
+
+**Git pushes do not automatically deploy this standalone project.** Continue using the reviewed passing CI production artifact, verify its source/digest, upload the exact static bytes and preserved Vercel configuration to this same project, then verify preview and production before recording success. No new integration, project, paid service or permission email is required for these original assets. Source changes alone are not deployment evidence.
+
+## Historical v2 hosting record and update procedure
+
+The following describes the older deployment, not the current production source or file count.
+
 # Browser deployment and updates
 
 The live production app is **[ScamSentry](https://scamsentry-bay.vercel.app/)**, project `scamsentry` in the verified `news-lens-ai` **Hobby** team. No account is required to use the public app. [Deployment/source/plan/smoke evidence](../assets/evidence/v2/hosting/VERCEL_RELEASE_VERIFICATION.json) · [Credential-free HTTP and digest verification](../assets/evidence/v2/hosting/PUBLIC_HTTP_VERIFICATION.json).

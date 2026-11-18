@@ -1,0 +1,663 @@
+{
+  "ci_run": 44158226922,
+  "tested_source": "f2b44da27166c2f1c8366d47247152dd1850a2f2",
+  "merged_source": "0e248cc766d58bc97c7dc504bbd03b21b7aa8b57",
+  "source_tree": "4af39ea26231217396ebb96f43fec9a4650a4639",
+  "artifact_id": 14362371953,
+  "artifact_sha256": "b347c94528baa8b189f3e751a19ccadde3f1420f5a195e36536f5b092084dfc3",
+  "original_capture_inventory": [
+    {
+      "path": "desktop-chromium_320-fallback-text-spacing.png",
+      "bytes": 190578,
+      "sha256": "f4cf5f66e9e0956ae9d754594fadca12d4bf0ad9b38c2513b4cdd87cfbe34078"
+    },
+    {
+      "path": "desktop-chromium_dark-analyzer-empty.png",
+      "bytes": 180331,
+      "sha256": "0b56d48d4e48b1cf9cbe0e9bb87a2c5915c3a086b2cf1a63292acedf40ccc0f0"
+    },
+    {
+      "path": "desktop-chromium_dark-android.png",
+      "bytes": 220517,
+      "sha256": "fb2553de46917c9642cbfb2d0a65f3d05b66f18ad569473d56a40e8fc20e5622"
+    },
+    {
+      "path": "desktop-chromium_dark-empty.png",
+      "bytes": 180374,
+      "sha256": "7bdabd86cd5ca25c39d8e622664f748d5f4fdbe7b7bd8877e7b46a4e8b919397"
+    },
+    {
+      "path": "desktop-chromium_dark-evidence.png",
+      "bytes": 502607,
+      "sha256": "f6b83736b0c5f9d89ac3788d3590a9563391a58c3c37cb98abc0cca872e189a2"
+    },
+    {
+      "path": "desktop-chromium_dark-home.png",
+      "bytes": 208191,
+      "sha256": "82803328b1f1ad757c3022ff6363f1b5954bbb20b954a109be5063c25a4923ee"
+    },
+    {
+      "path": "desktop-chromium_dark-learn-sender-identity.png",
+      "bytes": 164089,
+      "sha256": "1e10c0984a618fc328eb7ae7ce3df3b4ef6eaf18d8b7d6fb12751e2c290c4d03"
+    },
+    {
+      "path": "desktop-chromium_dark-learn.png",
+      "bytes": 152479,
+      "sha256": "f50cf03e7c0223758f14eb82932ed972f6723d89ac6a1086e639b10860c5eef7"
+    },
+    {
+      "path": "desktop-chromium_dark-link-populated.png",
+      "bytes": 182740,
+      "sha256": "2a05341c9d446e83fc354abada92795779f04139348c88c76a1a62f1565c16fd"
+    },
+    {
+      "path": "desktop-chromium_dark-link-result.png",
+      "bytes": 248035,
+      "sha256": "fca4f3af21cf00253fa1f5eff47030508186c9315d6c023ff84a0dc35a8acd1f"
+    },
+    {
+      "path": "desktop-chromium_dark-ordinary-populated.png",
+      "bytes": 182323,
+      "sha256": "63d564eb50517a93a11d81ec0b473c59c61c99eec7822b4c3ca03fbe3980d34b"
+    },
+    {
+      "path": "desktop-chromium_dark-ordinary-result.png",
+      "bytes": 256928,
+      "sha256": "bb4ace1e73e41580878cbf4a8a274c3b58778d55e8864c67c92af81320b2e069"
+    },
+    {
+      "path": "desktop-chromium_dark-privacy.png",
+      "bytes": 228491,
+      "sha256": "408652027068560b94dcb4988ff52868a8f5b3c7ad9f49d541d70b2eea129621"
+    },
+    {
+      "path": "desktop-chromium_dark-secret-populated.png",
+      "bytes": 182493,
+      "sha256": "55e301863b9d47f6602f91d504d607136070a6994c47978d11145e31fb0f23eb"
+    },
+    {
+      "path": "desktop-chromium_dark-secret-result.png",
+      "bytes": 262758,
+      "sha256": "32719c7e5ea851b04b7b2076b3090822158060dbf3f7505360d11a3329599195"
+    },
+    {
+      "path": "desktop-chromium_dark-sparse-populated.png",
+      "bytes": 179211,
+      "sha256": "b84874a6cd86ce0b9547bf7a8e6b8a0ed4bbf32f3dbcba5d3a9809c87d4cf0a8"
+    },
+    {
+      "path": "desktop-chromium_dark-sparse-result.png",
+      "bytes": 256056,
+      "sha256": "3ee91ee9b2c0668d642fa754fe124aef30c8ec1bb9014dcff004cc7a0d27d856"
+    },
+    {
+      "path": "desktop-chromium_lab-performance.json",
+      "bytes": 42010,
+      "sha256": "6bf2952e2e9a177eb10d61583122427ccc04b8064673140bbf83214a6ffbc800"
+    },
+    {
+      "path": "desktop-chromium_layout-matrix.json",
+      "bytes": 7172,
+      "sha256": "9937f333a0204b5910c503d6f60134cfc50faa71cd2b81bb5a492eaee4212365"
+    },
+    {
+      "path": "desktop-chromium_light-analyzer-empty.png",
+      "bytes": 176244,
+      "sha256": "43d417350388d5eec0ba34b5d5d62626f70e1c1f25f65591c168d8b60b52d990"
+    },
+    {
+      "path": "desktop-chromium_light-android.png",
+      "bytes": 215761,
+      "sha256": "23bd5ff15a8a1101fd9d7a14b3df0ae01e51f3569c53591a4e360105f7a9c6fc"
+    },
+    {
+      "path": "desktop-chromium_light-evidence.png",
+      "bytes": 491945,
+      "sha256": "aeb0f6c74299a8b6796df8b86df76f23244a104af93c4e03f70a091b7e2dc92b"
+    },
+    {
+      "path": "desktop-chromium_light-home.png",
+      "bytes": 203452,
+      "sha256": "6d2c909e1680760b34f056dc49ca1a9c9cbc708a929a8975c7a02acc1d9dc83c"
+    },
+    {
+      "path": "desktop-chromium_light-learn-sender-identity.png",
+      "bytes": 161109,
+      "sha256": "fdc996923d2f91dad194f81074a2c8690ce5d5ad56e6e72ab32f2c6ba12c84d2"
+    },
+    {
+      "path": "desktop-chromium_light-learn.png",
+      "bytes": 149661,
+      "sha256": "fc02d359237bdd2160d94b429508b2f7484ce261d76222e9f227e39114119bf8"
+    },
+    {
+      "path": "desktop-chromium_light-link-populated.png",
+      "bytes": 179600,
+      "sha256": "b45a0bf283a1ecf38dc465f7eb82c6f770bc5adfe2eb1d9b0d920aa674c2b102"
+    },
+    {
+      "path": "desktop-chromium_light-link-result.png",
+      "bytes": 242318,
+      "sha256": "379a4c74f9288357c1af2685b854b43b90f60aff1a20b53130029815c82c36a7"
+    },
+    {
+      "path": "desktop-chromium_light-ordinary-populated.png",
+      "bytes": 179137,
+      "sha256": "b2ca785a49a841e2e13a228bca28646159bccbdd791f6b2aee50be6c6e1fdc4f"
+    },
+    {
+      "path": "desktop-chromium_light-ordinary-result.png",
+      "bytes": 250577,
+      "sha256": "a78f9f1ae078d11900f23849ac082ebaf1f4957bb6c7bcc39942f17a6159531f"
+    },
+    {
+      "path": "desktop-chromium_light-privacy.png",
+      "bytes": 221549,
+      "sha256": "1a516fc975e163a7b185e8b65aa9523660fdd96db9777e2f7d2becd6b202d5c9"
+    },
+    {
+      "path": "desktop-chromium_light-secret-populated.png",
+      "bytes": 179495,
+      "sha256": "a3f199b931931df582d09a190d4102551e6dca1e63cb76b463975a6be6d031b7"
+    },
+    {
+      "path": "desktop-chromium_light-secret-result.png",
+      "bytes": 256550,
+      "sha256": "f4851212b65127ba6528f2195c745633ff31309dabf4490ea73f7f540317ba26"
+    },
+    {
+      "path": "desktop-chromium_light-sparse-populated.png",
+      "bytes": 176157,
+      "sha256": "5dfee3b9c8b879fc96ac34f58a46eeea0875a4688fca197bc45bcb567ef735ec"
+    },
+    {
+      "path": "desktop-chromium_light-sparse-result.png",
+      "bytes": 250199,
+      "sha256": "62b88f77454de9888649ae73e00ff36c259e7b8739a8f5dfae3d2702b53571e9"
+    },
+    {
+      "path": "desktop-chromium_model-unavailable.png",
+      "bytes": 237803,
+      "sha256": "2ee03de8e951e02789037f1477f210227defa5decc45891c9a4cc7293c104669"
+    },
+    {
+      "path": "desktop-chromium_motion-demo.webm",
+      "bytes": 959438,
+      "sha256": "58ec2cd73eba82a35d9b201eec028304d74cd6b505396508a6062dbc59f25e83"
+    },
+    {
+      "path": "desktop-chromium_not-found.png",
+      "bytes": 75601,
+      "sha256": "81a2121b28bdd15560c39b9be99ee3817c7f1c00ba480e28843bc1493f3edc8c"
+    },
+    {
+      "path": "desktop-chromium_reduced-motion-privacy.png",
+      "bytes": 228491,
+      "sha256": "408652027068560b94dcb4988ff52868a8f5b3c7ad9f49d541d70b2eea129621"
+    },
+    {
+      "path": "desktop-chromium_report-preview.png",
+      "bytes": 268713,
+      "sha256": "ca7ec53651f094e43c739783dd5a15000cd3574b0c932db86b44d134b9792dd5"
+    },
+    {
+      "path": "desktop-firefox_320-fallback-text-spacing.png",
+      "bytes": 198645,
+      "sha256": "baf6003c94f519b11f4626f886d33cc39f42e1a9a9abe80b324989f3619ac7df"
+    },
+    {
+      "path": "desktop-firefox_dark-analyzer-empty.png",
+      "bytes": 222596,
+      "sha256": "80eefd9f4bf19ec89c757d7b22fefc68feda93190903dc7f80fb27d04c9fe133"
+    },
+    {
+      "path": "desktop-firefox_dark-android.png",
+      "bytes": 268479,
+      "sha256": "60707d464bbe1ef3414073456e828228a81800593050f01b2ab9fb68772c3c44"
+    },
+    {
+      "path": "desktop-firefox_dark-empty.png",
+      "bytes": 222392,
+      "sha256": "1bf6ea9416ce8ac63d01850d8dcb571b630f8b9025ceb9a110b40a064a9c311d"
+    },
+    {
+      "path": "desktop-firefox_dark-evidence.png",
+      "bytes": 610318,
+      "sha256": "5a7b2c924f503767c5d7ffd5a6f360ea2ff080c92290a441927ebf87e7034bc6"
+    },
+    {
+      "path": "desktop-firefox_dark-home.png",
+      "bytes": 264092,
+      "sha256": "5d81ba77b34f72c3f5b61b5b5f67729479f8b5a43c44553620bc6ac10747635a"
+    },
+    {
+      "path": "desktop-firefox_dark-learn-sender-identity.png",
+      "bytes": 204718,
+      "sha256": "5129775b712ff10d21894ca4c5c274144ccf53ed4bcd9e7d23cc64e56bb86a59"
+    },
+    {
+      "path": "desktop-firefox_dark-learn.png",
+      "bytes": 182947,
+      "sha256": "e56b584b2806563a6189a98ec8d4982a933662d7dedca197afc00d8df22a1824"
+    },
+    {
+      "path": "desktop-firefox_dark-link-populated.png",
+      "bytes": 225415,
+      "sha256": "028f82462912084113c0f6ea5bd5dd6ffe95691768176ee43013f44dff84d507"
+    },
+    {
+      "path": "desktop-firefox_dark-link-result.png",
+      "bytes": 306797,
+      "sha256": "c54e7ce63e3d02fe17e76f44056eb1ccaaba84b87e01e95e5c8e92df3fdc1d3a"
+    },
+    {
+      "path": "desktop-firefox_dark-ordinary-populated.png",
+      "bytes": 225472,
+      "sha256": "5861a83a351fa26cba8127757bbca5ed6d728619bd28cc7ac96d4f5cbff87244"
+    },
+    {
+      "path": "desktop-firefox_dark-ordinary-result.png",
+      "bytes": 314395,
+      "sha256": "0f22763181988ea561e5392c441759d8503ccdb218c18118a8bfa73d809922ad"
+    },
+    {
+      "path": "desktop-firefox_dark-privacy.png",
+      "bytes": 275942,
+      "sha256": "8a4b15e2f206268af9d099d5c6e3e943c5552a4449e3466511162e18a3dfbd42"
+    },
+    {
+      "path": "desktop-firefox_dark-secret-populated.png",
+      "bytes": 224889,
+      "sha256": "844791ff52fd882c938023ffab27ae492559156561ec96ff5171a2d95fc4dbca"
+    },
+    {
+      "path": "desktop-firefox_dark-secret-result.png",
+      "bytes": 324405,
+      "sha256": "b5f9507c4d4d38dd40bdf0122b59e9a938f2bfacdf2fa66307676fb1de2c61c0"
+    },
+    {
+      "path": "desktop-firefox_dark-sparse-populated.png",
+      "bytes": 221298,
+      "sha256": "a253d43e5b7c6c747225fcfab17fcf6e3274ba0195664fb6932aa8ba0f75328d"
+    },
+    {
+      "path": "desktop-firefox_dark-sparse-result.png",
+      "bytes": 314546,
+      "sha256": "68c3fc9ad2e8aa95e6adeb19186dad0f2b86ea5d004e332f213d07e0ee85488b"
+    },
+    {
+      "path": "desktop-firefox_lab-performance.json",
+      "bytes": 27942,
+      "sha256": "ef03c9dbf8bc39f16d2a8d07cee58c488fa362d03d7d7625259be07e42264f55"
+    },
+    {
+      "path": "desktop-firefox_layout-matrix.json",
+      "bytes": 2473,
+      "sha256": "3ae9581a23d74815d38b365dac76b9bbdf2e271c0ff0f18f9a9f0b7ed0995cd7"
+    },
+    {
+      "path": "desktop-firefox_light-analyzer-empty.png",
+      "bytes": 222387,
+      "sha256": "bbd8f50c4e0c88937afd4efe239d20f566f75e05edfc3b563abe2140fbda10a8"
+    },
+    {
+      "path": "desktop-firefox_light-android.png",
+      "bytes": 268707,
+      "sha256": "d25c05cffa46a564f96e1a44963ce0792bf83f6d53cf82dab544e57719ed2f86"
+    },
+    {
+      "path": "desktop-firefox_light-evidence.png",
+      "bytes": 611461,
+      "sha256": "d4f4454fbeaf6092f1bf2415c61cee5802e8bf9480e9fc407f1496e10d5751d2"
+    },
+    {
+      "path": "desktop-firefox_light-home.png",
+      "bytes": 264066,
+      "sha256": "37a4ea60b02e65f8aca7c6875023c1c9357fe3ec9c8e9cd6b4f593d466d37181"
+    },
+    {
+      "path": "desktop-firefox_light-learn-sender-identity.png",
+      "bytes": 204730,
+      "sha256": "2a57ba417427c47423aefc53f5637490dcee306f975e13571b5d35cc6dbeca19"
+    },
+    {
+      "path": "desktop-firefox_light-learn.png",
+      "bytes": 182872,
+      "sha256": "ddd59ab63aa7a64560638f926030af66ca664aacb04200f7f4840b2403978353"
+    },
+    {
+      "path": "desktop-firefox_light-link-populated.png",
+      "bytes": 224962,
+      "sha256": "a63237123e4d5a9bca508a11ae7068d1242302c63c111be84ef40d2f28e3efd9"
+    },
+    {
+      "path": "desktop-firefox_light-link-result.png",
+      "bytes": 306324,
+      "sha256": "3ec1d6323d5089947130992ef301ec53e028fc1fa8ef28f30e16639037f2a72e"
+    },
+    {
+      "path": "desktop-firefox_light-ordinary-populated.png",
+      "bytes": 225142,
+      "sha256": "ef65bb03099966c931f01743d581c4c2b4ae4805480d24034e5fddaf7d193ceb"
+    },
+    {
+      "path": "desktop-firefox_light-ordinary-result.png",
+      "bytes": 314149,
+      "sha256": "414b17c54eb2de7dcc2bce34ddcd5b25f9c745267d4e6478ee0563f3bab54a8f"
+    },
+    {
+      "path": "desktop-firefox_light-privacy.png",
+      "bytes": 276655,
+      "sha256": "843adfbb001f03f55b4e0ef5692b7ef75da02e7ddb1801f08541cc05b14cd483"
+    },
+    {
+      "path": "desktop-firefox_light-secret-populated.png",
+      "bytes": 224599,
+      "sha256": "304546d34aedb9eb3f8f99df21ee00806f5edc218b59e85aec3718aa5ccb1bf8"
+    },
+    {
+      "path": "desktop-firefox_light-secret-result.png",
+      "bytes": 323995,
+      "sha256": "5fd90b75381fb4384b6519e7418e2c39883e124c60114d38f5b21cfd4b94e217"
+    },
+    {
+      "path": "desktop-firefox_light-sparse-populated.png",
+      "bytes": 220977,
+      "sha256": "4f965898e2ab26778c33c76d12e48e79d604984739427379cbd9ee1a2a598957"
+    },
+    {
+      "path": "desktop-firefox_light-sparse-result.png",
+      "bytes": 314085,
+      "sha256": "5f7972b5613e7392e693c94e56b2ee4c7699a8cea8ab306693643e1cdd344923"
+    },
+    {
+      "path": "desktop-firefox_model-unavailable.png",
+      "bytes": 298655,
+      "sha256": "e5889ecc2ef83d73d939d38276ef15621078907c6e42344fdcedf5fbb9be4bff"
+    },
+    {
+      "path": "desktop-firefox_motion-demo.webm",
+      "bytes": 1078677,
+      "sha256": "fd61eec98003d17f121f964d3a8f9e05b6426aa2f21022928bfa63ab8f2ea72d"
+    },
+    {
+      "path": "desktop-firefox_not-found.png",
+      "bytes": 96470,
+      "sha256": "3c9ed0ff2506bedc9dd283ad4ab1c8ee60013603342c9ad7ffc8b04457dc2e25"
+    },
+    {
+      "path": "desktop-firefox_reduced-motion-privacy.png",
+      "bytes": 275942,
+      "sha256": "8a4b15e2f206268af9d099d5c6e3e943c5552a4449e3466511162e18a3dfbd42"
+    },
+    {
+      "path": "desktop-firefox_report-preview.png",
+      "bytes": 323150,
+      "sha256": "e8b9f3608d5dc62cf17e16462f56f9983120f7095cf0dc6b3ccaf3da0c76a63f"
+    },
+    {
+      "path": "mobile-chromium_320-fallback-text-spacing.png",
+      "bytes": 610805,
+      "sha256": "e0dc3d0e8f607d790c34721c7b71f8ecef49451c4fb5a6eb4e2f15f5ba068079"
+    },
+    {
+      "path": "mobile-chromium_dark-analyzer-empty.png",
+      "bytes": 429122,
+      "sha256": "e6f448e2f06c905c78654424694b2adb99df0d5245d30c5d432cf4e347866221"
+    },
+    {
+      "path": "mobile-chromium_dark-android.png",
+      "bytes": 527662,
+      "sha256": "055bc3e6d2a72e41cbe6e215b3a1ee85cd18431f208179f1fe65947d630b18b3"
+    },
+    {
+      "path": "mobile-chromium_dark-empty.png",
+      "bytes": 429122,
+      "sha256": "e6f448e2f06c905c78654424694b2adb99df0d5245d30c5d432cf4e347866221"
+    },
+    {
+      "path": "mobile-chromium_dark-evidence.png",
+      "bytes": 1234840,
+      "sha256": "81ee1fffde8652de9b35426416e0daee573e0fc1b06a84c57b6e09e0d6bba70d"
+    },
+    {
+      "path": "mobile-chromium_dark-home.png",
+      "bytes": 443681,
+      "sha256": "d0e8718039b5e1fc4c6bb407831f2c161bcedb85d35196b60669a3038dd93f9c"
+    },
+    {
+      "path": "mobile-chromium_dark-learn-sender-identity.png",
+      "bytes": 371844,
+      "sha256": "4d10a67109d229c351924e464a9cd2896e6e3c1b94da960f4a8c1b486bae63f9"
+    },
+    {
+      "path": "mobile-chromium_dark-learn.png",
+      "bytes": 351876,
+      "sha256": "44d0de3751c7613d3f4cff72dfa8aa616062d715313db9be47e23c0039084742"
+    },
+    {
+      "path": "mobile-chromium_dark-link-populated.png",
+      "bytes": 429148,
+      "sha256": "2e80a68cfe95b566cdef5b8e9252b413774d6d640b97fd9656613dd768189572"
+    },
+    {
+      "path": "mobile-chromium_dark-link-result.png",
+      "bytes": 654190,
+      "sha256": "cc84cc650b347d8ea155cf2dacd42419058bc6920c5328c852b0e760f4957e46"
+    },
+    {
+      "path": "mobile-chromium_dark-ordinary-populated.png",
+      "bytes": 426432,
+      "sha256": "3587bfa4a513033e6d85c2ec4d813c8b2dec19c9ee4a5bfb66b4476e610a7d06"
+    },
+    {
+      "path": "mobile-chromium_dark-ordinary-result.png",
+      "bytes": 678936,
+      "sha256": "768346070306e9f8f20499e0136aaad84abc51061994395d7b9399d24f9c7bbc"
+    },
+    {
+      "path": "mobile-chromium_dark-privacy.png",
+      "bytes": 568177,
+      "sha256": "0433a70962ff70d296e25a8882aa7674f1035a06b01988f47190fe32fbe84bdd"
+    },
+    {
+      "path": "mobile-chromium_dark-secret-populated.png",
+      "bytes": 425181,
+      "sha256": "5953ffb42d8b8ef2b7a2c7f41b826adfd92aab5a9680cb0c529bf4a196e5101f"
+    },
+    {
+      "path": "mobile-chromium_dark-secret-result.png",
+      "bytes": 697470,
+      "sha256": "2d6b40445d1f5ffe9a204c5cf974826f41916ffa86ca0ee2797b2ca8e7798054"
+    },
+    {
+      "path": "mobile-chromium_dark-sparse-populated.png",
+      "bytes": 420625,
+      "sha256": "0559f6af8dd934e0d415d6e817a075e3ba1ff7b235fd8adc5011ec4af57a5478"
+    },
+    {
+      "path": "mobile-chromium_dark-sparse-result.png",
+      "bytes": 670080,
+      "sha256": "1158a3e76240ff795e67f3aaa7e2fc77d22002c7fa9f815eb732650b7e8392eb"
+    },
+    {
+      "path": "mobile-chromium_lab-performance.json",
+      "bytes": 42224,
+      "sha256": "a600c264820fe01a8134c4c45a5f1de16eb2044ef4027bd6bc5fb412ad3b0d57"
+    },
+    {
+      "path": "mobile-chromium_layout-matrix.json",
+      "bytes": 2473,
+      "sha256": "3ae9581a23d74815d38b365dac76b9bbdf2e271c0ff0f18f9a9f0b7ed0995cd7"
+    },
+    {
+      "path": "mobile-chromium_light-analyzer-empty.png",
+      "bytes": 420397,
+      "sha256": "464be8eed6fe29ec37a0467affe2b0793de7d667f3c4610343de8faea7279bab"
+    },
+    {
+      "path": "mobile-chromium_light-android.png",
+      "bytes": 520541,
+      "sha256": "2f631f27d827fa4b0e51a252f09bb61cf4f35739d211f196fe888815c38406df"
+    },
+    {
+      "path": "mobile-chromium_light-evidence.png",
+      "bytes": 1219103,
+      "sha256": "c27dde8d2705a01f11fe0d181407fa721135b902b3b5c220fe78e0a75b89616b"
+    },
+    {
+      "path": "mobile-chromium_light-home.png",
+      "bytes": 433823,
+      "sha256": "d4c5ba50f8c899e9414d2c63476c5a4052a0f9873a56ff5388cec0ae288d45e1"
+    },
+    {
+      "path": "mobile-chromium_light-learn-sender-identity.png",
+      "bytes": 366526,
+      "sha256": "078a7d0f329801e4b77bc13d53d88ecd0a5e3a630d44cc6d620039250c59e382"
+    },
+    {
+      "path": "mobile-chromium_light-learn.png",
+      "bytes": 347942,
+      "sha256": "e72a8cd8679655e1acba78585de40e493e35bcd381dee43a7538a8057d29f680"
+    },
+    {
+      "path": "mobile-chromium_light-link-populated.png",
+      "bytes": 424093,
+      "sha256": "6e6cb645c6161ab0884040113f518607bee9fb9bade2dde249802f30f294f7d9"
+    },
+    {
+      "path": "mobile-chromium_light-link-result.png",
+      "bytes": 641845,
+      "sha256": "1b8aca4180fcc8ba62a85886d1cd72df62e236ef3266fcbebeea42dc3c4ec077"
+    },
+    {
+      "path": "mobile-chromium_light-ordinary-populated.png",
+      "bytes": 420779,
+      "sha256": "92d044ab1b50c32e4a2b64093997a9541d287ca52999b4ebe0ed599378e41537"
+    },
+    {
+      "path": "mobile-chromium_light-ordinary-result.png",
+      "bytes": 669559,
+      "sha256": "fb34cad72c34d8f5a7f0257ed7da86e42efe85d1b82a9e8f82896dec5a9ac5c6"
+    },
+    {
+      "path": "mobile-chromium_light-privacy.png",
+      "bytes": 545422,
+      "sha256": "9af39b1e4248700e6d1c7dd3f299b5580c2ffe0dceb47e16624d618516d84d68"
+    },
+    {
+      "path": "mobile-chromium_light-secret-populated.png",
+      "bytes": 419544,
+      "sha256": "ddcb296ecffa24d5c81a0c3f041d2904dd6ac1c1d64b4f17636e2f0e2bde0d43"
+    },
+    {
+      "path": "mobile-chromium_light-secret-result.png",
+      "bytes": 684229,
+      "sha256": "deab254797e7e58a110854be063aaec74687e618e3d1004a7673018c9c60523f"
+    },
+    {
+      "path": "mobile-chromium_light-sparse-populated.png",
+      "bytes": 414594,
+      "sha256": "341bce330c0f5b870c3f10dd79158f1db565667c90f01b18215bbbe279a68614"
+    },
+    {
+      "path": "mobile-chromium_light-sparse-result.png",
+      "bytes": 657089,
+      "sha256": "127b4ee9b968f0cacfdf6c1564ade3674a0f79654877ad5f11fc5dc22e4ea081"
+    },
+    {
+      "path": "mobile-chromium_mobile-menu.png",
+      "bytes": 640261,
+      "sha256": "0e214eb0f013be62ab6ee5bad760981fafc2736b2ae7cd16c81e13240cc0ac8c"
+    },
+    {
+      "path": "mobile-chromium_model-unavailable.png",
+      "bytes": 622018,
+      "sha256": "0b17230ecef68952c46f1f2818ddecaeec6231393003c8e1a4c2edfd23a3f87d"
+    },
+    {
+      "path": "mobile-chromium_motion-demo.webm",
+      "bytes": 1591639,
+      "sha256": "7a44c6147aa8c75d8d9723e3c02e8c87f7d1328c8ad42851b9cb9a8310d6c6e5"
+    },
+    {
+      "path": "mobile-chromium_not-found.png",
+      "bytes": 154205,
+      "sha256": "7191954f5db3b07d5fb9ebf7752340c051c9ef150179a71aba1cc1f4922b6be6"
+    },
+    {
+      "path": "mobile-chromium_reduced-motion-privacy.png",
+      "bytes": 568177,
+      "sha256": "0433a70962ff70d296e25a8882aa7674f1035a06b01988f47190fe32fbe84bdd"
+    },
+    {
+      "path": "mobile-chromium_report-preview.png",
+      "bytes": 661950,
+      "sha256": "a6c6f45906038e270283e9809e455f815dea65b3ddaa3bae3334088125a42eaa"
+    },
+    {
+      "path": "web_demo_desktop.webm",
+      "bytes": 840302,
+      "sha256": "3cc42924802830f926cd73579d83a481ec21810fed2e9b5315f758e2349f6fdb"
+    },
+    {
+      "path": "web_desktop-chromium_home.png",
+      "bytes": 162156,
+      "sha256": "b79be9d9d4f5d129f1ad477c8e30ca1b7fd6c1a80d66e043337ed8f01f7ad391"
+    },
+    {
+      "path": "web_desktop-chromium_network.json",
+      "bytes": 979,
+      "sha256": "ea8895260a889a0fef655e446e5ae7c8cb9638c845645d66bca79fcf10750bbe"
+    },
+    {
+      "path": "web_desktop-chromium_result.png",
+      "bytes": 283209,
+      "sha256": "3ff75ffc5d63ea455526d7459d4b6e83680707e7125855d06922391b081ffcc9"
+    },
+    {
+      "path": "web_desktop-chromium_timings.json",
+      "bytes": 6118,
+      "sha256": "b9abb93ac313d9d3f21fd3275a89acda37fe8cc8df40220e1c5ad0c6ac79097c"
+    },
+    {
+      "path": "web_desktop-firefox_home.png",
+      "bytes": 204780,
+      "sha256": "245f42a56775dd38db58f80dc5dd99377ec129b1f028ce62ccd85c2dd7b33ebc"
+    },
+    {
+      "path": "web_desktop-firefox_network.json",
+      "bytes": 1064,
+      "sha256": "0d41e8b682e032ad597c9659a50b3b4d317970d9f5f6d2eb3c7b9fd6a1b51c85"
+    },
+    {
+      "path": "web_desktop-firefox_result.png",
+      "bytes": 344448,
+      "sha256": "d2de16c3c4b3eb5f1b06ac93a13ee9f8f475bf3eb7388098a70c5e280cf204e7"
+    },
+    {
+      "path": "web_mobile-chromium_home.png",
+      "bytes": 397368,
+      "sha256": "80f4f6af6f53fd7d82910cf94f3d42ed062bec9db26b3095b267931904a98394"
+    },
+    {
+      "path": "web_mobile-chromium_network.json",
+      "bytes": 979,
+      "sha256": "ea8895260a889a0fef655e446e5ae7c8cb9638c845645d66bca79fcf10750bbe"
+    },
+    {
+      "path": "web_mobile-chromium_result.png",
+      "bytes": 732099,
+      "sha256": "454d0087a6709f2d456e1213268a85f77cc8e5cc1e082e2eb2de7b5fd0c4d0fd"
+    }
+  ],
+  "retained_captures": [
+    "desktop-chromium_light-home.png",
+    "desktop-chromium_dark-secret-result.png",
+    "desktop-chromium_light-evidence.png",
+    "mobile-chromium_light-home.png",
+    "desktop-chromium_motion-demo.webm"
+  ],
+  "scope": "Original CI production-build captures with fictional inputs, copied byte-for-byte. These are v3 baseline evidence, not v3.1 motion acceptance."
+}

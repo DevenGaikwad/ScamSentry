@@ -21,4 +21,4 @@ The original web app has one React component with in-memory button navigation, a
 
 ## Implementation and validation
 
-Results will be recorded after execution, with exact source/deployment identity. Historical model and Android evidence remain separate.
+The editorial redesign is implemented and merged at `0e248cc766d58bc97c7dc504bbd03b21b7aa8b57`. All 67 unit/parity and 42 browser cases passed. Original captures, performance limitations and exact deployment provenance are in [FRONTEND_VALIDATION.md](FRONTEND_VALIDATION.md). The v3.1 motion follow-up is a separate next change; historical model and Android evidence remain separate.

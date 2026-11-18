@@ -1,5 +1,13 @@
 # Current continuation checkpoint
 
+18 November 2026: the v3 editorial browser redesign is merged and live at **https://scamsentry-inspect.vercel.app/**. Source `0e248cc766d58bc97c7dc504bbd03b21b7aa8b57`, identical to the tested `f2b44da` tree, passed 67 unit/parity and 42 three-project browser checks. Production deployment `dpl_HUWQrorzT2fmY9P5QLJFNZkACyJQ` serves that original CI output. The previous hostname redirects to the preferred one, retaining paths. [Current frontend validation](FRONTEND_VALIDATION.md) and `assets/evidence/v3/final` close the interrupted v3 documentation/evidence work.
+
+The owner's 10,985-word v3.1 follow-up is next: free-follow corner cursor, visible public depth transitions, a seeded hero network, and meaningful animated flow diagrams. Preserve this completed redesign, model/engine/worker/benchmark and Android release. Work on a separate branch, validate the exact new output, then update this same repository and Vercel project. No Git integration is installed: pushes alone do not deploy.
+
+## Preserved Android / research release handoff
+
+The following records the earlier v2 release. Its source, test counts, captures and hosting ID are historical and must not be substituted for the current frontend identities above.
+
 17 November 2026. Android/GitHub work is delivered as a published research preview. The owner subsequently resumed Vercel work; **the browser companion is now live on verified Hobby hosting** at https://scamsentry-bay.vercel.app/. Do not regenerate authorization links or redeploy the already verified output on resume.
 
 ## Durable release and source

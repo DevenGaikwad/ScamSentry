@@ -1,0 +1,143 @@
+[
+  {
+    "capture": "desktop-chromium_lab-performance.json",
+    "reported_source_commit": "eab21504af687212438be2405301c9d66eae9545",
+    "browser": "159.0.8154.6",
+    "platform": "linux",
+    "viewport": "1363x936, DPR 1",
+    "network": "identical local gzip-enabled static servers, no CPU or network throttling",
+    "limitation": "Firefox may not expose LCP, layout-shift or event timing; unsupported metrics remain zero and are not a passing field claim",
+    "values": [
+      {
+        "variant": "baseline-526f6c0",
+        "cache": "cold",
+        "samples": 3,
+        "lcp_median_ms": 160,
+        "cls_max": 0.00135407396755194,
+        "transferred_median_bytes": 1098044,
+        "event_duration_max_ms": 64
+      },
+      {
+        "variant": "baseline-526f6c0",
+        "cache": "warm",
+        "samples": 3,
+        "lcp_median_ms": 72,
+        "cls_max": 0,
+        "transferred_median_bytes": 717,
+        "event_duration_max_ms": 32
+      },
+      {
+        "variant": "editorial",
+        "cache": "cold",
+        "samples": 3,
+        "lcp_median_ms": 120,
+        "cls_max": 0.00010357947235228701,
+        "transferred_median_bytes": 222538,
+        "event_duration_max_ms": 32
+      },
+      {
+        "variant": "editorial",
+        "cache": "warm",
+        "samples": 3,
+        "lcp_median_ms": 64,
+        "cls_max": 0,
+        "transferred_median_bytes": 994,
+        "event_duration_max_ms": 32
+      }
+    ]
+  },
+  {
+    "capture": "desktop-firefox_lab-performance.json",
+    "reported_source_commit": "eab21504af687212438be2405301c9d66eae9545",
+    "browser": "159.0",
+    "platform": "linux",
+    "viewport": "1363x936, DPR 1",
+    "network": "identical local gzip-enabled static servers, no CPU or network throttling",
+    "limitation": "Firefox may not expose LCP, layout-shift or event timing; unsupported metrics remain zero and are not a passing field claim",
+    "values": [
+      {
+        "variant": "baseline-526f6c0",
+        "cache": "cold",
+        "samples": 3,
+        "lcp_median_ms": 106,
+        "cls_max": 0,
+        "transferred_median_bytes": 1098567,
+        "event_duration_max_ms": 24
+      },
+      {
+        "variant": "baseline-526f6c0",
+        "cache": "warm",
+        "samples": 3,
+        "lcp_median_ms": 67,
+        "cls_max": 0,
+        "transferred_median_bytes": 717,
+        "event_duration_max_ms": 24
+      },
+      {
+        "variant": "editorial",
+        "cache": "cold",
+        "samples": 3,
+        "lcp_median_ms": 1402,
+        "cls_max": 0,
+        "transferred_median_bytes": 223075,
+        "event_duration_max_ms": 24
+      },
+      {
+        "variant": "editorial",
+        "cache": "warm",
+        "samples": 3,
+        "lcp_median_ms": 1336,
+        "cls_max": 0,
+        "transferred_median_bytes": 994,
+        "event_duration_max_ms": 16
+      }
+    ]
+  },
+  {
+    "capture": "mobile-chromium_lab-performance.json",
+    "reported_source_commit": "eab21504af687212438be2405301c9d66eae9545",
+    "browser": "159.0.8154.6",
+    "platform": "linux",
+    "viewport": "1363x936, DPR 1",
+    "network": "identical local gzip-enabled static servers, no CPU or network throttling",
+    "limitation": "Firefox may not expose LCP, layout-shift or event timing; unsupported metrics remain zero and are not a passing field claim",
+    "values": [
+      {
+        "variant": "baseline-526f6c0",
+        "cache": "cold",
+        "samples": 3,
+        "lcp_median_ms": 160,
+        "cls_max": 0,
+        "transferred_median_bytes": 1098044,
+        "event_duration_max_ms": 56
+      },
+      {
+        "variant": "baseline-526f6c0",
+        "cache": "warm",
+        "samples": 3,
+        "lcp_median_ms": 68,
+        "cls_max": 0,
+        "transferred_median_bytes": 717,
+        "event_duration_max_ms": 32
+      },
+      {
+        "variant": "editorial",
+        "cache": "cold",
+        "samples": 3,
+        "lcp_median_ms": 124,
+        "cls_max": 0,
+        "transferred_median_bytes": 222538,
+        "event_duration_max_ms": 72
+      },
+      {
+        "variant": "editorial",
+        "cache": "warm",
+        "samples": 3,
+        "lcp_median_ms": 64,
+        "cls_max": 0,
+        "transferred_median_bytes": 994,
+        "event_duration_max_ms": 32
+      }
+    ]
+  }
+]
