@@ -18,6 +18,10 @@ import `in`.deven.scamsentry.core.AnalysisResult
 import `in`.deven.scamsentry.core.Risk
 import java.io.File
 import android.graphics.Bitmap
+import android.graphics.Color
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import org.junit.Assert.assertTrue
 import android.content.Intent
 
 @RunWith(AndroidJUnit4::class)
@@ -81,21 +85,35 @@ class WorkflowTest {
         compose.onNodeWithText("Analyze").performClick()
         compose.onNodeWithText("A second look. Before you act.").assertExists()
         compose.onNodeWithContentDescription("Message to analyze").assertTextContains(input)
-        screenshot("03_dark_editor.png")
+        compose.onNodeWithText("LOCAL INSPECTION").performScrollTo()
+        screenshot("03_dark_editor.png", assertDarkStatusBar = true)
         compose.onNodeWithContentDescription("Settings and model information").performClick()
         compose.onNodeWithText("System").performScrollTo().performClick()
         compose.waitUntil(10_000) {
             compose.onAllNodes(hasText("System") and isSelected()).fetchSemanticsNodes().isNotEmpty()
         }
     }
-    private fun screenshot(name: String) {
+    private fun screenshot(name: String, assertDarkStatusBar: Boolean = false) {
         compose.waitForIdle()
+        val statusBar = if (assertDarkStatusBar) compose.runOnIdle {
+            ViewCompat.getRootWindowInsets(compose.activity.window.decorView)
+                ?.getInsets(WindowInsetsCompat.Type.statusBars())?.top ?: 0
+        } else 0
         val bitmap=requireNotNull(androidx.test.platform.app.InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()) { "Device screenshot unavailable" }
         val additional=androidx.test.platform.app.InstrumentationRegistry.getArguments().getString("additionalTestOutputDir")
         val directory=additional?.let { File(it) } ?: File(compose.activity.getExternalFilesDir(null),"screenshots")
         val path=File(directory,name).apply { parentFile?.mkdirs() }
-        try { path.outputStream().use { check(bitmap.compress(Bitmap.CompressFormat.PNG,100,it)) } }
-        finally { bitmap.recycle() }
+        try {
+            path.outputStream().use { check(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)) }
+            if (assertDarkStatusBar) {
+                assertTrue("Status bar inset must be visible", statusBar > 0)
+                val pixel = bitmap.getPixel(bitmap.width / 2, statusBar / 2)
+                assertTrue("Dark theme needs a dark system-bar background",
+                    maxOf(Color.red(pixel), Color.green(pixel), Color.blue(pixel)) < 72)
+            }
+        } finally {
+            bitmap.recycle()
+        }
     }
     @Test fun packagedAndroidModelMatchesReference() {
         val assets=compose.activity.assets
