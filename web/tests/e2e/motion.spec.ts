@@ -5,7 +5,7 @@ import { join } from 'node:path'
 
 const evidence='../assets/evidence/v3/motion/browser'
 const observations:Record<string,unknown>={}
-const capture=async(page:Page,name:string)=>{mkdirSync(evidence,{recursive:true});await page.screenshot({path:join(evidence,`${test.info().project.name}_${name}.png`),animations:'allow'})}
+const capture=async(page:Page,name:string)=>{mkdirSync(evidence,{recursive:true});await page.screenshot({path:join(evidence,`${test.info().project.name}_${name}.png`),animations:'allow',scale:'css'})}
 async function nav(page:Page,name:string){
   const menu=page.getByRole('button',{name:'Menu',exact:true})
   if(await menu.isVisible())await menu.click()
@@ -52,15 +52,30 @@ test('public routes render departure, geometric middle, real miniature and five 
     await page.getByRole('navigation',{name:'Main navigation',exact:true}).getByRole('link',{name,exact:true}).click()
     const scene=page.locator('.route-scene'),main=page.locator('main')
     await expect(scene).toHaveAttribute('data-motif',motif)
+    const proofPromise=page.evaluate(async()=>{
+      const frames:{phase:string|null;geometry:number;outgoing:string;incoming:string;opacity:number;heading:string|null;inert:boolean}[]=[]
+      const started=performance.now()
+      return await new Promise<typeof frames>((resolve,reject)=>{
+        const sample=()=>{
+          const scene=document.querySelector('.route-scene'),main=document.querySelector('main')!
+          if(!scene){resolve(frames);return}
+          if(performance.now()-started>2500){reject(new Error('Scene did not settle'));return}
+          frames.push({phase:scene.getAttribute('data-phase'),geometry:Number(getComputedStyle(scene.querySelector('.depth-geometry')!).opacity),outgoing:getComputedStyle(scene.querySelector('.outgoing-public-plane')!).transform,incoming:getComputedStyle(main).transform,opacity:Number(getComputedStyle(main).opacity),heading:main.querySelector('h1')?.textContent??null,inert:main.hasAttribute('inert')})
+          requestAnimationFrame(sample)
+        }
+        sample()
+      })
+    })
     await expect(scene.locator('.outgoing-public-plane')).toBeVisible()
     await expect(scene).toHaveAttribute('data-phase','scene')
-    samples.push(await page.evaluate(()=>({phase:document.querySelector('.route-scene')?.getAttribute('data-phase'),geometry:getComputedStyle(document.querySelector('.depth-geometry')!).opacity,outgoing:getComputedStyle(document.querySelector('.outgoing-public-plane')!).transform})))
     if(name==='Privacy')await capture(page,'transition-middle')
-    await expect(scene).toHaveAttribute('data-phase','arriving')
-    const incoming=await main.evaluate(el=>({transform:getComputedStyle(el).transform,opacity:getComputedStyle(el).opacity,heading:el.querySelector('h1')?.textContent,inert:el.hasAttribute('inert')}))
-    expect(incoming.transform).not.toBe('none');expect(incoming.inert).toBe(true);expect(incoming.heading?.length).toBeGreaterThan(5)
-    samples.push(incoming)
-    if(name==='Privacy')await capture(page,'transition-arrival')
+    if(name==='Android'){await expect(scene).toHaveAttribute('data-phase','arriving');await capture(page,'transition-arrival')}
+    const proof=await proofPromise
+    expect(proof.some(f=>f.phase==='scene'&&f.geometry>.25&&f.outgoing!=='none')).toBe(true)
+    const incoming=proof.find(f=>f.phase==='arriving'&&f.opacity>.1&&f.incoming!=='none')
+    expect(incoming,'A real visible incoming plane must be observed, independent of PNG encoding time').toBeTruthy()
+    expect(incoming!.inert).toBe(true);expect(incoming!.heading!.length).toBeGreaterThan(5)
+    samples.push({motif,frames:proof})
     await expect(main).toHaveAttribute('data-route-phase','idle');await expect(page.locator('h1')).toBeFocused();await expect(scene).toHaveCount(0)
   }
   await page.getByRole('link',{name:'ScamSentry home',exact:true}).click()
