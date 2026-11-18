@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "scope": "Fresh local IPython execution of the Colab notebook. The README selects three of ten generated charts.",
+  "notebook": "ml/notebooks/ScamSentry_ML_Evidence.ipynb",
+  "notebook_sha256": "0ab9d319fdb5876533a9fadb83071ffa74e19feaa998c5e22a4d830391955f55",
+  "evidence_commit": "01765677ea3e7a95b8983498168604cfec83090c",
+  "protocol_id": "ss-group-v1",
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "generated_pngs": 10,
+  "generated_csvs": 7,
+  "figures": {
+    "03_training_feature_correlation.png": {
+      "sha256": "65cb39d8849e037f03aac3ce09c0e5d7817c792a3cd7914f4c3127b3dda60865",
+      "scope": "Frozen train split, 3444 messages"
+    },
+    "04_historical_confusion.png": {
+      "sha256": "3fdd078a82180da5e5bcd30c703297954aa7063d37aee53df308f4646406aab5",
+      "scope": "Frozen historical test, 861 records"
+    },
+    "08_historical_robustness.png": {
+      "sha256": "6e2f95b6ecb4a6a877c29988216e28403b3ef5ea46e27b8e9902acbd473b4bc3",
+      "scope": "Historical test with controlled text perturbations"
+    }
+  }
+}

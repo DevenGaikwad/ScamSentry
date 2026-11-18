@@ -1,5 +1,7 @@
 # Reproduce the ML pipeline
 
+[Open the Colab evidence notebook](notebooks/ScamSentry_ML_Evidence.ipynb) · [Notebook execution and figure generation](notebooks/README.md)
+
 Run from `ml` after installing the local package and pinned requirements. The app bundle is already exported; raw/processed messages are not distributed. Obtain the primary source from the registered original publisher, verify the pinned digest, and keep it under the ignored `data/raw` directory.
 
 ```sh

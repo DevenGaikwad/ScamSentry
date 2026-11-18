@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "browser_version": "0.4.0",
+  "source_commit": "01765677ea3e7a95b8983498168604cfec83090c",
+  "workflow_run": "44296081682",
+  "browser_artifact": "14424586316",
+  "artifact_sha256": "7ac090337b0728d7b63f0cbb445dc15ceabf59096722e680cab622ee167b3cfb",
+  "captures": [
+    {
+      "file": "browser-analysis-result.png",
+      "route": "/analyze",
+      "description": "Local analysis result using fictional input",
+      "source_member": "assets/evidence/v3/browser/desktop-chromium_light-secret-result.png",
+      "dimensions": [
+        1440,
+        3256
+      ],
+      "sha256": "eba3c8e1372a90c85230490b82ee1cc259efa1efe48105e64e85adac9e85f1ea"
+    },
+    {
+      "file": "browser-model-evidence.png",
+      "route": "/evidence",
+      "description": "Archived model evidence page",
+      "source_member": "assets/evidence/v3/browser/desktop-chromium_light-evidence.png",
+      "dimensions": [
+        1440,
+        5979
+      ],
+      "sha256": "508a265c5667f920e1886c2f6050982a2138eadd0e75b6bff75341bee756b4a5"
+    }
+  ]
+}
