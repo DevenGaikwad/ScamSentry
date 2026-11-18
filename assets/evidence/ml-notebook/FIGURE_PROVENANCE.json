@@ -2,7 +2,7 @@
   "schema_version": 1,
   "scope": "Fresh local IPython execution of the Colab notebook. The README selects three of ten generated charts.",
   "notebook": "ml/notebooks/ScamSentry_ML_Evidence.ipynb",
-  "notebook_sha256": "0ab9d319fdb5876533a9fadb83071ffa74e19feaa998c5e22a4d830391955f55",
+  "notebook_sha256": "43792206fc9d4de9317adaf7e79732109a6bc90ab25b6a22ce756d58d6458df8",
   "evidence_commit": "01765677ea3e7a95b8983498168604cfec83090c",
   "protocol_id": "ss-group-v1",
   "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
@@ -27,5 +27,6 @@
       "sha256": "6e2f95b6ecb4a6a877c29988216e28403b3ef5ea46e27b8e9902acbd473b4bc3",
       "scope": "Historical test with controlled text perturbations"
     }
-  }
+  },
+  "figure_manifest_schema_version": 2
 }

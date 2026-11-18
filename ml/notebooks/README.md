@@ -2,7 +2,7 @@
 
 [Open in Colab](https://colab.research.google.com/github/DevenGaikwad/ScamSentry/blob/main/ml/notebooks/ScamSentry_ML_Evidence.ipynb) · [Notebook source](ScamSentry_ML_Evidence.ipynb) · [README figures](../../assets/evidence/ml-notebook/FIGURE_PROVENANCE.json)
 
-Use a CPU runtime and choose **Runtime → Run all**. The default run reads hash-checked, aggregate evidence from the checkout or public repository. It exports ten PNGs, seven CSVs and a SHA-256 figure manifest under **scamsentry_evidence/**. NumPy, pandas, Matplotlib and IPython are required. The chart manifest records actual versions. Local Jupyter can run the same notebook after installing those packages.
+Use a CPU runtime and choose **Runtime → Run all**. The default run reads hash-checked, aggregate evidence from the checkout or public repository. It exports ten PNGs, seven CSVs and a SHA-256 figure manifest under **scamsentry_evidence/**. The manifest records each chart’s partition and sample counts, the source SHA-256 values, and the runtime versions. Local Jupyter can run the same notebook with NumPy, pandas, Matplotlib and IPython.
 
 | Notebook view | Exact scope |
 | --- | --- |
@@ -31,6 +31,6 @@ The builder verifies the split and processed-data digests, then cross-checks lab
 
 ## Demonstrate the training workflow
 
-Set **RUN_TRAINING_DEMO** in the notebook when you want to run a separate C2 fit. Use a Python 3.12 CPU runtime with access to GitHub, PyPI and the registered dataset publisher. If the publisher download fails, set **TRAINING_CSV** to a runtime copy of the exact registered CSV. The SHA-256 check applies to either route. Training recreates the frozen split, uses an isolated pinned environment, and reports development metrics. The temporary checkout and trained files are cleaned up when the cell completes.
+Set **RUN_TRAINING_DEMO** in the notebook when you want to run a separate C2 fit. Use a Python 3.12 CPU runtime with access to GitHub, PyPI and the registered dataset publisher. If the publisher download fails, set **TRAINING_CSV** to a runtime copy of the exact registered CSV. The SHA-256 check applies to either route. Training recreates the frozen split and uses an isolated pinned environment. The aggregate **optional_training_demo.json** records the run ID, checked hashes, development metrics, calibration scope and runtime versions. The temporary checkout and trained files are cleaned up when the cell completes.
 
 For a short faculty demo, show the split chart, historical confusion and training correlation, then point to the OCR-like substitution result and V4 screening decision. The original model's reported test metrics come from its frozen release record.
