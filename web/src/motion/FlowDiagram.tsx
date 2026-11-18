@@ -31,6 +31,7 @@ export function SignalDiagram({kind='hero'}:{kind?:FlowKind}) {
       frame=requestAnimationFrame(tick)
     }
     const sync=()=>{
+      if(destroyed)return
       stop();svg.dataset.visible=String(visible)
       if(!running||!visible||document.hidden){animations.forEach(a=>a.cancel());return}
       svg.dataset.running='true'

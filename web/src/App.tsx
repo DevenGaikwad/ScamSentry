@@ -36,17 +36,22 @@ function Header({ path }: { path: string }) {
   </header>
 }
 function Shell({ path, session }: { path: string; session: AnalysisSession }) {
-  const previousPath = useRef(path)
+  const renderedPath = useRef(path)
+  const pendingFocus = useRef(false)
   const { transition } = useTransition()
   const plane = useRoutePlane(path)
   const { running } = usePreferences()
   usePageMetadata(path); useEditorialEffects(path)
   useLayoutEffect(() => {
-    if (previousPath.current !== path) window.scrollTo({ top: 0, behavior: 'instant' })
+    if (renderedPath.current !== path) {
+      renderedPath.current = path
+      pendingFocus.current = true
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
   }, [path])
   useEffect(() => {
-    if (transition || previousPath.current === path) return
-    previousPath.current = path
+    if (transition || !pendingFocus.current) return
+    pendingFocus.current = false
     document.querySelector<HTMLElement>('main h1')?.focus({ preventScroll: true })
   }, [path, transition])
   let content

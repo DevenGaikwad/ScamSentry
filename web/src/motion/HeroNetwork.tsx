@@ -50,6 +50,7 @@ export function HeroNetwork() {
       if (element.dataset.renderer !== 'static') frame=requestAnimationFrame(tick)
     }
     const sync = () => {
+      if(destroyed)return
       cancelAnimationFrame(frame); frame=0; last=0
       const active=running&&visible&&!document.hidden
       element.dataset.running=String(active)
@@ -57,6 +58,7 @@ export function HeroNetwork() {
       if(active&&element.dataset.renderer!=='static') frame=requestAnimationFrame(tick)
     }
     const resize = () => {
+      if(destroyed)return
       const rect=element.getBoundingClientRect(), w=Math.round(rect.width), h=Math.round(rect.height)
       if(w===width&&h===height)return
       width=w;height=h

@@ -93,6 +93,10 @@ test('public routes render departure, geometric middle, real miniature and five 
 test('latest navigation wins, history remains native, pause and renderer failure always restore usable content',async({page})=>{
   await page.setViewportSize({width:1363,height:936});await page.goto('/')
   const links=page.getByRole('navigation',{name:'Main navigation',exact:true})
+  await links.getByRole('link',{name:'Learn',exact:true}).click()
+  await expect(page.locator('.route-scene')).toHaveAttribute('data-phase','arriving')
+  await page.goBack();await expect(page).toHaveURL(/\/$/)
+  await expect(page.locator('main')).toHaveAttribute('data-route-phase','idle');await expect(page.locator('h1')).toBeFocused()
   await links.getByRole('link',{name:'Learn',exact:true}).click();await links.getByRole('link',{name:'Evidence',exact:true}).click()
   await page.goBack();await expect(page).toHaveURL(/\/learn$/)
   await page.goForward();await expect(page).toHaveURL(/\/evidence$/)
