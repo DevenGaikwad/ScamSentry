@@ -68,10 +68,15 @@ test('public routes render departure, geometric middle, real miniature and five 
     })
     await expect(scene.locator('.outgoing-public-plane')).toBeVisible()
     await expect(scene).toHaveAttribute('data-phase','scene')
+    // Firefox can deliver very sparse rAF samples under trace/video capture. Verify the
+    // visible middle directly as well; do not require a sample at one exact boundary.
+    await expect.poll(async()=>Number(await page.locator('.depth-geometry').evaluate(el=>getComputedStyle(el).opacity))).toBeGreaterThan(.25)
     if(name==='Privacy')await capture(page,'transition-middle')
     if(name==='Android'){await expect(scene).toHaveAttribute('data-phase','arriving');await capture(page,'transition-arrival')}
     const proof=await proofPromise
-    expect(proof.some(f=>f.phase==='scene'&&f.geometry>.25&&f.outgoing!=='none')).toBe(true)
+    mkdirSync(evidence,{recursive:true});writeFileSync(join(evidence,`${test.info().project.name}_${motif}_geometry.json`),JSON.stringify({source:process.env.SCAMSENTRY_SOURCE_SHA??'local',motif,frames:proof},null,2))
+    expect(proof.some(f=>f.geometry>.25&&f.outgoing!=='none')).toBe(true)
+    expect(new Set(proof.map(f=>f.outgoing)).size,'The outgoing plane must actually move').toBeGreaterThan(1)
     const incoming=proof.find(f=>f.phase==='arriving'&&f.opacity>.1&&f.incoming!=='none')
     expect(incoming,'A real visible incoming plane must be observed, independent of PNG encoding time').toBeTruthy()
     expect(incoming!.inert).toBe(true);expect(incoming!.heading!.length).toBeGreaterThan(5)
