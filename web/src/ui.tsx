@@ -50,31 +50,8 @@ export function PageIntro({ number, label, title, lead }: { number: string; labe
 export function Chapter({ number, to, label }: { number: string; to: string; label: string }) {
   return <nav className="chapter reveal" aria-label="Next chapter"><Link href={to} className="chapter-link" data-bracket><span className="eyebrow">END OF CHAPTER · {number}</span><span className="chapter-title">{label}<Arrow /></span><span className="eyebrow">CONTINUE READING</span></Link></nav>
 }
-export function SignalDiagram({ kind = 'hero' }: { kind?: 'hero' | 'privacy' }) {
-  const ref = useRef<SVGSVGElement>(null)
-  useEffect(() => {
-    const node = ref.current
-    if (!node) return
-    const observer = new IntersectionObserver(entries => { node.dataset.visible = entries[0]?.isIntersecting ? 'true' : 'false' })
-    observer.observe(node)
-    return () => observer.disconnect()
-  }, [])
-  return <figure className={`signal-figure ${kind} reveal`}>
-    <svg ref={ref} data-visible="false" viewBox="0 0 720 264" className="signal-diagram" role="img" aria-label={kind === 'hero' ? 'Conceptual signal flow: a message is inspected locally, then you independently verify the request.' : 'Public assets download to this browser. Your input stays in a local worker. A redacted file leaves only when you review and download it.'}>
-      <g fill="none" stroke="currentColor" strokeWidth="1">
-        <path className="diagram-rule" d="M0 132H128L176 84H280M0 172H108L176 104H280M0 92H136L176 132H280M440 132H520L572 80H720M440 152H548L592 196H720" />
-        <path className="signal-packet" d="M0 132H128L176 84H280M440 132H520L572 80H720" />
-        <path className="diagram-boundary" d="M248 24H472V240H248Z" strokeDasharray="3 7" />
-        <path d="M292 72H428V192H292Z" />
-        <path d="M310 92H340V122H310ZM380 142H410V172H380Z" />
-        <path d="M340 106H370V156H380M322 122V156H360" />
-      </g>
-      <g fill="currentColor"><rect className="diagram-node" x="124" y="128" width="8" height="8" /><rect className="diagram-node node-two" x="516" y="128" width="8" height="8" /><circle cx="360" cy="132" r="5" /></g>
-      <g className="diagram-labels" fill="currentColor"><text x="0" y="238">{kind === 'hero' ? '01 / YOUR INPUT' : '01 / PUBLIC ASSETS'}</text><text x="264" y="258">02 / LOCAL INSPECTION</text><text x="720" y="238" textAnchor="end">{kind === 'hero' ? '03 / YOUR JUDGMENT' : '03 / REVIEWED EXPORT'}</text></g>
-    </svg>
-    <figcaption><span className="status-square" aria-hidden="true" /> {kind === 'hero' ? 'Conceptual signal flow. No live traffic or inference progress is represented.' : 'Input is processed in browser memory. Only an explicitly downloaded redacted file leaves this flow.'}</figcaption>
-  </figure>
-}
+export { SignalDiagram } from './motion/FlowDiagram'
+export { PointerBrackets } from './motion/PointerBrackets'
 export function useEditorialEffects(path: string) {
   const { running } = usePreferences()
   useEffect(() => {
@@ -102,23 +79,4 @@ export function ReadingRail({ path }: { path: string }) {
     return () => { cancelAnimationFrame(frame); removeEventListener('scroll', update); removeEventListener('resize', update) }
   }, [path])
   return <div className="reading-rail" ref={ref} aria-hidden="true"><span /></div>
-}
-export function PointerBrackets() {
-  const ref = useRef<HTMLDivElement>(null)
-  const { running } = usePreferences()
-  useEffect(() => {
-    const element = ref.current
-    if (!element || !running || !matchMedia('(hover: hover) and (pointer: fine)').matches) return
-    const over = (event: PointerEvent) => {
-      const target = (event.target as Element).closest<HTMLElement>('[data-bracket]')
-      if (!target) { element.hidden = true; return }
-      const rect = target.getBoundingClientRect()
-      element.style.left = `${rect.left - 5}px`; element.style.top = `${rect.top - 5}px`
-      element.style.width = `${rect.width + 10}px`; element.style.height = `${rect.height + 10}px`; element.hidden = false
-    }
-    const hide = () => { element.hidden = true }
-    document.addEventListener('pointerover', over); addEventListener('scroll', hide, { passive: true })
-    return () => { hide(); document.removeEventListener('pointerover', over); removeEventListener('scroll', hide) }
-  }, [running])
-  return <div ref={ref} hidden className="pointer-brackets" aria-hidden="true" />
 }

@@ -1,13 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Analyze } from './Analyze'
 import { Android, Article, Evidence, Home, Learn, NotFound, Privacy } from './Pages'
 import { PreferencesProvider, usePreferences } from './preferences'
-import { Link, Router, usePageMetadata } from './router'
+import { Link, Router, usePageMetadata, useTransition } from './router'
 import { creatorCredit, navigation, site } from './site'
 import { Arrow, containDialogFocus, External, Mark, PointerBrackets, ReadingRail, useEditorialEffects } from './ui'
 import { useAnalysis } from './useAnalysis'
 import type { AnalysisSession } from './useAnalysis'
+import { RouteScene, useRoutePlane } from './motion/RouteScene'
 import './style.css'
+import './motion/motion.css'
 
 function PreferenceControls() {
   const { theme, motion, reduced, setTheme, toggleMotion } = usePreferences()
@@ -34,15 +36,24 @@ function Header({ path }: { path: string }) {
   </header>
 }
 function Shell({ path, session }: { path: string; session: AnalysisSession }) {
-  const previousPath = useRef(path)
+  const renderedPath = useRef(path)
+  const pendingFocus = useRef(false)
+  const { transition } = useTransition()
+  const plane = useRoutePlane(path)
   const { running } = usePreferences()
   usePageMetadata(path); useEditorialEffects(path)
-  useEffect(() => {
-    if (previousPath.current === path) return
-    previousPath.current = path
-    window.scrollTo({ top: 0, behavior: 'instant' })
-    document.querySelector<HTMLElement>('main h1')?.focus({ preventScroll: true })
+  useLayoutEffect(() => {
+    if (renderedPath.current !== path) {
+      renderedPath.current = path
+      pendingFocus.current = true
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
   }, [path])
+  useEffect(() => {
+    if (transition || !pendingFocus.current) return
+    pendingFocus.current = false
+    document.querySelector<HTMLElement>('main h1')?.focus({ preventScroll: true })
+  }, [path, transition])
   let content
   if (path === '/') content = <Home />
   else if (path === '/analyze') content = <Analyze session={session} />
@@ -52,7 +63,7 @@ function Shell({ path, session }: { path: string; session: AnalysisSession }) {
   else if (path === '/privacy') content = <Privacy />
   else if (path === '/android') content = <Android />
   else content = <NotFound />
-  return <><a className="skip-link" href="#main-content">Skip to content</a><Header path={path} /><ReadingRail path={path} /><main id="main-content" className={path === '/analyze' ? 'analyze-page' : 'public-page'} key={path} tabIndex={-1}>{content}</main><footer className="site-footer"><div className="footer-top"><Link href="/" className="footer-brand"><Mark />ScamSentry</Link><span className="eyebrow">A PERSONAL ACADEMIC RESEARCH PREVIEW / WEB {site.version}</span><button className="back-top" onClick={() => { document.querySelector<HTMLElement>('main h1')?.focus({ preventScroll: true }); scrollTo({ top: 0, behavior: running ? 'smooth' : 'instant' }) }}>Back to top <Arrow /></button></div><p className="creator-credit">{creatorCredit}</p><div className="footer-bottom"><span>No sender is authenticated. Verify independently.</span><External href={site.repository}>GitHub source</External><Link href="/privacy">Privacy</Link><Link href="/evidence">Evidence & credits</Link></div></footer><PointerBrackets /></>
+  return <><a className="skip-link" href="#main-content">Skip to content</a><Header path={path} /><ReadingRail path={path} /><RouteScene transition={transition} /><main ref={plane} inert={!!transition} data-route-phase={transition?.phase ?? 'idle'} id="main-content" className={path === '/analyze' ? 'analyze-page' : 'public-page'} key={path} tabIndex={-1}>{content}</main><footer className="site-footer" inert={!!transition}><div className="footer-top"><Link href="/" className="footer-brand"><Mark />ScamSentry</Link><span className="eyebrow">A PERSONAL ACADEMIC RESEARCH PREVIEW / WEB {site.version}</span><button className="back-top" onClick={() => { document.querySelector<HTMLElement>('main h1')?.focus({ preventScroll: true }); scrollTo({ top: 0, behavior: running ? 'smooth' : 'instant' }) }}>Back to top <Arrow /></button></div><p className="creator-credit">{creatorCredit}</p><div className="footer-bottom"><span>No sender is authenticated. Verify independently.</span><External href={site.repository}>GitHub source</External><Link href="/privacy">Privacy</Link><Link href="/evidence">Evidence & credits</Link></div></footer><PointerBrackets /></>
 }
 export default function App() {
   const session = useAnalysis()

@@ -9,7 +9,7 @@ export const creatorCredit = `${creator.fullName} · ${creator.fullDegree} · ${
 export const site = {
   origin: 'https://scamsentry-inspect.vercel.app',
   repository: 'https://github.com/DevenGaikwad/ScamSentry',
-  version: '0.3.0',
+  version: '0.3.1',
   release: 'https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview',
 } as const
 export const riskCopy: Record<Risk, { title: string; description: string; symbol: string }> = {

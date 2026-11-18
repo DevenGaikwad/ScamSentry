@@ -1,0 +1,38 @@
+{
+  "baseline": "92df2bbaf00aed9431711b4fec793b0b69e615f5",
+  "frozen_files": [
+    {
+      "path": "web/src/core/engine.ts",
+      "sha256": "ad945fec02cfa1087ff3d6e9e84498c1ed281f481dc4844b21af2a318e3b1aeb",
+      "unchanged": true
+    },
+    {
+      "path": "web/src/analysis.worker.ts",
+      "sha256": "34b87f2a09a2a14426a728c0ce39f8cb9f144452520c9a083d516403c227d8e9",
+      "unchanged": true
+    },
+    {
+      "path": "web/src/release-manifest.json",
+      "sha256": "5332819c33e15a6440b393d2ee9c4f2bf802cad6b3f2549e2481e44a6083662d",
+      "unchanged": true
+    },
+    {
+      "path": "web/src/core/contracts.generated.json",
+      "sha256": "0e98d86998330dd9dece5b339a18bf3eba731d1c0ac9bfe0a8c3a04214a0180b",
+      "unchanged": true
+    },
+    {
+      "path": "web/src/benchmark.json",
+      "sha256": "18d34a98f4a046ae0d8e91f89ed43bdc0e9f958e689c74ee603ee4da46732e38",
+      "unchanged": true
+    },
+    {
+      "path": "web/public/model/model-14927b442dc9f33a.json",
+      "sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+      "unchanged": true
+    }
+  ],
+  "model_retrained": false,
+  "native_source_changed": false,
+  "local_browser": "Blocked before app launch: process_singleton_posix socket() Operation not permitted. Browser checks must run in CI."
+}

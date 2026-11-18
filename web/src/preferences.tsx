@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useLayoutEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 
 export type Theme = 'system' | 'light' | 'dark'
@@ -15,16 +15,18 @@ export function PreferencesProvider({ busy, children }: { busy: boolean; childre
   const [systemDark, setSystemDark] = useState(() => matchMedia('(prefers-color-scheme: dark)').matches)
   const [reduced, setReduced] = useState(() => matchMedia('(prefers-reduced-motion: reduce)').matches)
   const [hidden, setHidden] = useState(() => document.hidden)
+  const [forced, setForced] = useState(() => matchMedia('(forced-colors: active)').matches)
   const [inputActive, setInputActive] = useState(false)
   const dark = theme === 'dark' || (theme === 'system' && systemDark)
-  const running = !reduced && motion !== 'paused' && !hidden && !busy && !inputActive
+  const running = !reduced && !forced && motion !== 'paused' && !hidden && !busy && !inputActive
   useEffect(() => {
-    const d = matchMedia('(prefers-color-scheme: dark)'), r = matchMedia('(prefers-reduced-motion: reduce)')
+    const d = matchMedia('(prefers-color-scheme: dark)'), r = matchMedia('(prefers-reduced-motion: reduce)'), f = matchMedia('(forced-colors: active)')
     const syncDark = () => setSystemDark(d.matches), syncReduced = () => setReduced(r.matches), syncHidden = () => setHidden(document.hidden)
-    d.addEventListener('change', syncDark); r.addEventListener('change', syncReduced); document.addEventListener('visibilitychange', syncHidden)
-    return () => { d.removeEventListener('change', syncDark); r.removeEventListener('change', syncReduced); document.removeEventListener('visibilitychange', syncHidden) }
+    const syncForced = () => setForced(f.matches)
+    d.addEventListener('change', syncDark); r.addEventListener('change', syncReduced); f.addEventListener('change', syncForced); document.addEventListener('visibilitychange', syncHidden)
+    return () => { d.removeEventListener('change', syncDark); r.removeEventListener('change', syncReduced); f.removeEventListener('change', syncForced); document.removeEventListener('visibilitychange', syncHidden) }
   }, [])
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.dataset.theme = dark ? 'dark' : 'light'
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#101010' : '#f5f5f5')
   }, [dark])
