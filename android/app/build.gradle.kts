@@ -1,8 +1,14 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
 }
+val releaseIdentity = Properties().apply {
+    rootProject.file("release.properties").inputStream().use { load(it) }
+}
+
 android {
     namespace = "in.deven.scamsentry"
     compileSdk = 37
@@ -10,8 +16,8 @@ android {
         applicationId = "in.deven.scamsentry"
         minSdk = 26
         targetSdk = 36
-        versionCode = 2
-        versionName = "0.2.0-preview"
+        versionCode = releaseIdentity.getProperty("versionCode").toInt()
+        versionName = releaseIdentity.getProperty("versionName")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }

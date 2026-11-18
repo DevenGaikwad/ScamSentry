@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { damping, heroGeometry, project } from '../src/motion/geometry'
+import { damping, heroPipelines, measureTrack, positionOnTrack, uniqueSegments } from '../src/motion/geometry'
 import { edgePath, flowGraph, pointOnPolyline } from '../src/motion/flow'
 import { isPublicPath, richNavigation, routeMotif } from '../src/motion/navigation'
 
@@ -16,20 +16,39 @@ describe('public motion geometry and privacy policy',()=>{
     expect(richNavigation('/learn','/learn',true,false,false)).toBe(false)
     expect(new Set(['/','/learn','/evidence','/privacy','/android'].map(routeMotif)).size).toBe(5)
   })
-  it('generates deterministic bounded geometry and finite projections on narrow and high-density layouts',()=>{
-    expect(heroGeometry()).toEqual(heroGeometry())
-    expect(heroGeometry().strands).toHaveLength(42)
-    expect(heroGeometry(true).strands).toHaveLength(24)
-    for(const compact of [false,true])for(const [width,height] of [[320,320],[390,600],[1363,800],[2560,1400]]){
-      for(const strand of heroGeometry(compact).strands)for(const p of strand.points){
-        const v=project(p,width,height,.075)
-        expect(v).not.toBeNull();expect(Number.isFinite(v!.x)&&Number.isFinite(v!.y)).toBe(true)
-        expect(Math.abs(v!.x)).toBeLessThan(width*2);expect(Math.abs(v!.y)).toBeLessThan(height*3)
+  it('routes each public pipeline through square, bounded segments between real ports', () => {
+    const { wide, compact } = heroPipelines
+    expect(compact.nodes.length).toBeLessThan(wide.nodes.length)
+    expect(wide.edges.length).toBeLessThan(12)
+    for (const graph of [wide, compact]) {
+      const segments = uniqueSegments(graph.edges)
+      expect(segments.length).toBeLessThanOrEqual(22)
+      for (const edge of graph.edges) {
+        const from = graph.nodes.find(node => node.id === edge.from)!
+        const to = graph.nodes.find(node => node.id === edge.to)!
+        expect(edge.points[0]).toEqual([from.x + from.width, from.y + from.height / 2])
+        expect(edge.points.at(-1)).toEqual([to.x, to.y + to.height / 2])
+      }
+      for (const [[x, y], [u, v]] of segments) {
+        expect([x, y, u, v].every(Number.isFinite)).toBe(true)
+        expect((x === u) !== (y === v)).toBe(true)
+        expect(Math.min(x, u)).toBeGreaterThan(0)
+        expect(Math.max(x, u)).toBeLessThan(graph.width)
+        expect(Math.min(y, v)).toBeGreaterThan(0)
+        expect(Math.max(y, v)).toBeLessThan(graph.height)
+        for (const node of graph.nodes) {
+          const intersectsInterior = Math.max(x, u) > node.x && Math.min(x, u) < node.x + node.width
+            && Math.max(y, v) > node.y && Math.min(y, v) < node.y + node.height
+          expect(intersectsInterior, 'Connector crosses ' + node.id).toBe(false)
+        }
       }
     }
-    expect(project({x:0,y:0,z:2.7},1363,936)).toBeNull()
-    expect(project({x:NaN,y:0,z:0},1363,936)).toBeNull()
-    expect(project({x:0,y:0,z:0},0,936)).toBeNull()
+  })
+  it('travels equal screen distances through an elbow under nonuniform scaling', () => {
+    const track = measureTrack([[0, 0], [10, 0], [10, 20]], 2, .5)
+    expect(track.length).toBe(30)
+    expect([0, 10, 20, 25, 30].map(distance => positionOnTrack(track, distance)))
+      .toEqual([[0, 0], [5, 0], [10, 0], [10, 10], [10, 20]])
   })
   it('uses time-based damping with bounded restoration deltas',()=>{
     const a=damping(8,48),b=damping(16,48)

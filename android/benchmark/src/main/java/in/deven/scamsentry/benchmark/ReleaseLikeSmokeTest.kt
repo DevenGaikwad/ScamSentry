@@ -56,6 +56,8 @@ class ReleaseLikeSmokeTest {
     }
     @Test fun minifiedTextFlowShowsCredentialObservation()=checkedJourney("text") {
         val device=startClean()
+        assertTrue(device.wait(Until.hasObject(By.text("A second look. Before you act.")), 10000))
+        capture("minified_analyze_home.png")
         val editor=requireNotNull(device.wait(Until.findObject(By.clazz("android.widget.EditText").pkg(target)),15000))
         val message="Fictional account team: send your OTP immediately to confirm access."
         editor.text=message

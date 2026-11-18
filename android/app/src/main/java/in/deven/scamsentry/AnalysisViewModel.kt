@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import `in`.deven.scamsentry.core.*
 import `in`.deven.scamsentry.data.*
 import kotlinx.coroutines.*
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -23,6 +24,9 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
     val state = _state.asStateFlow()
     val historyEnabled = app.settings.historyEnabled.stateIn(viewModelScope,SharingStarted.WhileSubscribed(5000),false)
     val onboardingDone = app.settings.onboardingDone.stateIn(viewModelScope,SharingStarted.WhileSubscribed(5000),false)
+    val presentation = app.settings.presentation.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), PresentationPreferences())
+    private val pendingShare = Channel<Unit>(Channel.CONFLATED)
+    val sharedInput = pendingShare.receiveAsFlow()
     val history = app.history.observe().catch { _state.update { s -> s.copy(error="Saved summaries are unavailable. Message analysis still works.") }; emit(emptyList()) }.stateIn(viewModelScope,SharingStarted.WhileSubscribed(5000),emptyList())
     private var work: Job? = null
     private var previewOwner: OcrDraft? = null
@@ -63,6 +67,7 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
         if (text.length > 16_000) { _state.update { it.copy(error="Shared text is too large. Paste a shorter excerpt.") }; return }
         clear()
         edit(text,"Shared text")
+        pendingShare.trySend(Unit)
     }
     fun clear() {
         work?.cancel()
@@ -120,6 +125,18 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
         }
     }
     fun finishOnboarding() { viewModelScope.launch { app.settings.onboard() } }
+    fun setTheme(choice: AppTheme) = changePresentation { app.settings.theme(choice) }
+    fun setMotion(enabled: Boolean) = changePresentation { app.settings.motion(enabled) }
+
+    private fun changePresentation(update: suspend () -> Unit) {
+        viewModelScope.launch {
+            try {
+                update()
+            } catch (_: java.io.IOException) {
+                _state.update { it.copy(error="The display preference could not be saved. Try again.") }
+            }
+        }
+    }
     fun setHistory(enabled: Boolean) { viewModelScope.launch {
         runCatching { historyMutex.withLock {
             if(!enabled) app.history.clear()

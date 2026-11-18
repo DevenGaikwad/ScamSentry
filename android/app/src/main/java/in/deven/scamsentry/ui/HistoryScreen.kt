@@ -19,11 +19,11 @@ import java.util.Date
     val dateFormat=remember(locale) { SimpleDateFormat("dd MMM yyyy, HH:mm",locale) }
     LazyColumn(Modifier.fillMaxSize(),contentPadding=PaddingValues(24.dp),verticalArrangement=Arrangement.spacedBy(20.dp)) {
         item { Tag("YOUR DEVICE, YOUR CHOICE") }
-        item { Text("Saved summaries",style=MaterialTheme.typography.headlineLarge) }
-        item { Text("Only summaries you deliberately save appear here. Original messages and screenshots are never saved to history. At most 200 summaries are retained.",color=Studio.Muted) }
-        if(!enabled) item { Panel { Mark(kind="history"); Text("History is off",style=MaterialTheme.typography.titleLarge); Text("Analyze without retaining a record. Enable optional summary history in Settings.",color=Studio.Muted); OutlinedButton(onClick=onSettings) { Text("History settings") } } }
-        else if(entries.isEmpty()) item { Panel { Text("Nothing saved yet",style=MaterialTheme.typography.titleLarge); Text("After an analysis, choose Save a local summary.",color=Studio.Muted) } }
-        items(entries,key={it.id}) { e -> Panel { Text(Risk.entries.firstOrNull { it.wire==e.category }?.title?:"Saved result",style=MaterialTheme.typography.titleMedium); Text(e.summary,color=Studio.Muted); Text(dateFormat.format(Date(e.createdAt)),style=MaterialTheme.typography.bodyMedium,color=Studio.Muted); Text("${e.inputSource} · model ${e.modelId}",style=MaterialTheme.typography.bodyMedium); TextButton(onClick={ vm.delete(e.id) }) { Text("Delete summary",color=Studio.Red) } } }
-        if(entries.isNotEmpty()) item { TextButton(onClick=onClear) { Text("Clear all summaries",color=Studio.Red) } }
+        item { Heading("Saved summaries") }
+        item { Text("Only summaries you deliberately save appear here. Original messages and screenshots are never saved to history. At most 200 summaries are retained.",color=studio.muted) }
+        if(!enabled) item { Panel { Mark(kind="history"); Text("History is off",style=MaterialTheme.typography.titleLarge); Text("Analyze without retaining a record. Enable optional summary history in Settings.",color=studio.muted); OutlinedButton(onClick=onSettings) { Text("History settings") } } }
+        else if(entries.isEmpty()) item { Panel { Text("Nothing saved yet",style=MaterialTheme.typography.titleLarge); Text("After an analysis, choose Save a local summary.",color=studio.muted) } }
+        items(entries,key={it.id}) { e -> Panel { Text(Risk.entries.firstOrNull { it.wire==e.category }?.title?:"Saved result",style=MaterialTheme.typography.titleMedium); Text(e.summary,color=studio.muted); Text(dateFormat.format(Date(e.createdAt)),style=MaterialTheme.typography.bodyMedium,color=studio.muted); Text("${e.inputSource} · model ${e.modelId}",style=MaterialTheme.typography.bodyMedium); TextButton(onClick={ vm.delete(e.id) }) { Text("Delete summary",color=studio.danger) } } }
+        if(entries.isNotEmpty()) item { TextButton(onClick=onClear) { Text("Clear all summaries",color=studio.danger) } }
     }
 }
