@@ -15,7 +15,7 @@ export function PointerBrackets() {
     if (!running) return
     let frame = 0, last = 0, initialized = false, target: HTMLElement | null = null
     let pointer = { x: 0, y: 0 }, current = { x: 0, y: 0, w: 34, h: 34 }, goal = { ...current }
-    const hide = () => { root.hidden = true; initialized = false; cancelAnimationFrame(frame); frame = 0 }
+    const hide = () => { root.hidden = true; initialized = false; target=null; targetObserver?.disconnect(); cancelAnimationFrame(frame); frame = 0 }
     const blocked = () => !capability.matches || forced.matches || !!document.querySelector('dialog[open]') || !!document.activeElement?.matches(editable)
     const tick = (now: number) => {
       frame = 0
@@ -43,20 +43,22 @@ export function PointerBrackets() {
       pointer = { x: event.clientX, y: event.clientY }
       const element = event.target instanceof Element ? event.target : null
       if (element?.closest(editable)) { hide(); return }
-      target = element?.closest<HTMLElement>(actionable) ?? null
+      const next=element?.closest<HTMLElement>(actionable) ?? null
+      if(next!==target){targetObserver?.disconnect();target=next;if(target)targetObserver?.observe(target)}
       if (!initialized) { current = { ...pointer, w: 34, h: 34 }; initialized = true }
       bounds()
     }
     const leave = (event: PointerEvent) => { if (!event.relatedTarget) hide() }
-    const scroll = () => { target = null; if (initialized) bounds() }
+    const scroll = () => { target = null; targetObserver?.disconnect(); if (initialized) bounds() }
     const resize = () => { if (initialized) bounds() }
     const focus = () => { if (blocked()) hide() }
+    const targetObserver=new ResizeObserver(()=>{if(initialized)bounds()})
     const observer = new MutationObserver(focus)
     observer.observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['open','inert','disabled'] })
     document.addEventListener('pointermove', move, { passive: true }); document.addEventListener('pointerout', leave)
     document.addEventListener('focusin', focus); addEventListener('blur', hide); addEventListener('scroll', scroll, { passive: true }); addEventListener('resize', resize)
     capability.addEventListener('change', hide); forced.addEventListener('change', hide)
-    return () => { hide(); observer.disconnect(); document.removeEventListener('pointermove', move); document.removeEventListener('pointerout', leave); document.removeEventListener('focusin', focus); removeEventListener('blur', hide); removeEventListener('scroll', scroll); removeEventListener('resize', resize); capability.removeEventListener('change', hide); forced.removeEventListener('change', hide) }
+    return () => { hide(); observer.disconnect(); targetObserver?.disconnect(); document.removeEventListener('pointermove', move); document.removeEventListener('pointerout', leave); document.removeEventListener('focusin', focus); removeEventListener('blur', hide); removeEventListener('scroll', scroll); removeEventListener('resize', resize); capability.removeEventListener('change', hide); forced.removeEventListener('change', hide) }
   }, [running])
   return <div ref={ref} hidden className="pointer-brackets" aria-hidden="true"><i /><i /><i /><i /></div>
 }

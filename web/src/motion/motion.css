@@ -48,5 +48,5 @@ main[data-route-phase=idle]{transform:none;opacity:1}
 @media(max-width:1099px){.route-scene{top:96px}}
 @media(max-width:767px){:root{--route-duration:720ms}.route-scene{top:88px}.outgoing-public-plane{top:28px;padding:20px;min-height:280px}.outgoing-public-plane>p:not(.public-plane-title){font-size:14px}.hero-network{inset:-8px -12px 30%}.hero-static{stroke-width:1.1}}
 @media(max-width:767px){.flow-mobile-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;padding:16px 0 8px;margin:0;list-style:none;font:11px/1.5 'Geist Mono',monospace}.flow-mobile-legend li{border-top:1px solid var(--rule);padding-top:8px}.flow-figure{min-width:0}}
-@media(forced-colors:active){.hero-network canvas{display:none}.hero-network .hero-static{visibility:visible;color:CanvasText;opacity:.45}.route-scene,.pointer-brackets{display:none}}
+@media(forced-colors:active){.hero-network canvas{display:none}.hero-network[data-renderer] .hero-static{visibility:visible;color:CanvasText;opacity:.45}.route-scene,.pointer-brackets{display:none}}
 @media(prefers-reduced-motion:reduce){.route-scene,.pointer-brackets{display:none}.flow-packet{visibility:hidden}}

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useLayoutEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 
 export type Theme = 'system' | 'light' | 'dark'
@@ -26,7 +26,7 @@ export function PreferencesProvider({ busy, children }: { busy: boolean; childre
     d.addEventListener('change', syncDark); r.addEventListener('change', syncReduced); f.addEventListener('change', syncForced); document.addEventListener('visibilitychange', syncHidden)
     return () => { d.removeEventListener('change', syncDark); r.removeEventListener('change', syncReduced); f.removeEventListener('change', syncForced); document.removeEventListener('visibilitychange', syncHidden) }
   }, [])
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.dataset.theme = dark ? 'dark' : 'light'
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#101010' : '#f5f5f5')
   }, [dark])
