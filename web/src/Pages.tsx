@@ -83,7 +83,7 @@ export function Android() {
       {[
         ['arm64-v8a', 'Compatible ARM phones'],
         ['x86_64', 'Matching emulator or device'],
-        ['universal', 'Both supported architectures'],
+        ['universal', 'Multi-architecture fallback'],
       ].map(([abi, label]) => <div className="download-row" key={abi}>
         <div><span className="eyebrow">{label}</span><h3>{abi}</h3></div>
         <External className="primary link-button" href={site.release.replace('/tag/', '/download/') + '/ScamSentry_0.3.0-preview_' + abi + '_TEST-SIGNED.apk'}>Download APK</External>

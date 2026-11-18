@@ -53,7 +53,16 @@ def inspect(path,sdk):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--sdk',type=Path,default=Path(os.environ.get('ANDROID_HOME','/missing-sdk')));p.add_argument('--input',type=Path,default=Path('release/install'));p.add_argument('--output',type=Path,default=Path('release/apk_inspection.json'));a=p.parse_args()
     results=[inspect(p,a.sdk) for p in sorted(a.input.glob('*.apk'))]
-    if len(results)!=3 or {tuple(item['abis']) for item in results}!={('arm64-v8a',),('x86_64',),('arm64-v8a','x86_64')}:
-        raise ValueError('Expected arm64, x86_64 and universal variants')
+    by_variant = {name: [item for item in results if f"_{name}_TEST-SIGNED.apk" in item["file"]]
+                  for name in ("arm64-v8a", "x86_64", "universal")}
+    if len(results) != 3 or any(len(items) != 1 for items in by_variant.values()):
+        raise ValueError("Expected one APK per release variant")
+    for abi in ("arm64-v8a", "x86_64"):
+        if by_variant[abi][0]["abis"] != [abi]:
+            raise ValueError(f"Split APK ABI mismatch: {abi}")
+    required_abis = {"arm64-v8a", "x86_64"}
+    if not required_abis <= set(by_variant["universal"][0]["abis"]):
+        raise ValueError("Universal APK is missing a supported 64-bit ABI")
+
     a.output.write_text(json.dumps(results,indent=2)+'\n');print(f'Inspected {len(results)} actual APKs')
 if __name__=='__main__':main()

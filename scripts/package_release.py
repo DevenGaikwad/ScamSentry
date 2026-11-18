@@ -68,6 +68,8 @@ def main():
     (out/'full_package_validation.json').write_text(json.dumps(full_validation,indent=2)+'\n')
     downloads=[out/'install'/a['file'] for a in artifacts]+[source,bundle]+[out/n for n in ['ARTIFACT_INVENTORY.json','SHA256SUMS.txt','apk_inspection.json','archive_validation.json','full_package_validation.json']]
     if demo.is_file():downloads.append(demo)
+    motion=out/'ScamSentry_Editorial_Motion.webm'
+    if motion.is_file():downloads.append(motion)
     downloads.extend(p for p in [out/'RELEASE_VERIFICATION.json',out/'model_manifest.json'] if p.is_file())
     downloads.extend(sorted(out.glob('native_*.png')))
     (out/'DOWNLOAD_SHA256SUMS.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in downloads))

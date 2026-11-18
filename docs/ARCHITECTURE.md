@@ -1,4 +1,4 @@
-# V2 architecture
+# ScamSentry architecture
 
 The native foundation remains Kotlin/Compose, Material 3, Navigation Compose, ViewModel, coroutines/Flow, Room and DataStore. Domain behavior is Android-independent in `core-analysis`; bitmap/URI/OCR, lifecycle, persistence and sharing stay in the app layer. Coherent editor, result, history, information and component files replace the original all-in-one screen file.
 
@@ -32,3 +32,5 @@ flowchart TD
 ```
 
 The dotted edges represent verification, not an inference service. Python is the reference/research implementation; neither client sends message input to it. Every runtime retains its own implementation of the versioned contract, with parity evidence for the same fixtures.
+
+The 0.3.0 native preview separates appearance preferences from message state. DataStore retains theme and decorative motion alongside the existing history and onboarding choices. Shared text enters the current editor through the ViewModel and a one-time navigation event. The orthogonal Canvas consumes only public fixed geometry and theme tokens.

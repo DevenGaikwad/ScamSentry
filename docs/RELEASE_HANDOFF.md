@@ -1,4 +1,4 @@
-# Research-preview handoff
+# Historical 0.2.0 research-preview handoff
 
 [Live browser app](https://scamsentry-bay.vercel.app/) · [Public repository](https://github.com/DevenGaikwad/ScamSentry) · [v0.2.0-preview downloads](https://github.com/DevenGaikwad/ScamSentry/releases/tag/v0.2.0-preview) · [Executed workflow](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44012744040)
 
@@ -48,7 +48,7 @@ The complete application fixes global context suppression, conservative URL hand
 
 ## Review and demonstration
 
-Original native and browser screenshots are displayed in [README](../README.md) and retained under `assets/evidence/v2/final`. The prerelease includes the actual production [browser workflow recording](https://github.com/DevenGaikwad/ScamSentry/releases/download/v0.2.0-preview/ScamSentry_Browser_Workflow.webm). This recording is separate from a narrated faculty rehearsal and from phone performance evidence.
+Original native and browser screenshots are retained under `assets/evidence/v2/final`. The prerelease includes the actual production [browser workflow recording](https://github.com/DevenGaikwad/ScamSentry/releases/download/v0.2.0-preview/ScamSentry_Browser_Workflow.webm). This recording is separate from a narrated faculty rehearsal and from phone performance evidence.
 
 For a 6–10 minute review use [FACULTY_DEMO.md](FACULTY_DEMO.md); course outlines are in [ACADEMIC_REPORT_OUTLINES.md](ACADEMIC_REPORT_OUTLINES.md). Demonstrate an ordinary message, legitimate urgency, direct secret request, mixed warning/request, edited OCR, deceptive host, limited-support input and manual history controls. All examples are fictional.
 

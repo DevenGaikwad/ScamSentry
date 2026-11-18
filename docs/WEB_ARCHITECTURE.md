@@ -1,4 +1,4 @@
-# Browser architecture — editorial 0.3.0
+# ScamSentry browser architecture
 
 React 19 / TypeScript / Vite retain the approved local worker and shipping engine. `useAnalysis.ts` owns the in-memory draft, result, monotonically increasing request identity, timing and worker. Editing, clearing, cancelling or leaving active analysis invalidates pending replies; active-worker cancellation terminates the worker. Idle navigation can retain a verified worker and completed result in memory. StrictMode cleanup terminates workers. Integrity failure produces the engine’s model-unavailable contract and keeps independent observations; subsequent submissions can retry. No UI inference implementation exists.
 
@@ -9,3 +9,5 @@ React 19 / TypeScript / Vite retain the approved local worker and shipping engin
 Component boundaries: App/global navigation and route shell; Analyze/form, result disclosures and native report dialog; Pages/editorial content; ui/original mark, diagram, reading rail, decoding labels and pointer brackets. Labels decode only predefined public decoration with stable accessible text. The native cursor remains visible.
 
 No application analytics, link fetching, remote inference, browser OCR, PWA, inbox access or new runtime dependencies are introduced. Existing immutable model, contract and benchmark hashes are checked at build time. Android binaries and historical model evaluation remain separate.
+
+The hero's wide and compact SVG graph templates are independent of the inspection session. Shared connector runs are drawn once. A small animation loop reads distances cached at layout changes and positions a few markers along the already-rendered paths. The same paths are visible with motion paused, with a graphics error, and before an animation starts. Region layout keeps the pipeline clear of the eyebrow, primary action and supporting copy.
