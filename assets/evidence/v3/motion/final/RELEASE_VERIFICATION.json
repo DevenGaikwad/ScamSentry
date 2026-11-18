@@ -1,0 +1,102 @@
+{
+  "ci_run": 44242570910,
+  "tested_source": "f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05",
+  "merged_source": "3766d195c41e793e66edcbf472432f766c0e27d5",
+  "source_tree": "129f4d848bfb6c250d9ec4af645edb029c3fa1a1",
+  "artifact_id": 14400787647,
+  "artifact_sha256": "e753319ebed0ce4f64da5e3df2e94fa90247b160b35dfa61fea5a0c36c55e110",
+  "production_deployment": "dpl_DPMbrs8DMDG7nni1AKRZNSRsaQCV",
+  "production_origin": "https://scamsentry-inspect.vercel.app",
+  "preview_deployment": "dpl_77Yr9w1EL23UjdM6CQ8A2yWHhckj",
+  "preview_and_CI_public_files_identical": 27,
+  "production_ui": {
+    "approved_model_loaded": "ss-char-lr-0.1.0",
+    "ordinary_message_result": "Lower observed risk",
+    "secret_request_result": "Higher risk",
+    "standalone_link_result": "Needs checking",
+    "unsupported_devanagari_result": "Unable to assess reliably",
+    "actual_host": "review.test",
+    "redacted_report_omits_input_host_and_fictional_canary": true,
+    "analyzer_draft_cleared_after_review": true,
+    "public_transition_middle_opacity": 0.35,
+    "final_heading_focus": true,
+    "moving_packet_positions": [
+      "translate(147.37837500000006 66)",
+      "translate(164.11737500000044 66)"
+    ],
+    "pause_stops_packets_and_hides_reticle": true,
+    "final_scene_count": 0,
+    "final_hero_renderer": "canvas",
+    "final_hero_running": true,
+    "final_reticle_state": "follow",
+    "native_cursor": "auto",
+    "screenshot": "PRODUCTION_HOME.jpg",
+    "scope": "Live cloud Chrome at a desktop viewport, original fictional inputs; not physical Android or universal FPS evidence"
+  },
+  "unit_tests": 71,
+  "browser_tests": {
+    "startTime": "2026-11-18T05:18:40.534Z",
+    "duration": 265265.053,
+    "expected": 63,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "captures": [
+    {
+      "path": "desktop-chromium_hero-light.png",
+      "bytes": 154500,
+      "sha256": "b091eb6a0c835694ca67e902a4339d2cc862f9c21202d196b3e683d4bf943cdd"
+    },
+    {
+      "path": "desktop-chromium_hero-dark.png",
+      "bytes": 120881,
+      "sha256": "3a0516cdd88cfe44294932cb92e00475e33c2e18f931eae798ddd1e3c3ddf63e"
+    },
+    {
+      "path": "desktop-chromium_cursor-idle.png",
+      "bytes": 154924,
+      "sha256": "0ed953a475faec0f5b762319490a63ace89b80657f06061940474bb14e1e1173"
+    },
+    {
+      "path": "desktop-chromium_cursor-snap.png",
+      "bytes": 154938,
+      "sha256": "3ebd42e55cffc31744fb6916168f40b68cb6436319a409e799e60d1c93cb3930"
+    },
+    {
+      "path": "desktop-chromium_transition-middle.png",
+      "bytes": 116391,
+      "sha256": "4e3929d2e3b8d70ec58bd1f22207f2615b1eaa49e5e1368c43a19ce11c6d424c"
+    },
+    {
+      "path": "desktop-chromium_transition-arrival.png",
+      "bytes": 82715,
+      "sha256": "6d6d1a33d8489b17b50940d4cda72167f7022a06d847a0578ffc40372c3d4cb7"
+    },
+    {
+      "path": "desktop-chromium_flow-active.png",
+      "bytes": 53069,
+      "sha256": "5542c81caf550b5b3e4396d8fcfa9d5c4dd941bbba41f76162966a4725b1bc32"
+    },
+    {
+      "path": "desktop-chromium_hero-reduced.png",
+      "bytes": 154181,
+      "sha256": "2aa6217df473f09473b65cb523439be89e9adad43eb6223b97812d4f319b356c"
+    },
+    {
+      "path": "desktop-chromium_motion-tour.webm",
+      "bytes": 1126216,
+      "sha256": "89e54e2423abd8fdc207412bef03749e1c387c22c976e03e27253b0c72b44e3b"
+    },
+    {
+      "path": "PRODUCTION_HOME.jpg",
+      "bytes": 91986,
+      "sha256": "fb6c2b16304e97e86a86e9e7cadeaea04207f31193b15b93bd5a08e1661b635b",
+      "scope": "Original live production cloud-Chrome screenshot, dark theme, normal motion, native pointer and free-follow reticle. No private input."
+    }
+  ],
+  "captured_source": "f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05",
+  "scope": "Original browser CI captures of the production build. Emulated viewports and Linux software rendering are not physical-device performance certification. All retained file bytes are original.",
+  "persistent_hostname_route_version": "3338d802-a021-4a74-af57-04d1f58b8e04",
+  "public_verification": "PUBLIC_HTTP_VERIFICATION.json"
+}

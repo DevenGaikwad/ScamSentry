@@ -10,6 +10,18 @@ A native Android app and local-browser companion for inspecting suspicious messa
 
 Open **[ScamSentry](https://scamsentry-inspect.vercel.app/)**. Text and URL analysis run in a local worker after the public app/model assets download. No account is required to use the tool. Native Android provides screenshot OCR; browser OCR/PWA remain outside this preview.
 
+Browser **0.3.1** now adds a free-follow corner cursor, five public depth-transition motifs, a seeded moving wireframe hero and directed packet-flow diagrams. Light/dark themes, mobile layouts, pause and reduced-motion alternatives preserve the approved interface. The model and Android release remain unchanged.
+
+The deployed build comes from [passing CI run 44242570910](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44242570910): **71 unit/parity tests and 63 browser cases passed**, with zero skips, failures or flakes. [Motion implementation and release audit](docs/FRONTEND_MOTION_AUDIT.md) · [Exact release provenance](assets/evidence/v3/motion/final/RELEASE_VERIFICATION.json) · [Public file verification](assets/evidence/v3/motion/final/PUBLIC_HTTP_VERIFICATION.json).
+
+| Moving hero, dark theme | Public section depth |
+|---|---|
+| ![Original ScamSentry wireframe hero](assets/evidence/v3/motion/final/desktop-chromium_hero-dark.png) | ![Original public depth transition](assets/evidence/v3/motion/final/desktop-chromium_transition-middle.png) |
+
+[Watch the actual motion tour](assets/evidence/v3/motion/final/desktop-chromium_motion-tour.webm). It demonstrates cursor following and snapping, public depth navigation and moving diagram packets using original public content. Stills cannot establish the complete timing.
+
+<details><summary>Preserved v3 editorial baseline</summary>
+
 The editorial browser redesign is merged in `0e248cc766d58bc97c7dc504bbd03b21b7aa8b57` (the same tree tested as `f2b44da`). Production serves the exact output of [CI run 44158226922](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44158226922). Shareable pages, neutral light/dark themes, reduced-motion controls, a custom SS monogram and complete creator credits are implemented. The older `scamsentry-bay` hostname redirects to `scamsentry-inspect`, including deep paths.
 
 [Frontend verification](docs/FRONTEND_VALIDATION.md) · [Public HTTP verification](assets/evidence/v3/final/PUBLIC_HTTP_VERIFICATION.json) · [Capture provenance](assets/evidence/v3/final/PROVENANCE.json)
@@ -25,6 +37,8 @@ The editorial browser redesign is merged in `0e248cc766d58bc97c7dc504bbd03b21b7a
 ![Actual mobile homepage](assets/evidence/v3/final/mobile-chromium_light-home.png)
 
 [Original desktop motion capture](assets/evidence/v3/final/desktop-chromium_motion-demo.webm). These are v3 baseline captures, not acceptance evidence for the subsequent v3.1 motion work.
+
+</details>
 
 </details>
 

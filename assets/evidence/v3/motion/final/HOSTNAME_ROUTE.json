@@ -1,0 +1,34 @@
+{
+  "project_id": "prj_pFepmjKZNLc2CT9eBKtPbrt23Gzc",
+  "route_id": "5bf5b702-8377-4d30-a140-0b2f520a13c6",
+  "production_route_version": "3338d802-a021-4a74-af57-04d1f58b8e04",
+  "rule": {
+    "src": "^/(.*)$",
+    "has": [
+      {
+        "type": "host",
+        "value": "scamsentry-bay.vercel.app"
+      }
+    ],
+    "dest": "https://scamsentry-inspect.vercel.app/$1",
+    "status": 307
+  },
+  "verified": [
+    {
+      "path": "/",
+      "status": 307,
+      "location": "https://scamsentry-inspect.vercel.app/"
+    },
+    {
+      "path": "/privacy",
+      "status": 307,
+      "location": "https://scamsentry-inspect.vercel.app/privacy"
+    },
+    {
+      "path": "/learn/actual-host?source=redirect-check",
+      "status": 307,
+      "location": "https://scamsentry-inspect.vercel.app/learn/actual-host?source=redirect-check"
+    }
+  ],
+  "scope": "Persistent project routing, separate from the static deployment. Only the existing legacy host matches. The preferred host was rechecked against all 27 CI files after promotion."
+}

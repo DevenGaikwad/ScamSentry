@@ -1,0 +1,2507 @@
+{
+  "source": "f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05",
+  "date": "2026-11-18T05:19:41.371Z",
+  "observations": {
+    "desktop-chromium-choreography": [
+      {
+        "motif": "rails",
+        "frames": [
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.999408, 0, -0.0344001, 0, 0, 1, 0, 0, 0.0344001, 0, 0.999408, 0, -30.7083, 2.636, -126.731, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.997858, 0, -0.0654119, 0, 0, 1, 0, 0, 0.0654119, 0, 0.997858, 0, -58.4222, 5.01496, -241.104, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.996303, 0, -0.0859049, 0, 0, 1, 0, 0, 0.0859049, 0, 0.996303, 0, -76.7651, 6.58952, -316.804, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.996303, 0, -0.0859049, 0, 0, 1, 0, 0, 0.0859049, 0, 0.996303, 0, -76.7651, 6.58952, -316.804, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.994295, 0, -0.106668, 0, 0, 1, 0, 0, 0.106668, 0, 0.994295, 0, -95.3834, 8.18771, -393.64, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993697, 0, -0.112103, 0, 0, 1, 0, 0, 0.112103, 0, 0.993697, 0, -100.263, 8.60658, -413.778, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993271, 0, -0.115812, 0, 0, 1, 0, 0, 0.115812, 0, 0.993271, 0, -103.596, 8.89265, -427.531, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992972, 0, -0.118347, 0, 0, 1, 0, 0, 0.118347, 0, 0.992972, 0, -105.873, 9.08818, -436.932, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992972, 0, -0.118347, 0, 0, 1, 0, 0, 0.118347, 0, 0.992972, 0, -105.873, 9.08818, -436.932, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99277, 0, -0.12003, 0, 0, 1, 0, 0, 0.12003, 0, 0.99277, 0, -107.387, 9.21807, -443.176, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99257, 0, -0.121672, 0, 0, 1, 0, 0, 0.121672, 0, 0.99257, 0, -108.862, 9.34475, -449.267, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992546, 0, -0.121868, 0, 0, 1, 0, 0, 0.121868, 0, 0.992546, 0, -109.039, 9.35989, -449.995, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.456099,
+            "outgoing": "matrix3d(0.988478, 0, -0.151363, 0, 0, 1, 0, 0, 0.151363, 0, 0.988478, 0, -181.38, -1.28511, -630.072, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.456099,
+            "outgoing": "matrix3d(0.988478, 0, -0.151363, 0, 0, 1, 0, 0, 0.151363, 0, 0.988478, 0, -181.38, -1.28511, -630.072, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.654778,
+            "outgoing": "matrix3d(0.982951, 0, -0.183867, 0, 0, 1, 0, 0, 0.183867, 0, 0.982951, 0, -261.488, -13.0734, -829.482, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.808436,
+            "outgoing": "matrix3d(0.977627, 0, -0.210346, 0, 0, 1, 0, 0, 0.210346, 0, 0.977627, 0, -327.111, -22.7301, -992.834, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.904003,
+            "outgoing": "matrix3d(0.97337, 0, -0.229239, 0, 0, 1, 0, 0, 0.229239, 0, 0.97337, 0, -374.164, -29.6541, -1109.96, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.959969,
+            "outgoing": "matrix3d(0.97021, 0, -0.242267, 0, 0, 1, 0, 0, 0.242267, 0, 0.97021, 0, -406.735, -34.4471, -1191.04, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.999712,
+            "outgoing": "matrix3d(0.966124, 0, -0.258079, 0, 0, 1, 0, 0, 0.258079, 0, 0.966124, 0, -446.414, -40.286, -1289.81, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.964775, 0, -0.263077, 0, 0, 1, 0, 0, 0.263077, 0, 0.964775, 0, -458.992, -42.1369, -1321.12, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.964775, 0, -0.263077, 0, 0, 1, 0, 0, 0.263077, 0, 0.964775, 0, -458.992, -42.1369, -1321.12, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.963751, 0, -0.266802, 0, 0, 1, 0, 0, 0.266802, 0, 0.963751, 0, -468.377, -43.518, -1344.48, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.962979, 0, -0.269576, 0, 0, 1, 0, 0, 0.269576, 0, 0.962979, 0, -475.374, -44.5476, -1361.9, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.962385, 0, -0.271691, 0, 0, 1, 0, 0, 0.271691, 0, 0.962385, 0, -480.71, -45.3329, -1375.18, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96195, 0, -0.273225, 0, 0, 1, 0, 0, 0.273225, 0, 0.96195, 0, -484.585, -45.9031, -1384.83, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961638, 0, -0.274321, 0, 0, 1, 0, 0, 0.274321, 0, 0.961638, 0, -487.353, -46.3104, -1391.72, 1)",
+            "incoming": "matrix3d(0.979011, 0, 0.203806, -0.000185278, 0, 1, 0, 0, -0.203806, 0, 0.979011, -0.00089001, 403.985, 70.3795, -1475.96, 2.34178)",
+            "opacity": 0.120205,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96143, 0, -0.275048, 0, 0, 1, 0, 0, 0.275048, 0, 0.96143, 0, -489.191, -46.5809, -1396.29, 1)",
+            "incoming": "matrix3d(0.980059, 0, 0.198707, -0.000180643, 0, 1, 0, 0, -0.198707, 0, 0.980059, -0.000890963, 397.888, 64.7969, -1446.14, 2.31467)",
+            "opacity": 0.269313,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96131, 0, -0.275468, 0, 0, 1, 0, 0, 0.275468, 0, 0.96131, 0, -490.251, -46.7369, -1398.93, 1)",
+            "incoming": "matrix3d(0.981074, 0, 0.193634, -0.000176031, 0, 1, 0, 0, -0.193634, 0, 0.981074, -0.000891885, 391.827, 59.2478, -1416.49, 2.28772)",
+            "opacity": 0.417527,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961263, 0, -0.275632, 0, 0, 1, 0, 0, 0.275632, 0, 0.961263, 0, -490.666, -46.798, -1399.97, 1)",
+            "incoming": "matrix3d(0.982068, 0, 0.188525, -0.000171387, 0, 1, 0, 0, -0.188525, 0, 0.982068, -0.000892789, 385.73, 53.6652, -1386.67, 2.26061)",
+            "opacity": 0.566634,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.957955, 0, -0.286919, 0, 0, 1, 0, 0, 0.286919, 0, 0.957955, 0, -534.29, -48.3762, -1501.04, 1)",
+            "incoming": "matrix3d(0.983031, 0, 0.183442, -0.000166765, 0, 1, 0, 0, -0.183442, 0, 0.983031, -0.000893664, 379.67, 48.1161, -1357.03, 2.23366)",
+            "opacity": 0.714848,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.953431, 0, -0.301612, 0, 0, 1, 0, 0, 0.301612, 0, 0.953431, 0, -591.319, -50.4374, -1633.17, 1)",
+            "incoming": "matrix3d(0.983972, 0, 0.178323, -0.000162112, 0, 1, 0, 0, -0.178323, 0, 0.983972, -0.00089452, 373.573, 42.5335, -1327.21, 2.20655)",
+            "opacity": 0.863955,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.949542, 0, -0.313641, 0, 0, 1, 0, 0, 0.313641, 0, 0.949542, 0, -638.215, -52.1324, -1741.82, 1)",
+            "incoming": "matrix3d(0.98491, 0, 0.173067, -0.000157334, 0, 1, 0, 0, -0.173067, 0, 0.98491, -0.000895373, 366.628, 37.3134, -1295.61, 2.17782)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.946696, 0, -0.322129, 0, 0, 1, 0, 0, 0.322129, 0, 0.946696, 0, -671.422, -53.3326, -1818.76, 1)",
+            "incoming": "matrix3d(0.986135, 0, 0.165943, -0.000150857, 0, 1, 0, 0, -0.165943, 0, 0.986135, -0.000896487, 349.692, 35.7627, -1241.76, 2.12887)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.944713, 0, -0.3279, 0, 0, 1, 0, 0, 0.3279, 0, 0.944713, 0, -694.058, -54.1507, -1871.2, 1)",
+            "incoming": "matrix3d(0.987309, 0, 0.15881, -0.000144373, 0, 1, 0, 0, -0.15881, 0, 0.987309, -0.000897554, 332.756, 34.212, -1187.92, 2.07992)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.942283, 0, -0.334817, 0, 0, 1, 0, 0, 0.334817, 0, 0.942283, 0, -721.256, -55.1338, -1934.21, 1)",
+            "incoming": "matrix3d(0.9895, 0, 0.144534, -0.000131395, 0, 1, 0, 0, -0.144534, 0, 0.9895, -0.000899545, 298.918, 31.1137, -1080.34, 1.98213)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.941526, 0, -0.336941, 0, 0, 1, 0, 0, 0.336941, 0, 0.941526, 0, -729.621, -55.4361, -1953.6, 1)",
+            "incoming": "matrix3d(0.990517, 0, 0.137392, -0.000124902, 0, 1, 0, 0, -0.137392, 0, 0.990517, -0.00090047, 282.016, 29.5662, -1026.6, 1.93328)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.941526, 0, -0.336941, 0, 0, 1, 0, 0, 0.336941, 0, 0.941526, 0, -729.621, -55.4361, -1953.6, 1)",
+            "incoming": "matrix3d(0.990517, 0, 0.137392, -0.000124902, 0, 1, 0, 0, -0.137392, 0, 0.990517, -0.00090047, 282.016, 29.5662, -1026.6, 1.93328)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940959, 0, -0.338519, 0, 0, 1, 0, 0, 0.338519, 0, 0.940959, 0, -735.84, -55.6609, -1968, 1)",
+            "incoming": "matrix3d(0.991482, 0, 0.130243, -0.000118402, 0, 1, 0, 0, -0.130243, 0, 0.991482, -0.000901347, 265.115, 28.0186, -972.869, 1.88443)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940536, 0, -0.339695, 0, 0, 1, 0, 0, 0.339695, 0, 0.940536, 0, -740.475, -55.8284, -1978.74, 1)",
+            "incoming": "matrix3d(0.992398, 0, 0.123071, -0.000111883, 0, 1, 0, 0, -0.123071, 0, 0.992398, -0.00090218, 248.177, 26.4677, -919.018, 1.83547)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940224, 0, -0.340558, 0, 0, 1, 0, 0, 0.340558, 0, 0.940224, 0, -743.879, -55.9514, -1986.63, 1)",
+            "incoming": "matrix3d(0.99326, 0, 0.115908, -0.000105371, 0, 1, 0, 0, -0.115908, 0, 0.99326, -0.000902964, 231.275, 24.9202, -865.284, 1.78662)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939999, 0, -0.341177, 0, 0, 1, 0, 0, 0.341177, 0, 0.939999, 0, -746.324, -56.0398, -1992.29, 1)",
+            "incoming": "matrix3d(0.99407, 0, 0.10874, -9.88545e-05, 0, 1, 0, 0, -0.10874, 0, 0.99407, -0.0009037, 214.373, 23.3726, -811.549, 1.73777)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939845, 0, -0.341601, 0, 0, 1, 0, 0, 0.341601, 0, 0.939845, 0, -747.997, -56.1003, -1996.17, 1)",
+            "incoming": "matrix3d(0.994829, 0, 0.101566, -9.23325e-05, 0, 1, 0, 0, -0.101566, 0, 0.994829, -0.00090439, 197.472, 21.825, -757.814, 1.68892)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939749, 0, -0.341865, 0, 0, 1, 0, 0, 0.341865, 0, 0.939749, 0, -749.039, -56.1379, -1998.58, 1)",
+            "incoming": "matrix3d(0.995536, 0, 0.0943863, -8.58057e-05, 0, 1, 0, 0, -0.0943863, 0, 0.995536, -0.000905032, 180.57, 20.2775, -704.08, 1.64007)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939701, 0, -0.341996, 0, 0, 1, 0, 0, 0.341996, 0, 0.939701, 0, -749.556, -56.1566, -1999.78, 1)",
+            "incoming": "matrix3d(0.996191, 0, 0.0872019, -7.92744e-05, 0, 1, 0, 0, -0.0872019, 0, 0.996191, -0.000905628, 163.669, 18.7299, -650.345, 1.59122)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99656, 0, 0.0828706, -7.53369e-05, 0, 1, 0, 0, -0.0828706, 0, 0.99656, -0.000905964, 155.499, 17.7974, -617.966, 1.56179)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99691, 0, 0.0785562, -7.14147e-05, 0, 1, 0, 0, -0.0785562, 0, 0.99691, -0.000906282, 147.387, 16.8689, -585.725, 1.53248)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99724, 0, 0.0742403, -6.74912e-05, 0, 1, 0, 0, -0.0742403, 0, 0.99724, -0.000906582, 139.274, 15.9404, -553.485, 1.50317)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997552, 0, 0.0699231, -6.35664e-05, 0, 1, 0, 0, -0.0699231, 0, 0.997552, -0.000906866, 131.161, 15.0118, -521.244, 1.47386)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997846, 0, 0.0656045, -5.96405e-05, 0, 1, 0, 0, -0.0656045, 0, 0.997846, -0.000907132, 123.048, 14.0833, -489.003, 1.44455)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99812, 0, 0.0612847, -5.57134e-05, 0, 1, 0, 0, -0.0612847, 0, 0.99812, -0.000907382, 114.935, 13.1548, -456.762, 1.41524)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998376, 0, 0.0569638, -5.17852e-05, 0, 1, 0, 0, -0.0569638, 0, 0.998376, -0.000907615, 106.823, 12.2262, -424.522, 1.38593)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998613, 0, 0.0526417, -4.78561e-05, 0, 1, 0, 0, -0.0526417, 0, 0.998613, -0.00090783, 98.7099, 11.2977, -392.281, 1.35662)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998832, 0, 0.0483187, -4.39261e-05, 0, 1, 0, 0, -0.0483187, 0, 0.998832, -0.000908029, 90.5971, 10.3692, -360.04, 1.32731)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999032, 0, 0.0439922, -3.9993e-05, 0, 1, 0, 0, -0.0439922, 0, 0.999032, -0.000908211, 82.4795, 9.44006, -327.78, 1.29798)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999213, 0, 0.0396675, -3.60614e-05, 0, 1, 0, 0, -0.0396675, 0, 0.999213, -0.000908375, 74.3667, 8.51153, -295.539, 1.26867)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999375, 0, 0.035342, -3.21291e-05, 0, 1, 0, 0, -0.035342, 0, 0.999375, -0.000908523, 66.254, 7.58299, -263.298, 1.23936)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999519, 0, 0.0310159, -2.81963e-05, 0, 1, 0, 0, -0.0310159, 0, 0.999519, -0.000908654, 58.1412, 6.65446, -231.058, 1.21005)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999644, 0, 0.0266892, -2.42629e-05, 0, 1, 0, 0, -0.0266892, 0, 0.999644, -0.000908767, 50.0284, 5.72592, -198.817, 1.18074)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99975, 0, 0.022362, -2.03291e-05, 0, 1, 0, 0, -0.022362, 0, 0.99975, -0.000908864, 41.9157, 4.79739, -166.576, 1.15143)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999837, 0, 0.0180344, -1.63949e-05, 0, 1, 0, 0, -0.0180344, 0, 0.999837, -0.000908943, 33.8029, 3.86886, -134.335, 1.12212)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999906, 0, 0.0137064, -1.24603e-05, 0, 1, 0, 0, -0.0137064, 0, 0.999906, -0.000909006, 25.6901, 2.94032, -102.094, 1.09281)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999956, 0, 0.00937815, -8.52559e-06, 0, 1, 0, 0, -0.00937815, 0, 0.999956, -0.000909051, 17.5773, 2.01179, -69.8537, 1.0635)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.53066,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999987, 0, 0.00504975, -4.59068e-06, 0, 1, 0, 0, -0.00504975, 0, 0.999987, -0.000909079, 9.46457, 1.08325, -37.6129, 1.03419)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.293684,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0.000721247, -6.55679e-07, 0, 1, 0, 0, -0.000721247, 0, 1, -0.000909091, 1.3518, 0.154719, -5.37217, 1.00488)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.147299,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000721199, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.0614952,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000495739, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "Build yoursecond-look instinct.",
+            "inert": true
+          }
+        ]
+      },
+      {
+        "motif": "grid",
+        "frames": [
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.999402, 0, -0.0345662, 0, 0, 1, 0, 0, 0.0345662, 0, 0.999402, 0, -30.8566, 2.64873, -127.343, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99786, 0, -0.0653809, 0, 0, 1, 0, 0, 0.0653809, 0, 0.99786, 0, -58.3944, 5.01258, -240.989, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99786, 0, -0.0653809, 0, 0, 1, 0, 0, 0.0653809, 0, 0.99786, 0, -58.3944, 5.01258, -240.989, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.996305, 0, -0.0858857, 0, 0, 1, 0, 0, 0.0858857, 0, 0.996305, 0, -76.748, 6.58805, -316.733, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99513, 0, -0.0985762, 0, 0, 1, 0, 0, 0.0985762, 0, 0.99513, 0, -88.1228, 7.56447, -363.676, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993694, 0, -0.112124, 0, 0, 1, 0, 0, 0.112124, 0, 0.993694, 0, -100.282, 8.60823, -413.857, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993272, 0, -0.115809, 0, 0, 1, 0, 0, 0.115809, 0, 0.993272, 0, -103.592, 8.89237, -427.518, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993272, 0, -0.115809, 0, 0, 1, 0, 0, 0.115809, 0, 0.993272, 0, -103.592, 8.89237, -427.518, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992974, 0, -0.118332, 0, 0, 1, 0, 0, 0.118332, 0, 0.992974, 0, -105.86, 9.08703, -436.876, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99277, 0, -0.120029, 0, 0, 1, 0, 0, 0.120029, 0, 0.99277, 0, -107.385, 9.21795, -443.17, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99257, 0, -0.121674, 0, 0, 1, 0, 0, 0.121674, 0, 0.99257, 0, -108.864, 9.34489, -449.273, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992546, 0, -0.121868, 0, 0, 1, 0, 0, 0.121868, 0, 0.992546, 0, -109.039, 9.35988, -449.994, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992546, 0, -0.121868, 0, 0, 1, 0, 0, 0.121868, 0, 0.992546, 0, -109.039, 9.35988, -449.994, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.988484, 0, -0.151323, 0, 0, 1, 0, 0, 0.151323, 0, 0.988484, 0, -181.281, -1.27062, -629.827, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.455188,
+            "outgoing": "matrix3d(0.982992, 0, -0.183649, 0, 0, 1, 0, 0, 0.183649, 0, 0.982992, 0, -260.948, -12.9939, -828.137, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.653806,
+            "outgoing": "matrix3d(0.977633, 0, -0.210319, 0, 0, 1, 0, 0, 0.210319, 0, 0.977633, 0, -327.043, -22.7202, -992.667, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.904064,
+            "outgoing": "matrix3d(0.970213, 0, -0.242254, 0, 0, 1, 0, 0, 0.242254, 0, 0.970213, 0, -406.702, -34.4423, -1190.96, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.904064,
+            "outgoing": "matrix3d(0.970213, 0, -0.242254, 0, 0, 1, 0, 0, 0.242254, 0, 0.970213, 0, -406.702, -34.4423, -1190.96, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.959757,
+            "outgoing": "matrix3d(0.967881, 0, -0.25141, 0, 0, 1, 0, 0, 0.25141, 0, 0.967881, 0, -429.658, -37.8204, -1248.1, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.989241,
+            "outgoing": "matrix3d(0.966117, 0, -0.258106, 0, 0, 1, 0, 0, 0.258106, 0, 0.966117, 0, -446.483, -40.2962, -1289.98, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.999731,
+            "outgoing": "matrix3d(0.964776, 0, -0.263072, 0, 0, 1, 0, 0, 0.263072, 0, 0.964776, 0, -458.979, -42.135, -1321.09, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.963753, 0, -0.266798, 0, 0, 1, 0, 0, 0.266798, 0, 0.963753, 0, -468.367, -43.5166, -1344.46, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.963753, 0, -0.266798, 0, 0, 1, 0, 0, 0.266798, 0, 0.963753, 0, -468.367, -43.5166, -1344.46, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961948, 0, -0.273231, 0, 0, 1, 0, 0, 0.273231, 0, 0.961948, 0, -484.6, -45.9054, -1384.87, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961639, 0, -0.27432, 0, 0, 1, 0, 0, 0.27432, 0, 0.961639, 0, -487.35, -46.31, -1391.71, 1)",
+            "incoming": "matrix3d(0.97901, 0, 0.203812, -0.000185283, 0, 1, 0, 0, -0.203812, 0, 0.97901, -0.000890009, 403.992, 70.3862, -1475.99, 2.34181)",
+            "opacity": 0.120027,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961639, 0, -0.27432, 0, 0, 1, 0, 0, 0.27432, 0, 0.961639, 0, -487.35, -46.31, -1391.71, 1)",
+            "incoming": "matrix3d(0.97901, 0, 0.203812, -0.000185283, 0, 1, 0, 0, -0.203812, 0, 0.97901, -0.000890009, 403.992, 70.3862, -1475.99, 2.34181)",
+            "opacity": 0.120027,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961431, 0, -0.275048, 0, 0, 1, 0, 0, 0.275048, 0, 0.961431, 0, -489.189, -46.5807, -1396.29, 1)",
+            "incoming": "matrix3d(0.980058, 0, 0.198713, -0.000180649, 0, 1, 0, 0, -0.198713, 0, 0.980058, -0.000890961, 397.895, 64.8036, -1446.17, 2.3147)",
+            "opacity": 0.269134,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961431, 0, -0.275048, 0, 0, 1, 0, 0, 0.275048, 0, 0.961431, 0, -489.189, -46.5807, -1396.29, 1)",
+            "incoming": "matrix3d(0.980058, 0, 0.198713, -0.000180649, 0, 1, 0, 0, -0.198713, 0, 0.980058, -0.000890961, 397.895, 64.8036, -1446.17, 2.3147)",
+            "opacity": 0.269134,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961263, 0, -0.275632, 0, 0, 1, 0, 0, 0.275632, 0, 0.961263, 0, -490.666, -46.798, -1399.97, 1)",
+            "incoming": "matrix3d(0.982067, 0, 0.188531, -0.000171392, 0, 1, 0, 0, -0.188531, 0, 0.982067, -0.000892788, 385.738, 53.6719, -1386.71, 2.26064)",
+            "opacity": 0.566455,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961263, 0, -0.275632, 0, 0, 1, 0, 0, 0.275632, 0, 0.961263, 0, -490.666, -46.798, -1399.97, 1)",
+            "incoming": "matrix3d(0.982067, 0, 0.188531, -0.000171392, 0, 1, 0, 0, -0.188531, 0, 0.982067, -0.000892788, 385.738, 53.6719, -1386.71, 2.26064)",
+            "opacity": 0.566455,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.95341, 0, -0.301678, 0, 0, 1, 0, 0, 0.301678, 0, 0.95341, 0, -591.577, -50.4467, -1633.77, 1)",
+            "incoming": "matrix3d(0.983976, 0, 0.178298, -0.000162089, 0, 1, 0, 0, -0.178298, 0, 0.983976, -0.000894524, 373.544, 42.5068, -1327.07, 2.20642)",
+            "opacity": 0.86467,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.949505, 0, -0.313751, 0, 0, 1, 0, 0, 0.313751, 0, 0.949505, 0, -638.645, -52.1479, -1742.82, 1)",
+            "incoming": "matrix3d(0.984924, 0, 0.17299, -0.000157264, 0, 1, 0, 0, -0.17299, 0, 0.984924, -0.000895385, 366.445, 37.2967, -1295.03, 2.1773)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.949505, 0, -0.313751, 0, 0, 1, 0, 0, 0.313751, 0, 0.949505, 0, -638.645, -52.1479, -1742.82, 1)",
+            "incoming": "matrix3d(0.984924, 0, 0.17299, -0.000157264, 0, 1, 0, 0, -0.17299, 0, 0.984924, -0.000895385, 366.445, 37.2967, -1295.03, 2.1773)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.944715, 0, -0.327894, 0, 0, 1, 0, 0, 0.327894, 0, 0.944715, 0, -694.036, -54.1499, -1871.15, 1)",
+            "incoming": "matrix3d(0.987308, 0, 0.158818, -0.00014438, 0, 1, 0, 0, -0.158818, 0, 0.987308, -0.000897553, 332.776, 34.2139, -1187.98, 2.07998)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.943307, 0, -0.331923, 0, 0, 1, 0, 0, 0.331923, 0, 0.943307, 0, -709.867, -54.7221, -1907.83, 1)",
+            "incoming": "matrix3d(0.98843, 0, 0.151677, -0.000137888, 0, 1, 0, 0, -0.151677, 0, 0.98843, -0.000898573, 315.84, 32.6631, -1134.14, 2.03103)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.943307, 0, -0.331923, 0, 0, 1, 0, 0, 0.331923, 0, 0.943307, 0, -709.867, -54.7221, -1907.83, 1)",
+            "incoming": "matrix3d(0.98843, 0, 0.151677, -0.000137888, 0, 1, 0, 0, -0.151677, 0, 0.98843, -0.000898573, 315.84, 32.6631, -1134.14, 2.03103)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.941528, 0, -0.336936, 0, 0, 1, 0, 0, 0.336936, 0, 0.941528, 0, -729.599, -55.4353, -1953.54, 1)",
+            "incoming": "matrix3d(0.990514, 0, 0.137414, -0.000124922, 0, 1, 0, 0, -0.137414, 0, 0.990514, -0.000900467, 282.069, 29.571, -1026.77, 1.93343)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.941528, 0, -0.336936, 0, 0, 1, 0, 0, 0.336936, 0, 0.941528, 0, -729.599, -55.4353, -1953.54, 1)",
+            "incoming": "matrix3d(0.990514, 0, 0.137414, -0.000124922, 0, 1, 0, 0, -0.137414, 0, 0.990514, -0.000900467, 282.069, 29.571, -1026.77, 1.93343)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.94096, 0, -0.338518, 0, 0, 1, 0, 0, 0.338518, 0, 0.94096, 0, -735.835, -55.6607, -1967.99, 1)",
+            "incoming": "matrix3d(0.991481, 0, 0.13025, -0.000118409, 0, 1, 0, 0, -0.13025, 0, 0.991481, -0.000901347, 265.133, 28.0203, -972.927, 1.88448)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940225, 0, -0.340554, 0, 0, 1, 0, 0, 0.340554, 0, 0.940225, 0, -743.865, -55.9509, -1986.6, 1)",
+            "incoming": "matrix3d(0.993256, 0, 0.115945, -0.000105405, 0, 1, 0, 0, -0.115945, 0, 0.993256, -0.00090296, 231.362, 24.9281, -865.561, 1.78687)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940225, 0, -0.340554, 0, 0, 1, 0, 0, 0.340554, 0, 0.940225, 0, -743.865, -55.9509, -1986.6, 1)",
+            "incoming": "matrix3d(0.993256, 0, 0.115945, -0.000105405, 0, 1, 0, 0, -0.115945, 0, 0.993256, -0.00090296, 231.362, 24.9281, -865.561, 1.78687)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939845, 0, -0.341601, 0, 0, 1, 0, 0, 0.341601, 0, 0.939845, 0, -747.996, -56.1002, -1996.17, 1)",
+            "incoming": "matrix3d(0.994828, 0, 0.101573, -9.23395e-05, 0, 1, 0, 0, -0.101573, 0, 0.994828, -0.000904389, 197.49, 21.8267, -757.872, 1.68897)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939845, 0, -0.341601, 0, 0, 1, 0, 0, 0.341601, 0, 0.939845, 0, -747.996, -56.1002, -1996.17, 1)",
+            "incoming": "matrix3d(0.994828, 0, 0.101573, -9.23395e-05, 0, 1, 0, 0, -0.101573, 0, 0.994828, -0.000904389, 197.49, 21.8267, -757.872, 1.68897)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939701, 0, -0.341996, 0, 0, 1, 0, 0, 0.341996, 0, 0.939701, 0, -749.554, -56.1565, -1999.78, 1)",
+            "incoming": "matrix3d(0.996187, 0, 0.0872381, -7.93074e-05, 0, 1, 0, 0, -0.0872381, 0, 0.996187, -0.000905625, 163.754, 18.7377, -650.616, 1.59147)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99656, 0, 0.0828747, -7.53407e-05, 0, 1, 0, 0, -0.0828747, 0, 0.99656, -0.000905964, 155.507, 17.7983, -617.997, 1.56182)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.996909, 0, 0.0785603, -7.14185e-05, 0, 1, 0, 0, -0.0785603, 0, 0.996909, -0.000906281, 147.394, 16.8698, -585.756, 1.53251)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99724, 0, 0.0742445, -6.7495e-05, 0, 1, 0, 0, -0.0742445, 0, 0.99724, -0.000906582, 139.282, 15.9412, -553.516, 1.5032)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997552, 0, 0.0699272, -6.35702e-05, 0, 1, 0, 0, -0.0699272, 0, 0.997552, -0.000906866, 131.169, 15.0127, -521.275, 1.47389)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997845, 0, 0.0656086, -5.96442e-05, 0, 1, 0, 0, -0.0656086, 0, 0.997845, -0.000907132, 123.056, 14.0842, -489.034, 1.44458)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99812, 0, 0.0612889, -5.57171e-05, 0, 1, 0, 0, -0.0612889, 0, 0.99812, -0.000907382, 114.943, 13.1556, -456.793, 1.41527)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998376, 0, 0.0569679, -5.1789e-05, 0, 1, 0, 0, -0.0569679, 0, 0.998376, -0.000907615, 106.83, 12.2271, -424.553, 1.38596)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998614, 0, 0.052636, -4.78509e-05, 0, 1, 0, 0, -0.052636, 0, 0.998614, -0.000907831, 98.6992, 11.2965, -392.238, 1.35658)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998832, 0, 0.048313, -4.39209e-05, 0, 1, 0, 0, -0.048313, 0, 0.998832, -0.000908029, 90.5864, 10.3679, -359.997, 1.32727)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999032, 0, 0.0439891, -3.99901e-05, 0, 1, 0, 0, -0.0439891, 0, 0.999032, -0.000908211, 82.4737, 9.43939, -327.757, 1.29796)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999213, 0, 0.0396644, -3.60586e-05, 0, 1, 0, 0, -0.0396644, 0, 0.999213, -0.000908376, 74.3609, 8.51086, -295.516, 1.26865)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999375, 0, 0.0353389, -3.21263e-05, 0, 1, 0, 0, -0.0353389, 0, 0.999375, -0.000908523, 66.2481, 7.58232, -263.275, 1.23934)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999519, 0, 0.0310128, -2.81935e-05, 0, 1, 0, 0, -0.0310128, 0, 0.999519, -0.000908654, 58.1354, 6.65379, -231.034, 1.21003)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999644, 0, 0.0266861, -2.42601e-05, 0, 1, 0, 0, -0.0266861, 0, 0.999644, -0.000908767, 50.0226, 5.72526, -198.794, 1.18072)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99975, 0, 0.0223589, -2.03262e-05, 0, 1, 0, 0, -0.0223589, 0, 0.99975, -0.000908864, 41.9098, 4.79672, -166.553, 1.15141)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999837, 0, 0.0180312, -1.6392e-05, 0, 1, 0, 0, -0.0180312, 0, 0.999837, -0.000908943, 33.797, 3.86819, -134.312, 1.1221)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999906, 0, 0.0137033, -1.24575e-05, 0, 1, 0, 0, -0.0137033, 0, 0.999906, -0.000909006, 25.6843, 2.93965, -102.071, 1.09279)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999956, 0, 0.00937503, -8.52276e-06, 0, 1, 0, 0, -0.00937503, 0, 0.999956, -0.000909051, 17.5715, 2.01112, -69.8305, 1.06348)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999987, 0, 0.00504663, -4.58784e-06, 0, 1, 0, 0, -0.00504663, 0, 0.999987, -0.000909079, 9.45873, 1.08258, -37.5897, 1.03417)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0.00071813, -6.52846e-07, 0, 1, 0, 0, -0.00071813, 0, 1, -0.000909091, 1.34596, 0.15405, -5.34896, 1.00486)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.530451,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000721036, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.29355,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000495576, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.147218,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000270116, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "Know the model.Know its limits.",
+            "inert": true
+          }
+        ]
+      },
+      {
+        "motif": "rings",
+        "frames": [
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.997859, 0, -0.0654026, 0, 0, 1, 0, 0, 0.0654026, 0, 0.997859, 0, -58.4138, 5.01425, -241.07, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.997859, 0, -0.0654026, 0, 0, 1, 0, 0, 0.0654026, 0, 0.997859, 0, -58.4138, 5.01425, -241.07, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.997859, 0, -0.0654026, 0, 0, 1, 0, 0, 0.0654026, 0, 0.997859, 0, -58.4138, 5.01425, -241.07, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.995129, 0, -0.0985846, 0, 0, 1, 0, 0, 0.0985846, 0, 0.995129, 0, -88.1303, 7.56511, -363.707, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.995129, 0, -0.0985846, 0, 0, 1, 0, 0, 0.0985846, 0, 0.995129, 0, -88.1303, 7.56511, -363.707, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993694, 0, -0.112128, 0, 0, 1, 0, 0, 0.112128, 0, 0.993694, 0, -100.286, 8.60851, -413.871, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993271, 0, -0.115811, 0, 0, 1, 0, 0, 0.115811, 0, 0.993271, 0, -103.595, 8.89257, -427.527, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993271, 0, -0.115811, 0, 0, 1, 0, 0, 0.115811, 0, 0.993271, 0, -103.595, 8.89257, -427.527, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992769, 0, -0.120038, 0, 0, 1, 0, 0, 0.120038, 0, 0.992769, 0, -107.393, 9.21866, -443.205, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992769, 0, -0.120038, 0, 0, 1, 0, 0, 0.120038, 0, 0.992769, 0, -107.393, 9.21866, -443.205, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99257, 0, -0.121674, 0, 0, 1, 0, 0, 0.121674, 0, 0.99257, 0, -108.864, 9.34491, -449.275, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99257, 0, -0.121674, 0, 0, 1, 0, 0, 0.121674, 0, 0.99257, 0, -108.864, 9.34491, -449.275, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.98848, 0, -0.151351, 0, 0, 1, 0, 0, 0.151351, 0, 0.98848, 0, -181.35, -1.28076, -629.999, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.982987, 0, -0.183674, 0, 0, 1, 0, 0, 0.183674, 0, 0.982987, 0, -261.011, -13.0032, -828.294, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.982987, 0, -0.183674, 0, 0, 1, 0, 0, 0.183674, 0, 0.982987, 0, -261.011, -13.0032, -828.294, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.654348,
+            "outgoing": "matrix3d(0.973372, 0, -0.229233, 0, 0, 1, 0, 0, 0.229233, 0, 0.973372, 0, -374.15, -29.6521, -1109.93, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.808887,
+            "outgoing": "matrix3d(0.970211, 0, -0.242263, 0, 0, 1, 0, 0, 0.242263, 0, 0.970211, 0, -406.725, -34.4457, -1191.02, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.808887,
+            "outgoing": "matrix3d(0.970211, 0, -0.242263, 0, 0, 1, 0, 0, 0.242263, 0, 0.970211, 0, -406.725, -34.4457, -1191.02, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.959876,
+            "outgoing": "matrix3d(0.966115, 0, -0.258111, 0, 0, 1, 0, 0, 0.258111, 0, 0.966115, 0, -446.495, -40.298, -1290.01, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.989182,
+            "outgoing": "matrix3d(0.964782, 0, -0.26305, 0, 0, 1, 0, 0, 0.26305, 0, 0.964782, 0, -458.923, -42.1268, -1320.95, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.989182,
+            "outgoing": "matrix3d(0.964782, 0, -0.26305, 0, 0, 1, 0, 0, 0.26305, 0, 0.964782, 0, -458.923, -42.1268, -1320.95, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.999722,
+            "outgoing": "matrix3d(0.963757, 0, -0.266781, 0, 0, 1, 0, 0, 0.266781, 0, 0.963757, 0, -468.325, -43.5104, -1344.35, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.962385, 0, -0.27169, 0, 0, 1, 0, 0, 0.27169, 0, 0.962385, 0, -480.709, -45.3327, -1375.18, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.962385, 0, -0.27169, 0, 0, 1, 0, 0, 0.27169, 0, 0.962385, 0, -480.709, -45.3327, -1375.18, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96195, 0, -0.273224, 0, 0, 1, 0, 0, 0.273224, 0, 0.96195, 0, -484.584, -45.9029, -1384.82, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96143, 0, -0.275048, 0, 0, 1, 0, 0, 0.275048, 0, 0.96143, 0, -489.191, -46.5808, -1396.29, 1)",
+            "incoming": "matrix3d(0.980059, 0, 0.198709, -0.000180645, 0, 1, 0, 0, -0.198709, 0, 0.980059, -0.000890962, 397.89, 64.7989, -1446.15, 2.31468)",
+            "opacity": 0.269259,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96143, 0, -0.275048, 0, 0, 1, 0, 0, 0.275048, 0, 0.96143, 0, -489.191, -46.5808, -1396.29, 1)",
+            "incoming": "matrix3d(0.980059, 0, 0.198709, -0.000180645, 0, 1, 0, 0, -0.198709, 0, 0.980059, -0.000890962, 397.89, 64.7989, -1446.15, 2.31468)",
+            "opacity": 0.269259,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961263, 0, -0.275632, 0, 0, 1, 0, 0, 0.275632, 0, 0.961263, 0, -490.666, -46.798, -1399.97, 1)",
+            "incoming": "matrix3d(0.982068, 0, 0.188527, -0.000171388, 0, 1, 0, 0, -0.188527, 0, 0.982068, -0.000892789, 385.733, 53.6672, -1386.68, 2.26062)",
+            "opacity": 0.56658,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961263, 0, -0.275632, 0, 0, 1, 0, 0, 0.275632, 0, 0.961263, 0, -490.666, -46.798, -1399.97, 1)",
+            "incoming": "matrix3d(0.982068, 0, 0.188527, -0.000171388, 0, 1, 0, 0, -0.188527, 0, 0.982068, -0.000892789, 385.733, 53.6672, -1386.68, 2.26062)",
+            "opacity": 0.56658,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.953432, 0, -0.301607, 0, 0, 1, 0, 0, 0.301607, 0, 0.953432, 0, -591.3, -50.4367, -1633.12, 1)",
+            "incoming": "matrix3d(0.983972, 0, 0.178325, -0.000162113, 0, 1, 0, 0, -0.178325, 0, 0.983972, -0.00089452, 373.575, 42.5355, -1327.22, 2.20656)",
+            "opacity": 0.863902,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.953432, 0, -0.301607, 0, 0, 1, 0, 0, 0.301607, 0, 0.953432, 0, -591.3, -50.4367, -1633.12, 1)",
+            "incoming": "matrix3d(0.983972, 0, 0.178325, -0.000162113, 0, 1, 0, 0, -0.178325, 0, 0.983972, -0.00089452, 373.575, 42.5355, -1327.22, 2.20656)",
+            "opacity": 0.863902,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.946683, 0, -0.322168, 0, 0, 1, 0, 0, 0.322168, 0, 0.946683, 0, -671.575, -53.3381, -1819.11, 1)",
+            "incoming": "matrix3d(0.986142, 0, 0.165903, -0.000150821, 0, 1, 0, 0, -0.165903, 0, 0.986142, -0.000896493, 349.596, 35.754, -1241.46, 2.1286)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.946683, 0, -0.322168, 0, 0, 1, 0, 0, 0.322168, 0, 0.946683, 0, -671.575, -53.3381, -1819.11, 1)",
+            "incoming": "matrix3d(0.986142, 0, 0.165903, -0.000150821, 0, 1, 0, 0, -0.165903, 0, 0.986142, -0.000896493, 349.596, 35.754, -1241.46, 2.1286)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.943306, 0, -0.331926, 0, 0, 1, 0, 0, 0.331926, 0, 0.943306, 0, -709.878, -54.7225, -1907.85, 1)",
+            "incoming": "matrix3d(0.988431, 0, 0.151671, -0.000137883, 0, 1, 0, 0, -0.151671, 0, 0.988431, -0.000898574, 315.826, 32.6618, -1134.09, 2.03099)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.943306, 0, -0.331926, 0, 0, 1, 0, 0, 0.331926, 0, 0.943306, 0, -709.878, -54.7225, -1907.85, 1)",
+            "incoming": "matrix3d(0.988431, 0, 0.151671, -0.000137883, 0, 1, 0, 0, -0.151671, 0, 0.988431, -0.000898574, 315.826, 32.6618, -1134.09, 2.03099)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.942282, 0, -0.334822, 0, 0, 1, 0, 0, 0.334822, 0, 0.942282, 0, -721.272, -55.1343, -1934.25, 1)",
+            "incoming": "matrix3d(0.989502, 0, 0.144522, -0.000131384, 0, 1, 0, 0, -0.144522, 0, 0.989502, -0.000899547, 298.889, 31.1111, -1080.25, 1.98204)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.942282, 0, -0.334822, 0, 0, 1, 0, 0, 0.334822, 0, 0.942282, 0, -721.272, -55.1343, -1934.25, 1)",
+            "incoming": "matrix3d(0.989502, 0, 0.144522, -0.000131384, 0, 1, 0, 0, -0.144522, 0, 0.989502, -0.000899547, 298.889, 31.1111, -1080.25, 1.98204)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940959, 0, -0.338519, 0, 0, 1, 0, 0, 0.338519, 0, 0.940959, 0, -735.839, -55.6608, -1968, 1)",
+            "incoming": "matrix3d(0.991482, 0, 0.130244, -0.000118404, 0, 1, 0, 0, -0.130244, 0, 0.991482, -0.000901347, 265.119, 28.019, -972.882, 1.88444)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940959, 0, -0.338519, 0, 0, 1, 0, 0, 0.338519, 0, 0.940959, 0, -735.839, -55.6608, -1968, 1)",
+            "incoming": "matrix3d(0.991482, 0, 0.130244, -0.000118404, 0, 1, 0, 0, -0.130244, 0, 0.991482, -0.000901347, 265.119, 28.019, -972.882, 1.88444)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940225, 0, -0.340555, 0, 0, 1, 0, 0, 0.340555, 0, 0.940225, 0, -743.867, -55.951, -1986.6, 1)",
+            "incoming": "matrix3d(0.993256, 0, 0.115939, -0.000105399, 0, 1, 0, 0, -0.115939, 0, 0.993256, -0.00090296, 231.348, 24.9268, -865.516, 1.78683)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940225, 0, -0.340555, 0, 0, 1, 0, 0, 0.340555, 0, 0.940225, 0, -743.867, -55.951, -1986.6, 1)",
+            "incoming": "matrix3d(0.993256, 0, 0.115939, -0.000105399, 0, 1, 0, 0, -0.115939, 0, 0.993256, -0.00090296, 231.348, 24.9268, -865.516, 1.78683)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939845, 0, -0.341601, 0, 0, 1, 0, 0, 0.341601, 0, 0.939845, 0, -747.997, -56.1003, -1996.17, 1)",
+            "incoming": "matrix3d(0.994829, 0, 0.101567, -9.23341e-05, 0, 1, 0, 0, -0.101567, 0, 0.994829, -0.00090439, 197.476, 21.8254, -757.827, 1.68893)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939749, 0, -0.341865, 0, 0, 1, 0, 0, 0.341865, 0, 0.939749, 0, -749.036, -56.1378, -1998.58, 1)",
+            "incoming": "matrix3d(0.995533, 0, 0.0944164, -8.58331e-05, 0, 1, 0, 0, -0.0944164, 0, 0.995533, -0.00090503, 180.641, 20.284, -704.305, 1.64028)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939702, 0, -0.341996, 0, 0, 1, 0, 0, 0.341996, 0, 0.939702, 0, -749.553, -56.1565, -1999.78, 1)",
+            "incoming": "matrix3d(0.996186, 0, 0.0872605, -7.93278e-05, 0, 1, 0, 0, -0.0872605, 0, 0.996186, -0.000905623, 163.806, 18.7426, -650.784, 1.59162)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939702, 0, -0.341996, 0, 0, 1, 0, 0, 0.341996, 0, 0.939702, 0, -749.553, -56.1565, -1999.78, 1)",
+            "incoming": "matrix3d(0.996186, 0, 0.0872605, -7.93278e-05, 0, 1, 0, 0, -0.0872605, 0, 0.996186, -0.000905623, 163.806, 18.7426, -650.784, 1.59162)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.996908, 0, 0.0785738, -7.14307e-05, 0, 1, 0, 0, -0.0785738, 0, 0.996908, -0.00090628, 147.42, 16.8727, -585.857, 1.5326)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99724, 0, 0.0742491, -6.74992e-05, 0, 1, 0, 0, -0.0742491, 0, 0.99724, -0.000906582, 139.29, 15.9423, -553.55, 1.50323)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997552, 0, 0.0699231, -6.35664e-05, 0, 1, 0, 0, -0.0699231, 0, 0.997552, -0.000906866, 131.161, 15.0118, -521.244, 1.47386)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997552, 0, 0.0699231, -6.35664e-05, 0, 1, 0, 0, -0.0699231, 0, 0.997552, -0.000906866, 131.161, 15.0118, -521.244, 1.47386)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99812, 0, 0.061293, -5.57209e-05, 0, 1, 0, 0, -0.061293, 0, 0.99812, -0.000907382, 114.951, 13.1565, -456.824, 1.41529)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998376, 0, 0.0569632, -5.17848e-05, 0, 1, 0, 0, -0.0569632, 0, 0.998376, -0.000907615, 106.822, 12.2261, -424.518, 1.38593)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998613, 0, 0.0526583, -4.78712e-05, 0, 1, 0, 0, -0.0526583, 0, 0.998613, -0.00090783, 98.7411, 11.3013, -392.405, 1.35673)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998832, 0, 0.0483265, -4.39332e-05, 0, 1, 0, 0, -0.0483265, 0, 0.998832, -0.000908029, 90.6118, 10.3708, -360.098, 1.32736)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998832, 0, 0.0483265, -4.39332e-05, 0, 1, 0, 0, -0.0483265, 0, 0.998832, -0.000908029, 90.6118, 10.3708, -360.098, 1.32736)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999032, 0, 0.0439938, -3.99944e-05, 0, 1, 0, 0, -0.0439938, 0, 0.999032, -0.000908211, 82.4824, 9.4404, -327.792, 1.29799)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999212, 0, 0.0396862, -3.60784e-05, 0, 1, 0, 0, -0.0396862, 0, 0.999212, -0.000908375, 74.4018, 8.51554, -295.678, 1.2688)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999212, 0, 0.0396862, -3.60784e-05, 0, 1, 0, 0, -0.0396862, 0, 0.999212, -0.000908375, 74.4018, 8.51554, -295.678, 1.2688)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999519, 0, 0.031017, -2.81972e-05, 0, 1, 0, 0, -0.031017, 0, 0.999519, -0.000908654, 58.1431, 6.65468, -231.065, 1.21006)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99975, 0, 0.0223713, -2.03376e-05, 0, 1, 0, 0, -0.0223713, 0, 0.99975, -0.000908863, 41.9332, 4.7994, -166.646, 1.1515)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999837, 0, 0.0180349, -1.63953e-05, 0, 1, 0, 0, -0.0180349, 0, 0.999837, -0.000908943, 33.8039, 3.86897, -134.339, 1.12213)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999837, 0, 0.0180349, -1.63953e-05, 0, 1, 0, 0, -0.0180349, 0, 0.999837, -0.000908943, 33.8039, 3.86897, -134.339, 1.12213)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999906, 0, 0.013724, -1.24764e-05, 0, 1, 0, 0, -0.013724, 0, 0.999906, -0.000909005, 25.7232, 2.94411, -102.226, 1.09293)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999956, 0, 0.00938698, -8.53362e-06, 0, 1, 0, 0, -0.00938698, 0, 0.999956, -0.000909051, 17.5939, 2.01368, -69.9195, 1.06356)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.836869,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0.000738388, -6.71262e-07, 0, 1, 0, 0, -0.000738388, 0, 1, -0.000909091, 1.38393, 0.158396, -5.49985, 1.005)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.836869,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0.000738388, -6.71262e-07, 0, 1, 0, 0, -0.000738388, 0, 1, -0.000909091, 1.38393, 0.158396, -5.49985, 1.005)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.532955,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000722984, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.532955,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000722984, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "Keep it personal.Keep it local.",
+            "inert": true
+          }
+        ]
+      },
+      {
+        "motif": "corridor",
+        "frames": [
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix(1, 0, 0, 1, 0, 0)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99941, 0, -0.0343502, 0, 0, 1, 0, 0, 0.0343502, 0, 0.99941, 0, -30.6638, 2.63218, -126.547, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99941, 0, -0.0343502, 0, 0, 1, 0, 0, 0.0343502, 0, 0.99941, 0, -30.6638, 2.63218, -126.547, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.997861, 0, -0.0653747, 0, 0, 1, 0, 0, 0.0653747, 0, 0.997861, 0, -58.3888, 5.0121, -240.966, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99513, 0, -0.0985738, 0, 0, 1, 0, 0, 0.0985738, 0, 0.99513, 0, -88.1207, 7.56428, -363.667, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99513, 0, -0.0985738, 0, 0, 1, 0, 0, 0.0985738, 0, 0.99513, 0, -88.1207, 7.56428, -363.667, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.994291, 0, -0.106698, 0, 0, 1, 0, 0, 0.106698, 0, 0.994291, 0, -95.4102, 8.19002, -393.751, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993272, 0, -0.115808, 0, 0, 1, 0, 0, 0.115808, 0, 0.993272, 0, -103.592, 8.89231, -427.515, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.993272, 0, -0.115808, 0, 0, 1, 0, 0, 0.115808, 0, 0.993272, 0, -103.592, 8.89231, -427.515, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992973, 0, -0.118344, 0, 0, 1, 0, 0, 0.118344, 0, 0.992973, 0, -105.871, 9.08795, -436.921, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992641, 0, -0.121094, 0, 0, 1, 0, 0, 0.121094, 0, 0.992641, 0, -108.343, 9.30017, -447.124, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "departing",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.992641, 0, -0.121094, 0, 0, 1, 0, 0, 0.121094, 0, 0.992641, 0, -108.343, 9.30017, -447.124, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.99257, 0, -0.121673, 0, 0, 1, 0, 0, 0.121673, 0, 0.99257, 0, -108.864, 9.34488, -449.273, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.988486, 0, -0.151315, 0, 0, 1, 0, 0, 0.151315, 0, 0.988486, 0, -181.262, -1.26772, -629.778, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.35,
+            "outgoing": "matrix3d(0.988486, 0, -0.151315, 0, 0, 1, 0, 0, 0.151315, 0, 0.988486, 0, -181.262, -1.26772, -629.778, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.456205,
+            "outgoing": "matrix3d(0.982959, 0, -0.183824, 0, 0, 1, 0, 0, 0.183824, 0, 0.982959, 0, -261.38, -13.0575, -829.213, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.456205,
+            "outgoing": "matrix3d(0.982959, 0, -0.183824, 0, 0, 1, 0, 0, 0.183824, 0, 0.982959, 0, -261.38, -13.0575, -829.213, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.808509,
+            "outgoing": "matrix3d(0.973375, 0, -0.229216, 0, 0, 1, 0, 0, 0.229216, 0, 0.973375, 0, -374.108, -29.6459, -1109.82, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.904046,
+            "outgoing": "matrix3d(0.970214, 0, -0.242251, 0, 0, 1, 0, 0, 0.242251, 0, 0.970214, 0, -406.696, -34.4414, -1190.94, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.959748,
+            "outgoing": "matrix3d(0.967881, 0, -0.251408, 0, 0, 1, 0, 0, 0.251408, 0, 0.967881, 0, -429.654, -37.8197, -1248.09, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.959748,
+            "outgoing": "matrix3d(0.967881, 0, -0.251408, 0, 0, 1, 0, 0, 0.251408, 0, 0.967881, 0, -429.654, -37.8197, -1248.09, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 0.99973,
+            "outgoing": "matrix3d(0.964777, 0, -0.263071, 0, 0, 1, 0, 0, 0.263071, 0, 0.964777, 0, -458.976, -42.1346, -1321.08, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.963758, 0, -0.266778, 0, 0, 1, 0, 0, 0.266778, 0, 0.963758, 0, -468.316, -43.5091, -1344.33, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.963758, 0, -0.266778, 0, 0, 1, 0, 0, 0.266778, 0, 0.963758, 0, -468.316, -43.5091, -1344.33, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.962388, 0, -0.271677, 0, 0, 1, 0, 0, 0.271677, 0, 0.962388, 0, -480.676, -45.3279, -1375.1, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961951, 0, -0.27322, 0, 0, 1, 0, 0, 0.27322, 0, 0.961951, 0, -484.573, -45.9014, -1384.8, 1)",
+            "incoming": "matrix3d(0.978148, 0, 0.207912, -0.000189011, 0, 1, 0, 0, -0.207912, 0, 0.978148, -0.000889225, 408.9, 74.88, -1500, 2.36364)",
+            "opacity": 0,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961637, 0, -0.274325, 0, 0, 1, 0, 0, 0.274325, 0, 0.961637, 0, -487.363, -46.3119, -1391.74, 1)",
+            "incoming": "matrix3d(0.979016, 0, 0.203782, -0.000185257, 0, 1, 0, 0, -0.203782, 0, 0.979016, -0.000890015, 403.957, 70.3541, -1475.82, 2.34166)",
+            "opacity": 0.120884,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "scene",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96143, 0, -0.27505, 0, 0, 1, 0, 0, 0.27505, 0, 0.96143, 0, -489.195, -46.5814, -1396.3, 1)",
+            "incoming": "matrix3d(0.980061, 0, 0.198694, -0.000180631, 0, 1, 0, 0, -0.198694, 0, 0.980061, -0.000890965, 397.872, 64.7829, -1446.06, 2.3146)",
+            "opacity": 0.269688,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.96131, 0, -0.27547, 0, 0, 1, 0, 0, 0.27547, 0, 0.96131, 0, -490.256, -46.7376, -1398.94, 1)",
+            "incoming": "matrix3d(0.98108, 0, 0.193601, -0.000176001, 0, 1, 0, 0, -0.193601, 0, 0.98108, -0.000891891, 391.788, 59.2117, -1416.3, 2.28755)",
+            "opacity": 0.418491,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.961263, 0, -0.275632, 0, 0, 1, 0, 0, 0.275632, 0, 0.961263, 0, -490.667, -46.7981, -1399.97, 1)",
+            "incoming": "matrix3d(0.982073, 0, 0.188503, -0.000171366, 0, 1, 0, 0, -0.188503, 0, 0.982073, -0.000892793, 385.703, 53.6405, -1386.54, 2.26049)",
+            "opacity": 0.567295,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.957917, 0, -0.287045, 0, 0, 1, 0, 0, 0.287045, 0, 0.957917, 0, -534.777, -48.3938, -1502.17, 1)",
+            "incoming": "matrix3d(0.983039, 0, 0.183399, -0.000166726, 0, 1, 0, 0, -0.183399, 0, 0.983039, -0.000893671, 379.619, 48.0693, -1356.78, 2.23344)",
+            "opacity": 0.716098,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.953403, 0, -0.3017, 0, 0, 1, 0, 0, 0.3017, 0, 0.953403, 0, -591.661, -50.4498, -1633.96, 1)",
+            "incoming": "matrix3d(0.983978, 0, 0.17829, -0.000162082, 0, 1, 0, 0, -0.17829, 0, 0.983978, -0.000894525, 373.534, 42.4981, -1327.02, 2.20638)",
+            "opacity": 0.864902,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.949507, 0, -0.313746, 0, 0, 1, 0, 0, 0.313746, 0, 0.949507, 0, -638.626, -52.1472, -1742.77, 1)",
+            "incoming": "matrix3d(0.984923, 0, 0.172994, -0.000157267, 0, 1, 0, 0, -0.172994, 0, 0.984923, -0.000895384, 366.453, 37.2975, -1295.05, 2.17732)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.946676, 0, -0.322186, 0, 0, 1, 0, 0, 0.322186, 0, 0.946676, 0, -671.646, -53.3407, -1819.28, 1)",
+            "incoming": "matrix3d(0.986145, 0, 0.165884, -0.000150804, 0, 1, 0, 0, -0.165884, 0, 0.986145, -0.000896496, 349.552, 35.7499, -1241.32, 2.12847)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.944702, 0, -0.327929, 0, 0, 1, 0, 0, 0.327929, 0, 0.944702, 0, -694.175, -54.1549, -1871.47, 1)",
+            "incoming": "matrix3d(0.987316, 0, 0.158765, -0.000144332, 0, 1, 0, 0, -0.158765, 0, 0.987316, -0.00089756, 332.65, 34.2024, -1187.58, 2.07962)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.9433, 0, -0.331941, 0, 0, 1, 0, 0, 0.331941, 0, 0.9433, 0, -709.939, -54.7247, -1907.99, 1)",
+            "incoming": "matrix3d(0.988436, 0, 0.151639, -0.000137853, 0, 1, 0, 0, -0.151639, 0, 0.988436, -0.000898578, 315.749, 32.6548, -1133.85, 2.03077)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.942279, 0, -0.334828, 0, 0, 1, 0, 0, 0.334828, 0, 0.942279, 0, -721.297, -55.1352, -1934.31, 1)",
+            "incoming": "matrix3d(0.989504, 0, 0.144504, -0.000131367, 0, 1, 0, 0, -0.144504, 0, 0.989504, -0.000899549, 298.847, 31.1072, -1080.11, 1.98192)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.941523, 0, -0.336949, 0, 0, 1, 0, 0, 0.336949, 0, 0.941523, 0, -729.651, -55.4372, -1953.67, 1)",
+            "incoming": "matrix3d(0.990521, 0, 0.137362, -0.000124874, 0, 1, 0, 0, -0.137362, 0, 0.990521, -0.000900474, 281.945, 29.5597, -1026.38, 1.93307)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940957, 0, -0.338525, 0, 0, 1, 0, 0, 0.338525, 0, 0.940957, 0, -735.863, -55.6617, -1968.06, 1)",
+            "incoming": "matrix3d(0.991486, 0, 0.130212, -0.000118375, 0, 1, 0, 0, -0.130212, 0, 0.991486, -0.000901351, 265.044, 28.0121, -972.643, 1.88422)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940535, 0, -0.339697, 0, 0, 1, 0, 0, 0.339697, 0, 0.940535, 0, -740.484, -55.8287, -1978.76, 1)",
+            "incoming": "matrix3d(0.9924, 0, 0.123056, -0.000111869, 0, 1, 0, 0, -0.123056, 0, 0.9924, -0.000902182, 248.142, 26.4646, -918.909, 1.83537)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.940223, 0, -0.340559, 0, 0, 1, 0, 0, 0.340559, 0, 0.940223, 0, -743.885, -55.9516, -1986.64, 1)",
+            "incoming": "matrix3d(0.993262, 0, 0.115894, -0.000105358, 0, 1, 0, 0, -0.115894, 0, 0.993262, -0.000902965, 231.24, 24.917, -865.174, 1.78652)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939999, 0, -0.341179, 0, 0, 1, 0, 0, 0.341179, 0, 0.939999, 0, -746.328, -56.0399, -1992.3, 1)",
+            "incoming": "matrix3d(0.994072, 0, 0.108725, -9.88412e-05, 0, 1, 0, 0, -0.108725, 0, 0.994072, -0.000903702, 214.339, 23.3694, -811.439, 1.73767)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939845, 0, -0.341602, 0, 0, 1, 0, 0, 0.341602, 0, 0.939845, 0, -748, -56.1004, -1996.18, 1)",
+            "incoming": "matrix3d(0.99483, 0, 0.101551, -9.23192e-05, 0, 1, 0, 0, -0.101551, 0, 0.99483, -0.000904391, 197.437, 21.8219, -757.705, 1.68882)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939749, 0, -0.341866, 0, 0, 1, 0, 0, 0.341866, 0, 0.939749, 0, -749.041, -56.138, -1998.59, 1)",
+            "incoming": "matrix3d(0.995537, 0, 0.0943716, -8.57924e-05, 0, 1, 0, 0, -0.0943716, 0, 0.995537, -0.000905034, 180.536, 20.2743, -703.97, 1.63997)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939701, 0, -0.341996, 0, 0, 1, 0, 0, 0.341996, 0, 0.939701, 0, -749.556, -56.1566, -1999.78, 1)",
+            "incoming": "matrix3d(0.996192, 0, 0.0871872, -7.92611e-05, 0, 1, 0, 0, -0.0871872, 0, 0.996192, -0.000905629, 163.634, 18.7268, -650.235, 1.59112)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.996561, 0, 0.0828618, -7.53289e-05, 0, 1, 0, 0, -0.0828618, 0, 0.996561, -0.000905965, 155.483, 17.7955, -617.9, 1.56173)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99691, 0, 0.0785474, -7.14067e-05, 0, 1, 0, 0, -0.0785474, 0, 0.99691, -0.000906282, 147.37, 16.867, -585.66, 1.53242)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997241, 0, 0.0742315, -6.74832e-05, 0, 1, 0, 0, -0.0742315, 0, 0.997241, -0.000906583, 139.257, 15.9385, -553.419, 1.50311)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997553, 0, 0.0699143, -6.35584e-05, 0, 1, 0, 0, -0.0699143, 0, 0.997553, -0.000906866, 131.144, 15.0099, -521.178, 1.4738)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.997846, 0, 0.0655957, -5.96324e-05, 0, 1, 0, 0, -0.0655957, 0, 0.997846, -0.000907133, 123.032, 14.0814, -488.937, 1.44449)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998121, 0, 0.0612759, -5.57054e-05, 0, 1, 0, 0, -0.0612759, 0, 0.998121, -0.000907383, 114.919, 13.1529, -456.697, 1.41518)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998377, 0, 0.0569549, -5.17772e-05, 0, 1, 0, 0, -0.0569549, 0, 0.998377, -0.000907615, 106.806, 12.2243, -424.456, 1.38587)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998614, 0, 0.0526329, -4.78481e-05, 0, 1, 0, 0, -0.0526329, 0, 0.998614, -0.000907831, 98.6934, 11.2958, -392.215, 1.35656)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.998832, 0, 0.0483099, -4.39181e-05, 0, 1, 0, 0, -0.0483099, 0, 0.998832, -0.000908029, 90.5806, 10.3673, -359.974, 1.32725)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999032, 0, 0.043986, -3.99873e-05, 0, 1, 0, 0, -0.043986, 0, 0.999032, -0.000908211, 82.4678, 9.43872, -327.733, 1.29794)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999213, 0, 0.0396613, -3.60557e-05, 0, 1, 0, 0, -0.0396613, 0, 0.999213, -0.000908376, 74.3551, 8.51019, -295.493, 1.26863)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999375, 0, 0.0353358, -3.21235e-05, 0, 1, 0, 0, -0.0353358, 0, 0.999375, -0.000908523, 66.2423, 7.58166, -263.252, 1.23932)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999375, 0, 0.0353358, -3.21235e-05, 0, 1, 0, 0, -0.0353358, 0, 0.999375, -0.000908523, 66.2423, 7.58166, -263.252, 1.23932)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999519, 0, 0.0310097, -2.81906e-05, 0, 1, 0, 0, -0.0310097, 0, 0.999519, -0.000908654, 58.1295, 6.65312, -231.011, 1.21001)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999644, 0, 0.026683, -2.42572e-05, 0, 1, 0, 0, -0.026683, 0, 0.999644, -0.000908767, 50.0167, 5.72459, -198.77, 1.1807)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.99975, 0, 0.0223558, -2.03234e-05, 0, 1, 0, 0, -0.0223558, 0, 0.99975, -0.000908864, 41.904, 4.79605, -166.53, 1.15139)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999837, 0, 0.0180281, -1.63892e-05, 0, 1, 0, 0, -0.0180281, 0, 0.999837, -0.000908943, 33.7912, 3.86752, -134.289, 1.12208)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "arriving",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999906, 0, 0.0137001, -1.24547e-05, 0, 1, 0, 0, -0.0137001, 0, 0.999906, -0.000909006, 25.6784, 2.93898, -102.048, 1.09277)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999956, 0, 0.00937192, -8.51992e-06, 0, 1, 0, 0, -0.00937192, 0, 0.999956, -0.000909051, 17.5657, 2.01045, -69.8073, 1.06346)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 1,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(0.999987, 0, 0.00504351, -4.58501e-06, 0, 1, 0, 0, -0.00504351, 0, 0.999987, -0.000909079, 9.45289, 1.08192, -37.5665, 1.03415)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.530243,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0.000715014, -6.50012e-07, 0, 1, 0, 0, -0.000715014, 0, 1, -0.000909091, 1.34012, 0.153381, -5.32574, 1.00484)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.293416,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000720874, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          },
+          {
+            "phase": "settling",
+            "geometry": 0.147138,
+            "outgoing": "matrix3d(0.939693, 0, -0.34202, 0, 0, 1, 0, 0, 0.34202, 0, 0.939693, 0, -749.65, -56.16, -2000, 1)",
+            "incoming": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.000495414, 0, 0, 0, 1)",
+            "opacity": 1,
+            "heading": "A second look.On Android.",
+            "inert": true
+          }
+        ]
+      }
+    ],
+    "desktop-chromium-hero": {
+      "visiblePixels": 28969,
+      "scope": "emulated browser viewport, not physical-phone FPS"
+    }
+  }
+}

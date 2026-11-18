@@ -1,0 +1,34 @@
+{
+  "preview_deployment": "dpl_6ZwNZhYVKbrMQ5asMXkAmFjVYYXx",
+  "preview_url": "https://scamsentry-jbp60avhb-news-lens-ai.vercel.app/",
+  "source": "7cc527b75d56a4089bbff0f323cd3c8ae8ea87c4",
+  "runtime_source_unchanged_by_following_test_only_commit": "968947fe206aa069d6225f8ea4af1918e0d2b126",
+  "observed": [
+    "Visible original hero wires and moving markers in light and dark themes",
+    "Free-follow 34px reticle at viewport position (620,165), native arrow retained",
+    "Target snapping in main navigation",
+    "Real perspective departure, geometric scene and final heading focus",
+    "Privacy packets observed on continuous directed paths",
+    "Pause control retains completed diagram and usable navigation",
+    "Fictional secret request yields Higher risk and inert actual host review.test"
+  ],
+  "preview_access": "Vercel Authentication remains enabled. Authorized connector fetch returned exact expected HTML and strict CSP. Anonymous HTTP redirects to sign-in.",
+  "preview_model_limitation": "The worker deliberately fetches public assets with credentials omitted. On this protected preview it cannot obtain the model and honestly reports unavailable estimates, retaining local rule observations. Full model availability must be verified on public production; do not weaken preview authentication or alter the worker to conceal this.",
+  "pause_final_state": {
+    "motion": "paused",
+    "diagram_running": false,
+    "visible_packets": 0,
+    "scene_count": 0
+  },
+  "updated_preview": {
+    "deployment": "dpl_77Yr9w1EL23UjdM6CQ8A2yWHhckj",
+    "url": "https://scamsentry-uqcso5ivp-news-lens-ai.vercel.app/",
+    "source": "f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05",
+    "back_during_transition_restores_home_heading_focus": true,
+    "scene_phase_geometry_opacity_observed": 0.456343,
+    "scene_phase_geometry_transform": "matrix(1.06927,0,0,1.06927,0,0)",
+    "final_privacy_phase": "idle",
+    "final_heading_focused": true,
+    "final_scene_count": 0
+  }
+}

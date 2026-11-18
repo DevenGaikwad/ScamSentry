@@ -1,0 +1,29 @@
+{
+  "production_vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "full_audit_vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 12,
+    "critical": 0,
+    "total": 12
+  },
+  "unresolved": [
+    {
+      "name": "picomatch",
+      "url": "https://github.com/advisories/GHSA-fc5q-39xc-vjpf",
+      "range": "<=4.0.7",
+      "severity": "high"
+    }
+  ],
+  "disposition": "KNOWN UNPATCHED DEVELOPMENT-TOOL ISSUE — retained, not a zero-vulnerability claim",
+  "exposure": "Picomatch 4.0.7 is used by pinned Vite/Vitest/globbing tooling, not by the delivered browser or worker. Builds/tests use repository-owned patterns; message input is never a glob. Production serves precompiled static files and only React/React DOM are production npm dependencies.",
+  "remediation": "Upstream latest 4.0.7 has no published fixed version as checked 17 November 2026. Upgrade when a compatible official fix is available; no force downgrade, hidden advisory, registry failure or unreviewed patch is accepted."
+}

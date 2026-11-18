@@ -1,5 +1,15 @@
 # Current continuation checkpoint
 
+18 November 2026: both requested prompts are complete in order. The prior v3 redesign's interrupted evidence/docs were closed at `92df2bb`. The v3.1 motion patch is integrated at `3766d195c41e793e66edcbf472432f766c0e27d5` and live at **https://scamsentry-inspect.vercel.app/**. Tested source `f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05`, [CI run 44242570910](https://github.com/DevenGaikwad/ScamSentry/actions/runs/44242570910), passed 71 unit/parity and 63 browser tests with zero skips/flakes/failures. Production deployment `dpl_DPMbrs8DMDG7nni1AKRZNSRsaQCV` serves the exact passing CI static output.
+
+The corner cursor, five public depth motifs, seeded hero network, three directed diagrams, static fallbacks and shared motion policy are delivered. Scientific files, worker, engine, Android code and released APKs are unchanged. No training, new dataset, permission email, paid service, new repository/project or Git-integration grant was introduced. [Motion audit](FRONTEND_MOTION_AUDIT.md) and `assets/evidence/v3/motion/final` contain original captures, test/audit summaries, public hashes and provenance. Git pushes alone still do not deploy this standalone Vercel project.
+
+The approved model's historical weaknesses and physical Android device/accessibility/offline/16 KB runtime gates remain open as previously recorded. Do not repeat training or native builds to reproduce this visual patch. Do not interpret the presentation upgrade as improved F1 or sender authentication.
+
+## Preserved previous checkpoints
+
+# Previous v3 continuation checkpoint
+
 18 November 2026: the v3 editorial browser redesign is merged and live at **https://scamsentry-inspect.vercel.app/**. Source `0e248cc766d58bc97c7dc504bbd03b21b7aa8b57`, identical to the tested `f2b44da` tree, passed 67 unit/parity and 42 three-project browser checks. Production deployment `dpl_HUWQrorzT2fmY9P5QLJFNZkACyJQ` serves that original CI output. The previous hostname redirects to the preferred one, retaining paths. [Current frontend validation](FRONTEND_VALIDATION.md) and `assets/evidence/v3/final` close the interrupted v3 documentation/evidence work.
 
 The owner's 10,985-word v3.1 follow-up is next: free-follow corner cursor, visible public depth transitions, a seeded hero network, and meaningful animated flow diagrams. Preserve this completed redesign, model/engine/worker/benchmark and Android release. Work on a separate branch, validate the exact new output, then update this same repository and Vercel project. No Git integration is installed: pushes alone do not deploy.

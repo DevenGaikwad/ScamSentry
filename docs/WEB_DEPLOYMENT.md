@@ -1,3 +1,15 @@
+# Current motion deployment
+
+Production **https://scamsentry-inspect.vercel.app/** serves frontend 0.3.1, deployment `dpl_DPMbrs8DMDG7nni1AKRZNSRsaQCV`, from tested source `f9eb62f13f68f79da5a6a212bd9c817e1f6c3d05` / merged source `3766d195c41e793e66edcbf472432f766c0e27d5`. The recovered CI artifact SHA-256 is `e753319ebed0ce4f64da5e3df2e94fa90247b160b35dfa61fea5a0c36c55e110`. All 27 public files match exact CI bytes through unauthenticated HTTPS, including the worker and model; unknown paths return a real 404 and the old hostname redirects with 307 while retaining deep paths. [Release evidence](../assets/evidence/v3/motion/final/RELEASE_VERIFICATION.json) · [Public verification](../assets/evidence/v3/motion/final/PUBLIC_HTTP_VERIFICATION.json).
+
+The protected preview was reviewed through existing account access without changing its protections. Its anonymous worker asset fetch cannot use Vercel sign-in cookies, so model availability was explicitly limited there. Public production requires and receives a separate full-model runtime check; this is not concealed by a worker change or authentication override. [Preview observations](../assets/evidence/v3/motion/PREVIEW_REVIEW.json).
+
+The project remains the existing standalone Hobby project. No Git integration was installed: pushes alone do not deploy. Upload the exact passing CI output and reviewed static configuration, retain the previous healthy deployment, and verify preview/production source, security headers, routing, inference and motion before recording completion. Never upload private inputs or relax the same-origin CSP to make a scene run.
+
+The legacy-host redirect is a persistent project rule, version `3338d802-a021-4a74-af57-04d1f58b8e04`, scoped to `scamsentry-bay.vercel.app`. Root, deep paths and query preservation were verified after publishing it. [Exact configuration and probes](../assets/evidence/v3/motion/final/HOSTNAME_ROUTE.json). Retain this rule on future updates; a source upload alone does not establish redirect persistence.
+
+## Preserved deployment history
+
 # Current browser deployment
 
 Production: **https://scamsentry-inspect.vercel.app/**. Existing project `scamsentry` (`prj_pFepmjKZNLc2CT9eBKtPbrt23Gzc`) in the previously verified Hobby team. Current deployment `dpl_HUWQrorzT2fmY9P5QLJFNZkACyJQ` contains the exact editorial CI build tested at `f2b44da` and merged at `0e248cc`. [Current verification](FRONTEND_VALIDATION.md) · [Fresh public file/route/header report](../assets/evidence/v3/final/PUBLIC_HTTP_VERIFICATION.json).

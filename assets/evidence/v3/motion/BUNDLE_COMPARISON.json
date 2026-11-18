@@ -1,0 +1,36 @@
+{
+  "v3": [
+    {
+      "file": "analysis.worker-RwoWKVhw.js",
+      "bytes": 12512,
+      "gzip9_bytes": 5480
+    },
+    {
+      "file": "index-B2-FUewJ.css",
+      "bytes": 35341,
+      "gzip9_bytes": 7865
+    },
+    {
+      "file": "index-CE0KFv-k.js",
+      "bytes": 284075,
+      "gzip9_bytes": 87651
+    }
+  ],
+  "v3_1": [
+    {
+      "file": "analysis.worker-RwoWKVhw.js",
+      "bytes": 12512,
+      "gzip9_bytes": 5480
+    },
+    {
+      "file": "index-CW-f8Z_N.css",
+      "bytes": 40097,
+      "gzip9_bytes": 9021
+    },
+    {
+      "file": "index-CYVtF8VA.js",
+      "bytes": 299549,
+      "gzip9_bytes": 93338
+    }
+  ]
+}
