@@ -194,24 +194,21 @@ test('packets travel along continuous edges and reduced motion retains completed
   await page.emulateMedia({reducedMotion:'no-preference',forcedColors:'active'});await nav(page,'Privacy');await expect(page.locator('.route-scene')).toHaveCount(0);await expect(page.locator('.pointer-brackets')).toBeHidden()
 })
 
-test.describe('runtime capture', () => {
-  test.use({ video: 'on' })
-  test('real-time motion tour uses only original public content',async({page})=>{
-    await page.setViewportSize({width:1363,height:936});await page.goto('/');await page.waitForTimeout(600)
-    await page.mouse.move(300,170);await page.mouse.move(800,180,{steps:35});await page.waitForTimeout(250)
-    const navigation=page.getByRole('navigation',{name:'Main navigation',exact:true})
-    await navigation.getByRole('link',{name:'Learn',exact:true}).hover();await page.waitForTimeout(250)
-    await navigation.getByRole('link',{name:'Privacy',exact:true}).hover();await page.waitForTimeout(250)
-    await page.mouse.move(620,160,{steps:20});await page.waitForTimeout(250)
-    for(const name of ['Learn','Evidence','Privacy']){
-      await navigation.getByRole('link',{name,exact:true}).click()
-      if(name==='Evidence'){await expect(page.locator('.route-scene')).toHaveAttribute('data-phase','scene');await capture(page,'transition-middle')}
-      if(name==='Privacy'){await expect(page.locator('.route-scene')).toHaveAttribute('data-phase','arriving');await capture(page,'transition-arrival')}
-      await expect(page.locator('main')).toHaveAttribute('data-route-phase','idle');await page.waitForTimeout(250)
-    }
-    await page.locator('.flow-diagram').scrollIntoViewIfNeeded();await page.waitForTimeout(3600)
-    await capture(page,'tour-final')
-    const video=page.video();await page.close();if(video)await video.saveAs(join(evidence,`${test.info().project.name}_motion-tour.webm`))
-    mkdirSync(evidence,{recursive:true});writeFileSync(join(evidence,`${test.info().project.name}_observations.json`),JSON.stringify({source:process.env.SCAMSENTRY_SOURCE_SHA??'local',date:new Date().toISOString(),observations},null,2))
-  })
+test('real-time motion tour uses only original public content',async({page})=>{
+  await page.setViewportSize({width:1363,height:936});await page.goto('/');await page.waitForTimeout(600)
+  await page.mouse.move(300,170);await page.mouse.move(800,180,{steps:35});await page.waitForTimeout(250)
+  const navigation=page.getByRole('navigation',{name:'Main navigation',exact:true})
+  await navigation.getByRole('link',{name:'Learn',exact:true}).hover();await page.waitForTimeout(250)
+  await navigation.getByRole('link',{name:'Privacy',exact:true}).hover();await page.waitForTimeout(250)
+  await page.mouse.move(620,160,{steps:20});await page.waitForTimeout(250)
+  for(const name of ['Learn','Evidence','Privacy']){
+    await navigation.getByRole('link',{name,exact:true}).click()
+    if(name==='Evidence'){await expect(page.locator('.route-scene')).toHaveAttribute('data-phase','scene');await capture(page,'transition-middle')}
+    if(name==='Privacy'){await expect(page.locator('.route-scene')).toHaveAttribute('data-phase','arriving');await capture(page,'transition-arrival')}
+    await expect(page.locator('main')).toHaveAttribute('data-route-phase','idle');await page.waitForTimeout(250)
+  }
+  await page.locator('.flow-diagram').scrollIntoViewIfNeeded();await page.waitForTimeout(3600)
+  await capture(page,'tour-final')
+  const video=page.video();await page.close();if(video)await video.saveAs(join(evidence,`${test.info().project.name}_motion-tour.webm`))
+  mkdirSync(evidence,{recursive:true});writeFileSync(join(evidence,`${test.info().project.name}_observations.json`),JSON.stringify({source:process.env.SCAMSENTRY_SOURCE_SHA??'local',date:new Date().toISOString(),observations},null,2))
 })

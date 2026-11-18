@@ -181,7 +181,11 @@ internal fun ScamSentryRoot(vm: AnalysisViewModel, presentation: PresentationPre
                     }
                 }
                 composable("settings") {
-                    SettingsPage(enabled, presentation, vm, onAbout = { navigate("about") }, onPrivacy = { navigate("privacy") })
+                    SettingsPage(
+                        enabled, presentation, vm,
+                        onAbout = { nav.navigate("about") { launchSingleTop = true } },
+                        onPrivacy = { nav.navigate("privacy") { launchSingleTop = true } },
+                    )
                 }
                 composable("about") { AboutPage() }
                 composable("privacy") { PrivacyPage() }

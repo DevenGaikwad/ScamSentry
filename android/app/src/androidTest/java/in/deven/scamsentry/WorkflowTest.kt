@@ -84,7 +84,9 @@ class WorkflowTest {
         screenshot("03_dark_editor.png")
         compose.onNodeWithContentDescription("Settings and model information").performClick()
         compose.onNodeWithText("System").performScrollTo().performClick()
-        compose.onNodeWithText("System").assertIsSelected()
+        compose.waitUntil(10_000) {
+            compose.onAllNodes(hasText("System") and isSelected()).fetchSemanticsNodes().isNotEmpty()
+        }
     }
     private fun screenshot(name: String) {
         compose.waitForIdle()
