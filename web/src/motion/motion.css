@@ -19,7 +19,9 @@ html[data-theme=dark]{--wire:rgba(230,230,230,.3);--wire-node:rgba(240,240,240,.
 main[data-route-phase]:not([data-route-phase=idle]){position:relative;z-index:12;background:var(--paper);transform-origin:50% 160px;will-change:transform,opacity;box-shadow:0 0 0 1px var(--rule)}
 main[data-route-phase=idle]{transform:none;opacity:1}
 .route-scene{position:fixed;inset:112px 0 0;z-index:8;pointer-events:none;overflow:hidden;isolation:isolate;background:var(--paper);perspective:1100px;contain:strict}
-.depth-geometry{position:absolute;inset:0;width:100%;height:100%;color:var(--scene-ink);animation:depth-environment var(--route-duration) ease both}
+.depth-geometry{position:absolute;inset:0;width:100%;height:100%;color:var(--scene-ink);opacity:.35;transition:opacity 120ms ease;animation:depth-environment var(--route-duration) ease both}
+.route-scene[data-phase=scene] .depth-geometry,.route-scene[data-phase=arriving] .depth-geometry{opacity:1}
+.route-scene[data-phase=settling] .depth-geometry{opacity:0}
 .depth-rails,.depth-frames,.depth-rings{stroke-width:1;vector-effect:non-scaling-stroke;transform-origin:center}
 .depth-rings{opacity:.3}.depth-rails{opacity:.35}.depth-frames{opacity:.25}
 .motif-rings .depth-rings{opacity:1;animation:ring-turn var(--route-duration) ease both}
@@ -41,7 +43,7 @@ main[data-route-phase=idle]{transform:none;opacity:1}
 .signal-figure.evidence{padding-bottom:48px}
 .flow-mobile-legend{display:none}
 @keyframes public-depart{0%{opacity:1;transform:translateZ(0)}18%{opacity:1;transform:translate3d(-8vw,1vh,-450px) rotateY(7deg)}42%{opacity:.85;transform:translate3d(-36vw,-5vh,-1400px) rotateY(16deg)}65%,100%{opacity:0;transform:translate3d(-55vw,-6vh,-2000px) rotateY(20deg)}}
-@keyframes depth-environment{0%{opacity:0;transform:scale(1.25)}20%{opacity:.85}45%,65%{opacity:1;transform:scale(1)}95%,100%{opacity:0;transform:scale(.8)}}
+@keyframes depth-environment{0%{transform:scale(1.25)}45%,65%{transform:scale(1)}100%{transform:scale(.8)}}
 @keyframes ring-turn{0%{transform:rotate(-12deg) scale(1.1)}75%,100%{transform:rotate(10deg) scale(.9)}}
 @keyframes corridor-depth{0%{transform:scale(1.4)}80%,100%{transform:scale(.75)}}
 @keyframes depth-marker{0%{opacity:0;transform:translateX(-100px)}22%,70%{opacity:1}95%,100%{opacity:0;transform:translateX(100px)}}

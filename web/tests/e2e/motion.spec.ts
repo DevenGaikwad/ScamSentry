@@ -52,7 +52,7 @@ test('public routes render departure, geometric middle, real miniature and five 
     await page.getByRole('navigation',{name:'Main navigation',exact:true}).getByRole('link',{name,exact:true}).click()
     const scene=page.locator('.route-scene'),main=page.locator('main')
     await expect(scene).toHaveAttribute('data-motif',motif)
-    const proofPromise=page.evaluate(async()=>{
+    const proof=await page.evaluate(async()=>{
       const frames:{phase:string|null;geometry:number;outgoing:string;incoming:string;opacity:number;heading:string|null;inert:boolean}[]=[]
       const started=performance.now()
       return await new Promise<typeof frames>((resolve,reject)=>{
@@ -61,21 +61,13 @@ test('public routes render departure, geometric middle, real miniature and five 
           if(!scene){resolve(frames);return}
           if(performance.now()-started>2500){reject(new Error('Scene did not settle'));return}
           frames.push({phase:scene.getAttribute('data-phase'),geometry:Number(getComputedStyle(scene.querySelector('.depth-geometry')!).opacity),outgoing:getComputedStyle(scene.querySelector('.outgoing-public-plane')!).transform,incoming:getComputedStyle(main).transform,opacity:Number(getComputedStyle(main).opacity),heading:main.querySelector('h1')?.textContent??null,inert:main.hasAttribute('inert')})
-          requestAnimationFrame(sample)
+          setTimeout(sample,16)
         }
         sample()
       })
     })
-    await expect(scene.locator('.outgoing-public-plane')).toBeVisible()
-    await expect(scene).toHaveAttribute('data-phase','scene')
-    // Firefox can deliver very sparse rAF samples under trace/video capture. Verify the
-    // visible middle directly as well; do not require a sample at one exact boundary.
-    await expect.poll(async()=>Number(await page.locator('.depth-geometry').evaluate(el=>getComputedStyle(el).opacity))).toBeGreaterThan(.25)
-    if(name==='Privacy')await capture(page,'transition-middle')
-    if(name==='Android'){await expect(scene).toHaveAttribute('data-phase','arriving');await capture(page,'transition-arrival')}
-    const proof=await proofPromise
     mkdirSync(evidence,{recursive:true});writeFileSync(join(evidence,`${test.info().project.name}_${motif}_geometry.json`),JSON.stringify({source:process.env.SCAMSENTRY_SOURCE_SHA??'local',motif,frames:proof},null,2))
-    expect(proof.some(f=>f.geometry>.25&&f.outgoing!=='none')).toBe(true)
+    expect(proof.some(f=>f.phase==='scene'&&f.geometry>.25&&f.outgoing!=='none'),'A visible geometric middle must be observed').toBe(true)
     expect(new Set(proof.map(f=>f.outgoing)).size,'The outgoing plane must actually move').toBeGreaterThan(1)
     const incoming=proof.find(f=>f.phase==='arriving'&&f.opacity>.1&&f.incoming!=='none')
     expect(incoming,'A real visible incoming plane must be observed, independent of PNG encoding time').toBeTruthy()
@@ -166,7 +158,12 @@ test('real-time motion tour uses only original public content',async({page})=>{
   await navigation.getByRole('link',{name:'Learn',exact:true}).hover();await page.waitForTimeout(250)
   await navigation.getByRole('link',{name:'Privacy',exact:true}).hover();await page.waitForTimeout(250)
   await page.mouse.move(620,160,{steps:20});await page.waitForTimeout(250)
-  for(const name of ['Learn','Evidence','Privacy']){await navigation.getByRole('link',{name,exact:true}).click();await expect(page.locator('main')).toHaveAttribute('data-route-phase','idle');await page.waitForTimeout(250)}
+  for(const name of ['Learn','Evidence','Privacy']){
+    await navigation.getByRole('link',{name,exact:true}).click()
+    if(name==='Evidence'){await expect(page.locator('.route-scene')).toHaveAttribute('data-phase','scene');await capture(page,'transition-middle')}
+    if(name==='Privacy'){await expect(page.locator('.route-scene')).toHaveAttribute('data-phase','arriving');await capture(page,'transition-arrival')}
+    await expect(page.locator('main')).toHaveAttribute('data-route-phase','idle');await page.waitForTimeout(250)
+  }
   await page.locator('.flow-diagram').scrollIntoViewIfNeeded();await page.waitForTimeout(3600)
   await capture(page,'tour-final')
   const video=page.video();await page.close();if(video)await video.saveAs(join(evidence,`${test.info().project.name}_motion-tour.webm`))
