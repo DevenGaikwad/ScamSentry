@@ -117,25 +117,59 @@ test('private input and reports never enter scene markup or network requests',as
   for(const r of requests){expect(r.url).not.toContain(canary);expect(r.body??'').not.toContain(canary);expect(new URL(r.url).origin).toBe(new URL(page.url()).origin)}
 })
 
-test('hero draws visible seeded geometry, moves, suspends offscreen and survives canvas failure',async({page})=>{
+test('orthogonal hero packets move, stop offscreen and fall back to the same static geometry', async ({ page }) => {
   await page.goto('/')
-  const hero=page.locator('.home-hero .hero-network'),canvas=hero.locator('canvas')
-  await expect(hero).toHaveAttribute('data-renderer','canvas');await expect(hero).toHaveAttribute('data-running','true')
-  const pixels=await canvas.evaluate((el:HTMLCanvasElement)=>{const c=el.getContext('2d')!,p=c.getImageData(0,0,el.width,el.height).data;let visible=0;for(let i=3;i<p.length;i+=4)if(p[i]>30)visible++;return visible})
-  expect(pixels).toBeGreaterThan(600)
-  const first=await hero.getAttribute('data-frames');await page.waitForTimeout(200);expect(await hero.getAttribute('data-frames')).not.toBe(first)
-  await capture(page,'hero-light')
-  const menu=page.getByRole('button',{name:'Menu',exact:true});if(await menu.isVisible())await menu.click()
-  await page.getByRole('combobox',{name:'Theme',exact:true}).filter({visible:true}).selectOption('dark')
-  const close=page.getByRole('button',{name:'Close menu'});if(await close.isVisible())await close.click()
-  await expect(page.locator('html')).toHaveAttribute('data-theme','dark');await expect(hero).toHaveAttribute('data-renderer','canvas');await capture(page,'hero-dark')
-  await page.locator('footer').scrollIntoViewIfNeeded();await expect(hero).toHaveAttribute('data-running','false')
-  const stopped=await hero.getAttribute('data-frames');await page.waitForTimeout(120);expect(await hero.getAttribute('data-frames')).toBe(stopped)
-  await page.evaluate(()=>scrollTo(0,0));await expect(hero).toHaveAttribute('data-running','true')
-  await page.setViewportSize({width:320,height:936});expect(await canvas.evaluate((el:HTMLCanvasElement)=>el.width)).toBeLessThanOrEqual(640)
-  await expect(hero).toHaveCount(1)
-  await page.addInitScript(()=>{HTMLCanvasElement.prototype.getContext=()=>null});await page.reload();await expect(hero).toHaveAttribute('data-renderer','static');await expect(hero.locator('.hero-static')).toBeVisible();await expect(page.locator('h1')).toBeVisible()
-  observations[test.info().project.name+'-hero']={visiblePixels:pixels,scope:'emulated browser viewport, not physical-phone FPS'}
+  const hero = page.locator('.hero-network')
+  const graph = hero.locator('svg:visible')
+  const wireMarkup = await graph.locator('.pipeline-wires').innerHTML()
+  const packet = graph.locator('.pipeline-packets rect').first()
+  await expect(hero).toHaveAttribute('data-running', 'true')
+  const initial = await packet.getAttribute('transform')
+  await expect.poll(() => packet.getAttribute('transform')).not.toBe(initial)
+  expect(await graph.locator('.pipeline-wires line').evaluateAll(lines => lines.every(line =>
+    (line.getAttribute('x1') === line.getAttribute('x2')) !==
+    (line.getAttribute('y1') === line.getAttribute('y2'))))).toBe(true)
+  await capture(page, 'hero-light')
+
+  const theme = page.locator('.site-header select')
+  if (await theme.isVisible()) await theme.selectOption('dark')
+  else {
+    await page.getByRole('button', { name: 'Menu', exact: true }).click()
+    await page.getByRole('dialog').locator('select').selectOption('dark')
+    await page.getByRole('button', { name: 'Close menu' }).click()
+  }
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+  await capture(page, 'hero-dark')
+  await page.locator('footer').scrollIntoViewIfNeeded()
+  await expect(hero).toHaveAttribute('data-running', 'false')
+  const stopped = await hero.getAttribute('data-frames')
+  await page.waitForTimeout(180)
+  expect(await hero.getAttribute('data-frames')).toBe(stopped)
+  await page.evaluate(() => scrollTo(0, 0))
+  await expect(hero).toHaveAttribute('data-running', 'true')
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await expect(packet).toBeHidden()
+  expect(await graph.locator('.pipeline-wires').innerHTML()).toBe(wireMarkup)
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.setViewportSize({ width: 320, height: 936 })
+  await expect(hero.locator('svg[data-pipeline=compact]')).toBeVisible()
+  await expect(hero.locator('svg[data-pipeline=wide]')).toBeHidden()
+
+  await page.addInitScript(() => {
+    const original = SVGElement.prototype.setAttribute
+    SVGElement.prototype.setAttribute = function (name, value) {
+      if (name === 'transform' && this.closest('.pipeline-packets')) {
+        this.closest('.hero-network')?.setAttribute('data-test-failed-draw', 'true')
+        throw new Error('Fictional draw failure')
+      }
+      original.call(this, name, value)
+    }
+  })
+  await page.reload()
+  await expect(hero).toHaveAttribute('data-test-failed-draw', 'true')
+  await expect(hero).toHaveAttribute('data-running', 'false')
+  await expect(hero.locator('.pipeline-wires:visible')).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Inspect a message' }).first()).toBeVisible()
 })
 
 test('packets travel along continuous edges and reduced motion retains completed static equivalents',async({page})=>{

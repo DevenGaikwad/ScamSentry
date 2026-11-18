@@ -213,3 +213,59 @@ test('motion demonstration remains interruptible and preserves navigation', asyn
   const video = page.video(); await page.close()
   if (video) await video.saveAs(join(evidence, `${test.info().project.name}_motion-demo.webm`))
 })
+
+test('hero word separation and diagram clearance survive reflow and unavailable fonts', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto('/')
+  await page.evaluate(() => document.fonts.ready.then(() => undefined))
+  const headline = page.getByRole('heading', { name: 'A second look. Before you act.', exact: true })
+  let sharedRows = 0
+  async function inspect(width: number) {
+    await page.setViewportSize({ width, height: 890 })
+    const reading = await headline.evaluate(element => {
+      const bounds = element.getBoundingClientRect()
+      let rows = 0
+      let minGap = Infinity
+      let clipped = false
+      for (const phrase of element.querySelectorAll('.hero-mask > span')) {
+        const node = phrase.firstChild as Text
+        const mask = phrase.parentElement!.getBoundingClientRect()
+        const words = [...node.data.matchAll(/\S+/g)].map(word => {
+          const range = document.createRange()
+          range.setStart(node, word.index)
+          range.setEnd(node, word.index + word[0].length)
+          return range.getBoundingClientRect()
+        })
+        words.forEach((word, i) => {
+          clipped ||= word.left < bounds.left - 1 || word.right > bounds.right + 1 ||
+            word.top < mask.top - 2 || word.bottom > mask.bottom + 2
+          if (i > 0 && Math.abs(word.top - words[i - 1].top) < 1) {
+            rows++
+            minGap = Math.min(minGap, word.left - words[i - 1].right)
+          }
+        })
+      }
+      const graph = element.parentElement!.querySelector('.hero-network')!.getBoundingClientRect()
+      const hero = element.closest('.home-hero')!
+      const above = hero.querySelector(':scope > .eyebrow')!.getBoundingClientRect()
+      const below = hero.querySelector('.hero-bottom')!.getBoundingClientRect()
+      return { clipped, rows, minGap: rows ? minGap : null,
+        overlaps: graph.top < above.bottom || graph.bottom > below.top,
+        overflow: document.documentElement.scrollWidth > innerWidth + 1 }
+    })
+    expect(reading.clipped, 'clipped at ' + width).toBe(false)
+    expect(reading.overflow, 'horizontal overflow at ' + width).toBe(false)
+    expect(reading.overlaps, 'diagram intrudes on small text at ' + width).toBe(false)
+    if (reading.minGap !== null) expect(reading.minGap, 'word gap at ' + width).toBeGreaterThanOrEqual(3)
+    sharedRows += reading.rows
+  }
+  for (const width of [320, 390, 640, 768, 1024, 1363, 1440, 1920, 2560]) await inspect(width)
+  expect(sharedRows).toBeGreaterThan(12)
+  await page.route('**/*.woff2', route => route.abort())
+  await page.reload()
+  await inspect(320)
+  await inspect(1440)
+  await page.evaluate(() => { document.documentElement.style.fontSize = '150%' })
+  await inspect(320)
+  await expect(headline).toBeVisible()
+})

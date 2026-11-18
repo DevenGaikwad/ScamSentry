@@ -1,54 +1,87 @@
-/** Public, seeded decoration only. Coordinates never depend on messages or results. */
-export type Point3 = { x: number; y: number; z: number }
-export type Point2 = { x: number; y: number }
-export type Strand = { points: Point3[]; phase: number }
 export function damping(deltaMs: number, tauMs: number) {
   return 1 - Math.exp(-Math.min(40, Math.max(0, deltaMs)) / tauMs)
 }
-export function seeded(seed: number) {
-  let value = seed >>> 0 || 1
-  return () => { value ^= value << 13; value ^= value >>> 17; value ^= value << 5; return (value >>> 0) / 4294967296 }
+
+type Point = readonly [x: number, y: number]
+type Module = { id: string; label: string; x: number; y: number; width: number; height: number }
+type Connector = { id: string; from: string; to: string; points: Point[] }
+
+function module(id: string, label: string, x: number, y: number, width: number, height = 30): Module {
+  return { id, label, x, y, width, height }
 }
-export function cubic(a: Point3, b: Point3, c: Point3, d: Point3, t: number): Point3 {
-  const u = 1 - t
-  return { x: u ** 3 * a.x + 3 * u * u * t * b.x + 3 * u * t * t * c.x + t ** 3 * d.x,
-    y: u ** 3 * a.y + 3 * u * u * t * b.y + 3 * u * t * t * c.y + t ** 3 * d.y,
-    z: u ** 3 * a.z + 3 * u * u * t * b.z + 3 * u * t * t * c.z + t ** 3 * d.z }
-}
-export function heroGeometry(compact = false, seed = 37031) {
-  const random = seeded(seed)
-  const boxes = [
-    { x: -.43, y: -.18, z: -.08 }, { x: -.44, y: .13, z: .10 }, { x: -.29, y: .32, z: -.15 },
-    { x: 0, y: .03, z: .16 }, { x: .43, y: -.18, z: -.08 }, { x: .44, y: .13, z: .10 }, { x: .29, y: .32, z: -.15 },
-  ].filter((_, i) => !compact || i !== 2 && i !== 6)
-  const strands: Strand[] = []
-  for (let i = 0; i < (compact ? 24 : 42); i++) {
-    const fromLeft = i % 2 === 0
-    const peripheral = boxes[(fromLeft ? 0 : compact ? 3 : 4) + i % (compact ? 2 : 3)]
-    const core = { x: (fromLeft ? -.045 : .045), y: .03 + (random() - .5) * .14, z: .16 }
-    const a = fromLeft ? peripheral : core, d = fromLeft ? core : peripheral
-    const spread = (random() - .5) * .28
-    const b = { x: a.x * .66 + d.x * .34, y: a.y + spread, z: (random() - .5) * .6 }
-    const c = { x: a.x * .34 + d.x * .66, y: d.y - spread, z: (random() - .5) * .6 }
-    strands.push({ points: Array.from({ length: 33 }, (_, j) => cubic(a, b, c, d, j / 32)), phase: random() })
+
+function connect(from: Module, to: Module, lane: number): Connector {
+  const start: Point = [from.x + from.width, from.y + from.height / 2]
+  const end: Point = [to.x, to.y + to.height / 2]
+  return {
+    id: from.id + '-' + to.id, from: from.id, to: to.id,
+    points: start[1] === end[1] ? [start, [lane, start[1]], end] : [start, [lane, start[1]], [lane, end[1]], end],
   }
-  return { boxes, strands }
 }
-/** Rotation order: world Y, then X. Camera looks toward +z; near plane is rejected. */
-export function project(point: Point3, width: number, height: number, angle = 0): Point2 | null {
-  if (![point.x, point.y, point.z, width, height, angle].every(Number.isFinite) || width <= 0 || height <= 0) return null
-  const x = point.x * Math.cos(angle) + point.z * Math.sin(angle)
-  const z0 = -point.x * Math.sin(angle) + point.z * Math.cos(angle)
-  const tilt = angle * .35
-  const y = point.y * Math.cos(tilt) - z0 * Math.sin(tilt)
-  const z = point.y * Math.sin(tilt) + z0 * Math.cos(tilt)
-  const focal = 2.8
-  if (z >= focal - .25) return null
-  const scale = focal / (focal - z), unit = Math.min(width, height * 1.9)
-  return { x: width * .5 + x * unit * scale, y: height * .38 + y * unit * scale }
+
+// This public diagram illustrates local processing; its geometry has no session inputs.
+const message = module('message', 'MESSAGE', 35, 12, 104)
+const link = module('link', 'ADDRESS', 35, 327, 104)
+const prepare = module('prepare', 'PREPARE', 259, 327, 108)
+const model = module('model', 'LOCAL MODEL', 516, 12, 126)
+const signals = module('signals', 'OBSERVATIONS', 516, 327, 126)
+const review = module('review', 'REVIEW', 812, 327, 108)
+const guidance = module('guidance', 'NEXT STEP', 1042, 12, 123)
+const compactInput = module('input', 'INPUT', 8, 12, 76, 26)
+const compactCheck = module('check', 'LOCAL CHECK', 129, 32, 102, 26)
+const compactReview = module('review', 'REVIEW', 276, 12, 76, 26)
+
+export const heroPipelines = {
+  wide: {
+    width: 1200, height: 374,
+    nodes: [message, link, prepare, model, signals, review, guidance],
+    edges: [
+      connect(message, prepare, 196), connect(link, prepare, 196),
+      connect(prepare, model, 432), connect(prepare, signals, 432),
+      connect(model, review, 735), connect(signals, review, 735),
+      connect(review, guidance, 986),
+    ],
+    markers: ['message-prepare', 'prepare-model', 'model-review', 'review-guidance'],
+    junctions: [[196, 342], [432, 342], [735, 342]],
+  },
+  compact: {
+    width: 360, height: 70,
+    nodes: [compactInput, compactCheck, compactReview],
+    edges: [connect(compactInput, compactCheck, 106), connect(compactCheck, compactReview, 254)],
+    markers: ['input-check', 'check-review'],
+    junctions: [],
+  },
 }
-export const cubeEdges = [[0,1],[0,2],[0,4],[1,3],[1,5],[2,3],[2,6],[3,7],[4,5],[4,6],[5,7],[6,7]] as const
-export function cubeVertices(center: Point3, size: number): Point3[] {
-  return Array.from({ length: 8 }, (_, i) => ({ x: center.x + (i & 1 ? 1 : -1) * size,
-    y: center.y + (i & 2 ? 1 : -1) * size, z: center.z + (i & 4 ? 1 : -1) * size }))
+
+export function uniqueSegments(edges: readonly Connector[]) {
+  const segments = new Map<string, readonly [Point, Point]>()
+  for (const { points } of edges) {
+    for (let i = 1; i < points.length; i++) {
+      const from = points[i - 1], to = points[i]
+      segments.set([from.join(','), to.join(',')].sort().join('/'), [from, to])
+    }
+  }
+  return [...segments.values()]
+}
+
+export function measureTrack(points: readonly Point[], scaleX: number, scaleY: number) {
+  let length = 0
+  const segments = points.slice(1).map((to, i) => {
+    const from = points[i]
+    const distance = Math.hypot((to[0] - from[0]) * scaleX, (to[1] - from[1]) * scaleY)
+    const start = length
+    length += distance
+    return { from, to, distance, start }
+  }).filter(segment => segment.distance > 0)
+  return { segments, length }
+}
+
+export function positionOnTrack(track: ReturnType<typeof measureTrack>, distance: number): Point {
+  const clamped = Math.max(0, Math.min(track.length, distance))
+  for (const { from, to, distance: size, start } of track.segments) {
+    if (clamped > start + size) continue
+    const fraction = (clamped - start) / size
+    return [from[0] + (to[0] - from[0]) * fraction, from[1] + (to[1] - from[1]) * fraction]
+  }
+  return track.segments.at(-1)?.to ?? [0, 0]
 }

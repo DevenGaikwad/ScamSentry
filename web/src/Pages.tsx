@@ -7,8 +7,14 @@ import { Arrow, Chapter, DecodedLabel, External, Mark, PageIntro, SignalDiagram 
 
 export function Home() {
   return <>
-    <section className="home-hero" aria-labelledby="home-title"><HeroNetwork /><DecodedLabel>SCAMSENTRY / A PERSONAL RESEARCH PREVIEW</DecodedLabel>
-      <h1 id="home-title" tabIndex={-1} aria-label="A second look. Before you act."><span className="hero-mask"><span>A second look.</span></span><span className="hero-mask"><span>Before you act.</span></span></h1>
+    <section className="home-hero" aria-labelledby="home-title"><DecodedLabel>SCAMSENTRY / A PERSONAL RESEARCH PREVIEW</DecodedLabel>
+      <div className="hero-stage">
+        <HeroNetwork />
+        <h1 id="home-title" tabIndex={-1} aria-label="A second look. Before you act.">
+          <span className="hero-mask"><span>A second look.</span></span>{' '}
+          <span className="hero-mask"><span>Before you act.</span></span>
+        </h1>
+      </div>
       <div className="hero-bottom"><Link href="/analyze" className="hero-cta" data-bracket>Inspect a message <Arrow down /></Link><div className="hero-support"><p>A little distance from the urgency. Inspect messages and links with clear observations and a local research model.</p><span className="eyebrow">PAUSE / INSPECT / VERIFY</span></div></div>
     </section>
     <section className="home-flow"><div className="section-heading reveal"><span className="eyebrow">LOCAL BY DESIGN</span><h2>Your input.<br />Your perspective.</h2><p>No inbox access. No account. No automatic link opening. The page and approved model download first; your message is inspected in this browser.</p></div><SignalDiagram /></section>
