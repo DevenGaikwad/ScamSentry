@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "verified_notebook_commit": "ddabb90eb06ebe843be13a47a73ac5bd0331b286",
+  "notebook_path": "ml/notebooks/ScamSentry_ML_Evidence.ipynb",
+  "notebook_sha256": "43792206fc9d4de9317adaf7e79732109a6bc90ab25b6a22ce756d58d6458df8",
+  "frozen_evidence_commit": "01765677ea3e7a95b8983498168604cfec83090c",
+  "model_sha256": "14927b442dc9f33a35ad7086bd522b87e1110a73a6d1b2826b73ac1bf1a8a8fa",
+  "aggregate_input_sha256": "242b732427ed23423f377fb1ba644c2ccc15158b2457a78998cb9b9f08c0b8a2",
+  "aggregate_rebuild_byte_identical": true,
+  "local_default": {
+    "status": "passed",
+    "environment": "independent IPython processes with checkout and public-file inputs",
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "matplotlib": "3.10.8"
+    },
+    "source_files_verified": 11,
+    "manifest_schema_version": 2,
+    "outputs_match_between_input_routes": true,
+    "png_sha256": {
+      "01_dataset_and_splits.png": "1a22b596fd617128814240d0e6334fb7eb854c9608eee8cd6f012007ac3ed59b",
+      "02_training_length.png": "d1fe1a34c02e034c6ee7d2dd0601ebd73ecc97fcdc8ed530e5ee0a0307830029",
+      "03_training_feature_correlation.png": "65cb39d8849e037f03aac3ce09c0e5d7817c792a3cd7914f4c3127b3dda60865",
+      "04_historical_confusion.png": "3fdd078a82180da5e5bcd30c703297954aa7063d37aee53df308f4646406aab5",
+      "05_historical_class_performance.png": "5fa69f2d6def652d856a49b40b35e052a1a064af5915cafd6b61528b2e59981f",
+      "06_development_ranking.png": "f73b6ec0cdb6c80f54958c2aa5561151bdc870e7d592b7a4b5946afba8312795",
+      "07_historical_calibration.png": "63ea7aa4ab69ee07912bd9c15ef5a9942d76397278ca9d675e8f78918101dbe3",
+      "08_historical_robustness.png": "6e2f95b6ecb4a6a877c29988216e28403b3ef5ea46e27b8e9902acbd473b4bc3",
+      "09_training_comparisons.png": "57c328e1a5aaaa4852a72fd2a3932222ab04f381ad0febda1ff4b36cf5f6f256",
+      "10_v4_candidate_screen.png": "6deab98f3ef68c3d61bb639f9042e08710f7e5f4dedfc470d6274420e53350c7"
+    },
+    "csv_sha256": {
+      "historical_class_metrics.csv": "bb83ecaaf2caf0ba7c0c52fe8563ff7795c782fcdecf498684030655b097834e",
+      "historical_confusion_counts.csv": "6f9736063aa44bfd91b44164ec851f6d7ac0606c8ff5cff685d526fa84414805",
+      "historical_confusion_row_rates.csv": "23fbd85b05f0678f392b6c17eec4cfcf50ce1c02f78a441c73056213f018de41",
+      "split_support.csv": "601609e15875b8002e91214c3285ba410f4ead46c0577cf798565f20e9413b0f",
+      "training_pearson.csv": "c7e242f4a7eb3beb677e8179b8c48c8b864a1750636f36f4f92759d621ac3cd1",
+      "training_spearman.csv": "d3e163ae6e808507ec4b299d5fb345992bb2af4ff7a4157098ecb69a0575e815",
+      "v4_training_fold_summary.csv": "0c9011ee0af4018f030060589c0e2e32a2907a7a248725cdda2802d4b3e3f607"
+    },
+    "figure_partitions": {
+      "01_dataset_and_splits.png": {
+        "partition": "corpus audit and frozen splits",
+        "records": 5740,
+        "groups": 5411
+      },
+      "02_training_length.png": {
+        "partition": "train",
+        "records": 3444,
+        "groups": 3244
+      },
+      "03_training_feature_correlation.png": {
+        "partition": "train",
+        "records": 3444,
+        "groups": 3244
+      },
+      "04_historical_confusion.png": {
+        "partition": "historical test",
+        "records": 861,
+        "groups": 813
+      },
+      "05_historical_class_performance.png": {
+        "partition": "historical test",
+        "records": 861,
+        "groups": 813
+      },
+      "06_development_ranking.png": {
+        "partition": "development",
+        "records": 861,
+        "groups": 813
+      },
+      "07_historical_calibration.png": {
+        "partition": "historical test",
+        "records": 861,
+        "groups": 813
+      },
+      "08_historical_robustness.png": {
+        "partition": "historical test",
+        "records": 861,
+        "groups": 813
+      },
+      "09_training_comparisons.png": {
+        "partition": "development",
+        "records": 861,
+        "groups": 813
+      },
+      "10_v4_candidate_screen.png": {
+        "partition": "grouped cross-validation within train",
+        "records": 3444,
+        "groups": 3244
+      }
+    }
+  },
+  "hosted_default": {
+    "status": "passed",
+    "cpu_selected": true,
+    "backend": "Python 3 Google Compute Engine",
+    "source_files_verified": 11,
+    "png_count": 10,
+    "csv_count": 7,
+    "manifest_confirmed": true,
+    "optional_training_disabled": true,
+    "final_output": "Exported 10 figures, seven CSVs and a SHA-256 manifest with figure partitions to scamsentry_evidence/.",
+    "historical_interval_observed": "Historical macro F1 95% interval 0.8610–0.9446. Method: percentile bootstrap, unit: designated template connected component, 300 resamples, seed 42.",
+    "verified_url": "https://colab.research.google.com/github/DevenGaikwad/ScamSentry/blob/ddabb90eb06ebe843be13a47a73ac5bd0331b286/ml/notebooks/ScamSentry_ML_Evidence.ipynb",
+    "verified_on": "2026-11-18"
+  },
+  "optional_local_c2_fit": {
+    "schema_version": 1,
+    "run_id": "colab_demo_char_lr_c2",
+    "estimator": "char_lr_C2",
+    "training_source_commit": "01765677ea3e7a95b8983498168604cfec83090c",
+    "source_csv_sha256": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e",
+    "source_route": "verified supplied CSV",
+    "processed_dataset_sha256": "9c48acf3d1237e44b403b9cc675c758b4e834ba89b795856dcf1bf327c078e13",
+    "split_sha256": "34781f082c5b76e75b8ada075a7dec1385e90f58d104444a4810e1491ead6cf9",
+    "fit_records": 3444,
+    "development_records": 861,
+    "development_accuracy": 0.9698025551684089,
+    "development_macro_f1": 0.8975000642645248,
+    "calibration_partition": "calibration",
+    "calibration_records": 574,
+    "calibration_temperature": 0.5618655917675845,
+    "test_scored": false,
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scikit_learn": "1.8.0",
+      "matplotlib": "3.10.8"
+    }
+  },
+  "archived_historical_test": {
+    "records": 861,
+    "confusion_matrix": [
+      [
+        716,
+        7,
+        1
+      ],
+      [
+        5,
+        54,
+        3
+      ],
+      [
+        1,
+        9,
+        65
+      ]
+    ],
+    "accuracy": 0.9698025551684089,
+    "macro_f1": 0.9037592383028068,
+    "macro_f1_95ci": [
+      0.861006588073394,
+      0.9445590344171969
+    ],
+    "bootstrap": {
+      "unit": "designated template connected component",
+      "repetitions": 300,
+      "seed": 42,
+      "method": "percentile"
+    }
+  },
+  "readme_gallery": {
+    "browser_source_commit": "01765677ea3e7a95b8983498168604cfec83090c",
+    "browser_views": 5,
+    "android_views": 3,
+    "selected_figures": 3,
+    "capture_record": "assets/evidence/v4/README_BROWSER_CAPTURES.json"
+  },
+  "privacy_verification": {
+    "repository": "PASS",
+    "exported_source_archive": "PASS",
+    "publication_scope": "aggregate-only notebook evidence and documentation"
+  }
+}

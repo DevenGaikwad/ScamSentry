@@ -4,6 +4,8 @@
 
 Use a CPU runtime and choose **Runtime → Run all**. The default run reads hash-checked, aggregate evidence from the checkout or public repository. It exports ten PNGs, seven CSVs and a SHA-256 figure manifest under **scamsentry_evidence/**. The manifest records each chart’s partition and sample counts, the source SHA-256 values, and the runtime versions. Local Jupyter can run the same notebook with NumPy, pandas, Matplotlib and IPython.
 
+The published notebook passed both local input routes and a Google-hosted Colab CPU run. The execution record links the tested commit and records the generated files, the optional local C2 fit, and the source-archive checks. [Notebook verification](../../assets/evidence/ml-notebook/EXECUTION_VERIFICATION.json)
+
 | Notebook view | Exact scope |
 | --- | --- |
 | Split and dataset charts | 5,740 retained examples across four frozen partitions |

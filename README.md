@@ -66,7 +66,7 @@ The home and OCR captures show the release-like emulator build. The dark editor 
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DevenGaikwad/ScamSentry/blob/main/ml/notebooks/ScamSentry_ML_Evidence.ipynb)
 
-[View the notebook on GitHub](ml/notebooks/ScamSentry_ML_Evidence.ipynb) · [Run and reproduction notes](ml/notebooks/README.md)
+[View the notebook on GitHub](ml/notebooks/ScamSentry_ML_Evidence.ipynb) · [Run and reproduction notes](ml/notebooks/README.md) · [Notebook verification](assets/evidence/ml-notebook/EXECUTION_VERIFICATION.json)
 
 The shipping estimator is **ss-char-lr-0.1.0**, a character TF-IDF model with multinomial logistic regression and scalar-temperature calibration. The frozen historical test had 861 records across 813 groups. Macro F1 was **90.38%**, accuracy **96.98%**, and smishing-like recall **65 / 75**. These figures describe the historical evaluation.
 
